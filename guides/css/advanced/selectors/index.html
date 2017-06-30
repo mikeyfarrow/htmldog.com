@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Universal, Child, and Adjacent Selectors | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../cssadvanced/index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Universal, Child, and Adjacent Selectors</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>In earlier tutorials, we have covered <a href="../../beginner/selectors/index.html">HTML selectors</a>, <a href="../../intermediate/classid/index.html">Class and ID selectors</a>, and how to <a href="../../intermediate/grouping/index.html">combine selectors</a> to target specific element boxes. With the use of three itty-bitty characters, you can further pinpoint an element, reducing the need to bloat your HTML with class and ID attributes.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Universal selectors</h2>
+
+<p>Using an <strong>asterisk</strong> (&#8220; * &#8221;), you can target <strong>everything</strong> under the sun. You can use it by itself to set global styles for a page, or as a descendant of a selector to set styles of everything within something.</p>
+
+<p>The following, for example, will set the margin and padding on everything in a page to zero and everything within an element with the ID &#8220;contact&#8221; to be displayed as a block:</p>
+
+<pre><code class="oldLang language-css">
+<strong>*</strong> {
+    margin: 0;
+    padding: 0;
+}
+
+<strong>#contact *</strong> {
+    display: block;
+}
+</code></pre>
+
+<aside class="note i">
+<p>Using a standalone universal selector is commonly used to &#8220;reset&#8221; many of a browser&#8217;s default styles. Setting a margin to zero, for example, will kill all spacing around the likes of paragraphs, headings and blockquotes.</p>
+</aside>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Child selectors</h2>
+
+<p>A <strong>greater-than</strong> symbol (&#8220;&gt;&#8221;) can be used to specify something that is a child of something else, that is, something <strong>immediately nested</strong> within something.</p>
+
+<p>So, with this HTML&#8230;</p>
+
+<pre><code class="oldLang language-html">
+&lt;ul id="genus_examples"&gt;
+    &lt;li&gt;Cats
+        &lt;ul&gt;
+            &lt;li&gt;Panthera&lt;/li&gt;
+            &lt;li&gt;Felis&lt;/li&gt;
+            &lt;li&gt;Neofelis&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Apes
+        &lt;ul&gt;
+            &lt;li&gt;Pongo&lt;/li&gt;
+            &lt;li&gt;Pan&lt;/li&gt;
+            &lt;li&gt;Homo&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>&#8230;and the following CSS&#8230;</p>
+
+<pre><code class="oldLang language-css">
+<strong>#genus_examples &gt; li</strong> { border: 1px solid red }
+</code></pre>
+
+<p>&#8230;a red border would be drawn around &#8220;Cats&#8221; and &#8220;Apes&#8221; only, rather than around every single list item (which would be the case with <code>#genus_examples li { border: 1px solid red }</code>). This is because the likes of &#8220;Panthera&#8221; and &#8220;Felis&#8221; are <strong>grandchildren</strong> of &#8220;genus_examples&#8221;, not <strong>children</strong>.</p>
+
+<h2>Adjacent selectors</h2>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>A plus sign (&#8220;+&#8221;) is used to target an adjacent sibling of an element, essentially, something <strong>immediately following</strong> something.</p>
+
+<p>With the following HTML:</p>
+
+<pre><code class="oldLang language-html">
+&lt;h1&gt;Clouded leopards&lt;/h1&gt;
+&lt;p&gt;Clouded leopards are cats that belong to the genus Neofelis.&lt;/p&gt;
+&lt;p&gt;There are two extant species: Neofelis nebulosa and Neofelis diardi.&lt;/p&gt;
+</code></pre>
+
+<p>&#8230;and CSS&#8230;</p>
+
+<pre><code class="oldLang language-css">
+<strong>h1 + p</strong> { font-weight: bold }
+</code></pre>
+
+<p>Only the first paragraph, that following the heading, will be made bold.</p>
+
+<aside class="note three">
+<p>A further, CSS 3, &#8220;general sibling&#8221; selector uses a <strong>tilde</strong> (&#8220;~&#8221;) and will match an element following another regardless of its immediacy. So, in the above example, <code>h1 ~ p { font-weight: bold }</code> will style all paragraphs after the top-level heading but if there were any <a href="../../../../references/html/tags/p/index.html" class="acode"><code>p</code></a>s preceding the <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a>, these would not be affected.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../colors/index.html">Advanced Colors</a></li>
+  <li>Previous Page: <a href="../shadows/index.html">Shadows</a></li>
+  <li><a href="../../intermediate/grouping/index.html">Grouping and Nesting</a></li>
+  <li><a href="../attributeselectors/index.html">Attribute Selectors</a></li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/css/selectors/index.html">CSS Selectors</a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>CSS&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../cssbeginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../../cssintermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../../../cssadvanced/index.html">Advanced</a>
+					<ul>
+						<li><a href="../roundedcorners/index.html">Rounded Corners</a></li>
+						<li><a href="../shadows/index.html">Shadows</a></li>
+						<li><a href="index.html">Universal, Child, and Adjacent Selectors</a></li>
+						<li><a href="../colors/index.html">Advanced Colors</a></li>
+						<li><a href="../atrules/index.html">At-Rules</a></li>
+						<li><a href="../attributeselectors/index.html">Attribute Selectors</a></li>
+						<li><a href="../transitions/index.html">Transitions</a></li>
+						<li><a href="../backgrounds/index.html">Backgrounds: Multiples, Size, and Origin</a></li>
+						<li><a href="../transformations/index.html">Transformations</a></li>
+						<li><a href="../gradients/index.html">Gradients</a></li>
+						<li><a href="../mediaqueries/index.html">Media Queries</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

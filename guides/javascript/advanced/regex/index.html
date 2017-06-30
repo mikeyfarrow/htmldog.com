@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Regular Expressions | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">JavaScript</a>&nbsp;&rarr; <a href="../index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Regular Expressions</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p><em>Regular expressions</em> are another type of data in JavaScript, used to <strong>search and match strings</strong> to identify if a string is a valid domain name or to replace all instances of a word within a string, for example.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<aside class="note">
+<p>Regular expressions have their own syntax and often you&#8217;ll need to consult a regular expression reference if you&#8217;re doing something complex. Just search the Internet for what you need!</p>
+
+<p>The following is a very high-level overview of a complex area, going through some simple examples to show how to do it in JavaScript.</p>
+</aside>
+
+<h2>Creating regular expressions</h2>
+
+<p>Like with objects and arrays, there is a <em>regular expression literal</em> syntax designated by two forward slashes. Everything between is the expression:</p>
+
+<pre><code class="oldLang language-javascript">
+var regex = /^[a-z\s]+$/;
+</code></pre>
+
+<p>This expression matches strings that are made of lowercase letters and whitespace from beginning to end. The caret (&#8220;^&#8221;) indicates the start of the string, and the brackets indicate that anything between the opening and closing brace - letter a to z (&#8220;a-z&#8221;), lowercase, and white-space, indicated by the special &#8220;\s&#8221; character - can be repeated one or more times up to the end of the string, indicated by the dollar (&#8220;$&#8221;) symbol.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<p>Strings have a few useful methods that accept regular expressions; here&#8217;s a look at <code>match</code> and <code>replace</code>:</p>
+
+<pre><code class="oldLang language-javascript">
+var lowerCaseString = 'some characters';
+
+if (lowerCaseString.match(regex)) {
+    alert('Yes, all lowercase');
+}
+</code></pre>
+
+<p><code>match</code> produces a truthy value if the regular expression <em>matches</em> the string (<code>lowerCaseString</code>) <code>match</code> is called on. The string matches, so execution drops into the <code>if</code> statement to show an alert.</p>
+
+<p>Regular expressions can also be used to replace text:</p>
+
+<pre><code class="oldLang language-javascript">
+var text = "There is everything and nothing.";
+
+text = text.replace(/(every|no)thing/g, 'something');
+</code></pre>
+
+<pre class="output"><samp>
+// text is now "something and something"
+</samp></pre>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>This expression matches the word &#8220;everything&#8221; and the word &#8220;nothing&#8221; and replaces all occurrences of them with the word &#8220;something&#8221;. Notice the &#8220;g&#8221; after the closing forward slash (&#8220;/&#8221;) of the regular expression - this is the <em>global flag</em> that means the expression should match <em>all</em> occurrences, rather than just the first, which is what it does by default.</p>
+
+<p>Flags always go after the closing slash. The other flag you might need to use is the <em>case-insensitive flag</em>. By default, regular expressions care about the difference between uppercase and lowercase letters, but this can be changed using the &#8220;i&#8221; flag.</p>
+
+<pre><code class="oldLang language-javascript">
+var text = "Everything and nothing.";
+
+text = text.replace(/(every|no)thing/gi, "something");
+</code></pre>
+
+<pre class="output"><samp>
+// text is now "something and something"
+</samp></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../closures/index.html">Closures</a></li>
+  <li>Previous Page: <a href="../errors/index.html">Errors and Exceptions</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>JavaScript&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../beginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../intermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../index.html">Advanced</a>
+					<ul>
+						<li><a href="../oo/index.html">Object-Oriented Code</a></li>
+						<li><a href="../creatingelements/index.html">Creating Elements</a></li>
+						<li><a href="../canvas/index.html">Canvas</a></li>
+						<li><a href="../localstorage/index.html">Local Storage</a></li>
+						<li><a href="../errors/index.html">Errors and Exceptions</a></li>
+						<li><a href="index.html">Regular Expressions</a></li>
+						<li><a href="../closures/index.html">Closures</a></li>
+						<li><a href="../node/index.html">Node.js</a></li>
+						<li><a href="../jsapps/index.html">JS Apps</a></li>
+						<li><a href="../backbone/index.html">Backbone</a></li>
+						<li><a href="../angular/index.html">Angular</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

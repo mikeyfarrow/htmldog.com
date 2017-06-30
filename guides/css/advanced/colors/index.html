@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Advanced Colors | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../cssadvanced/index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Advanced Colors</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>We already know that <a href="../../beginner/colors/index.html">colors can be defined by name, RGB, or hex values</a>, but CSS 3 also allows you to paint away with <strong>HSL</strong> &#8212; hue, saturation, and lightness &#8212; as well as stipulating <strong>transparency</strong>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>There are no super special properties at play here &#8212; <strong>HSL</strong> and <strong>RGBa</strong> (the &#8220;a&#8221; standing for &#8220;alpha&#8221;, as in &#8220;alpha transparency&#8221;) can be applied to any property that has a color value, such as <a href="../../../../reference/cssproperties/color/index.html" class="acode"><code>color</code></a>, <a href="../../../../reference/cssproperties/background-color/index.html" class="acode"><code>background-color</code></a>, <a href="../../../../reference/cssproperties/border-color/index.html" class="acode"><code>border-color</code></a> or <a href="../../../../references/css/properties/box-shadow/index.html" class="acode"><code>box-shadow</code></a>, to name a mere handful.</p>
+
+<h2>Alpha transparency</h2>
+
+<p>RGBa opens up an exciting new dimension to web design, allowing you to set the transparency of a box or text. If you wanted a smidgen of a snazzy background image to peep through a heading, for example, you might use something like this:</p>
+
+<pre><code class="oldLang language-css">
+h1 {
+    padding: 50px;
+    background-image: url(snazzy.jpg);
+    <strong>color: rgba(0,0,0,0.8);</strong>
+}
+</code></pre>
+
+<p>A standard value of <code>rgb(0,0,0)</code> would set the heading to pure black but that fourth value, in <code>rgba</code>, sets the level of transparency, &#8220;1&#8221; being completely opaque, &#8220;0&#8221; being completely transparent. So <code>rgba(0,0,0,0.8)</code> is saying red=&#8220;0&#8221;, green=&#8220;0&#8221;, blue=&#8220;0&#8221;, alpha=&#8220;0.8&#8221;, which, all together, makes it 80% black.</p>
+
+<p>This doesn&#8217;t only apply to text, of course, you could apply a transparent background color to an entire box, a transparent box shadow&#8230; anywhere where you can use <code>rgb</code>, you can used <code>rgba</code>.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Hue, saturation, and lightness</h2>
+
+<p>Color names aside, web colors have always been red-green-blue biased, be that through hex codes or explicit RBG (or RGBa). Although mildly less straightforward (especially if your brain is trained to break down colors into red, green and blue), HSL can actually be more intuitive because it gives you direct control over the aspects of a color&#8217;s shade rather than its logical ingredients.</p>
+
+<p>It is used in a similar way to <code>rgb</code>:</p>
+
+<pre><code class="oldLang language-css">
+#smut { color: <strong>hsl(36, 100%, 50%)</strong> }
+</code></pre>
+
+<p>Rather than each sub-value being a part of the color spectrum, however, they are:</p>
+
+<ul>
+<li><strong>Hue</strong> (&#8220;36&#8221; in the above example): Any angle, from 0 to 360, taken from a typical color wheel, where &#8220;0&#8221; (and &#8220;360&#8221;) is red, &#8220;120&#8221; is green and &#8220;240&#8221; is blue.</li>
+<li><strong>Saturation</strong> (&#8220;100%&#8221; in the example): How saturated you want the color to be, from 0% (none, so a level of grey depending on the lightness) to 100% (the whole whack, please).</li>
+<li><strong>Lightness</strong> (&#8220;50%&#8221; in the example): From 0% (black) to 100% (white), 50% being &#8220;normal&#8221;.</li>
+</ul>
+
+<p>So the example used here will produce an orange (36°) that is rich (100% saturation) and vibrant (50% lightness). It is the equivalent of <code>#ff9900</code>, <code>#f90</code>, and <code>rgb(255, 153, 0)</code>.</p>
+
+<h3>HSLa</h3>
+
+<p>Hey, man, this funky fresh transparency and HSL can be combined?! You&#8217;d better believe it. Here&#8217;s <strong>HSLa</strong>:</p>
+
+<pre><code class="oldLang language-css">
+#rabbit { background: <strong>hsla(0, 75%, 75%, 0.5)</strong> }
+</code></pre>
+
+<p>You can figure out what that does, right?</p>
+
+<aside class="note i">
+<p><code>hsl</code> and <code>hsla</code> are supported by most modern browsers, including IE versions 9 and above.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../atrules/index.html">At-Rules</a></li>
+  <li>Previous Page: <a href="../selectors/index.html">Universal, Child, and Adjacent Selectors</a></li>
+  <li><a href="../../intermediate/grouping/index.html">Colors</a> (CSS Beginner Tutorial)</li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/colors/index.html">Colors</a></li>
+  <li><a href="../../../../examples/boxshadows/index.html">Box shadows</a>: with RGBa colors</li>
+  <li><a href="../../../../examples/transitions2/index.html">CSS transitions</a>: using <code>border-radius</code> and RGBa colors</li>
+  </ul>
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/css/values/color/index.html">CSS Value: Color</a></li>
+  <li><a href="../../../../reference/cssproperties/color/index.html">CSS Property: <code>color</code></a></li>
+  <li><a href="../../../../reference/cssproperties/background-color/index.html">CSS Property: <code>background-color</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>CSS&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../cssbeginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../../cssintermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../../../cssadvanced/index.html">Advanced</a>
+					<ul>
+						<li><a href="../roundedcorners/index.html">Rounded Corners</a></li>
+						<li><a href="../shadows/index.html">Shadows</a></li>
+						<li><a href="../selectors/index.html">Universal, Child, and Adjacent Selectors</a></li>
+						<li><a href="index.html">Advanced Colors</a></li>
+						<li><a href="../atrules/index.html">At-Rules</a></li>
+						<li><a href="../attributeselectors/index.html">Attribute Selectors</a></li>
+						<li><a href="../transitions/index.html">Transitions</a></li>
+						<li><a href="../backgrounds/index.html">Backgrounds: Multiples, Size, and Origin</a></li>
+						<li><a href="../transformations/index.html">Transformations</a></li>
+						<li><a href="../gradients/index.html">Gradients</a></li>
+						<li><a href="../mediaqueries/index.html">Media Queries</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

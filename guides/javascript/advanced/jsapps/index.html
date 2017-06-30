@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JS Apps | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">JavaScript</a>&nbsp;&rarr; <a href="../index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>JS Apps</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>These days JavaScript is being used to build large-scale <em>web applications</em> and the web is maturing as a platform for doing so. These apps have the advantage of being able to be highly interactive and responsive, requiring fewer page loads and HTTP requests.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>Ideas are being taken from the software engineering world on how to build such applications, so here&#8217;s a few ideas on how to do it before a look at some JavaScript frameworks designed to assist building larger apps.</p>
+
+<h2>Modularity</h2>
+
+<p>A key concept in software engineering is the idea of <em>modularity</em> in code. Separating out the key functionality of your app improves its maintainability and has a number of development advantages.</p>
+
+<p>For example, in a modular system a component can be swapped out at little cost, so long as the interface between the components remains the same. Similarly, different components can be worked on in isolation from each other, which is beneficial for development time and human resource management.</p>
+
+<p>Modules can be connected in a number of different ways - one way is with modules communicating only with a central event and resource management module, sometimes referred to as a <em>sandbox</em>, and not communicating directly with each other. A module can publish a notification about an event occurring without caring who or what else will act on it. This means that if one component ceases to function the others may continue, and that a new module can be easily added without affecting the others.</p>
+
+<aside class="note mag">
+<p>If you want to begin building modular apps, a library called <a href="http://requirejs.org/">RequireJS</a> is a good place to start.</p>
+</aside>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>MVC Architecture</h2>
+
+<p><em>Model-View-Controller</em> (<em>MVC</em>) architecture is a way of structuring code within an application. A <em>model</em> is concerned with the data in your app; the <em>view</em> with displaying or outputting data and the <em>controller</em> with the business logic and coordinating the models and views. An app might have many of all three.</p>
+
+<p>For example, you might have a <var>User</var> model that is responsible for retrieving information about a user. Then you&#8217;d have a <var>Login</var> controller that managed when to show a log-in screen to a visitor. The <var>LoginView</var> would be responsible for showing the screen and handling form submission, the data from which would be passed to the <var>Login</var> controller through to the <var>User</var> model.</p>
+
+<aside class="note">
+<p>As with any system there are a number of variations on this, and a number of client-side frameworks have addressed this idea in JavaScript. We&#8217;ll take a quick look at two: <a href="../backbone/index.html">Backbone</a> and <a href="../angular/index.html">Angular</a>.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../backbone/index.html">Backbone</a></li>
+  <li>Previous Page: <a href="../node/index.html">Node.js</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>JavaScript&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../beginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../intermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../index.html">Advanced</a>
+					<ul>
+						<li><a href="../oo/index.html">Object-Oriented Code</a></li>
+						<li><a href="../creatingelements/index.html">Creating Elements</a></li>
+						<li><a href="../canvas/index.html">Canvas</a></li>
+						<li><a href="../localstorage/index.html">Local Storage</a></li>
+						<li><a href="../errors/index.html">Errors and Exceptions</a></li>
+						<li><a href="../regex/index.html">Regular Expressions</a></li>
+						<li><a href="../closures/index.html">Closures</a></li>
+						<li><a href="../node/index.html">Node.js</a></li>
+						<li><a href="index.html">JS Apps</a></li>
+						<li><a href="../backbone/index.html">Backbone</a></li>
+						<li><a href="../angular/index.html">Angular</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

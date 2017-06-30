@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Transform origin</title>
+	<style>
+		body {
+			font: 15px/1.5 helvetica, arial, sans-serif;
+			background: #333;
+			color: #ccc;
+			margin: 50px 0 50px 50px;
+		}
+		a, code { color: white }
+		p { margin-bottom: 50px }
+	
+		pre, #htmldog {
+			float: left;
+			height: 300px;
+			width: 300px;
+			background-color: #666;
+			margin: 0 50px 50px 0;
+			white-space: normal;
+			position: relative;
+		}
+		pre code {
+			display: block;
+			height: 260px;
+			background: rgba(255,204,000,.7);
+			padding: 20px;
+		}
+		pre:after {
+			content: "";
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: red;
+			border: 5px solid white;
+			border-radius: 10px;
+			margin: -10px 0 0 -10px;
+		}
+
+		#p0 code {
+			-webkit-transform: rotate(10deg); /* for some older browsers */
+			-webkit-transform-origin: 50% 50%;
+			-ms-transform: rotate(10deg); /* for IE9 */
+			-ms-transform-origin: 50% 50%;
+			transform: rotate(10deg);
+			transform-origin: 50% 50%; /* default */
+		}
+		#p0:after {
+			top: 50%;
+			left: 50%;
+		}
+		#p1 code {
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: top;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: top;
+			transform: rotate(10deg);
+			transform-origin: top;
+		}
+		#p1:after {
+			top: 0;
+			left: 50%;
+		}
+		#p2 code {
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: right;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: right;
+			transform: rotate(10deg);
+			transform-origin: right;
+		}
+		#p2:after {
+			top: 50%;
+			right: 0;
+			margin: -10px -10px 0 0;
+		}
+		#p3 code {
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: right top;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: right top;
+			transform: rotate(10deg);
+			transform-origin: right top;
+		}
+		#p3:after {
+			top: 0;
+			right: 0;
+			margin: -10px -10px 0 0;
+		}
+		#p4 code {
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: 25% 25%;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: 25% 25%;
+			transform: rotate(10deg);
+			transform-origin: 25% 25%;
+		}
+		#p4:after {
+			top: 25%;
+			left: 25%;
+		}
+		#p5 code {
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: -20px 20px;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: -20px 20px;
+			transform: rotate(10deg);
+			transform-origin: -20px 20px;
+		}
+		#p5:after {
+			top: 20px;
+			left: -20px;
+		}
+
+		#htmldog a {
+			display: block;
+			padding: 105px 90px;
+			background: rgba(255,204,000,.7);
+			-webkit-transform: rotate(10deg);
+			-webkit-transform-origin: 0 0;
+			-ms-transform: rotate(10deg);
+			-ms-transform-origin: 0 0;
+			transform: rotate(10deg);
+			transform-origin: 0 0;
+			transition: 1s;
+		}
+		#htmldog a:hover {
+			-webkit-transform: rotate(-10deg);
+			-webkit-transform-origin: right top;
+			-ms-transform: rotate(-10deg);
+			-ms-transform-origin: right top;
+			transform: rotate(-10deg);
+			transform-origin: right top;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="http://www.htmldog.com/guides/css/advanced/transformations/">Transform origin</a></h1>
+	<p>Using the <a href="http://www.htmldog.com/references/css/properties/transform-origin/"><code>transform-origin</code></a> CSS property to alter the point at which transformations are measured from. Using a rotated 2D transformation as an example.</p>
+
+	<pre id="p0"><code id="c0">transform: rotate(10deg);
+transform-origin: 50% 50%;
+/* default */</code></pre>
+
+	<pre id="p1"><code id="c1">transform: rotate(10deg);
+transform-origin: top;</code></pre>
+
+	<pre id="p2"><code id="c2">transform: rotate(10deg);
+transform-origin: right;</code></pre>
+
+	<pre id="p3"><code id="c3">transform: rotate(10deg);
+transform-origin: right top;</code></pre>
+
+	<pre id="p4"><code id="c4">transform: rotate(10deg);
+transform-origin: 25% 25%;</code></pre>
+
+	<pre id="p5"><code id="c5">transform: rotate(10deg);
+transform-origin: -20px 20px;</code></pre>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="htmldog"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog" width="120" height="90"></a></p>
+</body>
+</html>

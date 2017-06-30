@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Tabs | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../manifest.json">
+	<link rel="mask-icon" href="../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../index.html" title="Home"><img src="../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../index.html" class="yahSec yahTech">Techniques</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>CSS Tabs</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Wikipedia, eBay, ask.com, PayPal, and a squillion other sites: a popular form of navigation design is <strong>tabbed navigation</strong> &#8212; a group of links that give the impression of being protrusions, attached to different areas of unseen content.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<figure class="note shot">
+    <div><img src="../../figures/tabs.png" width="500" height="70"></div>
+    <figcaption>Tabbed navigation made from list items and dollops of CSS</figcaption>
+</figure>
+
+<p>Tabs don&#8217;t have to be horizontal but they usually are so our first step is going to be to create a horizontal list.</p>
+
+<p>We&#8217;re going to try a few different things with CSS, but we&#8217;ll be sticking with the following basic HTML structure:</p>
+
+<pre><code class="language-html">
+&lt;header&gt; 
+
+&lt;h1&gt;Tabs&lt;/h1&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="this.html"&gt;This&lt;/a&gt;&lt;/li&gt;
+        &lt;li id="selected"&gt;&lt;a href="that.html"&gt;That&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="theOther.html"&gt;The Other&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="banana.html"&gt;Banana&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;/header&gt;
+
+&lt;section id="content"&gt;
+    &lt;p&gt;&lt;!-- Big lovely oodles of content --&gt;&lt;/p&gt;
+&lt;section&gt;
+</code></pre>
+
+<p>Now, what we want to do with this HTML is turn each list item into a tab, with the selected item appearing to be part of the corresponding content area.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<p>First of all, we can rip out the list item markers and zero the margin and padding of the <a href="../../references/html/tags/ul/index.html" class="acode"><code>ul</code></a> element:</p>
+
+<pre><code class="language-css">
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+</code></pre>
+
+<p>Now to get down to business&#8230;</p>
+
+<h2>Inline list-items</h2>
+
+<p>The most obvious first thing we can do is make the list horizontal. The most straight-forward solution for this is to set the <a href="../../references/css/properties/display/index.html" class="acode"><code>display</code></a> property of the boxes created by the <a href="../../references/html/tags/li/index.html" class="acode"><code>li</code></a> elements to <strong>inline</strong>:</p>
+
+<pre><code class="language-css">
+nav li {
+    display: inline;
+    border: solid;
+    border-width: 1px 1px 0 1px;
+    margin: 0 5px 0 0;
+}
+</code></pre>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>This rule set also starts to make the items a little more tab-like by applying a <strong>border</strong> to every side except the bottom. The margin property here zeroes the margin on all sides except the right, because we&#8217;re going to space the tabs out a bit.</p>
+
+<p>Now we can make things a little tidier by padding out the <a href="../../reference/htmltags/a/index.html" class="acode"><code>a</code></a> element boxes.</p>
+
+<pre><code class="language-css">
+nav li a {
+    padding: 0 10px;
+}
+</code></pre>
+
+<aside class="note i">
+<p>Adjusting the padding of the <a href="../../reference/htmltags/a/index.html" class="acode"><code>a</code></a> element box, rather than the <a href="../../references/html/tags/li/index.html" class="acode"><code>li</code></a> element boxes has the advantage of making the whole width of the tab clickable.</p>
+</aside>
+
+<p>So far the tabs aren&#8217;t sitting on anything so we can add a border to the content <a href="../../references/html/tags/section/index.html" class="acode"><code>section</code></a>:</p>
+
+<pre><code class="language-css">
+#content {
+    border: 1px solid;
+}
+</code></pre>
+
+<p>But there&#8217;s one essential thing missing. As it is, the tabs are just sitting across the top of the content box, all looking pretty much the same. What we need to do is make the &#8220;active&#8221; tab &#8212; the one that relates to the page we&#8217;re on &#8212; look as if it&#8217;s part of the content box, like a tab on the side of a dividing card.</p>
+
+<p>Because vertical padding in inline boxes doesn&#8217;t actually push anything out around it, we can simply do this:</p>
+
+<pre><code class="language-css">
+#selected {
+    padding-bottom: 1px; 
+    background: white;
+}
+</code></pre>
+
+<p>This pads the bottom of the <a href="../../references/html/tags/li/index.html" class="acode"><code>li</code></a> element box with the &#8220;selected&#8221; ID by one pixel, which pushes it over the top border of the content box. As the background color is white (assuming the content box&#8217;s background color is also white) it gives the illusion that the tab, and its border, are part of the content box.</p>
+
+<figure class="note shot">
+    <div><img src="../../figures/tabs_inline.png" width="500" height="99"></div>
+    <figcaption>Simple tabs using <code>display: inline</code></figcaption>
+</figure>
+
+<h2>Floated list-items</h2>
+
+<p>So far, this technique is great for basic tabs. Colors, border colors, text decoration, etc. can all be changed to suit. When it comes to padding, though, things go awry. For the very same reason that the &#8220;selected&#8221; tab works by spilling over onto the content box, padding can&#8217;t be applied to the initial tab states. They just wouldn&#8217;t behave.</p>
+
+<p>So if we want to do something a little funkier with the tabs, we need to horizontalize the list items a different way:</p>
+
+<pre><code class="language-css">
+#header li {
+    float: left;
+    border: 1px solid;
+    border-bottom-width: 0;
+    margin: 0 5px 0 0;
+}
+</code></pre>
+
+<p>It&#8217;s the same as before except that instead of displaying the <a href="../../references/html/tags/li/index.html" class="acode"><code>li</code></a> element boxes inline, we are <strong>floating</strong> them to the left.</p>
+
+<p>Doing this breaks a few things elsewhere, so before we can continue we need to clear the content box from the float&#8217;s evil grasp and then we need to get rid of any margins above the list:</p>
+
+<pre><code class="language-css">
+#content {
+    border: 1px solid;
+    clear: both;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+</code></pre>
+
+<p>We&#8217;re almost there with this method but instead of applying padding to the selected list item like we did with the inline list item approach (which here would just pad things out because a floated box has a &#8220;block&#8221; display type), we are going to lift the whole thing and smack it down one pixel:</p>
+
+<pre><code class="language-css">
+#selected {
+    position: relative;
+    top: 1px;
+    background: white;
+}
+</code></pre>
+
+<p>So now <a href="../../examples/tabs2/index.html">things look almost the same as they did with the inline method</a>. One little difference is that the selected tab is one pixel lower than the others because it has been pushed down to cover the bottom line. To avoid this you can apply the last declaration block with the positioning and the background color to the link inside the list item (<code>#selected a</code>) instead of the list item itself (<code>#selected</code>), which can achieve a more desirable effect.</p>
+
+<aside class="note i">
+<p>Another approach to wrestling control over the size of the tabs is to use <code>display: inline-block</code>.</p>
+</aside>
+
+<h2>Making things look nicer&#8230;</h2>
+
+<p>There are <a href="../../examples/tabs3/index.html">little things we can do to make these tabs look better</a> such as removing the underlines, providing different colors for borders, changing the background colors when hovering etc, which can make the tabs more discernable and the &#8220;active&#8221; tab more obvious.</p>
+
+<h2>Playing around</h2>
+
+<p>Of course, tabs don&#8217;t have to be as borderific as the above examples. The main principles stay the same &#8212; you set your horizontal list items and then style them how you please.</p>
+
+<p>You can just <a href="../../examples/tabs4/index.html">separate tabs by using solid background colors</a>. Alternatively, a simple trick, conjured up by <a href="http://www.simplebits.com/">Dan Cederholm</a> is to manipulate the bottom border of a list item to produce <a href="../../examples/tabs5/index.html">thin protruding tabs</a>.</p>
+
+<figure class="note shot">
+    <div><img src="../../figures/tabs_thin.png" width="500" height="99"></div>
+    <figcaption>Skinny tabs</figcaption>
+</figure>
+
+<p>And tabs don&#8217;t have to have boxy 90-degree corners, either. Applying <a href="../../references/css/properties/border-radius/index.html" class="acode"><code>border-radius</code></a> to the top left and top right corners of each tab will make them all the more like those dividing cards we so want to emulate.</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li><a href="../../guides/html/beginner/lists/index.html">Lists</a> (HTML Beginner Tutorial)</li>
+  <li><a href="../../guides/cssadvanced/layout/index.html">Page Layout</a> (CSS Intermediate Tutorial)</li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../examples/tabs1/index.html">Inline tabs</a>: basic tabs using <code>display</code></li>
+  <li><a href="../../examples/tabs2/index.html">Floated tabs</a>: basic tabs using <code>float</code></li>
+  <li><a href="../../examples/tabs3/index.html">Tabs 3</a>: adding more style</li>
+  <li><a href="../../examples/tabs4/index.html">Tabs 4</a>: another example</li>
+  <li><a href="../../examples/tabs5/index.html">Skinny tabs</a></li>
+  <li><a href="../../examples/tabs7/index.html">Fancy tabs</a>: going wild with CSS</li>
+  </ul>
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../references/html/tags/ul/index.html">HTML Tag: <code>ul</code></a></li>
+  <li><a href="../../references/html/tags/li/index.html">HTML Tag: <code>li</code></a></li>
+  <li><a href="../../references/html/tags/nav/index.html">HTML Tag: <code>nav</code></a></li>
+  <li><a href="../../references/css/properties/display/index.html">CSS Property: <code>display</code></a></li>
+  <li><a href="../../reference/cssproperties/float/index.html">CSS Property: <code>float</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../about.1.html">About Us</a></li>
+				<li><a href="../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

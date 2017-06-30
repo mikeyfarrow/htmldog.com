@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Text: Abbreviations, Quotations, and Code | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="../../../htmladvanced/text/index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">HTML</a>&nbsp;&rarr; <a href="../../../htmlintermediate/index.html">Intermediate</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Text: Abbreviations, Quotations, and Code</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>The basics of defining text using <a href="../../beginner/paragraphs/index.html">paragraphs (as well as emphasis and line breaks)</a> and <a href="../../beginner/headings/index.html">headings</a> was covered in the <a href="../../../htmlbeginner/index.html">HTML Beginner Tutorial</a>. And for the same reason we use <a href="../../../../references/html/tags/p/index.html" class="acode"><code>p</code></a> and <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a>, <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a>, etc, there are a number of other tags we should also use to specifically represent other text-types, such as <strong>abbreviations</strong>, <strong>quotations</strong>, and computer <strong>code</strong>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Abbreviations</h2>
+
+<p><a href="../../../../references/html/tags/abbr/index.html" class="acode"><code>abbr</code></a> is used to markup an abbreviation, a shortened form of a word or phrase. </p>
+
+<p>The expanded phrase that the abbreviation represents can be defined in the value of the <code >title</code> attribute. This is optional but recommended.</p>
+
+<pre><code class="oldLang language-html">
+&lt;p&gt;This web site is about <strong>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</strong> and <strong>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</strong>.&lt;/p&gt;
+</code></pre>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Quotations</h2>
+
+<p><a href="../../../../references/html/tags/blockquote/index.html" class="acode"><code>blockquote</code></a> and <a href="../../../../references/html/tags/q/index.html" class="acode"><code>q</code></a> are used for quotations. <a href="../../../../references/html/tags/blockquote/index.html" class="acode"><code>blockquote</code></a> is generally used for standalone often multi-line quotations whereas <a href="../../../../references/html/tags/q/index.html" class="acode"><code>q</code></a> is used for shorter, in-line quotations.</p>
+
+<p>If the source of the quotation can be found on the Web, the <code >cite</code> attribute can be used to point to its origin.</p>
+
+<pre><code class="oldLang language-html">
+&lt;p&gt;So I asked Bob about quotations on the Web and he said <strong>&lt;q&gt;I know as much about quotations as I do about pigeon fancying&lt;/q&gt;</strong>. Luckily, I found HTML Dog and it said:&lt;/p&gt;
+
+<strong>&lt;blockquote cite="http://www.htmldog.com/guides/html/intermediate/text/"&gt;</strong>
+    &lt;p&gt;blockquote and q are used for quotations. blockquote is generally used for standalone often multi-line quotations whereas q is used for shorter, in-line quotations.&lt;/p&gt;
+<strong>&lt;/blockquote&gt;</strong>
+</code></pre>
+
+<aside class="note five">
+<p>Blockquotes work very nicely with the HTML5 elements <a href="../../../../references/html/tags/figure/index.html" class="acode"><code>figure</code></a> and <a href="../../../../references/html/tags/figcaption/index.html" class="acode"><code>figcaption</code></a>, enabling a nice, semantic way to group a quotation with a citation:</p>
+
+<pre><code class="oldLang language-html">
+&lt;figure&gt;
+    &lt;blockquote&gt;[Big old quotation about evolution]&lt;/blockquote&gt;
+    &lt;figcaption&gt;Charles Darwin&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+
+<p>But let&#8217;s not get carried away with that here - see the <a href="../sectioning/index.html">article about Sectioning</a> for more.</p>
+</aside>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<h2>Citations</h2>
+
+<p>Just to make things nice and confusing, as well as a <code >cite</code> attribute, there is also a <a href="../../../../references/html/tags/cite/index.html" class="acode"><code>cite</code></a> tag. This can be used to define the title of a work, such as a book.</p>
+
+<pre><code class="oldLang language-html">
+&lt;p&gt;According to <strong>&lt;cite&gt;the Bible&lt;/cite&gt;</strong>, after six days God said &lt;q&gt;screw this for a lark, I'm having a nap&lt;/q&gt;.&lt;/p&gt;
+</code></pre>
+
+<h2>Code</h2>
+
+<p><a href="../../../../references/html/tags/code/index.html" class="acode"><code>code</code></a> is used to represent any form of computer <strong>code</strong>. Further, <a href="../../../../references/html/tags/var/index.html" class="acode"><code>var</code></a> can be used for <strong>variables</strong> (which could be a variable in anything, not just in code - it could be a variable in an equation, for example), <a href="../../../../references/html/tags/samp/index.html" class="acode"><code>samp</code></a> for sample <strong>output</strong>, and <a href="../../../../references/html/tags/kbd/index.html" class="acode"><code>kbd</code></a> (keyboard) for user <strong>input</strong>.</p>
+
+<pre><code class="oldLang language-html">
+&lt;p&gt;If you add the line <strong>&lt;code&gt;&lt;var&gt;givevaderachuckle&lt;/var&gt; = true;&lt;/code&gt;</strong> to the <strong>&lt;code&gt;destroy_planet&lt;/code&gt;</strong> subroutine and then type <strong>&lt;kbd&gt;ilovejabba&lt;/kbd&gt;</strong> into the console, the big bad green Death Star laser will etch <strong>&lt;samp&gt;Slug Lover!&lt;/samp&gt;</strong> on the planet's surface.&lt;/p&gt;
+</code></pre>
+
+<h3>Preformatted text</h3>
+
+<p><a href="../../../../reference/htmltags/pre/index.html" class="acode"><code>pre</code></a> is <strong>preformatted</strong> text and is unusual in HTML tags that it takes notice of every character in it, including the white space (whereas other elements will ignore a consecutive space or a line-break, for example). It is most commonly used for blocks of code, where spacing, such as indentations, can be relevant.</p>
+
+<pre><code class="oldLang language-html">
+<strong>&lt;pre&gt;</strong>&lt;code&gt;
+&amp;lt;div id="intro"&amp;gt;
+    &amp;lt;h1&amp;gt;Some heading&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;Some paragraph paragraph thing thing thingy.&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;<strong>&lt;/pre&gt;</strong>
+</code></pre>
+
+<aside class="note">
+<p>As an example, <a href="../../../../reference/htmltags/pre/index.html" class="acode"><code>pre</code></a> and <a href="../../../../references/html/tags/code/index.html" class="acode"><code>code</code></a> are used extensively throughout this site. The code blocks, such as the one above, are <a href="../../../../references/html/tags/code/index.html" class="acode"><code>code</code></a> elements inside <a href="../../../../reference/htmltags/pre/index.html" class="acode"><code>pre</code></a> elements. In-line references to tags and properties are simply <a href="../../../../references/html/tags/code/index.html" class="acode"><code>code</code></a> elements, often inside <a href="../../../../reference/htmltags/a/index.html" class="acode"><code>a</code></a> elements to link to <a href="../../../../reference/index.html">the reference section</a>.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../metatags/index.html">Meta Tags</a></li>
+  <li>Previous Page: <a href="../spandiv/index.html">Span and Div</a></li>
+  <li><a href="../text2/index.html">Text: Addresses, Definitions, Bi-directional, and Editorial</a></li>
+  <li><a href="../../beginner/paragraphs/index.html">Paragraphs</a> (HTML Beginner Tutorial)</li>
+  <li><a href="../../beginner/headings/index.html">Headings</a> (HTML Beginner Tutorial)</li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/html/tags/abbr/index.html">HTML Tag: <code>abbr</code></a></li>
+  <li><a href="../../../../references/html/tags/blockquote/index.html">HTML Tag: <code>blockquote</code></a></li>
+  <li><a href="../../../../references/html/tags/q/index.html">HTML Tag: <code>q</code></a></li>
+  <li><a href="../../../../references/html/tags/figure/index.html">HTML Tag: <code>figure</code></a></li>
+  <li><a href="../../../../references/html/tags/figcaption/index.html">HTML Tag: <code>figcaption</code></a></li>
+  <li><a href="../../../../references/html/tags/cite/index.html">HTML Tag: <code>cite</code></a></li>
+  <li><a href="../../../../references/html/tags/code/index.html">HTML Tag: <code>code</code></a></li>
+  <li><a href="../../../../references/html/tags/var/index.html">HTML Tag: <code>var</code></a></li>
+  <li><a href="../../../../references/html/tags/samp/index.html">HTML Tag: <code>samp</code></a></li>
+  <li><a href="../../../../references/html/tags/kbd/index.html">HTML Tag: <code>kbd</code></a></li>
+  <li><a href="../../../../reference/htmltags/pre/index.html">HTML Tag: <code>pre</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+		<section id="navSec">
+        <h2><span>Section menu: </span>HTML&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../htmlbeginner/index.html">Beginner</a></li>
+				
+				<li id="yahSubsec"><a href="../../../htmlintermediate/index.html">Intermediate</a>
+					<ul>
+						<li><a href="../spandiv/index.html">Span and Div</a></li>
+						<li><a href="../../../htmladvanced/text/index.html">Text: Abbreviations, Quotations, and Code</a></li>
+						<li><a href="../metatags/index.html">Meta Tags</a></li>
+						<li><a href="../tables/index.html">Tables: rowspan and colspan</a></li>
+						<li><a href="../definitionlists/index.html">Description Lists</a></li>
+						<li><a href="../text2/index.html">Text: Addresses, Definitions, Bi-directional, and Editorial</a></li>
+						<li><a href="../sectioning/index.html">Sectioning</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../../htmladvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="../../../htmladvanced/text/index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

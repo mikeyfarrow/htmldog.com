@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Text | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../cssbeginner/index.html">Beginner</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Text</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>You can alter the size and shape of the text on a web page with a range of properties.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>font-family</h2>
+
+<p>This is the font itself, such as Times New Roman, Arial, or Verdana.</p>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>The user&#8217;s browser has to be able to find the font you specify, which, in most cases, means it needs to be on <strong>their</strong> computer so there is little point in using obscure fonts that are only sitting on <strong>your</strong> computer. There are a select few &#8220;<strong>safe</strong>&#8221; fonts (the most commonly used are Arial, Verdana and Times New Roman), but you can specify more than one font, separated by <strong>commas</strong>. The purpose of this is that if the user does not have the first font you specify, the browser will go through the list until it finds one it does have. This is useful because different computers sometimes have different fonts installed. So <code>font-family: arial, helvetica, serif</code>, will look for the Arial font first and, if the browser can&#8217;t find it, it will search for Helvetica, and then a common serif font.</p>
+
+<p>Note: if the name of a font is more than one word, it should be put in quotation marks, such as <code>font-family: "Times New Roman"</code>.</p>
+
+<aside class="note">
+<p>You can use a wider selection than the &#8220;safe&#8221; fonts using several methods outlined in the CSS Advanced Tutorial but if you&#8217;re just getting to grips with CSS, we suggest sticking with this basic standard approach for the moment.</p>
+</aside>
+
+<h2>font-size</h2>
+
+<p><a href="../../../../reference/cssproperties/font-size/index.html" class="acode"><code>font-size</code></a> sets the size of the font. Be careful with this &#8212; text such as headings should not just be an HTML paragraph (<a href="../../../../references/html/tags/p/index.html" class="acode"><code>p</code></a>) in a large font - you should still use headings (<a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a>, <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a> etc.) even though, in practice, you could make the font-size of a paragraph larger than that of a heading (not recommended for sensible people).</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>font-weight</h2>
+
+<p><a href="../../../../reference/cssproperties/font-weight/index.html" class="acode"><code>font-weight</code></a> states whether the text is bold or not. Most commonly this is used as <code>font-weight: bold</code> or <code>font-weight: normal</code> but other values are <code>bolder</code>, <code>lighter</code>, <code>100</code>, <code>200</code>, <code>300</code>, <code>400</code> (same as <code>normal</code>), <code>500</code>, <code>600</code>, <code>700</code> (same as <code>bold</code>), <code>800</code> or <code>900</code>.</p>
+
+<figure class="note shot">
+    <div><img src="../../../../figures/weightStyle.gif" width="511" height="270"></div>
+    <figcaption><a href="../../../../reference/cssproperties/font-weight/index.html" class="acode"><code>font-weight</code></a>, <a href="../../../../reference/cssproperties/font-style/index.html" class="acode"><code>font-style</code></a>, <a href="../../../../references/css/properties/font-variant/index.html" class="acode"><code>font-variant</code></a>, and <a href="../../../../references/css/properties/text-transform/index.html" class="acode"><code>text-transform</code></a>.</figcaption>
+</figure>
+
+<aside class="note warning">
+<p>Play around with these font-weight values if you want see their effect but, keep in mind, that some older browsers become a little confused with anything other than <code>bold</code> and <code>normal</code> so we suggest sticking to those unless you&#8217;re a typography ninja.</p>
+</aside>
+
+<h2>font-style</h2>
+
+<p><a href="../../../../reference/cssproperties/font-style/index.html" class="acode"><code>font-style</code></a> states whether the text is italic or not. It can be <code>font-style: italic</code> or <code>font-style: normal</code>.</p>
+
+<h2>text-decoration</h2>
+
+<p><a href="../../../../reference/cssproperties/text-decoration/index.html" class="acode"><code>text-decoration</code></a> states whether the text has got a line running under, over, or through it.</p>
+
+<ul>
+<li><code>text-decoration: underline</code>, does what you would expect.</li>
+<li><code>text-decoration: overline</code> places a line above the text.</li>
+<li><code>text-decoration: line-through</code> puts a line through the text (&#8220;strike-through&#8221;).</li>
+</ul>
+
+<p>This property is usually used to decorate links and you can specify no underline with <code>text-decoration: none</code>.</p>
+
+<aside class="note warning">
+<p>Underlines should only really be used for links. They are a commonly understood web convention that has lead users to generally expect underlined text to be a link.</p>
+</aside>
+
+<h2>text-transform</h2>
+
+<p><a href="../../../../references/css/properties/text-transform/index.html" class="acode"><code>text-transform</code></a> will change the case of the text.</p>
+
+<ul>
+<li><code>text-transform: capitalize</code> turns the first letter of every word into uppercase.</li>
+<li><code>text-transform: uppercase</code> turns everything into uppercase.</li>
+<li><code>text-transform: lowercase</code> turns everything into lowercase.</li>
+<li><code>text-transform: none</code> I&#8217;ll leave for you to work out.</li>
+</ul>
+
+<p>So, a few of these things used together might look like this:</p>
+
+<pre><code class="oldLang language-css">
+body {
+<strong>    font-family: arial, helvetica, sans-serif;</strong>
+<strong>    font-size: 14px;</strong>
+}
+
+h1 {
+<strong>    font-size: 2em;</strong>
+}
+
+h2 {
+<strong>    font-size: 1.5em;</strong>
+}
+
+a {
+<strong>    text-decoration: none;</strong>
+}
+
+strong {
+<strong>    font-style: italic;</strong>
+<strong>    text-transform: uppercase;</strong>
+}
+</code></pre>
+
+<h2>Text spacing</h2>
+
+<p>Before we move on from this introduction to styling text, a quick look at how to space out the text on a page.</p>
+
+<figure class="note shot">
+    <div><img src="../../../../figures/spacingOutText.gif" width="500" height="400"></div>
+    <figcaption><a href="../../../../examples/textalign/index.html">Spacing out text</a></figcaption>
+</figure>
+
+<p>The <a href="../../../../references/css/properties/letter-spacing/index.html" class="acode"><code>letter-spacing</code></a> and <a href="../../../../references/css/properties/word-spacing/index.html" class="acode"><code>word-spacing</code></a> properties are for spacing between letters or words. The value can be a length or <code>normal</code>.</p>
+
+<p>The <a href="../../../../references/css/properties/line-height/index.html" class="acode"><code>line-height</code></a> property sets the height of the lines in an element, such as a paragraph, without adjusting the size of the font. It can be a number (which specifies a multiple of the font size, so &#8220;2&#8221; will be two times the font size, for example), a length, a percentage, or <code>normal</code>.</p>
+
+<p>The <a href="../../../../references/css/properties/text-align/index.html" class="acode"><code>text-align</code></a> property will align the text inside an element to left, right, center, or justify.</p>
+
+<p>The <a href="../../../../references/css/properties/text-indent/index.html" class="acode"><code>text-indent</code></a> property will indent the first line of a paragraph, for example, to a given length or percentage. This is a style traditionally used in print, but rarely in digital media such as the web.</p>
+
+<pre><code class="oldLang language-css">
+p {
+<strong>    letter-spacing: 0.5em;</strong>
+<strong>    word-spacing: 2em;</strong>
+<strong>    line-height: 1.5;</strong>
+<strong>    text-align: center;</strong>
+}
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../margins/index.html">Margins and Padding</a></li>
+  <li>Previous Page: <a href="../colors/index.html">Colors</a></li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/fontsizes/index.html">Font sizes</a>: Using <code>font-size</code>.</li>
+  <li><a href="../../../../examples/headings2/index.html">Size doesn&#8217;t matter</a>: Changing default sizes.</li>
+  <li><a href="../../../../examples/fontfamilies/index.html">Font families</a>: Font lists and fallback fonts with <code>font-family</code>.</li>
+  <li><a href="../../../../examples/case/index.html">Bold, italics, case, and line height</a>: using <code>font-weight</code>, <code>font-style</code>, <code>font-variant</code>, <code>text-transform</code>, and <code>line-height</code>.</li>
+  <li><a href="../../../../examples/textalign/index.html">Spacing out text</a>: Using <code>text-align</code>, <code>text-indent</code>, <code>word-spacing</code>, and <code>letter-spacing</code>.</li>
+  </ul>
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/css/properties/font-family/index.html">CSS Property: <code>font-family</code></a></li>
+  <li><a href="../../../../reference/cssproperties/font-size/index.html">CSS Property: <code>font-size</code></a></li>
+  <li><a href="../../../../reference/cssproperties/font-weight/index.html">CSS Property: <code>font-weight</code></a></li>
+  <li><a href="../../../../reference/cssproperties/font-style/index.html">CSS Property: <code>font-style</code></a></li>
+  <li><a href="../../../../reference/cssproperties/text-decoration/index.html">CSS Property: <code>text-decoration</code></a></li>
+  <li><a href="../../../../references/css/properties/text-transform/index.html">CSS Property: <code>text-transform</code></a></li>
+  <li><a href="../../../../references/css/properties/letter-spacing/index.html">CSS Property: <code>letter-spacing</code></a></li>
+  <li><a href="../../../../references/css/properties/word-spacing/index.html">CSS Property: <code>word-spacing</code></a></li>
+  <li><a href="../../../../references/css/properties/line-height/index.html">CSS Property: <code>line-height</code></a></li>
+  <li><a href="../../../../references/css/properties/text-align/index.html">CSS Property: <code>text-align</code></a></li>
+  <li><a href="../../../../references/css/properties/text-indent/index.html">CSS Property: <code>text-indent</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>CSS&nbsp;tutorials</h2>
+			<ul>
+				<li id="yahSubsec"><a href="../../../cssbeginner/index.html">Beginner</a>
+					<ul>
+						<li><a href="../applyingcss/index.html">Applying CSS</a></li>
+						<li><a href="../selectors/index.html">Selectors, Properties, and Values</a></li>
+						<li><a href="../colors/index.html">Colors</a></li>
+						<li><a href="index.html">Text</a></li>
+						<li><a href="../margins/index.html">Margins and Padding</a></li>
+						<li><a href="../borders/index.html">Borders</a></li>
+						<li><a href="../conclusion/index.html">Putting It All Together</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../../cssintermediate/index.html">Intermediate</a></li>
+				
+				
+				<li><a href="../../../cssadvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

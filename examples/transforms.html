@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2D Transforms</title>
+	<style>
+		body {
+			font: 15px/1.5 helvetica, arial, sans-serif;
+			background: #333;
+			color: #ccc;
+			margin: 50px 0 50px 50px;
+		}
+		a, code { color: #fff }
+		p { margin-bottom: 50px }
+	
+		pre, #htmldog {
+			float: left;
+			height: 300px;
+			width: 300px;
+			background-color: #666;
+			margin: 0 50px 50px 0;
+			white-space: normal;
+		}
+		pre code {
+			display: block;
+			height: 260px;
+			background: rgba(255,204,000,.7);
+			padding: 20px;
+		}
+
+		#c0 {
+			-webkit-transform: none; /* for some older browsers */
+			-ms-transform: none; /* for IE9 */
+			transform: none; /* default, obvs */
+		}
+		#c1 {
+			-webkit-transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+			transform: rotate(10deg);
+		}
+		#c2 {
+			-webkit-transform: skewX(10deg);
+			-ms-transform: skewX(10deg);
+			transform: skewX(10deg);
+		}
+		#c3 {
+			-webkit-transform: skewY(-10deg);
+			-ms-transform: skewY(-10deg);
+			transform: skewY(-10deg);
+		}
+		#c4 {
+			-webkit-transform: skew(10deg, -10deg);
+			-ms-transform: skew(10deg, -10deg);
+			transform: skew(10deg, -10deg);
+		}
+		#c5 {
+			-webkit-transform: scale(0.8);
+			-ms-transform: scale(0.8);
+			transform: scale(0.8);
+		}
+		#c6 {
+			-webkit-transform: scale(0.8, 1.2);
+			-ms-transform: scale(0.8, 1.2);
+			transform: scale(0.8, 1.2);
+		}
+		#c7 {
+			-webkit-transform: translate(25px, 10px);
+			-ms-transform: translate(25px, 10px);
+			transform: translate(25px, 10px);
+		}
+		#c8 {
+			-webkit-transform: scale(0.8) rotate(10deg) translate(25px, 10px);
+			-ms-transform: scale(0.8) rotate(10deg) translate(25px, 10px);
+			transform: scale(0.8) rotate(10deg) translate(25px, 10px);
+		}
+		#c9 {
+			-webkit-transform: matrix(0.787846, 0.138919, -0.138919, 0.787846, 18.307, 11.3514);
+			-ms-transform: matrix(0.787846, 0.138919, -0.138919, 0.787846, 18.307, 11.3514);
+			transform: matrix(0.787846, 0.138919, -0.138919, 0.787846, 18.307, 11.3514);
+		}
+
+		#htmldog a {
+			display: block;
+			padding: 105px 90px;
+			background: rgba(255,204,000,.7);
+			-webkit-transform: scale(.8);
+			-ms-transform: scale(.8);
+			transform: scale(.8);
+			transition: .7s transform cubic-bezier(0.5,1.5,0.5,-0.5);
+		}
+		#htmldog a:hover {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="http://www.htmldog.com/guides/css/advanced/transformations/">2D Transforms</a></h1>
+	<p>Using the <a href="http://www.htmldog.com/references/css/properties/transform/"><code>transform</code></a> CSS property.</p>
+
+	<pre><code id="c0">transform: none;</code></pre>
+
+	<pre><code id="c1">transform: rotate(10deg);</code></pre>
+
+	<pre><code id="c2">transform: skewX(10deg);</code></pre>
+
+	<pre><code id="c3">transform: skewY(-10deg);</code></pre>
+
+	<pre><code id="c4">transform: skew(10deg, -10deg);</code></pre>
+
+	<pre><code id="c5">transform: scale(0.8);</code></pre>
+
+	<pre><code id="c6">transform: scale(0.8, 1.2);</code></pre>
+
+	<pre><code id="c7">transform: translate(25px, 10px);</code></pre>
+
+	<pre><code id="c8">transform: scale(0.8) rotate(10deg) translate(25px, 10px);</code></pre>
+
+	<pre><code id="c9">transform: matrix(0.787846, 0.138919, -0.138919, 0.787846, 18.307, 11.3514);</code></pre>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="htmldog"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog" width="120" height="90"></a></p>
+</body>
+</html>

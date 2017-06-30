@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Linear gradients</title>
+	<style>
+		html {
+			background: -webkit-linear-gradient(left, yellow, red);
+			background: linear-gradient(to left, yellow, red);
+			height: 100%;
+		}
+
+		body {
+			font: 14px/1.5 courier;
+			color: #000;
+		}
+	
+		p {
+			width: 200px;
+			height: 200px;
+			padding: 20px;
+			margin: 20px 0 0 20px;
+			float: left;
+			border: 1px solid yellow;
+		}
+	
+		#gradient1 {
+			background: #888 url(images/gradientLinear.jpg) repeat-x; /* Background images can be used for browsers that aren't capable of producing gradients */
+			background: -webkit-linear-gradient(yellow, red); /* Backup for major browsers that can still handle gradients */
+			background: linear-gradient(yellow, red); /* The CSS3 standard */
+		}
+		
+		#gradient2 {
+			background: -webkit-linear-gradient(right, yellow, red);
+			background: linear-gradient(to right, yellow, red);
+		}
+		
+		#gradient3 {
+			background: -webkit-linear-gradient(bottom right, yellow, red);
+			background: linear-gradient(to bottom right, yellow, red);
+		}
+		
+		#gradient4 {
+			background: -webkit-linear-gradient(20deg, yellow, red);
+			background: linear-gradient(20deg, yellow, red);
+		}
+		
+		#gradient5 {
+			background: -webkit-linear-gradient(hsl(0,100%,50%), hsl(60,100%,50%), hsl(120,100%,50%), hsl(180,100%,50%), hsl(240,100%,50%), hsl(300,100%,50%));
+			background: linear-gradient(hsl(0,100%,50%), hsl(60,100%,50%), hsl(120,100%,50%), hsl(180,100%,50%), hsl(240,100%,50%), hsl(300,100%,50%));
+		}
+		
+		#gradient6 {
+			background: -webkit-linear-gradient(135deg, hsl(36,100%,50%) 10%, hsl(72,100%,50%) 60%, white 90%);
+			background: linear-gradient(135deg, hsl(36,100%,50%) 10%, hsl(72,100%,50%) 60%, white 90%);
+		}
+		
+		#gradientCollie {
+			width: 120px;
+			height: 90px;
+			padding: 75px 60px;
+			background: -webkit-linear-gradient(white, #06c);
+			background: linear-gradient(white, #06c);
+		}
+	</style>
+</head>
+<body>
+	<p id="gradient1"><code>background: linear-gradient(yellow, red);</code></p>
+	<p id="gradient2"><code>background: linear-gradient(to right, yellow, red);</code></p>
+	<p id="gradient3"><code>background: linear-gradient(to bottom right, yellow, red);</code></p>
+	<p id="gradient4"><code>background: linear-gradient(20deg, yellow, red);</code></p>
+	<p id="gradient5"><code>background: linear-gradient(hsl(0,100%,50%), hsl(60,100%,50%), hsl(120,100%,50%), hsl(180,100%,50%), hsl(240,100%,50%), hsl(300,100%,50%));</code></p>
+	<p id="gradient6"><code>background: linear-gradient(135deg, hsl(36,100%,50%) 10%, hsl(72,100%,50%) 60%, white 90%);</code></p>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="gradientCollie"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

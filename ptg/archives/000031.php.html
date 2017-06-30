@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Redesign: Layout and Presentation - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000031.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Redesign: Layout and Presentation</h1>
+	
+<h2>Wednesday 18 February, 2004 (12:04PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<h3>Layout</h3>
+
+<p>Without wanting to fall into the heated layout debate (again), I thought it would be worth briefly mentioning a few things about the HTML Dog layout and the thought processes behind making such decisions in general.</p>
+
+<p>Just as I was leaning towards using a fixed-width layout I re-opted to stick with fluid (I prefer the term 'fluid' to 'liquid' simply because it rhymes with 'fixed'). I won't repeat <a href="000012.php.html">previous arguments</a>, I'll just say that trade-offs have to be made with whichever method you use and I felt that fluid was best for HTML Dog, but, y'know, it's not a universal thing - I'm still not saying one is better than the other. Uh oh... I think I'm slipping into fixed/fluid argument territory...</p>
+
+<p>The layout remains <a href="000011.php.html">elastic</a> (apart from the height of the header, due to its newly pixel-based construction) because not only do I think it's damned funky, I still believe it offers great advantages, particularly in the area of accessibility. The third column does cause some problems when it comes to elasticity in that the larger the font-size (and therefore left and right column width) the more compressed the central content area becomes. Due to the fluid nature of the central area however, it can at least slim right down before it starts to break. This example highlights further benefits of using fluid over fixed elements when it comes to elastic methodology.</p>
+
+<h3>Templates and Style Guides</h3>
+
+<p>A number of templates for the content-area were formulated following a strict style guide. Style guides and templates are an essential tool in constructing a website (even if they're just in your head) and they become increasingly important the larger the site gets - consistency is good. I tried to keep with much of the previous style of the content area, which already had a great deal of thought go into it, regarding how to highlight things such as code, examples, notes and the all important headings and subheadings. The biggest overhaul was in how to break down areas. Previously, there were a number of boxes that contained, for example, the main heading and you-are-here-jobbo, the blog entry, the comments and the form for posting a comment. Now they are all augmented into one area and broken up with solid or dotted lines. Personally, I think this is clearer and works much better.</p>
+
+<p>Some comments have already been made about the use of grey text (for highlighting a comment author and date for example) and that its lower contrast with the background is a bad thing. On one hand this does decrease usability because it is harder to read, but I think it also increases usability because it makes it stand out from the comment itself. There we go with trade-offs again.</p>
+
+<p>Of course, one of the things that makes style guides that much easier to implement and maintain is CSS - just one little change in a single file and a change in style is made across the entire site.</p>
+
+<h3>The Future</h3>
+
+<p>One of the things at the back of my mind is that it is becoming increasingly necessary to keep an eye on what's around the corner and how users may be surfing the web in the near future (even now). The rise and increasing popularity of <a href="http://www.nokia.co.uk/nokia/0,,48691,00.html">sophisticated mobile phones</a> that incorporate PDA style displays means that access to websites is forever moving into arenas other than the desktop (or laptop). Smaller devices with smaller screens bring specific implications with regard page layouts. Although the PC isn't going anywhere anytime soon, the need to accommodate a wider array of screen sizes is creeping up on us. Just as many are starting to think that we can begin to worry less about resolutions as small as 800x600, it could well be that we actually have to start thinking about resolutions that are becoming even smaller.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000031.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I like your Redesign very much. It keeps the simple style of the site and adds functuality with the third column. The 'you are here'-hint is also very useful, espacially when one has linked a subpage instead of the homepage of your website. And the using of some images for design purposes (e.g. the rounded corners at the top and bottom of the content area) is imho a good idea, especially because the site is still full accesible and readable if one turns the images of in oneselves browser.<br>
+But there are also some things I want to critisise. Firstly, there is no print layout at all. The Website remains in it's layout when you print it, which can be annoying because two thirds are taken up by the left and right navigation colums which lets long texts take much pages even if the user doesn't need these two colums at all. Secondly, why don't you use the link-tags to mirror the relationship of the individual pages among ech other?<br>
+But after all your site is still very good as the content hasn't really changed since the redesign :).<br>
+Sorry for my maybe not so good English, but my first language ist German as I have told you before, remember?</p>
+<p class="by">So said <a href="http://www.don-mcduck.de/">Maximilian Baumgart</a> on Wednesday 18 February, 2004 at 12:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000031.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>A little off topic, perhaps, but the validator is complaining about the comment form below. You appear to have given it its identifier by 'name' rather than 'id', which it doesn't like.</p>
+<p class="by">So said Mark Harmstone on Wednesday 18 February, 2004 at  1:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000031.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>I too like the redesign very much.</p>
+
+<p>I agree with Maximilian that you should use link tags where possible (I am just working out the mechanics of adding them to my site too).</p>
+
+<p>I have just one, slight, criticism - and it's only a subjective one: I do not like the way the gray bar (at the top and bottom of the content area) ends at the window edge. I feel these should be closed off  before the edge.</p>
+
+<p>Why? Well there's a subliminal effect (for me anyway). I keep getting the impression that I need to scroll horizontally and I couldn't figure out why until I realised that it's the gray bars - they seem to suggest a further content to the right.</p>
+
+<p>Of course, it could just be me! ;-)</p>
+<p class="by">So said <a href="http://urbanmainframe.com/">DarkBlue</a> on Wednesday 18 February, 2004 at  1:20PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000031.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Maximillian - I remember! Thanks for pointing out about the print thing. Something that completely slipped my mind even though I've got it written down on the things I should have done....! I've now added a few things to the CSS to make it more printer friendly. I'll work on something a bit better when I have time.</p>
+
+<p>Mark - Thanks for that. I've fixed the problem and now all should be hunky dorey.</p>
+
+<p>And Mr. DarkBlue! Interesting point. I'm not sure really. That's something I hadn't thought of. I won't change it just yet, but I'll certainly keep it in mind.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 18 February, 2004 at  1:36PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000031.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Whoa! That phone is nuts</p>
+<p class="by">So said Chris on Wednesday 18 February, 2004 at  4:18PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000031.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Looks great... but fluid doesn't rhyme with fixed :p</p>
+<p class="by">So said haze on Thursday 19 February, 2004 at 12:38AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000031.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Sure it does... erm... they both begin with 'f'... erm.... okay okay. I looked up 'rhyme' in the dictionary to see if I could somehow squeeze my claim into the official definition like a square peg in a round hole. Okay. Fine. I got it wrong. BUT YOU KNOW WHAT I MEAN!!!</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Thursday 19 February, 2004 at  9:49AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000031.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Fluid or Fixed....thats kind of illiteration which is the poor cousin of rhyme.  Oh well, it's a good job your not a rapper. </p>
+<p class="by">So said <a href="http://www.danwebb.net/">Dan W</a> on Thursday 19 February, 2004 at  1:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000031.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>Alliteration. "Fixed" and "fluid" are alliterative.</p>
+
+<p>And the site looks good. What's with that elephant in your logo? ;)</p>
+<p class="by">So said Neal on Saturday 21 February, 2004 at  8:17PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000032.php.html">Redesign: Branding</a></li>			<li id="previous">Previous Page: <a href="000030.php.html">The Redesign</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000031.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

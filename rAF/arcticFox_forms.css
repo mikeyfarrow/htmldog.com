@@ -1,0 +1,35 @@
+article label {
+	display: block;
+	width: 50%;
+	padding-bottom: 10px;
+}
+article input, article textarea {
+	box-sizing: border-box;
+	padding: 10px 15px;
+	color: #666;
+	background: #f5f2f0;
+}
+article input {
+	display: block;
+	width: 50%;
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+article form :focus {
+	color: #fff;
+	background: #999;
+}
+article textarea {
+	width: 100%;
+	height: 230px;
+	margin-bottom: 30px;
+}
+article input[type="submit"] {
+	width: auto;
+	padding: 0 15px;
+	color: #fff;
+	background: #08e;
+	background: linear-gradient(#6bf, #08e);
+	border: 3px solid #08e;
+}
+article input[type="submit"]:focus { border-color: #6bf }

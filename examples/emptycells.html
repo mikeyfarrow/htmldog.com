@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Empty cells</title>
+	<style>
+		table {
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #999;
+			padding: 0.1em 1em;
+			empty-cells: hide;
+		}
+
+		.alternative {
+			background-color: #ddf;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>Animal groups</caption>
+		<colgroup>
+			<col span="3">
+			<col class="alternative">
+			<col>
+		</colgroup>
+		<tr>
+			<th>Apes</th>
+			<th colspan="2">Cats</th>
+			<th style="background: #ddf;">Dogs</th>
+			<th>Lemurs</th>
+		</tr>
+		<tr>
+			<td>Gorilla</td>
+			<td></td>
+			<td>Cheetah</td>
+			<td style="background: #ddf;">Grey Wolf</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Lion</td>
+			<td>Puma</td>
+			<td style="background: #ddf;"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Serval</td>
+			<td style="background: #ddf;"></td>
+			<td>Red ruffed lemur</td>
+		</tr>
+		<tr>
+			<td>Chimpanzee</td>
+			<td>Leopard</td>
+			<td>Caracal</td>
+			<td style="background: #ddf;">Red Fox</td>
+			<td>Ring tailed lemur</td>
+		</tr>
+		<tr>
+			<td>Bonobo</td>
+			<td>&nbsp;</td><!-- a non-breaking space makes this not an empty cell -->
+			<td>Wild cat</td>
+			<td style="background: #ddf;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+	<!-- Link back to HTML Dog: -->
+	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

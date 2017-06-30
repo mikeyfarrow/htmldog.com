@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Mobile CSS is a Reality - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000056.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Mobile CSS is a Reality</h1>
+	
+<h2>Tuesday 15 June, 2004 ( 5:18PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>The response to the <a href="000055.php.html">mobile CSS support test</a> has been fantastic - thanks to everyone who has helped out. Hopefully I'm not the only one who finds these results helpful.</p>
+
+<p>All in all I would say that the results are encouraging. There appears to be enough support for the <code>handheld</code> media type (much more than I expected) to warrant the use of a media-specific style sheet, just as you can for print. And as the mobile market increases in size and technological capability, this seems like a sensible thing to at least think about (does anyone really doubt that the mobile internet is going to play an important role in the future?), if not already practice (the future's here!).</p>
+
+<p>Those devices that <em>only</em> support the <code>screen</code> media type (which is meant for large screens - desktop or laptop monitors) are the ones that will cause problems, but these seem few and far between, and, from what I can gather, something that is fast becoming a thing of the past as newer models seem to be eradicating this erroneous behaviour.</p>
+
+<p>Personally, I'm not that fussed about those that do not support CSS at all - well-structured HTML should be presented quite well by default with content that is quite accessible. Besides, there isn't much that can be done about this. I also genuinely think that this lack of support won't last long. Yes, HTML browsing is a good first step, but there are those coming along in leaps and bounds...</p>
+
+<p>The cutting edge PDA browsers from Microsoft and Opera (the popularity of the latter of which I think I underestimated) are making their way into phones and the way things are going, full-on mobile CSS is a reality. It's already here on some popular devices and as technology improves and becomes cheaper I can't see things going any other way than along a CSS-supported route.</p>
+
+<p>So in practical terms, a mobile-specific style sheet <em>is</em> a viable option, but you need to take into account that, at the moment, an apparently sizable chunk of mobile browser share (Pocket IE) also apply styles that are supposed to be specific to the "screen" media type. This means you can't separate <code>screen</code> and <code>handheld</code> (and if you think you're hiding your styles from these devices by just using a <code>screen</code> style sheet you're sadly mistaken) and you have to take into account the cascade and overrule any screen-specific styles you don't want in your handheld design.</p>
+
+<p>Just like the desktop web, users are already demanding more and expect better features. Small screen design is an area with clear practical problems when it comes to tables and spacer gifs and perfectly lends itself to web standards and CSS. Device manufacturers are realising this, now it's time for the web designers to catch on and take advantage of this burgeoning market.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000056.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I tried your test on my Sony-Ericsson T230, and the results surprised me a bit - all was listed as not applied.</p>
+
+<p>According to the specs I found on SE's developer pages, when I had just bought the phone, it should quite happily understand XHTML and CSS. However, it AFAIR requires the &lt;?xml?&gt; header to recognise it as xhtml. If the xml-prolog is not present, I beleive it will try to render the page as something called iHTML, which is quite like a simplified version of oldfashioned tagsoup.</p>
+
+<p>The specific XHTML-version it should understand is XHTML Mobile Profile which is a slightly enhanced version of XHTML Basic.</p>
+<p class="by">So said Ole Hansen on Tuesday 15 June, 2004 at  6:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000056.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Let me bring up this question one more time, since I would really like to know. Do mobile phones support XHTML? As in 'application/xhtml+xml', as in parse errors?</p>
+
+<p>Or do they render, only 'text/html' and therefore only invalid HTML (when you use the XHTML syntax)?</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday 15 June, 2004 at  7:10PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000056.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Anne - I assume that Opera browsers will support that MIME type. I assume that most others won't. I don't have any evidence of this, but on a more general note I think it's quite safe to say that given the massive variances in support of one sort or another, some will and some won't.</p>
+
+<p>And although that's preferable, as long as you're not declaring XHTML1.1, "text/html" is still a valid MIME type for XHTML.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday 15 June, 2004 at  7:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000056.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>My SE T230 accepts application/xhtml+xml but ignores parse errors in a small test document (with no CSS). Here is the source of the malformed page, I tried:</p>
+
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"<br>
+    "<a href="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">"&gt;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</a><br>
+&lt;html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml"</a> xml:lang="en" &gt;<br>
+  &lt;head&gt;<br>
+    &lt;title&gt;Testing&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+    &lt;p&gt;This page should be served as application/xhtml+xml<br>
+  &lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p class="by">So said Ole Hansen on Tuesday 15 June, 2004 at 10:24PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000056.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Nice work fella. Next step, a CSS support chart to see which rules the various phones understand. Have it on my desk by Tuesday :-)</p>
+<p class="by">So said <a href="http://www.andybudd.com/">Andy Budd</a> on Wednesday 16 June, 2004 at 10:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000056.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Good Job. Now how do you design for handhelds and phones?</p>
+<p class="by">So said <a href="http://www.vaneerden.com/">Bill Creswell</a> on Wednesday 16 June, 2004 at 11:40AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000056.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Patrick, great info. I agree with Andy: can we put the results in a sort of chart on this site? Would be nice to keep on adding phones and their support!</p>
+<p class="by">So said <a href="http://www.minvws.nl/">GeeBee</a> on Wednesday 16 June, 2004 at  9:16PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000056.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Yeah, I agree it's a good idea. Just need to find the time (I have too much beer drinking and football watching to do at the moment).</p>
+
+<p>As for having it on Mr. Budd's desk by Tuesday... erm... sure... Tuesday 19th? Of November? 2005?</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 16 June, 2004 at  9:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000056.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>Nokia's own XHTML browser found in many of their mobiles reads both screen and handheld CSS so if you use display:none techniques to delivery mobile specific content, you end up with a blank page. Point a Nokia XHTML mobile to <a href="http://pukupi.com/big/">http://pukupi.com/big/</a> to see what I mean.</p>
+
+<p>And then there are DoCoMo's FOMA (3G) mobiles...</p>
+
+<p>Mobile browser support for Web standards is diabolical!</p>
+<p class="by">So said <a href="http://pukupi.com/">Kyle Barrow</a> on Friday 18 June, 2004 at  4:55AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000056.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>While I'm a big fan of the possibilities this investigation heralds, I think there's something that needs to be noted.<br>
+The demographic involved is almost exclusively web professionals -- and standards advocates at that. The people who responded to your plea via the original post and via the WSG list are the type who would consider it their duty to have the latest and greatest browsers on their phone. THese same people probably aslo looked into this at the time of purchase.<br>
+Not to detract from this at all, quite on the contrary; but it would be great if we could extend this test out into the real world...</p>
+<p class="by">So said Andrew Krespanis on Friday 18 June, 2004 at  9:57AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000056.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Andrew - I agree. To an extent.</p>
+
+<p>I think, as one example, the number of people who have chosen to install the Opera browser on their devices is not representative - we know all too well how difficult it is to convince the masses to use a browser other than the one pre-installed (of even to make them realise that such things exist).</p>
+
+<p>A lot of the results however, come from in-built browsers on everyday phones (I was particularly impressed with the support that the browsers on Motorola phones have for example).</p>
+
+<p>Obviously, we can only look at phones (or PDA's) that have such web functionality, but those who gave results for devices that allow you to install other browsers also tended to give results for the in-built browser as well as any other extra they had added.</p>
+
+<p>CSS support is likely to be higher on the devices of techno-savvy people (who either install a browser, such as Opera, or make an informed choice on which device they want from the outset), but the results are only the results of devices and their platforms/OS/browsers. Additionally, what we need is statistics on device popularity in the wider world. What I'm encouraged about is that quite a lot of clearly popular models (for Europe/America, anyway) have been included in the test results - Nokias, Ericssons, Motorolas, Windows-based PDA's etc.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Friday 18 June, 2004 at 10:15AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000056.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>On the same note, remour has it that Nokia has invested in Mozilla: <a href="http://www.theregister.co.uk/2004/06/19/nokia_mozilla_browser/">http://www.theregister.co.uk/2004/06/19/nokia_mozilla_browser/</a><br>
+THis can only be a plus! :D</p>
+<p class="by">So said Andrew on Saturday 19 June, 2004 at 10:30AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000056.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>What I would like to see is some descent emulators for handheld, and other media built into, or extensions of browsers like Mozilla (most desktop browsers already emulate print) that can be run on the desktop so that development of stylesheets for these devices can be made easier and cheaper.  It costs quite a lot (at least for me anyway, (2.2c/KB which works out to be, if my calculations are correct, $AUD22/MB) to keep uploading to a web server for testing on the my mobile/pda.  I'm quite sure I spent quite a few dollars just for my phone to connect via GPRS and download each test I developed [1] (as I commented in the "HTML and CSS for Mobiles" post)., which would have been saved if I were able to test locally (to work out the bugs) before doing one test for the results at the end.</p>
+
+<p>[1] <a href="http://www.lachy.id.au/css/tests/media/">http://www.lachy.id.au/css/tests/media/</a></p>
+<p class="by">So said <a href="http://www.lachy.id.au/">Lachlan Hunt</a> on Sunday 20 June, 2004 at  4:08PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000056.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>The W3C DOM should have a propery that alerts the media type, IMHO. </p>
+<p class="by">So said Dante on Sunday 20 June, 2004 at  8:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000056.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>Is this the reason for nokias poor performance, a different DTD?</p>
+
+<p><a href="http://www.forum.nokia.com/main/0,6566,1_1_25_30,00.html#19">http://www.forum.nokia.com/main/0,6566,1_1_25_30,00.html#19</a></p>
+<p class="by">So said <a href="http://www.moreofthesame.com/">Ryan</a> on Monday 21 June, 2004 at  9:55AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000056.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>The DTD looks like the standard XHTML MP to me. Nokia mobiles have an annoying habit of reading both handheld and screen CSS.</p>
+<p class="by">So said <a href="http://pukupi.com/">Kyle Barrow</a> on Monday 21 June, 2004 at  9:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000056.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>I might be wrong, but there is one problem I just encountered. If I have</p>
+
+<p>&lt;style type="text/css" media="screen, tv, projection"&gt; @import "main.css"; &lt;/style&gt;</p>
+
+<p>&lt;style type="text/css" media="handheld"&gt; @import "handheld.css"; &lt;/style&gt;</p>
+
+<p>then Win IE5.x will render both of those in desktop browsers (this does not happen with media="print").  IE6 is fine. Similarly, PocketPC 2003 will also render both styles. Very unfotunate. :(</p>
+<p class="by">So said <a href="http://www.aplus.co.yu/">Aleksandar</a> on Saturday  3 July, 2004 at 10:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000056.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>See <a href="http://my.opera.com/">http://my.opera.com</a> for a site which uses media handheld quite extensively. Works great in the mobile versions of Opera. And elements with display:none in will not be downloaded.</p>
+
+<p>Lachlan Hunt wrote:<br>
+&gt; What I would like to see is some descent emulators for handheld, and other<br>
+&gt; media built into, or extensions of browsers like Mozilla (most desktop browsers<br>
+&gt; already emulate print) that can be run on the desktop so that development of<br>
+&gt; stylesheets for these devices can be made easier and cheaper.</p>
+
+<p>The Opera desktop versions supports this. Use Opera 7.x and hit SHIFT-F11 to trigger handheld mode (Or View -&gt; Small Screen in the menus).</p>
+<p class="by">So said Robert Parker on Sunday  4 July, 2004 at  3:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment19" class="comment">
+<h3><a href="000056.php.html#comment19"><span>Comment </span>19</a></h3>
+<p>Somewhere I was just reading t'other day (molly.com? photomatt.net?) pointed me to Heidi Pollack's webmonkey article from March "The End-All Guide to Small-Screen Web-Dev" with the advice to print it before Lycos kills off all the lovely monkey content for good. <a href="http://hotwired.lycos.com/webmonkey/04/12/index4a.html">http://hotwired.lycos.com/webmonkey/04/12/index4a.html</a></p>
+
+<p>I'd be interested in hearing some of the more spec-savvy folks' reactions to this. I think it's the best summary I've seen, but then I've been suffering from a bit of the developer despair she mentions in the first paragraph. </p>
+
+<p>In particular, what do folks think of her conclusions re: focusing on XHTML rather than WML?</p>
+<p class="by">So said <a href="http://www.metagrrrl.com/">Dinah Sanders</a> on Tuesday 13 July, 2004 at  6:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment20" class="comment">
+<h3><a href="000056.php.html#comment20"><span>Comment </span>20</a></h3>
+<p>Great info! My feeling on the mobile market is the following based on all this ::: The w3c is obviously pushing XHTML-basic ( a subset of xhtml and html) for most devices and from what Im seeing, this satisfies many of the newer and some older agents in what they need to adequately display most web sites online. I completely understand the initial push for some devices and browsers (like pocket PC) to try and build software that reads ANY web page online, even those NOT designed for handheld type style sheets or layout. After all, on the larger mobile devices with the bigger screens, why would I buy the thing if it cant assist me in viewing ANY web site online (thus, the problem of some agents using media="screen", which is incorrect). I think thats the ultimate dream with some of these micro-browsers; the ability to view any website even while having to crop and proxy-out and filter data as it needs to do that. I dont think thats going to change on the bigger devices....but....allot of the smaller ones seem to be abandoning WML, cHTML, iHTML, and the other languages and using a new language (XHTML-Basic). But what that tells me is the W3c is pushing for you to build one version of your site in xhtml for desktop and another for mobile devices, and completely separate the two, unless you are prepared to build a server side detection system to spit out the right DOCTYPE for xhtml-basic.<br>
+So, the solution seems to be two-prong: First, its a move to a single site with moble support adding using "handheld" as the media type, and a new web portal version of that same site using xhtml-basic, which is nothing but a subset of xhtml/html anyway. If you use XHTML-basic, I think you will see very good cross-device display, as its recognized by many new devices, and resolves the problem of figuring out what tags are accepted. The CSS is another story, and you wont be able to escape the problem of screen versus handheld as a way to separate out device formats 100% of the time, which I believe, you dont want to do anyway, simple because some of these devices WANT to show the full page format anyway, cant display it adequately, and as the webmonkey article articulates, many of these reformat your carefully styles pages anyway to fit within their screens using either an carriers proxy wap 2 server or using the preconfigured browser setup on the device by the vendor. Ive experiened this first-hand with something as simple as trying to set a font-size or font-family on a range of phones for Sprint. I was unable to modify either property in any of the pages vierwed on that carrier's cell phones offered. The agents retain variopus levels of control over display you cannot predict.<br>
+So, the solution is to design your primary web site for desktop viewing first using "screen", design a subsite CSS sheet and design for mobile devices using "handheld", and design tehse pages around the XHTML standard backed by the W3C. That will cover a broad range of users, and many mobile users, especially those with the screen/handheld confusion, and bigger viewing screens. These people want to see your site in its original form most cases and will proxy your code anyway. Those mobile portals requiring special limited layout and limited content obviously need the xhtml-basic doctype so require a separate subsite with that doctype and that frees you up to attach a linked "any device" style sheet using "all" or whatever you like, addressing that problem. I think thats the path we are going down. The first solution allows all desktop and large scale devices to get the full site and modify your layout to fit on the device, while applying an optional handheld sheet for other mobile agents to get an alternate view, if supporting "handheld". The second seems to be a pure mobile subsite solution using xhtml-basic and a simple style sheet designed specifically for mobile devices, but which is applied so that any device no matter what rule support they use, can access the site when they go to this secondary protal. Its not very romantic, but what is the w3c suggesting with xhtml-basic anyway?</p>
+
+<p>I think as time goes on, and the variety of approaches in how agents of all kinds access and use information will continue to confuse the issue even more, with a new family of  "xml data" agents coming on board that feed themslevs with unformatted RSS, text chat, and other simple text data, which will no doubt make designing a single web site solution for all devices even more foolish (and complex), moving us further in the direction of a special mobile web portal, mobile web sites, and xhtml-basic. Hope that helps!</p>
+
+<p>-Mitchell</p>
+<p class="by">So said <a href="http://www.stormdetector.com/">mitchell</a> on Monday  4 October, 2004 at  8:23AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment21" class="comment">
+<h3><a href="000056.php.html#comment21"><span>Comment </span>21</a></h3>
+<p>The W3C DOM should have a propery that alerts the media type, IMHO. <br>
+</p>
+<p class="by">So said <a href="http://www.dot4.biz/">alex</a> on Monday  1 August, 2005 at  3:51PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000057.php.html">Design Elastique</a></li>			<li id="previous">Previous Page: <a href="000055.php.html">HTML and CSS for Mobiles</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000056.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

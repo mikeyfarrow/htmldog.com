@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sectioning | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">HTML</a>&nbsp;&rarr; <a href="../../../htmlintermediate/index.html">Intermediate</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Sectioning</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>While <a href="../../beginner/headings/index.html">headings</a> do a grand, perfectly valid, job in defining the <strong>start</strong> of a new section or sub-section in a document, there are a number of elements that can be exploited to establish a cleaner, clearer semantic structure.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p><a href="../spandiv/index.html">Whereas div elements can be used to contain sections</a>, used primarily as scaffolding on which to hang CSS, they don&#8217;t hold a great deal of <strong>meaning</strong>. Sectioning involves a handful of tags that can be used to define specific parts of a page, such as <strong>articles</strong>, <strong>headers</strong>, <strong>footers</strong>, and <strong>navigation</strong>.</p>
+
+<h2>Articles and Sections</h2>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>An <a href="../../../../references/html/tags/article/index.html" class="acode"><code>article</code></a> element can be used to mark up a <strong>standalone section</strong> of content. This could be used just once, if you think of a blog post as an article, for example, or a number of times, if you imagine replicating a traditional newspaper page with numerous articles.</p>
+
+<p>A <a href="../../../../references/html/tags/section/index.html" class="acode"><code>section</code></a> element represents a more <strong>general section</strong> and could be used to split up an article, or to represent chapters, for example.</p>
+
+<pre><code class="oldLang language-html">
+<strong>&lt;article&gt;</strong>
+    <strong>&lt;section id="intro"&gt;</strong>
+        &lt;p&gt;[An introduction]&lt;/p&gt;
+    <strong>&lt;/section&gt;</strong>
+    <strong>&lt;section id="main_content"&gt;</strong>
+        &lt;p&gt;[Content]&lt;/p&gt;
+    <strong>&lt;/section&gt;</strong>
+    <strong>&lt;section id="related"&gt;</strong>
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="that.html"&gt;That related article&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="this.html"&gt;This related article&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    <strong>&lt;/section&gt;</strong>
+<strong>&lt;/article&gt;</strong>
+</code></pre>
+
+<p>While <a href="../../../../references/html/tags/div/index.html" class="acode"><code>div</code></a>s could be used to make these separations (or even if you didn&#8217;t need these separations for styling), this provides a much richer, more meaningful document.</p>
+
+<aside class="note five">
+<p>The HTML5 specifications suggest that you can use <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a> elements at the start of each section, which would become a sub-heading of anything preceding that section (so, in the example above, if you had an <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a> immediately following the opening <a href="../../../../references/html/tags/article/index.html" class="acode"><code>article</code></a> tag, an <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a> immediately after an opening <a href="../../../../references/html/tags/section/index.html" class="acode"><code>section</code></a> tag would be a <strong>sub-heading</strong> of that initial <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a>). This screws backwards compatibility, however, and any user agents (including screen readers) that don&#8217;t understand this won&#8217;t apply properly structured heading levels. We suggest sticking to the headings levels you would use if you didn&#8217;t use sections (so <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a>, followed by <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a>, etc, regardless of the sectioning). This doesn&#8217;t break anything or detract from the meaning or semantics.</p>
+</aside>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Headers and Footers</h2>
+
+<p><a href="../../../../references/html/tags/header/index.html" class="acode"><code>header</code></a> and <a href="../../../../references/html/tags/footer/index.html" class="acode"><code>footer</code></a> provide further specialized, self-descriptive, sections:</p>
+
+<pre><code class="oldLang language-html">
+&lt;body&gt;
+&lt;article&gt;
+    <strong>&lt;header&gt;</strong>
+        &lt;h1&gt;Alternatively&amp;hellip;&lt;/h1&gt;
+        &lt;p&gt;[An introduction]&lt;/p&gt;
+    <strong>&lt;/header&gt;</strong>
+    &lt;section id="main_content"&gt;
+        &lt;p&gt;[Content]&lt;/p&gt;
+    &lt;/section&gt;
+    <strong>&lt;footer&gt;</strong>
+        &lt;p&gt;[End notes]&lt;/p&gt;
+    <strong>&lt;/footer&gt;</strong>
+&lt;/article&gt;
+<strong>&lt;footer&gt;</strong>
+    &lt;p&gt;[Copyright bumf]&lt;/p&gt;
+<strong>&lt;/footer&gt;</strong>
+&lt;/body&gt;
+</code></pre>
+
+<p>The <a href="../../../../references/html/tags/footer/index.html" class="acode"><code>footer</code></a> is the footer of the section in which it is contained. So, in the above example, the first <a href="../../../../references/html/tags/footer/index.html" class="acode"><code>footer</code></a> is the footer of the article and the second <a href="../../../../references/html/tags/footer/index.html" class="acode"><code>footer</code></a> is the footer of the page.</p>
+
+<h2>Asides</h2>
+
+<p>An <a href="../../../../references/html/tags/aside/index.html" class="acode"><code>aside</code></a> can be used to represent content that is <strong>related</strong> the content surrounding it. Think of pull-quotes or snippets of related information in an article:</p>
+
+<pre><code class="oldLang language-html">
+&lt;section id="main_content"&gt;
+    &lt;h1&gt;Tixall&lt;/h1&gt;
+    &lt;p&gt;[All about Tixall]&lt;/p&gt;
+    <strong>&lt;aside&gt;</strong>
+        &lt;h2&gt;Tixall Obelisk&lt;/h2&gt;
+        &lt;p&gt;[A short note about Tixall Obelisk]&lt;/p&gt;
+    <strong>&lt;/aside&gt;</strong>
+    &lt;p&gt;[Maybe a bit more about Tixall]&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+
+<aside class="note i">
+<p>While we&#8217;re at this structure-love, if you want to include figures, there happens to be two tags for doing just that:</p>
+
+<pre><code class="oldLang language-html">
+<strong>&lt;figure&gt;</strong>
+    &lt;img src="obelisk.jpg"&gt;
+    <strong>&lt;figcaption&gt;</strong>Tixall Obelisk<strong>&lt;/figcaption&gt;</strong>
+<strong>&lt;/figure&gt;</strong>
+</code></pre>
+
+<p>Note that the <a href="../../../../references/html/tags/img/index.html" class="acode"><code>img</code></a> element doesn&#8217;t need an <code>alt</code> attribute IF the <a href="../../../../references/html/tags/figcaption/index.html" class="acode"><code>figcaption</code></a> (that&#8217;s &#8220;figure caption&#8221;, in case you need it spelling out) does that job.</p>
+</aside>
+
+<h2>Navigation</h2>
+
+<p>Finally, there&#8217;s <a href="../../../../references/html/tags/nav/index.html" class="acode"><code>nav</code></a>, used to mark up a group of <strong>navigation links</strong>:</p>
+
+<pre><code class="oldLang language-html">
+<strong>&lt;nav id="main_nav"&gt;</strong>
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/tutorials/"&gt;Tutorials&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/techniques/"&gt;Techniques&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/examples/"&gt;Examples&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/references/"&gt;References&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+<strong>&lt;/nav&gt;</strong>
+</code></pre>
+
+<aside class="note i">
+<p>This could also be used for in-page navigation (<code>&lt;a href="#overthere"&gt;...</code> etc.) but it isn&#8217;t necessary for every group of links - it is designed for major groupings. A copyright, author, and contact link could sit happily by themselves in a <a href="../../../../references/html/tags/footer/index.html" class="acode"><code>footer</code></a> element, for example.</p>
+</aside>
+
+<aside class="note warning">
+<p>If you want to style these new HTML 5 elements (and you probably do, right? It&#8217;s much nicer than using <code>&lt;div id="content"&gt;...</code>, etc) you will experience a problem in older browsers, most notably Internet Explorer versions 8 and earlier, that don&#8217;t understand these tags.</p>
+
+<p><a href="https://code.google.com/p/html5shiv/">HTML5Shiv</a> can come to your rescue, however; a small piece of JavaScript, slotted in to your <a href="../../../../references/html/tags/head/index.html" class="acode"><code>head</code></a> element, that teaches the remedial browsers and holds their hands so that you can use new HTML 5 tags and style them up to your heart&#8217;s content with CSS.</p>
+
+<p>It&#8217;s your call if you want to use a JavaScript fudge or stick with the safe old (and, again, perfectly valid) but semantically poorer headings and divs approach. This site, along with many others, chooses the former. Because HTML 5&#8217;s loveliness just about outweighs a hack&#8217;s ugliness.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../../../htmladvanced/index.html">HTML Advanced Tutorial</a></li>
+  <li>Previous Page: <a href="../text2/index.html">Text: Addresses, Definitions, Bi-directional, and Editorial</a></li>
+  <li><a href="../spandiv/index.html">Span and Div</a></li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/html/tags/article/index.html">HTML Tag: <code>article</code></a></li>
+  <li><a href="../../../../references/html/tags/section/index.html">HTML Tag: <code>section</code></a></li>
+  <li><a href="../../../../references/html/tags/header/index.html">HTML Tag: <code>header</code></a></li>
+  <li><a href="../../../../references/html/tags/footer/index.html">HTML Tag: <code>footer</code></a></li>
+  <li><a href="../../../../references/html/tags/aside/index.html">HTML Tag: <code>aside</code></a></li>
+  <li><a href="../../../../references/html/tags/figure/index.html">HTML Tag: <code>figure</code></a></li>
+  <li><a href="../../../../references/html/tags/figcaption/index.html">HTML Tag: <code>figcaption</code></a></li>
+  <li><a href="../../../../references/html/tags/nav/index.html">HTML Tag: <code>nav</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+		<section id="navSec">
+        <h2><span>Section menu: </span>HTML&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../htmlbeginner/index.html">Beginner</a></li>
+				
+				<li id="yahSubsec"><a href="../../../htmlintermediate/index.html">Intermediate</a>
+					<ul>
+						<li><a href="../spandiv/index.html">Span and Div</a></li>
+						<li><a href="../../../htmladvanced/text/index.html">Text: Abbreviations, Quotations, and Code</a></li>
+						<li><a href="../metatags/index.html">Meta Tags</a></li>
+						<li><a href="../tables/index.html">Tables: rowspan and colspan</a></li>
+						<li><a href="../definitionlists/index.html">Description Lists</a></li>
+						<li><a href="../text2/index.html">Text: Addresses, Definitions, Bi-directional, and Editorial</a></li>
+						<li><a href="index.html">Sectioning</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../../htmladvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

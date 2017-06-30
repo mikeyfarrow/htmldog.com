@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Media Queries | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../rAF/arcticFox.css" rel="stylesheet">
+
+	<link href="../../../rAF/arcticFox_tables.css" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../manifest.json">
+	<link rel="mask-icon" href="../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../index.html" title="Home"><img src="../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../reference/index.html" class="yahSec yahRef">References</a>&nbsp;&rarr; <a href="../index.html">CSS</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Media Queries</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p><strong>Media queries</strong> are used to target CSS at specific <strong>media types</strong> and <strong>media features</strong>. Styles can be applied to print or to screens of a certain size, for example.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Applying media queries</h2>
+
+<p>Media queries can be added to a <a href="../../html/tags/link/index.html" class="acode"><code>link</code></a> HTML element:</p>
+
+<pre><code class="oldLang language-html">
+&lt;link rel="stylesheet" href="this.css" media="<strong>print</strong>"&gt;
+&lt;!-- applies an external print-only stylesheet --&gt;
+
+&lt;link rel="stylesheet" href="that.css" media="<strong>screen and (max-width: 800px)</strong>"&gt;
+&lt;!-- applies an external stylesheet to screens up to 800 pixels wide --&gt;
+</code></pre>
+
+<p>Media queries can also be embedded in stylesheets using an <code>@media</code> rule:</p>
+
+<pre><code class="oldLang language-css">
+@media <strong>print</strong> {
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+    /* etc. */
+}
+/* applies styles to print only */
+
+@media <strong>screen and (max-width: 800px)</strong> {
+    body {
+        padding: 0;
+    }
+    /* etc. */
+}
+/* applies styles to screens up to 800 pixels wide */
+</code></pre>
+
+<p><code>@import</code> can also be used (<code>@import url(this.css) print</code>, for example).</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Media types</h2>
+
+<p><code >screen</code> and <code >print</code> are the most common media types. <code >all</code> can also be used and is the default state of a media query. Others, with patchy support, are <code>braille</code>, <code>embossed</code>, <code>handheld</code>, <code>projection</code>, <code>speech</code>, <code>tty</code>, and <code>tv</code>.</p>
+
+<h2>Media features</h2>
+
+<table class="twval">
+    <tr>
+        <th>Feature</th>
+        <th>Description</th>
+        <th>Possible values</th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >width</code></li>
+                <li><code >min-width</code></li>
+                <li><code >max-width</code></li>
+            </ul>
+        </td>
+        <td>Display area width.</td>
+        <td>[length], eg. <code>800px</code></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >height</code></li>
+                <li><code >min-height</code></li>
+                <li><code >max-height</code></li>
+            </ul>
+        </td>
+        <td>Display area height.</td>
+        <td>[length], eg. <code>20em</code></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >device-width</code></li>
+                <li><code >min-device-width</code></li>
+                <li><code >max-device-width</code></li>
+            </ul>
+        </td>
+        <td>Screen width.</td>
+        <td>[length], eg. <code>2in</code></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >device-height</code></li>
+                <li><code >min-device-height</code></li>
+                <li><code >max-device-height</code></li>
+            </ul>
+        </td>
+        <td>Screen height.</td>
+        <td>[length], eg. <code>10cm</code></td>
+    </tr>
+    <tr>
+        <td><code>orientation</code></td>
+        <td>Portrait (when height is greater than or equal to width) or landscape (when width is greater than height).</td>
+        <td>
+            <ul>
+                <li><code >portrait</code></li>
+                <li><code >landscape</code></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >aspect-ratio</code></li>
+                <li><code >min-aspect-ratio</code></li>
+                <li><code >max-aspect-ratio</code></li>
+            </ul>
+        </td>
+        <td>The ratio of the value of <code >width</code> to the value of <code >height</code>.</td>
+        <td>[ratio], eg. <code>2/1</code></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >device-aspect-ratio</code></li>
+                <li><code >min-device-aspect-ratio</code></li>
+                <li><code >max-device-aspect-ratio</code></li>
+            </ul>
+        </td>
+        <td>The ratio of the value of <code >device-width</code> to the value of <code >device-height</code>.</td>
+        <td>[ratio], eg. <code>16/9</code></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >color</code></li>
+                <li><code >min-color</code></li>
+                <li><code >max-color</code></li>
+            </ul>
+        </td>
+        <td>The number of bits per color component of a screen.</td>
+        <td>[integer]<br><code>0</code> indicates a device is not color.<br><code >color</code> without a value is the equivalent of <code>min-color: 1</code> (device is color).</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >color-index</code></li>
+                <li><code >min-color-index</code></li>
+                <li><code >max-color-index</code></li>
+            </ul>
+        </td>
+        <td>The number of entries in a device&#8217;s color lookup table.</td>
+        <td>[integer]<br><code>0</code> indicates a device does not use a color lookup table.<br><code >color-index</code> without a value is the equivalent of <code>min-color-index: 1</code> (device uses a color lookup table).</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >monochrome</code></li>
+                <li><code >min-monochrome</code></li>
+                <li><code >max-monochrome</code></li>
+            </ul>
+        </td>
+        <td>The number of bits per pixel on a grayscale device.</td>
+        <td>[integer]<br><code>0</code> indicates a device is not grayscale.<br><code >monochrome</code> without a value is the equivalent of <code>min-monochrome: 1</code> (device is grayscale).</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><code >resolution</code></li>
+                <li><code >min-resolution</code></li>
+                <li><code >max-resolution</code></li>
+            </ul>
+        </td>
+        <td>A device&#8217;s pixel density.</td>
+        <td>[resolution], eg. <code>300dpi</code></td>
+    </tr>
+    <tr>
+        <td><code>scan</code></td>
+        <td>Used with <code >tv</code> media type. The scanning process of a device.</td>
+        <td>
+            <ul>
+                <li><code >progressive</code></li>
+                <li><code >interlace</code></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>grid</code></td>
+        <td>If a device is grid (such as a teletype-like terminal) or bitmap.</td>
+        <td>[integer]<br><code>0</code> indicates a device is not grid.<br><code >grid</code> without a value is the equivalent of <code>grid: 1</code> (device is grid).</td>
+    </tr>
+</table>
+
+<aside class="note i">
+<p>Media features and their values should be contained inside parentheses, such as <code>(min-device-aspect-ratio: 16/9)</code> or <code>(color)</code>.</p>
+</aside>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<h2>Combining media queries</h2>
+
+<h3>Logical OR: comma-separated list</h3>
+
+<p>A comma-separated list will apply styles to multiple media queries.</p>
+
+<pre><code class="oldLang language-css">
+@media screen, projection {
+    /* CSS applied if device is screen OR projection */
+}
+</code></pre>
+
+<h3>Logical AND: <code >and</code></h3>
+
+<p>The <code >and</code> keyword will combine media queries.</p>
+
+<pre><code class="oldLang language-css">
+@media print and (min-resolution: 150dpi) {
+    /* CSS applied if device is print AND resolution is at least 150dpi */
+}
+</code></pre>
+
+<h3>Logical NOT: <code >not</code></h3>
+
+<p>The <code >not</code> keyword will exclude media queries.</p>
+
+<pre><code class="oldLang language-css">
+@media not screen {
+    /* CSS applied if device is NOT screen */
+}
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+  <ul>
+  <li><a href="../../../guides/css/advanced/mediaqueries/index.html">Media Queries</a> (CSS Advanced Tutorial)</li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../index.html">CSS</a>
+							<ul>
+								<li><a href="../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../selectors/index.html">Selectors</a></li>
+								<li><a href="../values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../about.1.html">About Us</a></li>
+				<li><a href="../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

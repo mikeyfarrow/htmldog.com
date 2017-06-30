@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Form to Email | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../manifest.json">
+	<link rel="mask-icon" href="../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../index.html" title="Home"><img src="../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../index.html" class="yahSec yahTech">Techniques</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Form to Email</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Tiptoeing outside of the boundaries of client-side coding, this page tackles a commonly requested server-side technique. It outlines a very basic method for taking the contents of a submitted form and sending it to any given email address. Y&#8217;know, like in &#8220;Contact us&#8221; forms.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>There are numerous ways of achieving this, with numerous wild and wonderful programming languages, but we&#8217;re going to use a scripting language called <strong>PHP</strong>.</p>
+
+<aside class="note i">
+<p>PHP stands for <strong>PHP: Hypertext Preprocessor</strong> (yeah &#8212; it&#8217;s recursive &#8212; bonkers) and it works hand-in-hand with HMTL. It&#8217;s easy and it&#8217;s prolific. In all likelihood the web hosting that is home to your HTML pages on the web will be PHP-enabled.</p>
+</aside>
+
+<h2>Step 1: Create a PHP page</h2>
+
+<p>If you use the extension &#8220;.php&#8221; instead of &#8220;.html&#8221; for your web page, the server hosting the page will know to execute any PHP sitting within it. So, to start, simply save an empty HTML page as &#8220;contact.php&#8221;.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Step 2: Create a form</h2>
+
+<p>You can read about <a href="../../guides/html/beginner/forms/index.html">the ins and outs of forms in the HTML Beginner Tutorial</a>. To jump straight in, let&#8217;s use the following super-stripped-down form HTML: </p>
+
+<pre><code class="oldLang language-html">
+&lt;form method="post" action="contact.php"&gt;
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>All quite straightforward, right? The <code>action="contact.php"</code> bit tells the page to send the form&#8217;s content to itself when the form is submitted. Crazy, huh? We&#8217;re doing everything here with the same page&#8230;</p>
+
+<h2>Step 3: Send the form&#8217;s data in an email</h2>
+
+<p>At the very top of the page, even before the Doctype, we are going to enter a smattering of PHP to handle the form data:</p>
+
+<pre><code>
+&lt;?php
+if($_POST["message"]) {
+    mail("your@email.address", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?&gt;
+</code></pre>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>&#8220;<code>&lt;?php</code>&#8221; marks the start of the PHP and &#8220;<code>?&gt;</code>&#8221; marks the end. The server will attempt to execute everything in between as PHP.</p>
+
+<p>This code checks if form data has been sent and, if it has, it uses the <code>mail</code> function to send the data as an email to &#8220;your@email.address&#8221; with the subject &#8220;Form to email message&#8221; and the message body that is the same as the form field with the name &#8220;message&#8221;. The email will appear to be from &#8220;an@email.address&#8221;.</p>
+
+<h2>Recap</h2>
+
+<p>You can try this out once you upload it (it requires the server to run &#8212; you won&#8217;t be able to run it locally).</p>
+
+<p>Here&#8217;s what&#8217;s happening:</p>
+
+<ol start='1'>
+<li>Once the form has been submitted, the page will send the data to itself.</li>
+<li>The page will check if data has been sent and, if it has, it will send it on as an email.</li>
+<li>The browser will load the page&#8217;s subsequent HTML, including your form.</li>
+</ol>
+
+<h2>Further steps: A basic &#8220;Contact us&#8221; page</h2>
+
+<p>OK, how about making this a bit more like a &#8220;Contact us&#8221; form? We can add sender name and sender email address to the message and also include a confirmation message, to let the sender know their message has been sent. Here&#8217;s the whole shebang:</p>
+
+<pre><code>
+&lt;?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender &lt;$senderEmail&gt;");
+
+    $thankYou="&lt;p&gt;Thank you! Your message has been sent.&lt;/p&gt;";
+}
+
+?&gt;</code><code class="html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Contact form to email&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    </code><code>&lt;?=$thankYou ?&gt;</code><code class="html">
+
+    &lt;form method="post" action="contact.php"&gt;
+        &lt;label&gt;Name:&lt;/label&gt;
+        &lt;input name="sender"&gt;
+
+        &lt;label&gt;Email address:&lt;/label&gt;
+        &lt;input name="senderEmail"&gt;
+
+        &lt;label&gt;Message:&lt;/label&gt;
+        &lt;textarea rows="5" cols="20" name="message"&gt;&lt;/textarea&gt;
+
+        &lt;input type="submit" name="submit"&gt;
+    &lt;/form&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>This time we&#8217;re:</p>
+
+<ol start='1'>
+<li>Checking the form has been sent (this time by looking for the form field named &#8220;submit&#8221;) and, if it has&#8230;</li>
+<li>Setting a bag-load of variables:
+<ol start='1'>
+<li>Your email address</li>
+<li>The email subject</li>
+<li>The sender&#8217;s name (taken from the form)</li>
+<li>The sender&#8217;s email address (taken from the form)</li>
+<li>The message (taken from the form)</li>
+</ol></li>
+<li>Sending the email, using all of those variables</li>
+<li>Setting a variable for a confirmation message</li>
+<li>Loading the HTML, including the confirmation message</li>
+</ol>
+
+<p>If the page loads and no form data has been sent then no email will be composed and no conformation message will be set so all that will happen is loading of the page&#8217;s HTML.</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li><a href="../../guides/html/beginner/forms/index.html">Forms</a> (HTML Beginner Tutorial)</li>
+  <li><a href="../../webhosting/index.html">Web Hosting</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../about.1.html">About Us</a></li>
+				<li><a href="../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

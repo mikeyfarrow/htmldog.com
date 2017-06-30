@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Peek-a-boo: Another method for hiding HTML - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000040.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Peek-a-boo: Another method for hiding HTML</h1>
+	
+<h2>Monday  5 April, 2004 ( 2:44PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>Picture this situation: You have a paragraph with links in, separated by commas. You want to keep the commas in the HTML because that's <strong>grammatically correct</strong> and because you want to adhere to <a href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-divide-links">WAI WCAG 1.0 checkpoint 10.5</a>. What you don't want however is to display those commas. You could use this HTML:</p>
+
+<pre><code>&lt;p&gt;&lt;a href="this.html"&gt;This&lt;/a&gt;&lt;span class="ttt"&gt;, &lt;/span&gt;&lt;a href="that.html"&gt;That&lt;/a&gt;&lt;span class="ttt"&gt;, &lt;/span&gt;&lt;a href="theother.html"&gt;The Other&lt;/a&gt;&lt;span class="ttt"&gt;.&lt;/span&gt;&lt;/p&gt;</code>
+</pre>
+
+<p>And then you could apply some CSS technique for hiding the 'ttt' class.</p>
+
+<p>But the HTML is bloated. It would be much more preferable to just have:</p>
+
+<pre><code>&lt;p class="ttt"&gt;&lt;a href="this.html"&gt;This&lt;/a&gt;, &lt;a href="that.html"&gt;That&lt;/a&gt;, &lt;a href="theother.html"&gt;The Other&lt;/a&gt;.&lt;/p&gt;</code>
+</pre>
+
+<p>But how to get rid of the commas? How about this CSS:</p>
+
+<pre><code>.ttt {</code>
+	<code class="m1">position: relative;</code>
+	<code class="m1">left: -999em;</code>
+<code>}</code>
+
+<code>.ttt a {</code>
+	<code class="m1">position: relative;</code>
+	<code class="m1">left: 999em;</code>
+<code>}</code>
+</pre>
+
+<p>The paragraph is yanked out of sight and then the individual anchor elements spring back into place. Peek-a-boo.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000040.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I can understand that there might be some reason to have no seperation between links, but generally, I think, it's a bad idea. I think in this case, the accessibility standard is for people that can actually see the screen (at least partially.) Someone with a screen reader will actually be able to differentiate between side-by-side links better than someone looking at the screen, since the links will  have the same styling.</p>
+
+<p>Does that make any sense? I'm tired right now, so I don't know if I'm too coherent.</p>
+<p class="by">So said <a href="http://forever.chronlink.net/">Andrew</a> on Monday  5 April, 2004 at  3:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000040.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>My understanding was that the requirement for a non-whitespace character between links was based on a bug in screenreaders at the time the accessibility guidelines were written. Readers at the time would speak adjacent links as one long link. They have since fixed the problem, making the WCAG guidelines device specific and woefully out of date. This is all rumor and hearsay, it would be great if someone could verify the reasoning behind the regulation. It's more valuable to those with disabilities for us to understand the spirit and not simply obey the letter of the law.</p>
+<p class="by">So said <a href="http://www.nilsdevine.com/">Nils T. Devine</a> on Monday  5 April, 2004 at  3:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000040.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Screen readers can read adjacent links pretty well actually, and there is no mention of this checkpoint in the working draft for WCAG 2.0. It still remains that if you want to claim to adhere to a standard, such as WCAG 1.0 AAA in this case, then you need to satisfy this point, even if it is out of date (see <a href="000035.php.html">http://www.htmldog.com/ptg/archives/000035.php</a> ).</p>
+
+<p>What I find more important though is that you should maintain good English (or Spanish or Swahili or whatever) in HTML. X number of adjacent links that do not form part of a sentence should be separated by punctuation, such as commas.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Monday  5 April, 2004 at  4:12PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000040.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Why wouldn't you want the commas?<br>
+I'd think that if you didn't want commas you'd have marked it up as a UL with LI for each link.<br>
+</p>
+<p class="by">So said Will on Monday  5 April, 2004 at  8:10PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000040.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>This is silly.<br>
+The whole idea behind it is silly. Don't make websites just to  be in accordance with some silly unrealistic accessibility crap. Make websites for actual people.<br>
+I know Javascript scares you but why not just go through all child nodes of that P and remove the text nodes?</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante Evans</a> on Tuesday  6 April, 2004 at  3:22AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000040.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Like I said, this isn't *just* about accessibility.</p>
+
+<p>And sometimes you not only have to be in accordance with 'silly unrealistic accessibility crap'  because you want to show you are considerate to those who are less abled than yourself and that you follow a helpful initiative, but because the people you're working for says "this has to be AAA".</p>
+
+<p>And JavaScript isn't the answer to all of the world's woes. If I applied all of your JavaScript solutions to all of the issues that have been raised in the past, I would have incredibly bloated web pages. Besides, this is purely a presentation issue. That's what CSS is for.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  6 April, 2004 at  9:09AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000040.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Unnecessary and useless. That is not what CSS is about.</p>
+<p class="by">So said <a href="http://www.w3.org/">Palmo</a> on Tuesday  6 April, 2004 at  7:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000040.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Necessary if you want to maintain properly structured language but present elements singularly.</p>
+
+<p>Useful... erm... ditto.</p>
+
+<p>CSS is about presentation.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  6 April, 2004 at  7:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000040.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>I didn't say you HAD to implement them, just think about the JS solutions. <br>
+BTW I noticed in everything you write you complain about IE. I was going to tell you about a JS solution but  I found another: why don't you just do:<br>
+&lt;!--[if IE]&gt;<br>
+&lt;style&gt;<br>
+@import "justforie.css";<br>
+&lt;/style&gt;<br>
+&lt;![endif]&gt;<br>
+Please stop giving Javascript a bad name. Please?<br>
+In case you DO ever want to do detect IE5+ with 99% percent certainty check for document.execCommand.<br>
+Cheers!</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante Evans</a> on Wednesday  7 April, 2004 at 12:48AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000040.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>Oh read this:<br>
+<a href="http://www.alistapart.com/discuss/popuplinks/7/#c7276">http://www.alistapart.com/discuss/popuplinks/7/#c7276</a><br>
+It sums up my views on the whole WIAA thing, and I like the way the author used his wording.</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante</a> on Wednesday  7 April, 2004 at 12:51AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000040.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>I won't linger on this too long because it's getting way off topic (again), but:</p>
+
+<p>I complain about IE because it doesn't handle CSS as well as browsers such as Mozilla or Opera. That's a simple fact. I don't think even Microsoft could deny that.</p>
+
+<p>I don't try to give JavaScript a bad name, I just think there is a time and a place for it.</p>
+
+<p>Accessibility isn't Bobby.</p>
+
+<p>Now. This Peek-a-boo thing....</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday  7 April, 2004 at  9:04AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000040.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>...is not a technique I would ever use, simply because I would never had to. And maybe if I did I'd remove it with Javascript.<br>
+Just in case you're wondering no browser handles CSS3 as well as Safari 1.2<br>
+Cheers!</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003/css3">Dante Evans</a> on Wednesday  7 April, 2004 at  6:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000040.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>Agreed that this is highly foolish. When we start marking up commas in our pages things are seriously degrading. Remember people, do NOT follow a standard over the edge of a cliff, even if that standard seems well meaning.</p>
+
+<p>Tom</p>
+<p class="by">So said <a href="http://www.pixelmech.com/">Tom Dell'Aringa</a> on Friday 16 April, 2004 at  2:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000040.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>This isn't following a standad over the edge of a cliff, I'm not even saying that the main reason for this is standards. It's the use of language.</p>
+
+<p>OK, let's forget the commas for a minute. Take, for example, the 'XML' link that appears on the right hand side of this blog. It's styled as an the orange button with white text because that's a common symbol for suggesting that the link leads to an XML feed of the web log. It relies on visual recognition of a symbol.</p>
+
+<p>But to someone who can't see the orange box, 'XML' on it's own makes no sense. To benefit someone who uses a screen reader, you could simply make this "XML feed" or something similar. Then instead of wrapping " feed" in tags to hide it, all you need to do is apply this method.</p>
+
+<p>That's just one example. Hiding elements is a common and often necessary thing. All it is is a method of reverse-hiding, whereby instead of hiding the elements wrapped in tags, you hide those  parts that aren't wrapped in tags, leaving the rest behind.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Friday 16 April, 2004 at  3:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000040.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>I honestly can't believe that your article got such bad responses. It bothers me.</p>
+
+<p>The application seems so obvious to me. When you want to make a web page that is viewed in a style similar to an OpenOffice.org Impress presentation, you could hide things that show up later on in the presentation. Of course there is that XML thingy that you mention.</p>
+
+<p>I was really trying to demonstrate this on my own personal web site, by showing that you could do many relevant and useful things with only 1 marked up page, and a handful of style sheets. Most people don't seem to be aware that style sheets could be combined, but I digress.</p>
+
+<p>My biggest complaint about this technique is that you don't actually get to make it disappear. That's not your fault, though. I fault the W3C. A big mistake that they made was making "display:none" inheritable, but not uninheritable. If it were uninheritable, then it would be possible to set the child elements to "display:block" or whatever. This is relevant for when people want to copy and paste text.</p>
+
+<p>Sometimes I get the impression that the standards weren't designed by designers. Don't get me wrong, though. They did a marvelous job as it is.</p>
+
+<p>Thanks for sharing this technique with us.</p>
+<p class="by">So said <a href="http://www.geocities.com/eugenetswong/csspowerdemo/">Eugene T.S. Wong</a> on Thursday 27 May, 2004 at 10:55PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000040.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>In my opinion the best solution if one does not want to use list markup but separate adjacent links by one or two characters is using the CSS "visibility" property. This property at times seems to be underestimated. It does not have the disatvantage Eugene pointed out for the "display" property but in contrast to that property it preserves the space the invisible content would occupy if it was visible.</p>
+
+<p>The stylesheet for the above example would simply look like this:</p>
+
+<p>p.ttt {<br>
+  visibility: hidden;<br>
+  }</p>
+
+<p>p.ttt a {<br>
+  visibility: visible;<br>
+  }</p>
+
+<p><br>
+</p>
+<p class="by">So said <a href="http://www.j-a-b.net/">Jens</a> on Wednesday  9 June, 2004 at  5:49PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000040.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>Hmm... yeah. That certainly is simpler! Funny how you can miss the more obvious things when you start to think around a problem...</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday  9 June, 2004 at  6:01PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000040.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>I like this article, it does not matter what people think about the actual example used (i.e. hidding commas) - it's the code technique that is important!</p>
+
+<p>The other technique in post 16 is simplier and probably should be used, however using 'visibility: hidden' is something search engines are clamping down on (due to keywork stuffing and other black hat search engine ranking techniques), using this may get the website blocked from the search engines! - so I would go with the first code example.</p>
+<p class="by">So said [Anon] on Wednesday 27 July, 2005 at  3:24PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000041.php.html">Consecutive Links</a></li>			<li id="previous">Previous Page: <a href="000039.php.html">How not to use HTML</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000040.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

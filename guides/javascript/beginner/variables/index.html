@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Variables and Data | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">JavaScript</a>&nbsp;&rarr; <a href="../index.html">Beginner</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Variables and Data</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Storing data so we can use it later is one of the most important things when writing code. Fortunately, JavaScript can do this! If it couldn&#8217;t, it&#8217;d be pretty darn useless.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>So let&#8217;s ask the user (that&#8217;s you) for their surname (check your driving license, or ask a friend).</p>
+
+<aside class="note">
+<p>By the way, this assumes you&#8217;ve jumped into a browser and are typing into your console.</p>
+</aside>
+
+<pre><code class="oldLang language-javascript">
+var surname = prompt('Greetings friend, may I enquire as to your surname?');
+</code></pre>
+
+<p>A little box will pop-up, asking (very courteously if I may say) for your surname. Type your surname in and hit &#8216;OK&#8217;.</p>
+
+<p>The surname you entered is now saved, and it can be referred to as <var>surname</var>. You can get what you entered back out again by typing <var>surname</var> into the console. You should see your surname appearing back to you underneath! Exciting!</p>
+
+<p>You&#8217;ve created a <em>variable</em>.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Variables</h2>
+
+<p>Think, if you will, of a variable as a shelf with a name so it&#8217;s easy to get back to. You&#8217;ve named a shelf <var>surname</var>.</p>
+
+<p>You can name a variable anything you like, but it&#8217;s best to name it in a way that tells what you&#8217;ve stored there. For example, <var>surname</var> is better than <var>mything</var> or <var>s</var>.</p>
+
+<p>When you type a variable name into the console you are asking the browser, which looks after the shelves, to go find the shelf and give what&#8217;s on it to you. This is also known as the variable&#8217;s <em>value</em>. The value can be almost anything - in <var>surname</var>, you&#8217;ve stored some letters, known as a <em>string</em>. You can also store numbers and a myriad other kinds of data.</p>
+
+<p>So, a variable has a <em>name</em> and a <em>value</em>.</p>
+
+<p>They are the way we store data, and you&#8217;ll be using them a lot.</p>
+
+<p>There are two parts to creating a variable; <em>declaration</em> and <em>initialization</em>. Once it&#8217;s created, you can <em>assign</em> (or set) its value.</p>
+
+<h2>Declaration</h2>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>Declaration is <em>declaring</em> a variable to <em>exist</em>. To return to the shelf metaphor, it&#8217;s like picking an empty shelf in a massive warehouse and putting a name on it.</p>
+
+<p>As above, to declare a variable, use the <code >var</code> keyword followed by the variable name, like this:</p>
+
+<pre><code class="oldLang language-javascript">
+var surname;
+var age;
+</code></pre>
+
+<aside class="note mag">
+<p>Notice those semicolons (&#8220;;&#8221;)? Almost every line in JavaScript ends in a semicolon - you&#8217;ll be using them a lot.</p>
+</aside>
+
+<h2>Initialization</h2>
+
+<p><em>Initialization</em> is giving a variable its <em>value</em> for the <em>first time</em>. The value can change later, but it is only initialized once.</p>
+
+<p>You initialize a variable using the equals sign (=). You can read it as &#8220;the <em>value</em> of the variable on the left should be the data on the right&#8221;:</p>
+
+<pre><code class="oldLang language-javascript">
+var name = "Tom";
+</code></pre>
+
+<p>&#8220;Tom&#8221; is a <em>string</em> - a collection of letters. A string is surrounded by single or double quote marks.</p>
+
+<pre><code class="oldLang language-javascript">
+var age = 20;
+</code></pre>
+
+<p>20 is just a number - and numbers don&#8217;t go in quotes.</p>
+
+<h2>Assignment</h2>
+
+<p>As mentioned, you can set a variable&#8217;s value as many times as you like. It&#8217;s called <em>assignment</em> and it looks very similar to initialization. You again use the equals sign, but there&#8217;s no need for the <code >var</code> keyword because we&#8217;ve already declared the variable.</p>
+
+<p>It&#8217;s like this, yo:</p>
+
+<pre><code class="oldLang language-javascript">
+name = "Andy";
+age = 43;
+</code></pre>
+
+<p><em>Only</em> do this if you&#8217;ve declared the variable using the <code >var</code> keyword!</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../math/index.html">Doing Math</a></li>
+  <li>Previous Page: <a href="../makingstuffhappen/index.html">Making Stuff Happen</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>JavaScript&nbsp;tutorials</h2>
+			<ul>
+				<li id="yahSubsec"><a href="../index.html">Beginner</a>
+					<ul>
+						<li><a href="../makingstuffhappen/index.html">Making Stuff Happen</a></li>
+						<li><a href="index.html">Variables and Data</a></li>
+						<li><a href="../math/index.html">Doing Math</a></li>
+						<li><a href="../logic/index.html">Logic</a></li>
+						<li><a href="../conditional/index.html">Conditional</a></li>
+						<li><a href="../looping/index.html">Looping</a></li>
+						<li><a href="../functions/index.html">Functions</a></li>
+						<li><a href="../objects/index.html">Objects</a></li>
+						<li><a href="../arrays/index.html">Arrays</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../intermediate/index.html">Intermediate</a></li>
+				
+				
+				<li><a href="../../advanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

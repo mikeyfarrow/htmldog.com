@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Radial gradients</title>
+	<style>
+		html {
+			background: -webkit-radial-gradient(green, yellow);
+			background: radial-gradient(green, yellow);
+			height: 100%;
+		}
+
+		body {
+			font: 14px/1.5 courier;
+			color: #000;
+		}
+	
+		p {
+			width: 300px;
+			height: 150px;
+			padding: 20px;
+			margin: 20px 0 0 20px;
+			float: left;
+			border: 1px solid green;
+		}
+	
+		#gradient1 {
+			background: #888 url(images/gradientRadial.jpg); /* Background images can be used for browsers that aren't capable of producing gradients */
+			background: -webkit-radial-gradient(yellow, green); /* Backup for major browsers that can still handle gradients */
+			background: radial-gradient(yellow, green); /* The CSS3 standard */
+		}
+		
+		#gradient2 {
+			background: -webkit-radial-gradient(circle, yellow, green);
+			background: radial-gradient(circle, yellow, green);
+		}
+		
+		#gradient3 {
+			background: -webkit-radial-gradient(circle closest-side, yellow, green);
+			background: radial-gradient(circle closest-side, yellow, green);
+		}
+		
+		#gradient4 {
+			background: -webkit-radial-gradient(top left, yellow, green);
+			background: radial-gradient(at top left, yellow, green);
+		}
+		
+		#gradient5 {
+			background: -webkit-repeating-radial-gradient(#8d0, #0d0 10px, #9f0 10px, #0f0 20px);
+			background: repeating-radial-gradient(#8d0, #0d0 10px, #9f0 10px, #0f0 20px);
+		}
+		
+		#gradientCollie {
+			width: 120px;
+			height: 90px;
+			padding: 50px 60px;
+			border-radius: 120px/95px;
+			background: -webkit-radial-gradient(white 50%, #06c 75%);
+			background: radial-gradient(white 50%, #06c 75%);
+		}
+	</style>
+</head>
+<body>
+	<p id="gradient1"><code>background: radial-gradient(yellow, green);</code></p>
+	<p id="gradient2"><code>background: radial-gradient(circle, yellow, green);</code></p>
+	<p id="gradient3"><code>background: radial-gradient(circle closest-side, yellow, green);</code></p>
+	<p id="gradient4"><code>background: radial-gradient(at top left, yellow, green);</code></p>
+	<p id="gradient5"><code>background: repeating-radial-gradient(#8d0, #0d0 10px, #9f0 10px, #0f0 20px);</code></p>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="gradientCollie"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

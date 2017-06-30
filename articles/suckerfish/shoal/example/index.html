@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Suckerfish Shoal example</title>
+<style type="text/css" media="all">
+
+body {
+	font: 100% arial, helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 1.5em;
+	color: orange;
+}
+
+/*--------------hover stuff----------------*/
+a {
+	text-decoration: none;
+}
+
+p:hover, p.sfhover {
+	color: #ccc;
+}
+
+p:hover a, p.sfhover a {
+	color: blue;
+	text-decoration: underline;
+}
+
+p a:hover {
+	color: orange;
+}
+
+/*--------------focus stuff----------------*/
+form {
+	border: 2px solid #9c9;
+	padding: 0.5em;
+}
+
+div {
+	background: #eee;
+	clear: left;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+label {
+	float: left;
+	width: 5em;
+}
+
+input, textarea {
+	width: 15em;
+	border: 2px solid;
+	border-color: #666 #ddd #ddd #666;
+}
+
+input:focus, textarea:focus, input.sffocus, textarea.sffocus {
+	background: #cfc;
+	border-color: #090;
+}
+
+/*--------------active stuff----------------*/
+em {
+	font-style: normal;
+}
+
+p:active a, p.sfactive a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+p:active em, p.sfactive em {
+	color: #090;
+}
+
+/*--------------target stuff----------------*/
+h2 {
+	color: #090;
+	font-size: 1.25em;
+}
+
+h2:target, h2.sftarget {
+	color: white;
+	background: #090;
+}
+
+
+</style>
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+function suckerfish(type, tag, parentId) {
+	if (window.attachEvent) {
+		window.attachEvent("onload", function() {
+			var sfEls = (parentId==null)?document.getElementsByTagName(tag):document.getElementById(parentId).getElementsByTagName(tag);
+			type(sfEls);
+		});
+	}
+}
+
+sfHover = function(sfEls) {
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+
+sfFocus = function(sfEls) {
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onfocus=function() {
+			this.className+=" sffocus";
+		}
+		sfEls[i].onblur=function() {
+			this.className=this.className.replace(new RegExp(" sffocus\\b"), "");
+		}
+	}
+}
+
+sfActive = function(sfEls) {
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmousedown=function() {
+			this.className+=" sfactive";
+		}
+		sfEls[i].onmouseup=function() {
+			this.className=this.className.replace(new RegExp(" sfactive\\b"), "");
+		}
+	}
+}
+
+sfTarget = function(sfEls) {
+	var aEls = document.getElementsByTagName("A");
+	document.lastTarget = null;
+	for (var i=0; i<sfEls.length; i++) {
+		if (sfEls[i].id) {
+			if (location.hash==("#" + sfEls[i].id)) {
+				sfEls[i].className+=" sftarget";
+				document.lastTarget=sfEls[i];
+			}
+			for (var j=0; j<aEls.length; j++) {
+				if (aEls[j].hash==("#" + sfEls[i].id)) aEls[j].targetEl = sfEls[i];
+				aEls[j].onclick = function() {
+					if (document.lastTarget) document.lastTarget.className = document.lastTarget.className.replace(new RegExp(" sftarget\\b"), "");
+					if (this.targetEl) this.targetEl.className+=" sftarget";
+					document.lastTarget=this.targetEl;
+					return true;
+				}
+			}
+		}
+	}
+}
+
+suckerfish(sfHover, "P");
+suckerfish(sfActive, "P");
+suckerfish(sfFocus, "INPUT");
+suckerfish(sfFocus, "TEXTAREA");
+suckerfish(sfTarget, "H2");
+
+
+//--><!]]></script>
+
+</head>
+
+<body>
+
+<h1>Suckerfish Shoal</h1>
+
+<p>An example accompanying the <a href="../index.html">Suckerfish Shoal article</a> in <a href="../../../../index.html">HTML Dog</a>.</p>
+
+<p>A whole heap of craziness, bringing together <a href="../../hover/index.html">Suckerfish :hover</a>, <a href="../../focus/index.html">Suckerfish :focus</a>, <a href="../../active/index.html">Suckerfish :active</a> and <a href="../../target/index.html">Suckerfish :target</a>.</p>
+
+<p>Hover over paragraphs to reveal links or click on them to reveal important words. Alternatively, play around with the form or just jump to <a href="index.html#nittygritty">nitty-gritty</a>,  <a href="index.html#grittynitty">gritty-nitty</a> or <a href="index.html#wittyditty">witty ditty</a>.</p>
+<p>Lorem ipsum <a href="index.html#">dolor</a> sit amet, <em>consectetuer</em> adipiscing elit. <a href="index.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit <em>blandit</em> risus. <a href="index.html#">Praesent</a> nonummy. <a href="index.html#">In erat</a>. Duis nibh pede, <a href="index.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. <em>Curabitur</em> nec dui <em>sed nunc congue</em> tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. <em>Vivamus pretium</em> dolor. Proin eu turpis. Phasellus ut mauris non <em>nulla</em> mattis luctus. <a href="index.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="index.html#">tellus</a> a vestibulum <em>pharetra</em>, nunc purus auctor lacus, ut <em>semper</em> purus ipsum eu velit. Praesent dui. Nulla accumsan turpis <em>at erat</em>.</p>
+
+<h2 id="nittygritty">Nitty-Gritty</h2>
+<p>Lorem ipsum <a href="index.html#">dolor</a> sit amet, <em>consectetuer</em> adipiscing elit. <a href="index.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit <em>blandit</em> risus. <a href="index.html#">Praesent</a> nonummy. <a href="index.html#">In erat</a>. Duis nibh pede, <a href="index.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. <em>Curabitur</em> nec dui <em>sed nunc congue</em> tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. <em>Vivamus pretium</em> dolor. Proin eu turpis. Phasellus ut mauris non <em>nulla</em> mattis luctus. <a href="index.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="index.html#">tellus</a> a vestibulum <em>pharetra</em>, nunc purus auctor lacus, ut <em>semper</em> purus ipsum eu velit. Praesent dui. Nulla accumsan turpis <em>at erat</em>.</p>
+
+<form action="index.html">
+
+<div><label for="this">This</label><input id="this" /></div>
+<div><label for="that">That</label><input id="that" /></div>
+<div><label for="theother">The Other</label><input id="theother" /></div>
+<div><label for="banana">Banana</label><input id="banana" /></div>
+<div><label for="kumquat">Kumquat</label><textarea id="kumquat" rows="10" cols="10"></textarea></div>
+
+</form>
+
+<p><a href="index.html#">Top</a></p>
+
+<h2 id="grittynitty">Gritty-Nitty</h2>
+<p>Lorem ipsum <a href="index.html#">dolor</a> sit amet, <em>consectetuer</em> adipiscing elit. <a href="index.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit <em>blandit</em> risus. <a href="index.html#">Praesent</a> nonummy. <a href="index.html#">In erat</a>. Duis nibh pede, <a href="index.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. <em>Curabitur</em> nec dui <em>sed nunc congue</em> tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. <em>Vivamus pretium</em> dolor. Proin eu turpis. Phasellus ut mauris non <em>nulla</em> mattis luctus. <a href="index.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="index.html#">tellus</a> a vestibulum <em>pharetra</em>, nunc purus auctor lacus, ut <em>semper</em> purus ipsum eu velit. Praesent dui. Nulla accumsan turpis <em>at erat</em>.</p>
+<p><a href="index.html#">Top</a></p>
+
+<h2 id="wittyditty">Witty-Ditty</h2>
+<p>Lorem ipsum <a href="index.html#">dolor</a> sit amet, <em>consectetuer</em> adipiscing elit. <a href="index.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit <em>blandit</em> risus. <a href="index.html#">Praesent</a> nonummy. <a href="index.html#">In erat</a>. Duis nibh pede, <a href="index.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. <em>Curabitur</em> nec dui <em>sed nunc congue</em> tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. <em>Vivamus pretium</em> dolor. Proin eu turpis. Phasellus ut mauris non <em>nulla</em> mattis luctus. <a href="index.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="index.html#">tellus</a> a vestibulum <em>pharetra</em>, nunc purus auctor lacus, ut <em>semper</em> purus ipsum eu velit. Praesent dui. Nulla accumsan turpis <em>at erat</em>.</p>
+<p><a href="index.html#">Top</a></p>
+
+
+</body>
+</html>
+

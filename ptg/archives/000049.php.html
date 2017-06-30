@@ -1,0 +1,1406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Tables My Ass - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000049.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Tables My Ass</h1>
+	
+<h2>Friday 14 May, 2004 (10:47AM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>High profile CSS advocates have been abducted and replaced by beings extolling the virtues of table layouts. Much like talking to Donald Sutherland at the end of Invasion of the Body Snatchers, we find ourselves whimpering "Andy...? Andy...? You still love CSS... right?".</p>
+
+<p>Partly in response to <a href="http://www.apcmag.com/apc/v3.nsf/0/a569c81864dc4f1bca256e5f001a59c5">David Emberton's ridiculous anti-web standards drivel</a>, these "devil's advocate" objective critiques of tables for layout (kicked off by <a href="http://www.andybudd.com/archives/2004/05/an_objective_look_at_table_based_vs_css_based_design/">Andy Budd</a> and then <a href="http://www.mezzoblue.com/archives/2004/05/13/gasp_tables/">Dave Shea</a>) unfortunately fall short of the mark and don't convince me in the slightest. So here's my response to their response and my turn at objectivity, which looks a little different. Objectivity doesn't mean sitting on the fence and I objectively conclude with pride and confidence that there is little or no room for tables in layout.</p>
+
+<p>One myth is that CSS is 'hard'. It isn't hard. Well, not any more difficult than any other approach. The problem is that experienced web designers started out by using tables for layout and then had to completely change their approach to do things the CSS way.<br>
+I worked with tables based layout for years and when I first started playing with CSS layout I got stumped. "It was so much easier with tables" I thought. But that just came from the fact that I was comfortable with tables. I knew how to manipulate them. Any change, especially such a radical one, is inevitably going to prove difficult. But I even remember when I first taught myself how to use tables for layout. That confused the hell out of me too. Looking back on it, I would even have to say that table layouts were the more difficult of the two approaches to learn, what with all of those rowspans, colspans and spacer gifs.</p>
+
+<p>Another odd point that Andy Budd raises is that a CSS designed page can be just as heavy, if not heavier than a page with tables. His reasoning is that because you have all of the site styles in one file and that needs to be downloaded first (which will usually be when the user visits the home page), this CSS file could actually be quite big (containing much more than the styles needed for the homepage) and so the design is top-heavy. But if it were the case that the CSS file became so large that it impeded download time in this manner, why are all of those styles in one file? You aren't limited to one CSS file and you <em>shouldn't</em> use one CSS file if there are substantial parts of it suitable only for particular sections. In my experience, from developing pages for small brochure type sites through to vast database driven, multi-section systems I have never come across a single case where the entire homepage (that's including the necessary CSS file) is heavier than a table-based equivalent. Those <code>table</code>, <code>tr</code>, <code>td</code> tags take up a LOT of space and in practice a CSS layout slashes file sizes.</p>
+
+<p>Forgetting semantics (because that's essentially what you are doing when you're laying out a page with tables), web standards layout still has the massive benefit of separating content and presentation. A table will lock you into a design. If you need to change it, you need to go into a page and fiddle with the table structure ("right... so... that cell spans three rows and this cell spans five, which is next to another cell that... oh damn it! What the hell is going on?!"). No simple global changes through a CSS file (which also have the added bonus of increasing the likelihood of visual consistency across the site). And you can forget about device independence. And forget about those who choose to use their own stylesheets.</p>
+
+<p>I see few benefits for tables. Laying out forms. But then forms can be seen as tabular anyway, so it's sound. Netscape 4? I'm not even convinced that supporting such old browsers is a reason. The benefits to the vast majority who have more capable browsers will far outweigh the disadvantages to the tiny minority who will see unstyled yet fully functional content. These pro-table (yes, I know they're only "devil's advocate") arguments seem to boil down to "it's easier", which is tosh. If you want to stay with the comfort of an inefficient hack methodology, that's up to you. But if you want to push things to their limits and make the most versatile, accessible, lightweight pages possible, make the effort to switch. If you had used it from the outset then you wouldn't have this problem. I've had plenty of positive feedback from HTML Dog readers who have managed to layout pages without even considering tables.<br>
+ <br>
+"If it aint broke, don't fix it", "it's a tool in the web designers toolbox" are some of the comments that have come up. Table layouts are a battered old soft-metal screwdriver with a rough wooden handle. You can still screw screws into a wall with it, it's just that I prefer to use my badass sturdy electric screwdriver instead. The screws are straighter and my hands are blister-free.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000049.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>Good one.<br>
+I am afraid that Andy's post will incourage some developers to go the old way, and not  to learn.<br>
+The sad fact is, that people who are capable using tables in the right way (only one lean and mean table, strictly for layout)<br>
+are capable to do designs without them and sucessfuly do. Others just will stick with the last century habits incouraged by big names saying "tables are ok", missing the "sometimes", and "used properly" from the context.</p>
+<p class="by">So said <a href="http://rimantas.com/">Rimantas</a> on Friday 14 May, 2004 at 11:56AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000049.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Right on brother - I said much the same thing to myself, although in a slightly less wordy way.</p>
+
+<p>Although the sooner someone writes a comprehensive "How to do Any Form Layout using CSS only" the better...</p>
+<p class="by">So said <a href="http://thewatchmakerproject.blogspot.com/">Matt Pennell</a> on Friday 14 May, 2004 at 12:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000049.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Maybe the 'big boys' are just having a laugh.  "What will those sheep believe next?"</p>
+<p class="by">So said <a href="http://eastsdomain.com/">Noa</a> on Friday 14 May, 2004 at 12:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000049.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>+ 1.</p>
+<p class="by">So said <a href="http://emps.l-c-n.com/">Philippe</a> on Friday 14 May, 2004 at  1:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000049.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>I really don't want to get into the 'mine is bigger/better/more standard than yours' argument. But please, all you gurus out there, remember that for layout, tables are easier than css (IMH Inexperienced O). I have wrestled endlessly with css (while consulting the excellent support sites - htmldog included) - and at no point has css become 'intuitive'.  And as for Zengarden! I love it, but it is on another planet as far as I am concerned.</p>
+
+<p>Having said all that - I will continue to per/a-spire.</p>
+<p class="by">So said ChrisP on Friday 14 May, 2004 at  1:55PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000049.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Big CSS files don't bother me. Why? Because their bloody cached! If you had to put even half the layout code you use in a single CSS file back into every page of a site in the form of TABLES and FONT tags then you'd see download time on each of those pages increase, you'd also lose the efficiency of revision that CSS affords. The idea that CSS is top heavy just doesn't wash as meaningful to me.</p>
+<p class="by">So said Chris R on Friday 14 May, 2004 at  3:36PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000049.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Just want to respond to ChrisP while I am here too. Hey Chris, I started with HTML tables years ago and remember going through the same kind of learning curve that I had to go through later to learn CSS tableless design. Not to be argumentative, but now that I've learned both and can look back on the experience I'd have to say that I think it's a good point recognizing that learning to use either method efficiently has it's challenges and  drawbacks. I can't really say one was harder than the other, and for all the advanteges that CSS offers, there's no way I am going back. I do use TABLES here and there for certain items that aren't worth the effort in CSS or may be just too darn delicate until browser compliance improves. And I truly believe that semantic code is much cleaner and more intuitive than the wads of tables and font tags we used to have to use everywhere. As for the CSS markup itself, that is more complex than a FONT tag but is straightforward and well documented. If anything I'd have to say the difficulty of CSS isn't CSS but crappy browser compliance which leads to unexpected behaviour and the neccessity of hacks. </p>
+<p class="by">So said Chris R on Friday 14 May, 2004 at  3:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000049.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>I agree with Chris R.  While using CSS and semantic markup is still fairly new for me, I greatly prefer it over tables.  It just makes more "sense" to me.  However, there are times when my boss is breathing down my neck to get a client's interface up, my art department has designed something that is superficially suited to a table layout, and I've got browser compliance issues that I'll revert to tables.  I don't like it and I try and use as much semantic markup within the "content cells" as I can, but I'm just too new with using CSS for layout.  Unfortunately, speed of deployment wins out in this case.</p>
+<p class="by">So said Xth on Friday 14 May, 2004 at  4:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000049.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>Tell the truth brother! Couldn't have said it better myself. I mean what's the point in going half-assed and using CSS for most everything only to fall back on tables if you can't hack it - literally. Talk about a fully validated retort - well said.</p>
+<p class="by">So said <a href="http://pointsofblue.blogspot.com/">Scott Blanchard</a> on Friday 14 May, 2004 at  9:21PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000049.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>Funnily enough, before I read this I had just posted this over at mezzoblue:</p>
+
+<p><a href="http://www.mezzoblue.com/archives/2004/05/13/gasp_tables/#c004943">http://www.mezzoblue.com/archives/2004/05/13/gasp_tables/#c004943</a></p>
+
+<p>Glad I'm not the only person who thinks this way.</p>
+
+<p>I'm still yet to be convinced on this whole "forms are tabular data" malarky. Aren't forms an interface for INPUTTING data? In which case, how can forms themselves be data ergo tabular data? Sure they are often PRESENTED in a tabular way, but that is only one, albeit common, method of presentation, is it not?<br>
+</p>
+<p class="by">So said Luke Redpath on Friday 14 May, 2004 at 11:24PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000049.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Steer clear of this hornet's nest and use frames.</p>
+
+<p>Seriously though, PPK provides good reasons for using frames: <a href="http://www.quirksmode.org/about/frames.html">http://www.quirksmode.org/about/frames.html</a></p>
+
+<p>I had almost no trouble switching from tables to divs.</p>
+
+<p>The new dantecubed.com, coming soon, uses frames though (but the frame tabs use list items).</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante</a> on Saturday 15 May, 2004 at 12:47AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000049.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>The way I see it, and what I also got from reading those two articles, is that the ONLY way the table was promoted was as an easier way to do stuff that's really really hard to do right with CSS, and might need to be rebuilt with a smaller addition. Table-style columns (equal height, background images) spring to mind. They were not promoting going back to all tables, nor going back to all tables but with CSS instead of font tags. They were promoting using table tags as a last-resort-workaround for a very limited set of setups until CSS3 gets implemented, so they can get the job done today. It may be evil evil evil to some of you, but it's that or five more hours writing code and testing across browsers.</p>
+<p class="by">So said <a href="http://waffle.wootest.net/">Jesper</a> on Saturday 15 May, 2004 at 12:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000049.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>Who needs tables for forms?</p>
+
+<p><a href="http://www.themaninblue.com/writing/perspective/2004/03/24/">http://www.themaninblue.com/writing/perspective/2004/03/24/</a></p>
+<p class="by">So said <a href="http://www.themaninblue.com/">Cameron Adams</a> on Monday 17 May, 2004 at  2:39AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000049.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>*I* find CSS hard and I work in this damned field. Why do my sites look so basic? Because I can't do any better. So, I mean, feel to be elitist and state the untruth that CSS is universally easier. For people who want to produce valid-code layouts who realize that life is too short and they'll never get that time back, let them use the jeezly tables. Get them to focus on valid code. Stop beating up.</p>
+<p class="by">So said <a href="http://joeclark.org/weblogs/">Joe Clark</a> on Monday 17 May, 2004 at  3:40AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000049.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>I'd have to say that CSS is much harder than table, and I don't have much experience either way to make me prejudiced.  I created my first web page about 6 weeks ago and picked up tables easily (I last programmed 20 years ago in Fortran and Basic).  Then I picked up a template done entirely in CSS - actually, one of yours off of Blogger.com.  6 weeks later, I'm still having trouble making it all work.  Tables takes me a few minutes; CSS takes me easily 10 times as long.</p>
+
+<p>Since I don't have much experience in tables, you can't attribute my CSS difficulty on some html table bias.</p>
+<p class="by">So said <a href="http://www.chasingthewind.net/">Michael</a> on Monday 17 May, 2004 at  4:20AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000049.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>Luke Redpath: "I'm still yet to be convinced on this whole "forms are tabular data" malarky. Aren't forms an interface for INPUTTING data?"</p>
+
+<p>Forms are useful for updating data too. This would involve feeding back the data to the user.</p>
+
+<p>"In which case, how can forms themselves be data ergo tabular data?"</p>
+
+<p>That would depend on the structure of the data the form is capturing / offering for update. I would believe that the structure of data remains the same regardless of whether it is editable within a form or not - its the same data.</p>
+
+<p>" Sure they are often PRESENTED in a tabular way, but that is only one, albeit common, method of presentation, is it not?"</p>
+
+<p>It is also one method of structure.<br>
+</p>
+<p class="by">So said <a href="http://www.isolani.co.uk/">Isofarro</a> on Monday 17 May, 2004 at 11:25AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000049.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>At the firm I work for, we often have an "old" way of coding websites, aside from me and another coworker.  I have yet to jump into buliding a corporate website via the whole CSS Only way, and that is simply because some of the companies we work with are paying alot of money and they want their site to look good, and unfortuntely, sometimes these people still use old browsers like NS 4.  In fact, one client of ours vowels she will not give up her browser at home even after my coworker has explained to her that its 8 years old and outdated, etc...  </p>
+
+<p>When I build a site for my company, I have been doing the hybrid layout.  I keep the content and presentation separated, but I stil use 1 table for the overall structure.  I DO NOT DO nested tables.  And when I can use a   in the layout, I do.</p>
+<p class="by">So said <a href="http://www.gamecubecheats.info/">Bryan</a> on Monday 17 May, 2004 at  1:54PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000049.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>Having just coded a large intranet that used all CSS/XHTML and no tables I can fully sympathise with people who are using tables for essential layout. Even with all the hacks it proved impossible to get everything exactly lined up across every browser/platform, and contrary to my expectations users DO notice when a box is 5px too low or a margin is missing from their version.  Worse than that, they take offence and ring you up believing they've been discriminated against, especially Mac IE5 users who assume that you're anti-apple.</p>
+
+<p>Add to that the problems faced by people coding pages/templates that are going to be edited by less able folk using programs such as Dreamweaver. The damage people can cause with these programs is definitley exagerated with a pure XHTML/CSS page more than it is with a tables/fonts page. In this respect Contribute is a step forward, though people used to using Dreamweaver don't like being told to use it.</p>
+
+<p>Admittedly Dave Embertons article was misguided, poorly informed and inflamatory. It is however useful reading as it reflects the attitude of many web developers and designers towards  web standards and the people who advocate them. I believe that the standards community  should concentrate more on advising people who are already running large and successful table/font sites on the best routes across to the semantic mark-up/CSS approach. If you just tell someone who is already running a _succesful_ site that  they're doing it wrong and that they should do it your way then they're obviously going to take offence. More carrot and less stick has got to be the answer.</p>
+
+<p>For what it's worth I'm glad that I took the full CSS approach for my intranet, and I believe that even with the amount of time spent adjusting and hacking it has already resulted in time savings and much improved consistency across pages. Not to mention lower page weights and obviously a greater technical integrity which is important whatever product you are making. If anyones interested I'd be happy  to share my experiences of moving across from 'the darkside'.</p>
+
+<p>P.S. Pat, congratulations on this site. V. Impressive.</p>
+<p class="by">So said Rob Clarke on Monday 17 May, 2004 at  2:20PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment19" class="comment">
+<h3><a href="000049.php.html#comment19"><span>Comment </span>19</a></h3>
+<p>Well said Kamarade ! ;) They call us communists, Or are they only too lazy to study new beautiful, true and simple stuff?</p>
+<p class="by">So said <a href="http://www.cafefort.com/">karim</a> on Monday 17 May, 2004 at  3:04PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment20" class="comment">
+<h3><a href="000049.php.html#comment20"><span>Comment </span>20</a></h3>
+<p>It took me the better part of a year to figure out how to do "proper" table based layouts.  It took me the better part of a month to figure out how to do pure css layouts.  And that's even including work arounds for common bugs, like the Box Model Hack.  So even people who use he excuses of "it's easier" and "I'm lazy" are full of it.  It seems to me that folks who are resistant to leaving behind old school table layouts are simply afraid to try something new.  This is quite sad, because every web professional I know got into this field because it was something new.  And most of us are tickled pink that thanks to emerging technologies and evolving standards like css, the field will remain new.</p>
+<p class="by">So said Derek Pennycuff on Monday 17 May, 2004 at  6:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment21" class="comment">
+<h3><a href="000049.php.html#comment21"><span>Comment </span>21</a></h3>
+<p>[quote] When I build a site for my company, I have been doing the hybrid layout. I keep the content and presentation separated, but I stil use 1 table for the overall structure. I DO NOT DO nested tables. And when I can use a in the layout, I do. [/quote] </p>
+
+<p>Here, here! Everything in moderation.  </p>
+
+<p>When I design a sight I design first and code second. I find that using pure CSS layout , like an obnoxious backseat driver, often ends up stearing the design a little bit in the end. This is most often a problem when floating elements inside a centered div - the darn footer elements colapse upwards; don't float use positining and margins? Crossbrowser catastrophe!  Usually one simple table takes care of so many things.</p>
+
+<p>Using CSS demands that you use hacks for anything other than simple layouts. Avoiding hacks is supposed to be at the heart of the web standards movement. </p>
+<p class="by">So said <a href="http://www.littlea.info/journal/test.php">pairustwo</a> on Monday 17 May, 2004 at  7:20PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment22" class="comment">
+<h3><a href="000049.php.html#comment22"><span>Comment </span>22</a></h3>
+<p>Isafarro: "That would depend on the structure of the data the form is capturing / offering for update."</p>
+
+<p>OK, I agree and it is one thing that I have not considered. If you were producing an HTML form to say, update the contents of a spreadsheet, then the spreadsheet data would need to be displayed in a tabular format because this is the data's inherent structure. Therefore, when producing a form it would make sense to use a table because you are presenting tabular data for amendment. I can't argue with that. You could also extend that to a form that lets you add values to a spreadsheet. Presenting the form in a tabular fashion would make sense as the data you are inputting is inherently tabular.</p>
+
+<p>I'm sure you will agree with me however that 9/10 forms are used to capture a series of information that is not inherently tabular in structure, although that data is often stored in a tabular format like a simple database table - however it may also be stored as XML data or a string. This sort of form covers the majority of webforms...registration forms, surveys, this comment form etc. and as such the forms should have no inherent tabular structure. Therefore to markup a form in a tabular structure would be incorrect.</p>
+
+<p>I'll be going into this more on my website in the next few days, and I have some nice examples of CSS styling that doesn't use floats as well as some more highly complex forms as a bit of an experiment.</p>
+<p class="by">So said <a href="http://www.lukeredpath.co.uk/">Luke Redpath</a> on Tuesday 18 May, 2004 at  1:10AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment23" class="comment">
+<h3><a href="000049.php.html#comment23"><span>Comment </span>23</a></h3>
+<p>It's easier to just kill a man than to work out your differences.</p>
+
+<p>Yes, CSS is definitely harder than table layout. Driving a tractor trailer is harder than riding a bicycle, but that does not make a bicycle a suitable replacement. The flaw in the analogy is simply that a heavy load will simply destroy the bicycle, while misapplying table markup will make fast downloads not as easy, will make maintaining and revamping the site more difficult, etc.</p>
+
+<p>Practice CSS. Get used to it. Sure, there are some things we're accustomed to in table layout that cannot be replicated under current CSS implementation. In time, it will be. Get on the train now, because when the time comes that there's no aesthetic excuses to prefer table layout, you will be prepared.</p>
+<p class="by">So said Neal on Tuesday 18 May, 2004 at  6:01AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment24" class="comment">
+<h3><a href="000049.php.html#comment24"><span>Comment </span>24</a></h3>
+<p>Well said Neal,  the tractor thing confused me though.......:)</p>
+
+<p>To be honest, I don't find CSS at all limiting anymore.  In fact, I find it much easier to achieve most of the effects I want quite quickly.  I don't really find that I need to use hacks that often.</p>
+
+<p>Once you get to know how to approach layout with CSS then everything will seem natural that way.  I actually find laying out sites using tables a bit of a bind now.  I'd liken switching from tables to CSS to switching from procedural programming to OOP - you just need to change the way you solve problems.  </p>
+
+<p>Stop wingeing you table users and sort your shit out!</p>
+<p class="by">So said <a href="http://www.danwebb.net/">Dan Webb</a> on Tuesday 18 May, 2004 at  1:04PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment25" class="comment">
+<h3><a href="000049.php.html#comment25"><span>Comment </span>25</a></h3>
+<p>&gt;"I objectively conclude with pride..."</p>
+
+<p>I kinda had to stop right there at that phrase. Isn't that called an oxymoron? A truly objective conclusion would not be colored by "pride".</p>
+<p class="by">So said Cheeky One on Tuesday 18 May, 2004 at  3:11PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment26" class="comment">
+<h3><a href="000049.php.html#comment26"><span>Comment </span>26</a></h3>
+<p>Well, I think Zeldman lays out the argument for CSS very well in his book, Designing with Web Standards. But he also admits that sticking to any approach unbendingly may impede the goal, which is simply to make web pages. (That was the goal, wasn't it?)</p>
+
+<p> Among the good CSS side-effects are pages that are accessible as possible to as many existing internet devices as possible, but surely you've heard.</p>
+
+<p>Lets face it --- the use of tables for page layout was a giant workaround in the presense of<br>
+web browsers which could do no more. Well, now we have browsers that can do much more. Yep, there are problems, but there is a Chinese proverb which says something to the effect of, "Progress consists of trading new problems for old ones."</p>
+<p class="by">So said <a href="http://www.commandertrombone.com/">Chris</a> on Tuesday 18 May, 2004 at  5:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment27" class="comment">
+<h3><a href="000049.php.html#comment27"><span>Comment </span>27</a></h3>
+<p>I, for one, am actually in agreement with Andy and Dave S. (even put a small bit about it on my site - www.jeremyflint.com).</p>
+
+<p>If you are designing a site, and you know that there will be a large percentage of viewers in NN4.79, why would you want to ignore that section of users? Especially if, for one reason or another, the users are locked into using and older browser,as is the case for many k-12 educational systems.</p>
+
+<p>I think basically Andy and Dave were saying to be wary of the audience you are designing for and design accordingly. If anyone reads into the articles that they should go back to table based design, they should re-read more carefully.</p>
+<p class="by">So said <a href="http://www.jeremyflint.com/">Jeremy Flint</a> on Wednesday 19 May, 2004 at  7:06PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment28" class="comment">
+<h3><a href="000049.php.html#comment28"><span>Comment </span>28</a></h3>
+<p>I suppose being younger and thus being relatively new to the game, I personally think CSS is far and away easier than tables. I never really learned table-layouts (I wasn't much into designing then) and I didn't really become interested in web design for a while *because* table layouts were such a pain to figure out. If, by chance, I did design a table layout, it was only with gratuitous use of Dreamweaver. So, for the same reason they claim tables are easier, I claim CSS is easier. It's what I learned and got comfortable with.</p>
+<p class="by">So said <a href="http://www.michee.vrtisworks.com/eos/">Michee Rose</a> on Thursday 20 May, 2004 at 12:37PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment29" class="comment">
+<h3><a href="000049.php.html#comment29"><span>Comment </span>29</a></h3>
+<p>I've been able to do things with tables that was not capable with CSS.</p>
+
+<p>I've been able to do things with CSS that I was not capable of doing with tables.</p>
+
+<p>I've been able to do a lot with CSS and tables.</p>
+<p class="by">So said staylor on Thursday 20 May, 2004 at  7:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment30" class="comment">
+<h3><a href="000049.php.html#comment30"><span>Comment </span>30</a></h3>
+<p>Good read, thanks</p>
+<p class="by">So said <a href="http://coda.co.za/">coda</a> on Friday 21 May, 2004 at  3:43AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment31" class="comment">
+<h3><a href="000049.php.html#comment31"><span>Comment </span>31</a></h3>
+<p>You dont think Dave wrote that article because he's under some MSN remit. The site itself fails a lot of  accessibility and web standards issues.</p>
+
+<p>"Can we fix the site guys??"</p>
+
+<p>"No. Not a chance"</p>
+
+<p>"Well then lets write an article damning web standards. And maybe insult disabled users to boot."</p>
+
+<p>I'd recommend any subscribing to the magazine to cancel and get a refund on any remaining issues. Any copies that are still kicking around a home or office can neatly be cut into 5 by 6 inch squares and left near a toilet/dunny.</p>
+
+<p>Mark Thomas</p>
+<p class="by">So said <a href="http://www.carbonchip.com/">Mark Thomas</a> on Friday 21 May, 2004 at  1:00PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment32" class="comment">
+<h3><a href="000049.php.html#comment32"><span>Comment </span>32</a></h3>
+<p>CSS is much easier. And using CSS makes great sense. </p>
+
+<p>If one looks at the very basics between block [area] items and  inline items, and begins to think  of content space and even delivery order ... it becomes even easier. If better naming is applied or used for the styles (semantics in naming). The styles, site, or page (document) become easier to debug, arrange, tweak, manipulate, modify, update, etc.</p>
+
+<p>Great thoughts.</p>
+
+<p></p>
+
+<p>CSS is very flexible.</p>
+
+<p>Having learned first layout from html tables, manipulations, hacks etc, many years of hand authoring markup, code, and deciding to give CSS a try back in 1998, 1999 with the basics [text, links, a bit of box properties], I found that converting over to CSS for presentational items was much easier and quicker.</p>
+
+<p>I wish schools and colleges would start teaching CSS from the beginning and basics with Web Design, then there would be fewer challenges transitioning, convincing, or retraing others.</p>
+
+<p>[p.s. Nice forms tool resource, Cameron. ]<br>
+</p>
+<p class="by">So said holly on Friday 21 May, 2004 at  4:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment33" class="comment">
+<h3><a href="000049.php.html#comment33"><span>Comment </span>33</a></h3>
+<p>I agree with David Emberton.</p>
+
+<p>Let's face the truth, I mean, I see blog posts like 'hey, someone has a great post about why you should use web standards, you can make your boss read it' etc. That in itself means something's wrong here.</p>
+
+<p>Tables work, tables are easy, tables are here. Saying, or in some way proving on paper, that CSS is easier won't make people use it. (Doesn't matter if it's better or not, or, if you think it's better or not. Getting the job done matters).</p>
+
+<p>Don't get me wrong, I believe that there should be web standards. It's just that I think current standards don't work and rather than defending something that doesn't work, I believe revising (or completely replacing) them is the more appropriate approach. And first step is accepting that they don't work.</p>
+
+<p>What about Flash? Where is SVG? I don't think David Emberton's article was ridiculous at all...</p>
+<p class="by">So said <a href="http://www.asvguy.com/">Burak KALAYCI</a> on Friday 21 May, 2004 at  6:37PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment34" class="comment">
+<h3><a href="000049.php.html#comment34"><span>Comment </span>34</a></h3>
+<p>CSS *is* hard.  It's a monumental PITA, and you've forgotten that because you've now programmed yourself to keep in mind all the bizarre and twisted intricacies of the aberrant behavior of all the major borwsers.  You admitted it yourself, learning CSS is a royal pain.  I am not a programmer or web designer, but I am a reasonably competent code-slinger.  Most people see my code and react with "eeew...", but that's another matter... :-)</p>
+
+<p>The reality is that the learning curve on CSS is so steep that it is just flat not usable by most people.  In fact, it's really not even usable by experts unless they work with it day in and day out to keep all the arcana fresh in thier minds.  (What does IE do in that case, again?) On top of that, the tools are archaic.  Sure, TopStyle helps a little, but I've yet to see a WYSIWYG tool that builds pages with CSS the way something like Namo WebEditor (or even the execrable GoLive) does with tables.  It's simply not possible to build a non-trivial CSS-based design until you know *way* too much.  CSS programming (and it *is* programming) is way too much like what early Mac programmers said about "Inside Macintosh" (Apple's original programming guide for the Mac): It consists of 24 chapters, the other 23 of which you must already fully understand in order to understand the one you are reading.   If that doesn't describe today's CSS situation, I don't know what does, except that no one has even bothered to put all 24 chapters in the same binding yet for CSS.</p>
+
+<p>While I appreciate CSS and its benefits, I have recently decided to stay with tables.  They work.  CSS doesn't, really.  And I really don't care enough about the benefits of CSS to put up with the pain.  If that means my pages aren't accessible, then tough.  We are not going to have an accessible sematic web until we get tools that can "automagically" deal with the crap involved with using CSS.  This is especially true for those of us that have no real incentive to learn all the CSS trickery in the first place, and don't build sites often enough to have a prayer of keeping all the gotchas fresh in our heads.  GO TABLES!</p>
+<p class="by">So said Dub Dublin on Saturday 22 May, 2004 at  9:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment35" class="comment">
+<h3><a href="000049.php.html#comment35"><span>Comment </span>35</a></h3>
+<p>CSS gurus, how would a do the following table in CSS?</p>
+
+<p>&lt;table&gt;&lt;td&gt;&lt;td&gt;Col1&lt;/td&gt;&lt;td&gt;Col2&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;td&gt;Data1&lt;/td&gt;&lt;td&gt;Data2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</p>
+<p class="by">So said pb on Saturday 22 May, 2004 at 11:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment36" class="comment">
+<h3><a href="000049.php.html#comment36"><span>Comment </span>36</a></h3>
+<p>PB: you don't.</p>
+<p class="by">So said Brandon on Sunday 23 May, 2004 at  6:55AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment37" class="comment">
+<h3><a href="000049.php.html#comment37"><span>Comment </span>37</a></h3>
+<p>PB, not sure if this is what you were getting at, but deciding to use CSs doesn't mean you stop using tables in your web pages. It means you stop using tables to determine the visual layout of your pages. Your example looks like a table used for displaying tabular data, which is exactly what the table tag was designed for.</p>
+
+<p>However, the table in question should probably look like this:</p>
+
+<p>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Col1&lt;/th&gt;&lt;th&gt;Col2&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Data1&lt;/td&gt;&lt;td&gt;Data2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</p>
+<p class="by">So said <a href="http://www.pauldwaite.co.uk/">Small Paul</a> on Sunday 23 May, 2004 at 10:49AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment38" class="comment">
+<h3><a href="000049.php.html#comment38"><span>Comment </span>38</a></h3>
+<p>"If you are designing a site, and you know that there will be a large percentage of viewers in NN4.79, why would you want to ignore that section of users? Especially if, for one reason or another, the users are locked into using and older browser,as is the case for many k-12 educational systems."</p>
+
+<p>1. Why stop at Netscape 4? Surely there are still users of Mosaic 1 or IE 3 out there. And people without any web browser at all. The fact is, when you make a *Web* page, you use a Web standard. When you wish to view a Web page, you must realize that a Web-compatible browser is needed. Ultimately, you cannot cling to a non-standard browser. The point, anyway, is that the advantages of using XHTML and CSS outweigh the slight disadvantage of giving Netscape 4 users unformatted content.</p>
+
+<p>2. I highly doubt that anyone is "locked into using" Netscape 4. If educators have old machines and still wish to provide their students with a web browser, Opera is faster and better. Educators should realize that the cost of not using an actual, compliant *Web* browser may be the inability to view websites!</p>
+<p class="by">So said <a href="http://www.hiddenfortress.net/">Paul D</a> on Monday 24 May, 2004 at  1:10AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment39" class="comment">
+<h3><a href="000049.php.html#comment39"><span>Comment </span>39</a></h3>
+<p>I am almost at the end of a very large project using tables as main layout method. I am sorry that I only learned about CSS in the middle of this process. However, being unwilling to start from scratch I decided to blend CSS and tables the best I could. It was very difficult, but I am happy that I now have a fully valid table based layout, with small filesize and all content styled using CSS.</p>
+
+<p>To those who fear CSS I can say that once you start using it, everything lights up. The syntax is English-like, very intuitive, fully documented and clean. Tables only clog up pages, and the update part is a nightmare, because you have to avoid breaking the table syntax. A very nice solution I found is using divs inside table cells, and then play with them instead of constantly resizing and rearanging the cells.</p>
+
+<p>CSS is the future and I am happy that I got past the table stage. Old browser compatibility is assured using CSS, because the content (and that is the most important thing in a website) is fully visible, and I don't think that people who use old browsers do so for fun. They want to search for content, not design. The design part shows only in "newer" browsers, which have been around for about 4 years now, and it's hard to believe that users keep using outdated software.</p>
+
+<p>The learning process for CSS is an ongoing task, but so is any other techinque. Plus, CSS offers flexibility for light pages, clean design and content, while tables only offer some visual structure. You should find your own reasons for using CSS and not tables. If you have been educated in using tables, CSS should be extremely easy to understand; the logic and order you must have in your mind by now for being able to design complex table structures will greatly help in simply positioning a set of boxes.</p>
+<p class="by">So said Dorel Octavian CIONVICA on Monday 24 May, 2004 at  6:02PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment40" class="comment">
+<h3><a href="000049.php.html#comment40"><span>Comment </span>40</a></h3>
+<p>I'm surprised such a non-topic could be turned into a debate. It's like the decision between a tuna sandwich and a ham sandwich. Oh well, I guess you had one of those slow days. And I don't feel like going to bed yet, so I'll join right in.</p>
+
+<p>Personally  I prefer CSS layouts. They're sexy, my boss doesn't understand them, and they also get me all the girls! But I'm afraid the arguments you're using for CSS vs. tables don't hold much water...</p>
+
+<p>&gt; One myth is that CSS is 'hard'. It isn't hard. <br>
+&gt; Well, not any more difficult than any other approach. </p>
+
+<p>That really depends. Ever looked at CSS3? Now THAT's hard. And there are very few people that  can claim to understand the CSS2 inline box model.</p>
+
+<p>But indeed, CSS is not too difficult. What IS difficult, as shown by the endless stream of questions in mailing lists and on usenet,  is getting all those bloody browsers to cooperate. And I'm not talking about Netscape 4; I'm talking about the latest incarnations of Internet Explorer, Mozilla, Firebird/Firefox, Opera, etc. These so-called "standard" browsers, they are a nightmare! And that's before we get into the murky waters of  "quirks" and "standard" mode.</p>
+
+<p>This is where a simple table grid really flies: If I want it to be three columns and three rows, with a footer at the end, by jove it's going to be just that, all over the browser universe. It's so universal even Lynx can handle it, if you take care just a little bit.</p>
+
+<p><br>
+&gt; Another odd point that Andy Budd raises is that a CSS designed <br>
+&gt; page can be just as heavy, if not heavier than a page with tables.</p>
+
+<p>Code, eh? The "heavy CSS file" argument really isn't all that clever. But hey, does the code weight really matter all that much? Yes, you might be able to shove off a couple bytes by replacing TABLE, TR and TD with DIV, SPAN, classes, ids, and a couple lines of CSS. Sure, on sites that don't use graphics at all, that might even be a factor. But what really hurts the bandwidth bill is the portrait of the director and his chihuahua in truecolor, that crummy flash intro you just couldn't talk them out of, etc. And those are the same weight whether they're wrapped in tables or in divs.</p>
+
+<p><br>
+&gt; A table will lock you into a design. If you need to change it, <br>
+&gt; you need to go into a page and fiddle with the table structure</p>
+
+<p>That's a very odd argument! In my not inconsiderable experience with both methods, both takes about equally long. It doesn't much matter whether I fiddle an hour or two with the CSS file to get my changes cross-browser compatible, or fiddle an hour or two with the HTML table-layout template file and the CSS colour/font layout file.</p>
+
+<p><br>
+&gt; Netscape 4? I'm not even convinced that supporting such <br>
+&gt; old browsers is a reason.</p>
+
+<p>Get up to date, man!  These days, the deadweight you're supposed to be ridiculing is Internet Explorer 6 ;-) .</p>
+
+<p><br>
+Let's face it, folks. CSS ain't the saviour, tables aren't the devil, and vice versa. Just use your common sense while coding, and all will be fine.</p>
+
+<p>Now where is that tuna sandwich when I need it?</p>
+
+<p><br>
+Matthias<br>
+</p>
+<p class="by">So said Matthias on Monday 24 May, 2004 at 10:36PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment41" class="comment">
+<h3><a href="000049.php.html#comment41"><span>Comment </span>41</a></h3>
+<p>Certainly CSS can be difficult to make work in all browsers. I test on various versions of IE, Netscape, and Opera as well as Mozilla Firefox, Lynx and a WebTV Viewer. Unfortunately I have only a PC and no Mac! But with a good deal of labor, I have managed to get a site of several hundred pages to perform perfectly on all browsers tested. The key is to make the presentation nice but relatively simple so things don't break.</p>
+
+<p>Of course it doesn't look the same on every browser: IE and newer browsers get the full layout; version 4 browsers get colors, fonts and a few floats, but no other formatting; WebTV gets white text on gray background; everyone else gets unstyled markup. Thanks to PHP, compliant browsers get XHTML 1.1 (as application/xhtml+xml) and everyone else gets HTML 4.01 Strict (as text/html). Not bad for a variety family site run by a non-professional!</p>
+
+<p>Regarding projects I've done for others -- I generally use HTML 4.01 Transitional, CSS layouts where they work easily and simple tables where they work best (which is less often as I learn more about CSS). I say do what you must, but mind the standards, because standardization makes for more universal implementations of the medium (the Internet). When user agents (browsers) provide better support for standards, this will be easier to accomplish.</p>
+
+<p>Very interesting discussion.</p>
+<p class="by">So said <a href="http://www.ookingdom.com/">Charlie Petitt</a> on Tuesday 25 May, 2004 at  8:09AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment42" class="comment">
+<h3><a href="000049.php.html#comment42"><span>Comment </span>42</a></h3>
+<p>I've kept an eye on this whole CSS/table thing for a while, and I think it's funny. It's kind of like listening to a roomful of Mac zealots. </p>
+
+<p>A few well known people in this community say CSS is good, and a thousand parrots echo it because most people are too stupid to think for themselves.</p>
+
+<p>After almost 10 years of doing this, I am using tables to layout pages and CSS to style them, and will continue to do so for as long as I can tell. It's easier, it's faster, and I can make complicated pages look EXACTLY like I want them to with a minimum of fuss. There are still way too many things that I can do with Photoshop and tables that I can't do with pure CSS. The number of table bugs in different browsers is a fraction of the CSS bugs. The time I would spend getting deep into CSS is time I can't spend making money building tabled layouts.</p>
+
+<p>I do agree that purely informational sites, intranets, etc are well suited to pure CSS, but design IS important, and companies want to leave a lasting impression on their site's visitors, have marketing and branding concerns, etc.</p>
+
+<p>Pure CSS sites are bland, boring, and you can spot them right off. Why would creative people muzzle themselves like that?</p>
+
+<p>Lastly, broadband access will be nearly ubiquitous long long before browsers are standardized for CSS, making the whole "lean page" arguement completely and totally moot for users, and for 99% of the web sites out there, bandwidth bills aren't an issue.</p>
+<p class="by">So said Joey on Tuesday 25 May, 2004 at  8:12AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment43" class="comment">
+<h3><a href="000049.php.html#comment43"><span>Comment </span>43</a></h3>
+<p>I like CSS, and I like tables for layout.</p>
+
+<p>I just hate it when people think that "there is just one way to it right". I use tables for pure (main) layout and CSS for makeup. Guess what, my sites look exactly like I want them to look like, no problem here. If you want to use CSS all the way and no tables, then fine. But don't consider webdesigners that use tables stupid people. </p>
+
+<p>OT: I'm personally fed up with all the standards. They're everywhere, left right and center. When making a site 100.00% correct according to all the standards involved, I'd be spending more time about tiny little absurd details than making the actual site! No, I'm not lazy, I just realize that my professional skill at designing websites will not be better if I follow the standards, created by other people and which contain a signficant number of things with which I don't agree, like a blind muppet. In the end I'm designing the web application for a specific platform (browser) and a specific version. New versions of the standards are released frequently, it's just not worth anymore the invest time in completely investigating them. Besides, no matter what browser you're a fanboy of, they all have "mistakes" (half of them actual mistakes, the other non-compliance with some standard, even though the browser creator didn't promise you compliance with that browser). I design my sites (actually intranet applications) for a specific browser (version). I refuse to fall on my knees and obey all the standards 100%, why should I? If there were 1 standard for websites and 1 for CSS and all browsers supported them 100% correctly, then maybe it would be worth the effort (more).</p>
+
+<p>Am I the only one fed up with the webstandards forcing us to redesign every time some egghead comes up with the brilliant idea to deprecate something and invent something else to replace it?</p>
+<p class="by">So said Mike on Tuesday 25 May, 2004 at  1:20PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment44" class="comment">
+<h3><a href="000049.php.html#comment44"><span>Comment </span>44</a></h3>
+<p>CSS vs TABLES...the great debate.</p>
+
+<p>I think what it really boils down to is common sense.</p>
+
+<p>I faced this problem at work recently.</p>
+
+<p>One of our recent projects was to redesign a booking engine.  I had explained that while we were going to spend the money and time to improve the software project we should make the code more standards based.  First, my boss did'nt know what the hell I was talking about, and being young it always comes across as bullshit.  Second, mind you I had no control over how the html code was put together. or assembled in order  i was already given an inherent structure to deal with.  A few days before the project started I hacked around some comps to see how difficult it would be to do the layout with all css.  It was extremely difficult but I guess this was because of the gap in my knowlege.  Either way we ended up doing something more transitional...rather than a full layout with css.  The end product is suberb and is I think a good compromise that sometimes money, time, and business obligations just force you to make.  All this bullshit about using css exclusively for layout is nonsense.  Yes this would be an option if you are certaintly the sole coder and designer of a website...but we know that is not always the case.  There are so many stakeholders in websites these days...you have be practical...  Suppose you tell your stakeholders you are doing css layout...and they say okay sounds good...and they will be in charge of updating the website... When they open it up in most likely frontpage its unlikely they are going to hand code the new content in they probably will copy and paste and use all the ridiculous formatting features that frontpage provides swarming your nicely coded templates with shit.  The point is if you can afford it, and have the time...spend the time fighting with the browsers and do the full css-layout...Not every project neccesitates this flexibility.  My most recent project is redoing my companies website.  I have elected to do a full css-layout with no tables.  My biggest worry though is people going in and editing the code, and thinking that they needlessly need to fan tables all over the place to get particular layouts...that would be a disaster, so maybe in the end I will settle on a header div, a main div with a simple two column table ( which is not inherently inaccessible if it is disabled ) and a footer div, because I cannot be confident the people that will be updating the site will know what the hell they are doing..</p>
+<p class="by">So said Paul on Tuesday 25 May, 2004 at  4:19PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment45" class="comment">
+<h3><a href="000049.php.html#comment45"><span>Comment </span>45</a></h3>
+<p>(Before I begin: Sorry to be devil's advocate here. And no, i am NOT pro-table. In fact, i'm another webstandards purist. I've been telling various web companies to make their banner-ads code xhtml-strict compatible).</p>
+
+<p>There's one argument in favor of tables that we all forgot about.</p>
+
+<p>The freaking wysiwyg designers! Good exposition on the electric screwdriver. But this argument has just backfired on you. wysiwyg tools could be compared with the electric screwdriver, and the hand-written code with manual old screwdrivers.</p>
+
+<p>The sad truth about table-based design: It can be automated. And if it can be, it will be. That's what dreamweaver does, that's what designers do, and that's what they will continue to do unless FORCED otherwise.</p>
+
+<p>So far i haven't seen a wysiwyg-er with buttons like "join all these rollovers in a single div using pure style attributes inside the img tags". </p>
+
+<p>Or how about "implement this menu with CSS-modified ul's instead of tables". Or even better... "Build hierarchical menu using CSS and javascript."</p>
+
+<p>Or EVEN better (and this is my favorite)... a "generate DOM-based event generator to get rid of those bloddy onmouseover events messing up my markup" tool.</p>
+
+<p>I do have such a script (heheh) but how can i publish it and integrate it to Macromedia Fireworks or Dreamweaver?</p>
+
+<p>Any programmer who builds extensions for Macromedia stuff? Hello? Anyone? </p>
+
+<p>(desertic wind blows...)</p>
+
+<p>Shocking truth: With wysiwyg, you JUST have TWO choices: "one table" and "nested tables". When i tried to export my design, i was SHOCKED when I found out that the "single table" approach looked even much more complicated than the nested one! (and that was just for the header).</p>
+
+<p>How do you tell Dreamweaver™ and Fireworks™ to turn your slices into divs? To give you a separate CSS file? To integrate it with your currently-working CSS?</p>
+
+<p>You can't. It hasn't been implemented yet. The problem is NOT (that much) that some browsers haven't implemented the latest CSS techniques. The REAL problem is that WYSIWYG software hasn't.</p>
+
+<p>On the other hand... how I'd LOVE to see the CSS3 working finally! 3 column layouts, yay! Imaged borders, even more yay! Alas, they haven't.  And for a good 3-column flexible layout with graphical borders, we'll always have to resort to the 3-column table with nested 3x3 tables in each. (the 8 cells being the graphical borders, and the middle cell being for the content). Or even worse *shudder* a 9x3 table with rowpan=2 for the contents.</p>
+
+<p>But when CSS3 is finally out, I will be able to say:<br>
+Layout? It's SO easy! Just do a 3-column table and style each td with imaged borders with CSS3.</p>
+
+<p>And then, the alarm clock will wake me up.<br>
+Back to reality...</p>
+<p class="by">So said Rick on Tuesday 25 May, 2004 at  5:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment46" class="comment">
+<h3><a href="000049.php.html#comment46"><span>Comment </span>46</a></h3>
+<p>Rick, you make a good point. My site (www.ookingdom.com) is huge and is laid out entirely in CSS, but I am the sole webmaster. Anyone expecting several hands to share the work should probably resort to something more "conventional", especially in light of the "CSS-ignorant" WYSIWYG HTML editors.</p>
+
+<p>For what it's worth, not ALL standards enthusiasts eschew tables layouts. I do for my own site, but that doesn't mean everyone has to. Read the following excerpt:<br>
+<a href="http://www.ookingdom.com/newsarchive/2003/11#nov06king">http://www.ookingdom.com/newsarchive/2003/11#nov06king</a></p>
+<p class="by">So said <a href="http://www.ookingdom.com/">Charlie Petitt</a> on Tuesday 25 May, 2004 at  8:26PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment47" class="comment">
+<h3><a href="000049.php.html#comment47"><span>Comment </span>47</a></h3>
+<p>Forgetting about the whole semantically-incorrect argument, tables are such an old-fashioned methodology: explicitly placing everything in the right place and with the right size.  Talk about inflexible and non-extensible.</p>
+
+<p>CSS goes with a more modern methodology; that is, place everything left-to-right, top-to-bottom and allow everything to expand and slide, and look good regardless of environment.  This is the direction that everything is going; as far as I know, even Microsoft is deprecating the old Windows-API GUI-positioning crud in favor of XAML in Longhorn.</p>
+<p class="by">So said Zooplah on Wednesday 26 May, 2004 at  1:35AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment48" class="comment">
+<h3><a href="000049.php.html#comment48"><span>Comment </span>48</a></h3>
+<p>I think Zeldman takes the best approach in his most recent book...and that would be what he calls the "transitional" approach.</p>
+
+<p>Tables are part of standards...HTML 4, 4.01, XHTML 1, 1.1, and 2.</p>
+
+<p>I think the problem is, is that yes css has an incredible learning curve...but by the way you read about in on the internet...it either seems like you have to go all the way with css based layouts or no-way ( and if that is your choice , you should not call yourself a true front end web developer ) such thinking is nonsense.  Yes the advantages to css far outway the advantages to using tables...but a transitional site is much better than a site that uses nested inside of nested inside of nested inside of nested tables...</p>
+
+<p>One of the ways I have learned css is to take existing spaghetti sites and recode them in a transitional format.for personal practice..this eases the learning curve a bit...because you can use one table as a simple grid and then build modular peices using divs inside of the cells that can be yanked out for future designs.  And while many standards purist would bemoan this practice, they should applaud it because it as I said better than nested tables...it just seems as though the purist are taking an almost puritan like attitude about the whole affair....</p>
+<p class="by">So said  on Wednesday 26 May, 2004 at  4:28AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment49" class="comment">
+<h3><a href="000049.php.html#comment49"><span>Comment </span>49</a></h3>
+<p>I have been in the computer industry for 30 years, during which time I have run successful companies. Over that period I have seen thousands of changes in the industry, not just the internet but across most areas of technology. However, the current raging debate about CSS-P and tables for layout has got be totally bemused.</p>
+
+<p>As I see it, if you ask most business people if they care whether their site is pure CSS-P or tables based layout they would probably say “I don’t care”. What they do care about is meeting the brief, achieving the aims, delivering a stable, compliant and customer centric web experience at a sensible cost. If the design goal is that we are a publishing house and print layout and PDA’s have too be supported then maybe CSS-P is the way to go, and if they want a footer always positioned at the bottom of all content maybe tables is the way to go.</p>
+
+<p>Why therefore are so many people hell bent on making other web developers feel disgraced dare they use tables. If tables are the best solution then use them and if CSS-P is best then use this method. Maybe the industry experts have done too good a job at convincing us all that we must abandon tables at all costs. Most sensible and informed people know the differences and the advantages that CSS-P can deliver. </p>
+
+<p>Look around at many of the pure CSS based design layouts, many have a similar feel often bordering on being pretty with nice gradients, subtle pictures etc. For me the best thing CSS delivers is the exact control over type, background images and absolutely positioned elements, print style sheets and reduced bandwidth, all superb options and not debated because we all know the benefits and use them.</p>
+
+<p>So why the ongoing debate about CSS-P for layout, I say because CSS-P in its current form is a long way from perfect, for example why can’t you say width 70% and height 70% for a Div and know it will work just like a table in all popular browsers ? </p>
+
+<p>When CSS3 comes, is supported properly and addresses many of the current shortcomings I suspect the debate about using pure CSS will vanish as developers will see they have a solution that is better than tables in almost all situations. But this is a Transitional time and until that is no longer the case there is nothing wrong with using transitional methods. Of course we all want to separate content from presentation and keep sites efficient but anyone who feels confident enough to state a developer who still uses tables is stupid, is very misguided. Charlie, Joey and Mike (post 41, 42 and 43) are all correct and accept that there are plenty of times when tables are the best solution. If Jeffrey Zeldman can accept this point I am sure the rest of the industry should do so also.</p>
+
+<p>Maybe we should all create a universal site who’s sole purpose is to pass on and educate each of us regarding the real world web design issues we all face from time to time, explain why it’s a no no to put Div’s inside a simple overall table layout for example (so I am told) and other such matters without the need to say “you’re a bad bad boy if you use tables, a website site that is not 100% focussed on “got to use latest technology at any cost but on how best to meet the clients brief using transitional methods, standards and new technology where most appropriate. If we lose site of the real business objective for websites by getting wrapped up too much in latest layout technology issues we surly lose site of everything the web should stand for. </p>
+
+<p>Always onward, always introducing and using new technology and standards but at a realistic pace please gentlemen !<br>
+</p>
+<p class="by">So said David Egerton on Wednesday 26 May, 2004 at 11:17AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment50" class="comment">
+<h3><a href="000049.php.html#comment50"><span>Comment </span>50</a></h3>
+<p>Hmmm </p>
+<p class="by">So said <a href="http://ohhhh.com/">Yeah</a> on Wednesday 26 May, 2004 at  7:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment51" class="comment">
+<h3><a href="000049.php.html#comment51"><span>Comment </span>51</a></h3>
+<p>I used to be in this game professionally for companies like About.com and Deutsche Bank, and now three years later I'm trying to get back into it.  My basic understanding of layout was really through tables.  It was a definite learning curve, but I became very savvy with nested tables.  So now I am learning css, and it feels like you're trying to swim without a paddle, starting over as an obese arthritic when you used to be an olympic swimmer.  <br>
+Some of the stuff I have seen is really cool with css and it is clearly the future.  But it seems to me the way you even think has to change.  This method seems to me to be much more in favor of the traditional print designer who used Quark and Photoshop. <br>
+I think many of us who are really great at interface issues but not great illustrators really feel like they've lost a niche they once had, or certainly we have to adjust in a way where we don't know we'll be quite as skilled using css.... I think that is some of the reluctance.  I know it's mine.  <br>
+Congrats to everyone has made the transition.  I'll see you there when I catch up!</p>
+<p class="by">So said Erik on Friday 28 May, 2004 at 12:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment52" class="comment">
+<h3><a href="000049.php.html#comment52"><span>Comment </span>52</a></h3>
+<p>One more thing - I also feel like I can't take on new consulting projects till I'm fully versed, and the author of this article only reinforces that belief.  <br>
+</p>
+<p class="by">So said Erik on Friday 28 May, 2004 at 12:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment53" class="comment">
+<h3><a href="000049.php.html#comment53"><span>Comment </span>53</a></h3>
+<p>So... I take it I'm the only one who finds tables *harder* to use for layout than CSS?</p>
+
+<p>I can barely keep track of the nesting and relationship of table cells for tabular data, let alone for layout. My current website design is a plain simple layout with a plain simple table because that's all I could figure out.</p>
+
+<p>But lately I've been redoing my sites to learn using CSS for all layout, and I'm finding it just a lot easier. The HTML code is easier to keep track of, and I'm finding it easy to make neat layout stuff just by "tacking" elements everywhere. Change a line, stick that part there. Change another line, put some spacing on that part. Makes me wish I'd discovered "pure" CSS layout before now!</p>
+
+<p>Now, I'm not going to say I'm a designer, because I'm not... even the new layouts I've been making are still simple. And the browser issues with CSS are irritating. But IMHO, I can't help but agree with the thought that "tables are only easier because you learned them first". I certainly don't find table layout easier than CSS layout. I mean, how on Earth do you all manage to keep track of all those table cells?</p>
+<p class="by">So said <a href="http://alienharmony.com/">Liz Calkins</a> on Friday 28 May, 2004 at  5:44PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment54" class="comment">
+<h3><a href="000049.php.html#comment54"><span>Comment </span>54</a></h3>
+<p>I just use what's easiest and simplest (CSS).</p>
+<p class="by">So said <a href="http://purl.org/mooquackwooftweetmeow/">Greg K Nicholson</a> on Saturday 29 May, 2004 at  3:31PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment55" class="comment">
+<h3><a href="000049.php.html#comment55"><span>Comment </span>55</a></h3>
+<p>If Andy spent as much time learing CSS form layout as he did thinking up anti-css epistles...</p>
+<p class="by">So said <a href="http://www.foltzwerk.com/">David</a> on Sunday 30 May, 2004 at 12:11AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment56" class="comment">
+<h3><a href="000049.php.html#comment56"><span>Comment </span>56</a></h3>
+<p>I don't know if building web sites with CSS is easier or harder than tables, but it's qualitatively DIFFERENT.  </p>
+
+<p>DreamWeaver -- PageMaker for the Web -- sees the page as a bunch of boxes.  It thinks in &lt;font&gt; tags, translates to numbered &lt;div&gt;s, and puts it all into the &lt;head&gt;.  </p>
+
+<p>Even novice CSS designers formulate a mental model assigning semantics to web page divisions across sections of a web site.  CSS design doesn't lend itself well to WYSIWYG editing, because it separates style from content, and because of the way inheritance and the cascade work.  </p>
+
+<p>The CSS designer's task involves more than graphic layout.  WYSIWYG might be nice, but the designer needs a powerful text editor.  Maybe she also need something more powerful that can integrate a higher-level abstraction of pages and site sections and the CSS cascade, and incorporate graceful degradation for older browsers, across an entire site.</p>
+<p class="by">So said <a href="http://zajac.ca/">Michael Z.</a> on Sunday 30 May, 2004 at  4:19AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment57" class="comment">
+<h3><a href="000049.php.html#comment57"><span>Comment </span>57</a></h3>
+<p>Hello all</p>
+<p class="by">So said <a href="http://www.print.com/">Helga</a> on Sunday 30 May, 2004 at  3:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment58" class="comment">
+<h3><a href="000049.php.html#comment58"><span>Comment </span>58</a></h3>
+<p>Liz Calkins:</p>
+
+<p>No, you're not the only one. I think the big division in web design is between people who actually know what goes on underneath and build sites textually, and people who use "WYSIWYG" tools.</p>
+
+<p>People who use the graphical tools think tables are easier, because they never see the complexity and because their tools don't support CSS layout. </p>
+
+<p>For those of us who use handwritten pages and content management systems with automatic templating and database backing, CSS layout is better in every way--faster to download, easier to write, easier to understand, easier to maintain, compatible across more platforms, and so on.</p>
+
+<p>I don't design for Netscape 4, but the beautiful thing about CSS is I don't have to. I design for web standards, and the site still works on Netscape 4. Sure, it's ugly on that browser, but who cares?</p>
+
+<p>Keep the audience in mind: the person running Netscape 4 doesn't care if my web site is ugly, because if they *did* care about how nice web pages looked *they wouldn't be running Netscape 4*. And if the reader doesn't care about ugliness, why should I?</p>
+
+<p>Sure, maybe corporate clients care that their "message" isn't appearing with full design and layout fidelity on browsers that are ten years obsolete. In which case, tell them to use PDF, because you're never going to get full fidelity everywhere on the web. If you think otherwise, tell me how you're going to optimize your table-based layout for when I visit it from my t68i cellphone.</p>
+<p class="by">So said <a href="http://www.pobox.com/~meta/">mathew</a> on Sunday 30 May, 2004 at  8:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment59" class="comment">
+<h3><a href="000049.php.html#comment59"><span>Comment </span>59</a></h3>
+<p>I like to layout my pages using font tags, which are changed using inline CSS, to behave like table cells. This works only in IE6 with SP1 half installed, but I find it's worth the sacrifice.</p>
+<p class="by">So said Michael Ward on Wednesday  2 June, 2004 at 11:29AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment60" class="comment">
+<h3><a href="000049.php.html#comment60"><span>Comment </span>60</a></h3>
+<p> is depricated code and shouldn't be used any more... sorry. ;-)</p>
+
+<p>All the people who "struggle" with CSS... did you read the blog entry?? EVERYONE struggles with CSS. There was a time, many moons ago, when you struggled with ! If something's new to you, you will struggle. Quit whinging, get through it and write good, CSS-based code.</p>
+<p class="by">So said <a href="http://www.mynancoulddobetter.com/">TheG</a> on Friday  4 June, 2004 at  9:45AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment61" class="comment">
+<h3><a href="000049.php.html#comment61"><span>Comment </span>61</a></h3>
+<p>Oops... &lt;font&gt; is depricated! My bad.</p>
+<p class="by">So said <a href="http://www.mynancoulddobetter.com/">TheG</a> on Friday  4 June, 2004 at  9:46AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment62" class="comment">
+<h3><a href="000049.php.html#comment62"><span>Comment </span>62</a></h3>
+<p>tables were very hard for me to learn (of course, this was when i was 15, now i am 17), so i never really made a very nice layout untill i learned css. it just made much more sence to me.</p>
+<p class="by">So said <a href="http://yamipoli.com/">yamipoli</a> on Sunday  6 June, 2004 at  3:31AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment63" class="comment">
+<h3><a href="000049.php.html#comment63"><span>Comment </span>63</a></h3>
+<p>One issue that is easily handled with tables layout that nobody has presented me with a CSS-P solution yet:</p>
+
+<p>When a site visitor enlarges the font, the browser will reflow the text to fit the table. With CSS-P, the text from one div often winds up overprinting text from an adjacent div, making the text unreadable. Is there any way to make the div automatically resize so as to tolerate the larger fonts? (Whether 16px or 200 or 300%?)</p>
+
+<p>By the way, Dreamweaver does have Modify-&gt;Convert-&gt;Tables to Layers/Layers to Tables. I haven't used it so can't say how well it works.</p>
+<p class="by">So said Charles on Monday 14 June, 2004 at  8:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment64" class="comment">
+<h3><a href="000049.php.html#comment64"><span>Comment </span>64</a></h3>
+<p>(continued) To clarify, not only does the div need to tolerate enlarged fonts, it needs to do so without requiring horizontal scrolling for each line of a paragraph. One horizontal scroll to get to the text column is fine, but a paragraph must reside within the horizontal bounds of the browser.</p>
+
+<p>(I added this note after trying Son of Suckerfish at 300%)</p>
+<p class="by">So said <a href="http://www.sfmuni.com/">Charles</a> on Monday 14 June, 2004 at 11:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment65" class="comment">
+<h3><a href="000049.php.html#comment65"><span>Comment </span>65</a></h3>
+<p>(concluded, I hope) <br>
+Oops! I see many of our table pages don't support 300% either. Might be an issue of pages that have data tables on them. If CSS-P can force the paragraphs that are not in tables to wrap at the window edge you might have a sale.</p>
+<p class="by">So said <a href="http://www.sfmuni.com/">Charles</a> on Monday 14 June, 2004 at 11:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment66" class="comment">
+<h3><a href="000049.php.html#comment66"><span>Comment </span>66</a></h3>
+<p>I'm reading this page in IE5.1.7 on a Macintosh running OS9. I have a 21" monitor so the browser window has plenty of room. The "Search" button at the top of the screen is overlapping part of your logo, so as far as I know, this site is called "ldog.com". Doesn't give me a lot of faith in the site owner's views on best approaches to Web coding, I must say.</p>
+<p class="by">So said Tired of Purists on Sunday 20 June, 2004 at  6:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment67" class="comment">
+<h3><a href="000049.php.html#comment67"><span>Comment </span>67</a></h3>
+<p>Charles: don't try to control as much. If the text is spilling out of the div, it's likely you're own directions are causing that.</p>
+
+<p>Set widths without using absolute values. % is best. Let the text wrap as it may.</p>
+<p class="by">So said Neal on Wednesday 23 June, 2004 at  7:08AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment68" class="comment">
+<h3><a href="000049.php.html#comment68"><span>Comment </span>68</a></h3>
+<p>CSS Design is one of the most important changes the web is going though as it enables a clatter free content<br>
+that can be transported into many interface outlets such as mobile phones and other media.<br>
+having a clatter free content is extremely important for search engines and reduces the load time. <br>
+</p>
+<p class="by">So said <a href="http://flashaddict.mindsay.com/">Jenny Price</a> on Friday 16 July, 2004 at  8:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment69" class="comment">
+<h3><a href="000049.php.html#comment69"><span>Comment </span>69</a></h3>
+<p>Maybe the best site on the subject of CSS is <a href="http://www.csszengarden.com/">http://www.csszengarden.com</a> which illustrates exactly the power<br>
+of CSS design an how you can take the same clean content and lay it out in numerous designs without having any tables or html code!<br>
+</p>
+<p class="by">So said <a href="http://www.celebrityblog.net/">Richard Diaz</a> on Friday 16 July, 2004 at  9:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment70" class="comment">
+<h3><a href="000049.php.html#comment70"><span>Comment </span>70</a></h3>
+<p>Mac OS 10.3.4 and IE 5.2.3<br>
+The search box is to the left on top of the dog logo and name. <br>
+I see many CSS sites with weird overflowing text in IE 5.2.3, including many of the beautiful Zen Garden pages. <br>
+www.htmldog.com looks OK in Safari 1.2.2. But I don't like to use Safari because I like to save many of your pages for refering to later and Safari doesn't do web archives and also Safari doesn't display the link URL when I hover over it.</p>
+
+<p>I've always used tables for layout (one simple, outer table, no nested tables, with CSS for all styles). I'm starting a new site and was considering trying a CSS only site, but after reading all the discussions, I'm not sure it's worth the trouble. I'm leaning toward the conclusion I came to four years ago: the browsers are ready.</p>
+<p class="by">So said <a href="http://www.ananda.it/">Linda</a> on Friday 16 July, 2004 at  9:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment71" class="comment">
+<h3><a href="000049.php.html#comment71"><span>Comment </span>71</a></h3>
+<p>Shoot! I meant: the browsers aren't ready. :-(</p>
+<p class="by">So said <a href="http://www.ananda.it/">linda</a> on Friday 16 July, 2004 at  9:41PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment72" class="comment">
+<h3><a href="000049.php.html#comment72"><span>Comment </span>72</a></h3>
+<p>All the people who "struggle" with CSS... did you read the blog entry?? EVERYONE struggles with CSS. There was a time, many moons ago, when you struggled with ! If something's new to you, you will struggle. Quit whinging, get through it and write good, CSS-based code.</p>
+<p class="by">So said Alex on Thursday 22 July, 2004 at  9:07AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment73" class="comment">
+<h3><a href="000049.php.html#comment73"><span>Comment </span>73</a></h3>
+<p>It is necessary to optimize a site for netscape without css, and only then to add styles</p>
+<p class="by">So said <a href="http://www.vivm.com/">andry</a> on Sunday 25 July, 2004 at  8:40AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment74" class="comment">
+<h3><a href="000049.php.html#comment74"><span>Comment </span>74</a></h3>
+<p>CSS It is the excellent tool for development of sites,is in it nothing difficult</p>
+<p class="by">So said <a href="http://www.you-links.com/">Albert</a> on Monday 26 July, 2004 at  5:06PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment75" class="comment">
+<h3><a href="000049.php.html#comment75"><span>Comment </span>75</a></h3>
+<p>Sorry, didn't mean to whine. I've abandoned tables and created the new site in standard CSS. Only 7 pages so far, but the 3-column dynamic design is there and seems to work, even validates.  I haven't tested it in many browsers yet. That's the hard part, I think.</p>
+
+<p>Thanks largely to HTML Dog --  I learned a great deal by tearing this site apart and to all of you for your instructive comments. Also from seeing the PHP here, I learned enough to automate the daily quote.</p>
+
+<p>“Nothing is troublesome that we do willingly.” ~&nbsp;Thomas Jefferson</p>
+<p class="by">So said <a href="http://www.livingyoga.info/">Linda</a> on Saturday 31 July, 2004 at  7:18PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment76" class="comment">
+<h3><a href="000049.php.html#comment76"><span>Comment </span>76</a></h3>
+<p>Tell the truth brother! Couldn't have said it better myself. I mean what's the point in going half-assed and using CSS for most everything only to fall back on tables if you can't hack it - literally. Talk about a fully validated retort - well said.</p>
+<p class="by">So said Alex on Sunday  8 August, 2004 at  4:47PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment77" class="comment">
+<h3><a href="000049.php.html#comment77"><span>Comment </span>77</a></h3>
+<p>I feel I have to get this off my chest: <br>
+I f**king HATE tables - every time I have to use them I feel I am taking a great quantum leap backwards and its really frustrating. I really have no idea how to use tables for layout, being relatively new to web development all I know is CSS - and now I've got to create stupid HTML newsletters using tables and I have no  idea what I am doing. The annoying thing about this is - I don't have a choice, I HAVE to use tables  - unless anyone knows of any email clients that reliably support CSS layouts? <br>
+I would say more but those tds don't write themselves you know...</p>
+<p class="by">So said Clare on Wednesday 11 August, 2004 at  1:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment78" class="comment">
+<h3><a href="000049.php.html#comment78"><span>Comment </span>78</a></h3>
+<p>I love CSS, and would use it exclusively if I could. But I started with a pure-CSS design for <a href="http://blogcritics.org/">http://blogcritics.org/</a> and gave up. That site has five columns side-by-side, and there is no good way to do five columns in CSS. If you absolute-position them, you've got trouble. If you float them, you've got trouble.  (Try a browser windows less than 900 pixels or so!) Basically, with five columns, you've got trouble. So now I'm back to tables, and hating it.</p>
+
+<p>When CSS can do everything tables can do, I'll never use another table for non-tabular data again. But I suspect people who believe CSS can do everything have never built five-column pages. </p>
+
+<p>P.S. There is a lot of pressure to go to six columns, too.</p>
+<p class="by">So said <a href="http://w6daily.winn.com/">Phillip Winn</a> on Wednesday 18 August, 2004 at  7:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment79" class="comment">
+<h3><a href="000049.php.html#comment79"><span>Comment </span>79</a></h3>
+<p>Who needs tables for body?</p>
+<p class="by">So said <a href="http://www.yxdown.com/">yxdown</a> on Tuesday  7 September, 2004 at  3:07PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment80" class="comment">
+<h3><a href="000049.php.html#comment80"><span>Comment </span>80</a></h3>
+<p>Well i hate tables too and i know that css is an excellent tool for developing sites.<br>
+ I'm using tables to determine the visual layout of my pages,<br>
+i know thet suck  but the problem is i don't have time to learn css :)</p>
+<p class="by">So said <a href="http://www.cheapnet-it.com/">Internet is not Cheapnet</a> on Thursday 21 October, 2004 at  4:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment81" class="comment">
+<h3><a href="000049.php.html#comment81"><span>Comment </span>81</a></h3>
+<p>CSS is a great tool but it cannot substitute tables. Unfortunately HTML does not have any more or less usable layout marker but tables. CSS is very useful for font formating bot not for layouting pages.</p>
+<p class="by">So said <a href="http://www.belaware.com/">Alex</a> on Thursday 28 October, 2004 at 10:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment82" class="comment">
+<h3><a href="000049.php.html#comment82"><span>Comment </span>82</a></h3>
+<p>well~~i hope the css tech is as simple as you said.</p>
+<p class="by">So said ken9cn on Friday 29 October, 2004 at 10:52AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment83" class="comment">
+<h3><a href="000049.php.html#comment83"><span>Comment </span>83</a></h3>
+<p>What have tables got to offer? Well, they let the browser do the heavy lifting of figuring out what goes where; they are a natural match to grid-based layout; and provided you stay away from nesting, they are easy. <br>
+What problems do tables have? Only one: you have to give the content in the same order as the table cells. <br>
+Now if CSS had such a thing as a CSS-grid (a.k.a. table) we wouldn't be having this religious war.</p>
+<p class="by">So said William McIlhagga on Friday 29 October, 2004 at 12:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment84" class="comment">
+<h3><a href="000049.php.html#comment84"><span>Comment </span>84</a></h3>
+<p>I'm about to build some reasonable sized sites and have been considering the CSS/table dilemma so I'm glad to have found this page.  CSS looks like an excellent ideal that is not quite there yet.  Seperation of styling from content, low-fat pages, (claimed) ease of maintenance are all very appealing but I suspect the headache I'll get from getting a non-trivial layout to work properly on a range of browsers just isn't going to be worth the time I'd spend doing it.  Time is money and tables are a known quantity.  This site and many other CSS ones I've seen are certainly very elegant and undoubtedly the future so I will keep on learning CSS.</p>
+<p class="by">So said <a href="http://www.rolamtech.com/">Giles</a> on Monday  1 November, 2004 at  3:46AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment85" class="comment">
+<h3><a href="000049.php.html#comment85"><span>Comment </span>85</a></h3>
+<p>CSS is basically used to give effects to the text in the web site. Tables are sumthing different which are used to arrange the text not format it. I think CSS cant replace tables or tables cant replace CSS. Tables are just another form to give layout to page. Both CSS and tables go hand in hand to form a stylisg webpage</p>
+<p class="by">So said <a href="http://www.weldonpharmacy.com/sitemap.html">warner</a> on Tuesday  2 November, 2004 at  6:01AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment86" class="comment">
+<h3><a href="000049.php.html#comment86"><span>Comment </span>86</a></h3>
+<p>Ok you save disk and bandwidth you can create nice layouts but it's more complicated IMHO. I just use tables whenever i don't want to create something fancy and save my self some time .</p>
+<p class="by">So said <a href="http://freenet.altervista.org/">Mr. Anti Dialer</a> on Wednesday 17 November, 2004 at  3:31PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment87" class="comment">
+<h3><a href="000049.php.html#comment87"><span>Comment </span>87</a></h3>
+<p>Show me how to make 2 div's side by side to eachother whereas one has variable content the same height. I am quite certain this is impossible. They don't update like tables. I've talked to many people about my problem and they all end up having the same responce, use a table for that part</p>
+<p class="by">So said <a href="http://www.oasisband.net/">Jesse Donat</a> on Thursday 10 March, 2005 at 12:29AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment88" class="comment">
+<h3><a href="000049.php.html#comment88"><span>Comment </span>88</a></h3>
+<p>I have used tables in the past but wanted to use layers to add some new looks to my websites. I am inspired by the article and though have used css to enhance my table in the past, I am trying to use tables only if they enhance my page at present. Less of the same old-same old.</p>
+<p class="by">So said <a href="http://www.developweb.ca/">Will</a> on Tuesday  5 April, 2005 at  2:53AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment89" class="comment">
+<h3><a href="000049.php.html#comment89"><span>Comment </span>89</a></h3>
+<p>All of you people can say what you want, but if your sites design is what makes it popular, then something is wrong.  Look at <a href="http://maddox.xmission.com/!">http://maddox.xmission.com/!</a>  It has the most crappy design every, but look at the very bottom.  Over 100million page views.  When I went, he had 212 page views in the last minute.  That is more than most sites get a day...</p>
+
+<p>Yes, I realize he used tables and some other naughty tags, but the point is content &amp;gt design.  With that said, you have no excuse to use tables, except for what they were meant for.  Tables do work, but I want you to change a 100+ page layout in 10 minutes.  That's right, IMPOSSIBLE.  With CSS it's completely possible!</p>
+<p class="by">So said <a href="http://randominsomniac.hiya-host.com/">Zack S.</a> on Wednesday 13 April, 2005 at 11:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment90" class="comment">
+<h3><a href="000049.php.html#comment90"><span>Comment </span>90</a></h3>
+<p>I am just learning how use HTML and CSS (thank you!)  The CSS I learned enough in 15 minutes to do what I wanted to do, and I still haven't quite figured out the way tables work.  I can't imagine trying to layout my website with tables.  Just laying out data in tables is enough of a headache!  <br>
+</p>
+<p class="by">So said akeed1979 on Friday 27 May, 2005 at  9:12PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment91" class="comment">
+<h3><a href="000049.php.html#comment91"><span>Comment </span>91</a></h3>
+<p>"Pure CSS sites are bland, boring, and you can spot them right off. Why would creative people muzzle themselves like that?"</p>
+
+<p>That statement is just plain wrong. We are training developers at our company to use CSS and many of them were making the same statement until we set them straight. We have taken various table-based company web pages and have rewritten them using CSS. In our accessibility presentations, we compare the table-based and CSS versions of the pages side-by-side and no one can tell the difference between the two unless they look at the code. What really wins them over to CSS is when we show them how we can completely change the design by switching stylesheets.</p>
+
+<p>I have been doing web design (Internet and Intranet, table-based and CSS) since 1999 and I definitely believe that CSS for layout is superior to tables. As for learning CSS, it isn't difficult. From my experience, CSS for layouts is much easier to learn than tables. I head a volunteer group of developers who train people from non-profits to create/maintain their own web sites. Many of these people are computer novices and they have no trouble learning CSS.</p>
+<p class="by">So said Roman on Wednesday  8 June, 2005 at 12:25AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment92" class="comment">
+<h3><a href="000049.php.html#comment92"><span>Comment </span>92</a></h3>
+<p>I find the attitudes of making CSS or tables an all or nothing choice very disturbing.  I do a lot of database dependent sites and in those cases tables are far superior to using CSS to format the presentation of content.  Database driven content requires a lot of format flexbility to respond to the varying amounts and type of content that's being presented.</p>
+
+<p>CSS is great for styling fonts and line spacing and tags but, so far, I haven't seen that it's worth the time to deal with the un-standard standard browser implementations that make it extremely difficult , to format a site that is liquid and won't break when font sizes are changed by the user.</p>
+
+<p>I've been through several site reformats and I can't say that those that used CSS for positioning were any easier than those that used a table based format. </p>
+
+<p>It's not a choice of which is better, the choice is how to integrate CSS and tables to create the best blend that results in an easy to use and easy to maintain site format. </p>
+<p class="by">So said Christie Mason on Wednesday 15 June, 2005 at  2:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment93" class="comment">
+<h3><a href="000049.php.html#comment93"><span>Comment </span>93</a></h3>
+<p>Useful debate - thanks (no need for the numerous expletives though!)</p>
+
+<p>Having gone from a hobby designer to p/t pro last year I have more or less entirely guessed the whole process of web design - slowly and painstakingly!  In my hobby period I never read a single word about page layout techniques but found myself intuitively trying tables to do the job. I think (IMHO) I have at last perfected the art (!?) but having spent a lot more time reading the 'pundits' in this last year I had become convinced that "as a professional" I really should be using CSS. I use CSS for general formatting and am totally convinced of its benefits there but as I approach the topic of CSS for layout I am concerned by the lack of browser consistency. This discussion has been very helpful and while I will start tinkering with CSS layout (I think it is going to be the best -IN THE FUTURE) I am happy to let a little more time pass for browsers and 'CSS standards' to meet. Well... until I read a more convincing argument for CSS!</p>
+<p class="by">So said <a href="http://www.onthewebnow.co.uk/">Rick</a> on Thursday  7 July, 2005 at  2:03PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment94" class="comment">
+<h3><a href="000049.php.html#comment94"><span>Comment </span>94</a></h3>
+<p>The previous two comments, taken together, are "spot on".  There's no net value-add with using div's to replace tables in *all* cases, due to browser inconsistencies and the idiom behind using div's in place of tables is, in nontrivial design approaches, just not as straightforward from a visual design perspective.  And in my experience, the more straightforward the approach, the easier the maintenance, even if you end up with a marginally greater volume of tag output that will affect performance negligibly for most site visitors.</p>
+<p class="by">So said <a href="http://www.stevemagruder.com/">Steve Magruder</a> on Thursday 21 July, 2005 at  2:20AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment95" class="comment">
+<h3><a href="000049.php.html#comment95"><span>Comment </span>95</a></h3>
+<p>You know... someone would thing you people never heard of templating a table based layout, separating the non changing parts into separate files and SSI'ing them into a page as needed.  This works very fast, reduces site size tremendously and still allows one to use tables.  CSS has it's place, but so do tables.  Stop being so fanatical, and learn to be a little practical.</p>
+<p class="by">So said  on Friday 19 August, 2005 at  5:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment96" class="comment">
+<h3><a href="000049.php.html#comment96"><span>Comment </span>96</a></h3>
+<p>Its amusing to read many of the comments a year after this was posted.</p>
+
+<p>Did so many people really not *get* it back then? Scary. I wonder how many people still don't get it. Give it a couple of years and I think you'll have a hard time trying to find a job in this business if you are still designing like its 1999.</p>
+<p class="by">So said <a href="http://www.lukeredpath.co.uk/">Luke Redpath</a> on Wednesday  7 December, 2005 at  5:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment97" class="comment">
+<h3><a href="000049.php.html#comment97"><span>Comment </span>97</a></h3>
+<p> cheap phentermine  phentermine . buy phentermine, discount phentermine, phentermine online, phentermine cod.<br>
+order cialis  cialis . cialis online, cheap cialis, discount cialis, free cialis.<br>
+buy xanax online  xanax . xanax without prescription, buy xanax, xanax xr, xanax online.<br>
+ambien online  ambien . order ambien, cheap ambien, ambien withdrawal, order ambien online.<br>
+fioricet online  fioricet . fioricet online ingredients, order fioricet online, fioricet online cheap, 1 fioricet online.<br>
+buy soma  soma . buy soma online, cheap soma, drug soma, soma online.<br>
+generic levitra  levitra . buy levitra online, buy levitra, cheap levitra, levitra alternative.<br>
+ </p>
+<p class="by">So said <a href="http://jordon.snooser.de/">francis giraldo</a> on Friday 23 December, 2005 at  2:52AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment98" class="comment">
+<h3><a href="000049.php.html#comment98"><span>Comment </span>98</a></h3>
+<p>I have only one thing to add to this debate: A quote from someone on a message board I go to.</p>
+
+<p>&gt;I see no tables on your site, yet you're using &lt;table&gt;'s. That's like buying a toilet to boil your yams in, wtf...</p>
+<p class="by">So said Tom on Wednesday  4 January, 2006 at  6:57PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment99" class="comment">
+<h3><a href="000049.php.html#comment99"><span>Comment </span>99</a></h3>
+<p>&gt;CSS gurus, how would a do the following table in CSS?<br>
+&gt;&lt;table&gt;&lt;td&gt;&lt;td&gt;Col1&lt;/td&gt;&lt;td&gt;Col2&lt;/td&gt;&lt;/tr&gt;<br>
+&gt;&lt;tr&gt;&lt;td&gt;Data1&lt;/td&gt;&lt;td&gt;Data2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<br>
+&gt;So said pb on Saturday 22 May, 2004 at 11:48PM GMT.</p>
+
+<p>You would do it like this:<br>
+&lt;table&gt;<br>
+&lt;thead&gt;<br>
+&lt;tr&gt;<br>
+&lt;th&gt;Col1&lt;/th&gt;<br>
+&lt;th&gt;Col2&lt;/th&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/thead&gt;<br>
+&lt;tbody&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;Data1&lt;/td&gt;<br>
+&lt;td&gt;Data2&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/tbody&gt;<br>
+&lt;/table&gt;</p>
+
+<p>You shouldn't be against ever using tables. That's wrong because tables do have a semantic meaning. When you actually are displaying data, not using tables is an accessibility issue. That's something most people don't realize. I suggest you read Roger's article on this.<br>
+<a href="http://www.456bereastreet.com/archive/200410/bring_on_the_tables/">http://www.456bereastreet.com/archive/200410/bring_on_the_tables/</a></p>
+<p class="by">So said Tom on Friday  6 January, 2006 at  7:18PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment100" class="comment">
+<h3><a href="000049.php.html#comment100"><span>Comment </span>100</a></h3>
+<p>@comment 87:<br>
+<a href="http://infinity-stuff.com/other-stuff/nickpresta-ath-cx/source/equalcols.html">http://infinity-stuff.com/other-stuff/nickpresta-ath-cx/source/equalcols.html</a></p>
+<p class="by">So said Tom (again) on Sunday  8 January, 2006 at  2:24AM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="http://www.htmldog.com/ptg/archives/000050.php">Son of Suckerfish Dropdowns</a></li>			<li id="previous">Previous Page: <a href="http://www.htmldog.com/ptg/archives/000048.php">The Truth About Columns</a></li>		</ul>		
+		<ul>			<li><a href="http://www.htmldog.com/ptg/">Dog Blog home page</a></li>								</ul>
+
+
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000049.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

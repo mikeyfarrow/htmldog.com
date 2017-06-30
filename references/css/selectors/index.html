@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Selectors | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../rAF/arcticFox.css" rel="stylesheet">
+
+	<link href="../../../rAF/arcticFox_tables.css" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../manifest.json">
+	<link rel="mask-icon" href="../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../index.html" title="Home"><img src="../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../reference/index.html" class="yahSec yahRef">References</a>&nbsp;&rarr; <a href="../index.html">CSS</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>CSS Selectors</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Every <strong>CSS selector</strong>, taken from the latest <strong>CSS3</strong> standard.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2 id="basic">Basic selectors</h2>
+
+<table class="tweg">
+    <tr>
+        <th>Selector</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>element</code></td>
+        <td><strong>Type</strong> selector. Matches an element.</td>
+        <td><code class="css">p { color: red }<br>/* matches paragraphs */</code></td>
+    </tr>
+    <tr>
+        <td><code>.class</code></td>
+        <td><strong>Class</strong> selector. Matches the value of a <code >class</code> attribute.</td>
+        <td><code class="css">.warning { color: red }<br>/* matches elements containing class="warning" */</code></td>
+    </tr>
+    <tr>
+        <td><code>#id</code></td>
+        <td><strong>ID</strong> selector. Matches the value of an <code >id</code> attribute.</td>
+        <td><code class="css">#warning { color: red }<br>/* matches elements containing id="warning" */</code></td>
+    </tr>
+    <tr>
+        <td><code>*</code></td>
+        <td><strong>Universal</strong> selector. Matches everything.</td>
+        <td><code class="css">* { color: red }<br>/* matches everything */</code></td>
+    </tr>
+</table>
+
+<h2 id="attribute">Attribute selectors</h2>
+
+<table class="tweg">
+    <tr>
+        <th>Selector</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>[attribute]</code></td>
+        <td>Matches elements <strong>containing a given attribute</strong>.</td>
+        <td><code class="css">a[href] { color: red }<br>/* matches a elements with an href attribute */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute="x"]</code></td>
+        <td>Matches elements <strong>containing a given attribute with a given value</strong>.</td>
+        <td><code class="css">a[href="/sitemap/"] { color: red }<br>/* matches a elements with the attribute and value href="/sitemap/" */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute~="x"]</code></td>
+        <td>Matches elements containing a given attribute with a value that contains a sub-value within a <strong>space-separated list</strong>.</td>
+        <td><code class="css">abbr[title~="Style"] { color: red }<br>/* matches abbr elements with a title that contains 'Style' (such as in title="Cascading Style Sheets") */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute|="x"]</code></td>
+        <td>Matches elements containing a given attribute with a value that contains a sub-value within a <strong>hyphen-separated list</strong>.</td>
+        <td><code class="css">html[lang|="en"] { color: red }<br>/* matches html elements with a lang attribute that contains 'en' (such as in lang="en-gb") */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute^="x"]</code></td>
+        <td>Matches elements containing a given attribute with a value that <strong>starts</strong> with something.</td>
+        <td><code class="css">a[href^="http://"] { color: red }<br>/* matches a elements with an href attribute, the value of which begins with 'http://' */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute$="x"]</code></td>
+        <td>Matches elements containing a given attribute with a value that <strong>ends</strong> with something.</td>
+        <td><code class="css">a[href$=".com"] { color: red }<br>/* matches a elements with an href attribute, the value of which ends with '.com' */</code></td>
+    </tr>
+    <tr>
+        <td><code>[attribute*="x"]</code></td>
+        <td>Matches elements containing a given attribute with a value that <strong>contains</strong> something.</td>
+        <td><code class="css">a[href*="htmldog"] { color: red }<br>/* matches a elements with an href attribute, the value of which contains 'htmldog' */</code></td>
+    </tr>
+</table>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../linkto/index.html">
+			<span class="bsa_it_i"><img src="../../../rAF/food/int_li120.png" alt="Link to HTML Dog" width="120" height="60"></span>
+			<strong class="bsa_it_t">Link To Us!</strong>
+			<span class="bsa_it_d">If you've found HTML Dog useful, please consider linking to us.</span>
+		</a>
+	</p>
+</aside>
+
+<h2 id="pseudo-classes">Pseudo-classes</h2>
+
+<table class="tweg">
+    <tr>
+        <th>Selector</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>:link</code></td>
+        <td>Matches a <strong>link that has not been visited</strong>.</td>
+        <td><code class="css">a:link { color: blue }</code></td>
+    </tr>
+    <tr>
+        <td><code>:visited</code></td>
+        <td>Matches a <strong>link thas has been visited</strong>.</td>
+        <td><code class="css">a:visited { color: purple }</code></td>
+    </tr>
+    <tr>
+        <td><code>:active</code></td>
+        <td>Matches an element that is being <strong>activated</strong>, such as a link being clicked on.</td>
+        <td><code class="css">a:active { color: red }</code></td>
+    </tr>
+    <tr>
+        <td><code>:hover</code></td>
+        <td>Matches an element whose box is being <strong>hovered over</strong> by a cursor.</td>
+        <td><code class="css">a:hover { text-decoration: none }</code></td>
+    </tr>
+    <tr>
+        <td><code>:focus</code></td>
+        <td>Matches an element that has <strong>focus</strong>, such as one that has been tabbed to.</td>
+        <td><code class="css">a:focus { border: 1px solid yellow }</code></td>
+    </tr>
+    <tr>
+        <td><code>:target</code></td>
+        <td>Matches an element that has been <strong>linked to</strong> (via <code>&lt;a href=<wbr>"#x"&hellip;</code>, for example).</td>
+        <td><code class="css">h2:target { color: red }<br>/* matches a second-level heading that has been linked to */</code></td>
+    </tr>
+    <tr>
+        <td><code>:lang()</code></td>
+        <td>Matches an element of a given <strong>language</strong>.</td>
+        <td><code class="css">p:lang(fr) { color: red }<br>/* matches paragraphs that are declared, or otherwise considered, as French */</code></td>
+    </tr>
+    <tr>
+        <td><code>:first-child</code></td>
+        <td>Matches the <strong>first child</strong> of an element.</td>
+        <td><code class="css">p:first-child { color: red }<br>/* matches the first child, if it is a paragraph, of an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:last-child</code></td>
+        <td>Matches the <strong>last child</strong> of an element.</td>
+        <td><code class="css">div p:last-child { color: blue }<br>/* matches the last child, if it is a paragraph, of an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:first-of-type</code></td>
+        <td>Matches the <strong>first sibling of its type</strong> in an element.</td>
+        <td><code class="css">li:first-of-type { color: red }<br>/* matches the first instance of a list item inside an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:last-of-type</code></td>
+        <td>Matches the <strong>last sibling of its type</strong> in an element.</td>
+        <td><code class="css">li:last-of-type { color: blue }<br>/* matches the last instance of a list item inside an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:nth-child()</code></td>
+        <td>Matches an element that is the <strong>ordinal number child</strong> of its parent.</td>
+        <td><code class="css">p:nth-child(3) { color: red }<br>/* matches the third child, if it is a paragrpah, of an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:nth-last-child()</code></td>
+        <td>Matches an element that is the <strong>ordinal number child, in reverse order</strong>, of its parent.</td>
+        <td><code class="css">p:nth-last-child(2) { color: blue }<br>/* matches the next-to-last child, if it is a paragraph, of an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:nth-of-type()</code></td>
+        <td>Matches an element that is the <strong>ordinal number sibling of its type</strong>.</td>
+        <td><code class="css">li:nth-of-type(5) { color: red }<br>/* matches the fifth instance of a list item inside an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:nth-last-of-type()</code></td>
+        <td>Matches an element that is the o<strong>rdinal number sibling, in reverse order, of its type</strong>.</td>
+        <td><code class="css">li:nth-of-type(5) { color: red }<br>/* matches the next-to-last instance of a list item inside an element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:only-child</code></td>
+        <td>Matches an element if it is the <strong>only child</strong> of its parent.</td>
+        <td><code class="css">article p:only-child { color: red }<br>/* matches a paragraph if it is the only child of an article element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:only-of-type</code></td>
+        <td>Matches an element if it is the <strong>only sibling of its type</strong>.</td>
+        <td><code class="css">article aside:only-of-type { color: blue }<br>/* matches an aside element if it is the only aside element in an article element */</code></td>
+    </tr>
+    <tr>
+        <td><code>:empty</code></td>
+        <td>Matches an element with <strong>no children, or content</strong>.</td>
+        <td><code class="css">td:empty { border-color: red }<br>/* matches table data cells with nothing in 'em */</code></td>
+    </tr>
+    <tr>
+        <td><code>:root</code></td>
+        <td>Matches the <strong>root element</strong> of a document. This will be the <a href="../../html/tags/html/index.html" class="acode"><code>html</code></a> element in HTML.</td>
+        <td><code class="css">:root { background: yellow }</code></td>
+    </tr>
+    <tr>
+        <td><code>:enabled</code></td>
+        <td>Matches <strong>form control elements that are not disabled</strong>.</td>
+        <td><code class="css">input:enabled { border-color: lime }<br>/* matches input elements that are not disabled */</code></td>
+    </tr>
+    <tr>
+        <td><code>:disabled</code></td>
+        <td>Matches <strong>form control elements that are disabled</strong>.</td>
+        <td><code class="css">input:enabled { border-color: red }<br>/* matches input elements that are disabled */</code></td>
+    </tr>
+    <tr>
+        <td><code>:checked</code></td>
+        <td>Matches a radio or checkbox type <strong>input element that is checked</strong>.</td>
+        <td><code class="css">input:checked { outline: 3px solid yellow }<br>/* matches checked input elements */</code></td>
+    </tr>
+    <tr>
+        <td><code>:not()</code></td>
+        <td><strong>Negotiation</strong> pseudo-class. Matches an element that does not match a selector.</td>
+        <td><code class="css">p:not(:first-child) { color: orange }<br>/* matches paragraphs that are not first children */</code></td>
+    </tr>
+</table>
+
+<h2 id="pseudo-elements">Pseudo-elements</h2>
+
+<table class="tweg">
+    <tr>
+        <th>Selector</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>::first-line</code></td>
+        <td>Matches the <strong>first textual line</strong> in an element.</td>
+        <td><code class="css">p::first-line { font-weight: bold }<br>/* matches the first line in a paragraph */</code></td>
+    </tr>
+    <tr>
+        <td><code>::first-letter</code></td>
+        <td>Matches the <strong>first letter</strong> in an element.</td>
+        <td><code class="css">p::first-letter { font-size: 2em }<br>/* matches the first letter in a paragraph */</code></td>
+    </tr>
+    <tr>
+        <td><code>::before</code></td>
+        <td>Used with the <a href="../../../reference/cssproperties/content/index.html" class="acode"><code>content</code></a> property to generate content <strong>before</strong> the initial content of an element.</td>
+        <td><code class="css">h1::before { content: "*" }<br>/* places an asterisk at the start of a top-level heading */</code></td>
+    </tr>
+    <tr>
+        <td><code>::after</code></td>
+        <td>Used with the <a href="../../../reference/cssproperties/content/index.html" class="acode"><code>content</code></a> property to generate content <strong>after</strong> the initial content of an element.</td>
+        <td><code class="css">h1::after { content: "+" }<br>/* places a plus-sign at the end of a top-level heading */</code></td>
+    </tr>
+</table>
+
+<figure class="note shot">
+    <div><img src="../../../figures/firstLetterFirstLine.png" width="500" height="264"></div>
+    <figcaption>Targeting the first letter, and first line, using pseudo-elements.</figcaption>
+</figure>
+
+<aside class="note i">
+    <p>Pseudo-elements can also be defined using a single, rather than double, colon (<code>:first-line</code> as opposed to <code>::first-line</code>, for example). While this is old-school, it is also, for that very fact, more widely supported by browsers.</p>
+</aside>
+
+<h2 id="combinators">Combinators</h2>
+
+<table class="tweg">
+    <tr>
+        <th>Selector</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>selector selector</code></td>
+        <td><strong>Descendant</strong> combinator. Matches elements that are descendants of another element.</td>
+        <td><code class="css">aside p { color: red }<br>/* matches paragraphs inside elements containing class="warning" */</code></td>
+    </tr>
+    <tr>
+        <td><code>selector &gt; selector</code></td>
+        <td><strong>Child</strong> combinator. Matches elements that are children of another element.</td>
+        <td><code class="css">.warning > p { color: red }<br>/* matches paragraphs that are children of elements containing class="warning" */</code></td>
+    </tr>
+    <tr>
+        <td><code>selector + selector</code></td>
+        <td><strong>Adjacent sibling</strong> combinator. Matches elements that immediately follow another element.</td>
+        <td><code class="css">h1 + * { color: red }<br>/* matches the first element to follow a top-level heading */</code></td>
+    </tr>
+    <tr>
+        <td><code>selector ~ selector</code></td>
+        <td><strong>General sibling</strong> combinator. Matches elements that follow another element.</td>
+        <td><code class="css">h2 ~ p { color: red }<br>/* matches every paragraph that follows a second-level heading */</code></td>
+    </tr>
+</table>
+
+<aside class="note warning">
+    <p>Beyond the basic selectors, some others may cause incompatibility issues, especially with older browsers. As always, test thoroughly.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+  <ul>
+  <li><a href="../../../reference/cssproperties/index.html">CSS Properties</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../index.html">CSS</a>
+							<ul>
+								<li><a href="../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="index.html">Selectors</a></li>
+								<li><a href="../values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../about.1.html">About Us</a></li>
+				<li><a href="../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Block and inline boxes 2</title>
+	<style>
+		body {
+			font: 80% arial, helvetica, sans-serif;
+		}
+		
+		h1 {
+			font-size: 1.5em;
+		}
+		
+		h2 {
+			font-size: 1em;
+		}
+		
+		code {
+			font-family: courier;
+		}
+		
+		#example1, #example2 {
+			background: #ccc;
+			border: 2px solid black;
+		}
+
+		span {
+			background: white;
+			display: block;
+			border: 0.5em solid red;
+			padding: 1em;
+			margin: 0.5em;
+		}
+		
+		span.altern8 {
+			background: #5b5;
+		}
+		
+		#example2 span {
+			display: inline;
+		}
+
+		#htmldog {
+			margin: 2em 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Block and inline boxes (with padding, border and margin)</h1>
+	<p>Each of these examples contains the same HTML, but the elements in the first are set to <code>display: block</code> and the elements in the second are set to <code>display: inline</code>.</p>
+
+	<h2>Block</h2>
+	<p id="example1"><span>This</span><span class="altern8">That</span><span>The Other</span><span class="altern8">4</span></p>
+
+	<h2>Inline</h2>
+	<p id="example2"><span>This</span><span class="altern8">That</span><span>The Other</span><span class="altern8">4</span></p>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="htmldog"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Text: Time, Mark, and &quot;Presentational&quot; | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../manifest.json">
+	<link rel="mask-icon" href="../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../index.html" title="Home"><img src="../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="../../htmlintermediate/badtags/index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../index.html">HTML</a>&nbsp;&rarr; <a href="../../htmladvanced/index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Text: Time, Mark, and "Presentational"</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>HTML5 adds and amends a handful of tags relating to <strong>text</strong>. Many of the minor amendments, such as differing attributes in existing tags, have already been covered, but this page looks at two new tags &#8212; <a href="../../../references/html/tags/time/index.html" class="acode"><code>time</code></a> and <a href="../../../references/html/tags/mark/index.html" class="acode"><code>mark</code></a> &#8212; as well as the re-definition of presentational tags.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Time</h2>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p><a href="../../../references/html/tags/time/index.html" class="acode"><code>time</code></a> is by far the chocolate ice cream sexiest sweet sugar lovely of these tags and is used to make dates and times super-semantically rich and mmm.</p>
+
+<p>The text sandwiched in the middle of the opening and closing tag can be any format of date of time - the whole precise lot, or just one part, such as a day. It is made more helpful, however, by the <code>datetime</code> attribute, the value of which should be a machine-readable date and/or time. </p>
+
+<pre><code class="oldLang language-html">
+&lt;p&gt;Written by Doctor Who on <strong>&lt;time datetime="2052-11-21"&gt;Thursday 21st November 2052&lt;/time&gt;</strong>.&lt;/p&gt;
+</code></pre>
+
+<p>Valid <code>datetime</code> values can take the format of a year-month-day date (as above), of as a &#8220;fuzzy&#8221; date, such as &#8220;2052-11&#8221;, of a time, such as &#8220;09:30&#8221; (always using a 24-hour clock) or a combination, such as &#8220;2052-11-21 09:30&#8221;. This can also accommodate time zones and durations.</p>
+
+<aside class="note i">
+<p>If the textual content of the <a href="../../../references/html/tags/time/index.html" class="acode"><code>time</code></a> element is already machine readable, you don&#8217;t need the <code>datetime</code> attribute but it is required if it isn&#8217;t.</p>
+</aside>
+
+<h2>Mark</h2>
+
+<p>Text can be highlighted, as if with a marker pen, using <a href="../../../references/html/tags/mark/index.html" class="acode"><code>mark</code></a>:</p>
+
+<pre><code class="oldLang language-html">
+&lt;blockquote&gt;
+    &lt;p&gt;He wants to play with his <strong>&lt;mark&gt;Legos&lt;/mark&gt;</strong>&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The person being quoted is clearly American because, for some odd reason, they pluralise "Lego".&lt;/p&gt;
+</code></pre>
+
+<p>Yes, this is a form of emphasis, literally speaking, but it won&#8217;t always be considered emphasis in the original meaning (for example, the person being quoted above isn&#8217;t emphasizing &#8220;Legos&#8221;, the commenter is), hence its inclusion.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Redefining the &#8220;presentational&#8221; tags</h2>
+
+<p><del>One of the slightly more </del><ins>The single most</ins> revolting &#8220;advance&#8221; in HTML 5 is its attempt to redefine the archaic presentational tags. Once popular, many moons ago, they just won&#8217;t go away no matter how over the hill they are. These tags are also known as &#8220;Cliff Richard tags&#8221;.</p>
+
+<p>Some of the newly defined blighters are helpful, some are questionable, and some have new definitions crowbarred in that are, to say the least, tenuous.</p>
+
+<ul>
+<li><a href="../../../references/html/tags/hr/index.html" class="acode"><code>hr</code></a>, no longer &#8220;horizontal rule&#8221;, is a <strong>thematic break</strong>, between paragraphs, for example, like those found in many a chapter of many a book.</li>
+<li><a href="../../../references/html/tags/small/index.html" class="acode"><code>small</code></a>, used for <strong>small print</strong>. Arguably a fair point, &#8220;small print&#8221; has taken on a meaning beyond &#8220;print that is small&#8221;.</li>
+<li><a href="../../../references/html/tags/s/index.html" class="acode"><code>s</code></a>, no longer &#8220;strikethrough&#8221;, is for text that is <strong>no longer correct</strong> (eg, <code>this is &lt;s&gt;presentational, not&lt;/s&gt; meaningful</code>). Hmm. OK. Maybe. <a href="../../../references/html/tags/del/index.html" class="acode"><code>del</code></a> still seems fine to most normals, though.</li>
+<li><a href="../../../references/html/tags/u/index.html" class="acode"><code>u</code></a>, no longer &#8220;underline&#8221;, is for text that is <strong>unarticulated</strong>. It&#8217;s also &#8220;useless&#8221; but bonus point for the abbreviation remaining intact.</li>
+<li><a href="../../../references/html/tags/i/index.html" class="acode"><code>i</code></a>, no longer &#8220;italic&#8221;, is for text in an <strong>alternate voice</strong> or representing a different quality of text. So, like, differently <strong>emphasized</strong>, then (see note below).</li>
+<li><a href="../../../references/html/tags/b/index.html" class="acode"><code>b</code></a>, no longer &#8220;bold&#8221;, stands for &#8220;text to which <strong>attention</strong> is being drawn without conveying importance or suggesting an alternative voice&#8221; (and even that&#8217;s paraphrasing). <a href="../../../references/html/tags/b/index.html" class="acode"><code>b</code></a> also stands for &#8220;bollocks.&#8221;</li>
+<li><a href="../../../references/html/tags/sub/index.html" class="acode"><code>sub</code></a> and <a href="../../../references/html/tags/sup/index.html" class="acode"><code>sup</code></a> are still <strong>subscript</strong> and <strong>superscript</strong> and yet, at the same time, they&#8217;re somehow not presentational anymore.</li>
+</ul>
+
+<aside class="note">
+<p>The specs contradict themselves at times: &#8220;The <a href="../../../references/html/tags/sup/index.html" class="acode"><code>sup</code></a> element represents a superscript,&#8221; it says. Superscript is, by definition, not to mention its actual inherent semantic meaning, presentational. And yet the specification goes on to say that it &#8220;must be used only to mark up typographical conventions with specific meanings, not for typographical presentation&#8221;.</p>
+
+<p>The fundamental problem with many of these new definitions, in fact, is that they say, in essence &#8220;this is emphasis, but it isn&#8217;t emphasis.&#8221;</p>
+
+<p>As an example, perhaps the best argument for an <a href="../../../references/html/tags/i/index.html" class="acode"><code>i</code></a> element is using it to represent taxonomic genus and species names which, traditionally, are represented in italics. But if something is in italics when text surrounding it isn&#8217;t in italics then it&#8217;s emphasized visually. If it&#8217;s (literally) in an alternate voice from preceding and proceeding content, it&#8217;s emphasized aurally.</p>
+
+<p>And, on a practical level, given it has taken so long for software that interprets HTML, such as screen readers, to take any notice of basic web standards, what are the chances of them taking any notice of tags for vague notions of &#8220;alternative voices&#8221; and &#8220;drawing attention without conveying importance?&#8221; (And is there a tag for rhetorical questions?)</p>
+</aside>
+
+<p>Adding more specific meaning is welcome but even when helpful, these tags still aren&#8217;t ideal - they&#8217;re ugly. Messy. While we&#8217;re loving semantics, we&#8217;re supposed to be happy with the likes of <a href="../../../references/html/tags/hr/index.html" class="acode"><code>hr</code></a> when &#8220;H.R.&#8221; is a misnomer? Tempered happiness, maybe.</p>
+
+<p>In case you haven&#8217;t picked up on the subtleties, we recommend you avoid these tags whenever possible. They serve to pollute and confuse more than clarify and <a href="../../../references/html/tags/em/index.html" class="acode"><code>em</code></a> does the job perfectly more often than not.</p>
+
+<aside class="note">
+<p>Some well-respected professionals (well-respected by HTML Dog as well) are happy to use these tags. You can too, if you really want. Go ahead - swallow the W3Cs drunken folly - not many fairies will die because of it. But here at the kennels we think that keeping a puritanical mindset of separating meaningful content from presentation reaps benefits in itself and that these tags should have been put down long ago.</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="conditionalcomments/index.html">Conditional Comments</a></li>
+  <li>Previous Page: <a href="../../htmladvanced/index.html">HTML Advanced Tutorial introduction</a></li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../references/html/tags/time/index.html">HTML Tag: <code>time</code></a></li>
+  <li><a href="../../../references/html/tags/mark/index.html">HTML Tag: <code>mark</code></a></li>
+  <li><a href="../../../reference/cssproperties/index.html">CSS Properties</a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../index.html">HTML</a></li>
+						<li><a href="../../css/index.html">CSS</a></li>
+						<li><a href="../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+		<section id="navSec">
+        <h2><span>Section menu: </span>HTML&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../htmlbeginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../htmlintermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../../htmladvanced/index.html">Advanced</a>
+					<ul>
+						<li><a href="../../htmlintermediate/badtags/index.html">Text: Time, Mark, and &#8220;Presentational&#8221;</a></li>
+						<li><a href="conditionalcomments/index.html">Conditional Comments</a></li>
+						<li><a href="../../htmladvanced/tables/index.html">Tables: Columns, Headers, and Footers</a></li>
+						<li><a href="links/index.html">Accessible Links</a></li>
+						<li><a href="forms/index.html">Accessible Forms</a></li>
+						<li><a href="html5forms1/index.html">HTML5 Forms Pt. 1: Input Types</a></li>
+						<li><a href="html5forms2/index.html">HTML5 Forms Pt. 2: Attributes and Data Lists</a></li>
+						<li><a href="embeddedcontent/index.html">Embedded Content: Video, Audio, and Canvas</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../about.1.html">About Us</a></li>
+				<li><a href="../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="../../htmlintermediate/badtags/index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Media Queries | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../cssadvanced/index.html">Advanced</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Media Queries</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p><code>@media</code> at-rules, used to target styles at specific media, such as <strong>screen</strong> or <strong>print</strong>, <a href="../atrules/index.html">have already been covered</a>. But this can be pushed to an even greater level of sophistication, enabling you to specify <strong>different design choices depending on screen size</strong>. A page can then be optimized and laid out completely differently for <strong>mobile phones</strong>, <strong>tablets</strong>, and varying browser <strong>window sizes</strong>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>To recap, if we want to apply some CSS solely to screen-based <strong>media</strong>, for example, one option would be to slot something like the following in at the bottom of a stylesheet:</p>
+
+<pre><code class="oldLang language-css">
+@media screen {
+
+    body { font: 12px arial, sans-serif }
+    #nav { display: block }
+
+}
+</code></pre>
+
+<h2>Browser-size specific CSS</h2>
+
+<p>To extend the previous example, not only can screen-based media be targeted, screen-based media <strong>of a certain size</strong> can be targeted as well:</p>
+
+<pre><code class="oldLang language-css">
+<strong>@media screen and (max-width: 1000px)</strong> {
+
+    #content { width: 100% }
+
+}
+</code></pre>
+
+<p>This is telling a browser to apply a block of CSS when its <strong>viewport</strong> is 1000 pixels wide or less. You could use this to do something as simple as making a content area or navigation narrower or you could completely re-arrange a page layout (like stacking page sections on top of one another instead of displaying them in columns).</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<p>You can apply more than one <code>@media</code> rule, so you could have a number of different designs that are browser size dependent:</p>
+
+<pre><code class="oldLang language-css">
+@media screen and (max-width: 1000px) {
+
+    #content { width: 100% }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    #nav { float: none }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #content aside {
+        float: none;
+        display: block;
+    }
+
+}
+</code></pre>
+
+<p>Note that if, for example, a layout area was 600 pixels wide or less, all three of these would be applied (because it would be less than or equal to 1000px, 800px, and 600px).</p>
+
+<aside class="note mag">
+<p>As well as using a general <code >max-width</code> on the main content area (the <a href="../../../../references/html/tags/article/index.html" class="acode"><code>article</code></a> elements), this site also has a number of size-dependent CSS rules. If you&#8217;re able to do so, try resizing your browser to see the changes take effect.</p>
+</aside>
+
+<p>You could also use &#8220;min-width&#8221; in place of &#8220;max-width&#8221; if you want to do things the other way around and apply CSS to sizes equal to or <strong>over</strong> a certain length.</p>
+
+<h2>Orientation-specific CSS</h2>
+
+<p>If you have a hankering for applying CSS depending on the orientation of the browser, fill your boots with something like the following:</p>
+
+<pre><code class="oldLang language-css">
+<strong>@media screen and (orientation: landscape)</strong> {
+
+    #nav { float: left }
+
+}
+
+<strong>@media screen and (orientation: portrait)</strong> {
+
+    #nav { float: none }
+
+}
+</code></pre>
+
+<p>This could be especially useful with mobile devices&#8230;</p>
+
+<h2>Device-specific CSS</h2>
+
+<p>We&#8217;re not talking different CSS for each and every brand and model of laptop, phone, and donkey - that would be sinful - but we can, with a relatively clear conscience (as long as we&#8217;re sensible), specify the likes of the device&#8217;s screen dimensions and its pixel ratio.</p>
+
+<aside class="note warning">
+<p>A &#8220;handheld&#8221; media type does exist and it could be used as <code>@media handheld</code>&#8230; but it isn&#8217;t widely supported and the distinction of what is &#8220;handheld&#8221; has become blurred due to the proliferation of all manner of devices with all manner of screen sizes.</p>
+</aside>
+
+<h3>Width and height</h3>
+
+<p><code>device-width</code>, <code>device-height</code>, <code>min-device-width</code>, <code>max-device-width</code>, <code>min-device-height</code> and <code>max-device-height</code> can be used to target the computed resolution of a device:</p>
+
+<pre><code class="oldLang language-css">
+@media screen and (min-device-height: 768px) and (max-device-width: 1024px) {
+
+    /* You can apply numerous conditions separated by "and" */
+
+}
+</code></pre>
+
+<h3>Pixel ratio</h3>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>It&#8217;s important to keep in mind that a <strong>CSS pixel</strong> need not be the same as a <strong>physical pixel</strong>. While a screen may physically be 720 pixels wide, a browser may actually apply CSS assuming that it is 480 pixels wide, for example. This is so that a standard designed web page will more likely fit on the screen. In this example, there is a <strong>pixel ratio</strong> of 1.5:1: There are 1½ physical pixels to every CSS pixel. A bog-standard desktop monitor will have a pixel ratio of 1:1: One CSS pixel to every physical pixel.</p>
+
+<p>If you want to apply styles only to these devices, you can use something like:</p>
+
+<pre><code class="oldLang language-css">
+@media (device-pixel-ratio: 2) {
+
+    body { background: url(twiceasbig.png) }
+
+}
+</code></pre>
+
+<p>This would apply to the likes of the iPhone (4 and above), with a pixel ratio of 2:1. You can also use <code>min-device-pixel-ratio</code> and <code>max-device-pixel-ratio</code>.</p>
+
+<aside class="note warning">
+<p>Talking of iPhones, you know the deal: also use <code>-webkit-device-pixel-ratio</code>, etc, etc&#8230;</p>
+</aside>
+
+<aside class="note i">
+<p>You might also want to fiddle with a device&#8217;s viewport to get it to play how you want. Leaping back over to HTML, the following <a href="../../../../references/html/tags/meta/index.html" class="acode"><code>meta</code></a> element will force a device to render a page at the width of the viewport (rather than attempting to show a wider-width design and zooming out, which it will do by default if the page can be wider than the viewport&#8217;s width) and also prevent the user from zooming in and out:</p>
+
+<pre><code class="oldLang language-html">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+</code></pre>
+
+<p>The benefit of this is that you can control exactly what is applied to what physical screen size. And although it&#8217;s painful to remove user controls, if the design is delightfully swell and made just for that diddy little screen, there shouldn&#8217;t be a need to zoom.</p>
+
+<p>The HTML Dog web site takes this approach: instead of a small device attempting to render a bigger, fatter web page by shrinking it down, the CSS turns it into a single-column design made specifically for such a device.</p>
+</aside>
+
+<h3>Others</h3>
+
+<p>You can also apply styles depending on a device&#8217;s resolution:</p>
+
+<pre><code class="oldLang language-css">
+@media screen and (resolution: 326dpi) { /* */ }
+
+@media screen and (min-resolution: 96dpi) { /* */ }
+</code></pre>
+
+<p>Or on its aspect ratio:</p>
+
+<pre><code class="oldLang language-css">
+@media screen and (device-aspect-ratio: 16/9) { /* */ }
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Previous Page: <a href="../gradients/index.html">Gradients</a></li>
+  <li><a href="../atrules/index.html">At-Rules</a></li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/css/mediaqueries/index.html">Media Queries</a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>CSS&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../cssbeginner/index.html">Beginner</a></li>
+				
+				
+				<li><a href="../../../cssintermediate/index.html">Intermediate</a></li>
+				
+				<li id="yahSubsec"><a href="../../../cssadvanced/index.html">Advanced</a>
+					<ul>
+						<li><a href="../roundedcorners/index.html">Rounded Corners</a></li>
+						<li><a href="../shadows/index.html">Shadows</a></li>
+						<li><a href="../selectors/index.html">Universal, Child, and Adjacent Selectors</a></li>
+						<li><a href="../colors/index.html">Advanced Colors</a></li>
+						<li><a href="../atrules/index.html">At-Rules</a></li>
+						<li><a href="../attributeselectors/index.html">Attribute Selectors</a></li>
+						<li><a href="../transitions/index.html">Transitions</a></li>
+						<li><a href="../backgrounds/index.html">Backgrounds: Multiples, Size, and Origin</a></li>
+						<li><a href="../transformations/index.html">Transformations</a></li>
+						<li><a href="../gradients/index.html">Gradients</a></li>
+						<li><a href="index.html">Media Queries</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</section>
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

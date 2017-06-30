@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Styling Anchors with :target</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	
+	<link href="../../r10/goldenjackal.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,300,400,600,700' rel="stylesheet">
+
+	<!--[if lt IE 9]><link href="/r10/damnyouGJ.css" rel="stylesheet"><script src="/r10/html5shiv.js"></script><![endif]-->
+
+
+	<script src="../../r10/codehighlighter.js"></script>
+
+		
+</head>
+
+<body class="level2">
+
+
+<div id="dog_tag"><p><a href="../../index.html"><img src="../../r10/logoNew.gif" alt="HTML Dog" width="80" height="58"><span></span></a></p></div>
+<p id="access_nav"><a href="index.html#main_nav">Skip to navigation</a></p>
+
+<nav id="you_are_here"><a href="../../index.html" id="home_link">Home</a><span> &rarr; </span><a href="../../reference/index.html">References</a><span> &rarr; </span><a href="../../references/css/index.html">CSS</a><span> &rarr; </span><a href="../../reference/cssproperties/index.html">Properties</a><span id="yah_last"> &rarr; </span></nav>
+
+<article>
+	
+<header>
+	
+	<div id="flowerbreak" class="flowernum2 flowerextra"></div>
+
+	<h1>Styling Anchors with :target</h1>
+
+	
+
+<p>When using page anchors (those parts of the page, such as headings, that you jump to with links), you can (theoretically) style the element that is the anchor itself by using the <code>target</code> pseudo class.</p>
+	
+		<aside id="flower_primary" class="flower">
+			<div id="bsap_1294690" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		</aside>
+
+
+</header>
+
+<section id="main_content">		
+
+
+	
+
+<p>Using the following HTML:</p>
+
+<pre><code class="html">
+&lt;p>You can read all of content, or get straight to the &lt;a href="#nittygritty">nitty-gritty&lt;/a>.&lt;/p>
+&lt;p>Alternatively, you can read the  &lt;a href="#grittynitty">gritty-nitty&lt;/a>.&lt;/p>
+&lt;p>Or if you prefer, try the &lt;a href="#wittyditty">witty ditty&lt;/a>.&lt;/p>
+&lt;!--[A whole load of content]-->
+&lt;h2 id="nittygritty">Nitty-Gritty&lt;/h2>
+&lt;h2 id="grittynitty">Gritty-Nitty&lt;/h2>
+&lt;h2 id="wittyditty">Witty-Ditty&lt;/h2>
+</code></pre>
+
+<p>And the following CSS:</p>
+
+<pre><code class="css">
+h2 {
+	color: #f60;
+}
+
+h2:target {
+	color: white;
+	background: #f60;
+}
+</code></pre>
+
+<p>Not only will the browser jump to the required element (the anchor), it will highlight that element by changing its color to white and its background to orange.</p>
+
+<p>But there was a "theoretically" thrown in there. Internet Explorer doesn't support the <code>target</code> pseudo-class (and neither does Opera at the time of writing), so this only works on a small number of browsers. <code>target</code> can still be used however as it can benefit those using capable browsers without adversely affecting those who aren't. The page anchors in the above code, for example, will still work in every browser, it's just that IE users won't have the highlighting bonus that others will have.</p>
+
+<p>Like the <code>focus</code> pseudo-class, you can also <a href="../suckerfish/target/index.html">mimic the target pseudo-class with some Suckerfish JavaScript</a>.</p>
+
+
+
+
+<aside id="flowers">
+	<div class="flower">
+		<div id="bsap_1294762" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+	
+	<div class="blossom">
+		<div id="bsap_1294763" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		<div id="bsap_1294764" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+
+	<p><a href="../../advertise/index.html">Advertise With Us</a></p>
+
+</aside>
+
+
+</section>
+
+
+
+
+<footer id="related">
+
+	
+
+
+
+
+
+	
+	<h2>Related Pages</h2>
+	<ul>
+		<li><a href="../suckerfish/target/index.html">Suckerfish :target article</a></li>
+		<li><a href="../drstrangeswitcher.html">Dr. Strangeswitcher article</a></li>
+	</ul>
+
+
+	<h3>Working Examples</h3>
+	<ul>
+		<li><a href="../../examples/target.html">Anchors and targets</a></li>
+	</ul>
+
+
+	<h3>Reference</h3>
+	<ul>
+		<li><a href="../../reference/htmltags/a/index.html">a HTML tag</a></li>
+	</ul>
+
+
+
+
+	
+
+
+
+</footer>
+
+
+</article>
+
+
+
+
+<nav id="main_nav">
+
+	<ul>
+
+		<li id="li_tut"><a href="../../guides/index.html" >Tutorials</a>
+			<ul>
+				<li><a href="../../guides/html/index.html">HTML</a></li>
+				<li><a href="../../guides/css/index.html">CSS</a></li>
+				<li><a href="../../guides/javascript/index.html">JavaScript</a></li>
+			</ul>
+		</li>
+
+		<li id="li_tech"><a href="../../techniques/index.html">Techniques</a></li>
+
+		<li id="li_eg"><a href="../../examples/index.html">Examples</a></li>
+
+	    <li id="li_ref"><a href="../../reference/index.html" >References</a>
+			<ul>
+				<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+				<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>			
+			</ul>
+		</li>
+
+		<li id="li_wh" class="subli superli"><a href="../../webhosting/index.html">Web Hosting</a></li>
+
+		<li class="subli superli"><a href="../../about.1.html">About Us</a></li>
+		<li class="subli"><a href="../../linkto/index.html">Link to Us</a></li>
+		<li id="li_smap" class="subli"><a href="../../sitemap/index.html">Site Map</a></li>
+
+		<li id="access_top"><a href="index.html#">&#8593; Top</a></li>    
+	</ul>
+
+	<p id="tweet"><a href="https://twitter.com/htmldog">Tweet @htmldog</a></p>
+
+
+</nav>
+
+
+<form action="../../search/index.html" id="search">
+
+	<fieldset><label for="morombe">Search: </label><input name="q" id="morombe"><input type="submit" value="Search"></fieldset>
+
+</form>
+
+
+
+
+<footer id="site_footer">
+	<p>&copy; 2003&#8211;2017.</p>
+	<p><a href="../../terms/index.html">Terms of use</a>.</p>
+	<p>Hosted by <a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+<p id="flogo"><a href="../../index.html"><img src="../../r10/htmldog90_lg.gif" width="90" height="18" alt="HTML Dog"></a></p>
+</footer>
+
+
+</body>
+
+<script async src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</html>

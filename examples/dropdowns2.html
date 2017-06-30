@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dropdowns 2: Multiple levels</title>
+	<style>
+		body {
+			font: 15px arial, helvetica, sans-serif;
+			background: #333;
+			color: #fff;
+		}
+	
+		a {
+			color: #06c;
+		}
+	
+		ul {
+			padding: 0;
+			margin: 0;
+			background: #fff;
+			float: left;
+		}
+	
+		li {
+			float: left;
+			display: inline;
+			position: relative;
+			width: 150px;
+			list-style: none;
+		}
+	
+		ul ul {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			background: #ccc;
+			display: none;
+		}
+	
+		ul ul ul {
+			left: 100%;
+			top: 0;
+			background: #999;
+		}
+	
+		li:hover > ul {
+			display: block;
+		}
+	
+	
+		p {
+			clear: left;
+			padding-top: 1em;
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="dropdowns2.html">Birds</a>
+				<ul>
+					<li><a href="dropdowns2.html">Ratites</a></li>
+					<li><a href="dropdowns2.html">Fowl</a></li>
+					<li><a href="dropdowns2.html">Neoaves</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="dropdowns2.html">Mammals</a>
+				<ul>
+					<li>
+						<a href="dropdowns2.html">Monotremes</a>
+						<ul>
+							<li><a href="dropdowns2.html">Echidnas</a></li>
+							<li><a href="dropdowns2.html">Platypus</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="dropdowns2.html">Marsupials</a>
+						<ul>
+							<li><a href="dropdowns2.html">Opossums</a></li>
+							<li><a href="dropdowns2.html">Numbats, etc.</a></li>
+							<li><a href="dropdowns2.html">Bandicoots, etc.</a></li>
+							<li><a href="dropdowns2.html">Kangaroos, koalas, wombats, etc.</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="dropdowns2.html">Placentals</a>
+						<ul>
+							<li><a href="dropdowns2.html">Primates, ungulates, etc.</a></li>
+							<li><a href="dropdowns2.html">Anteaters, sloths, etc.</a></li>
+							<li><a href="dropdowns2.html">Elephants, etc.</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="dropdowns2.html">Reptiles</a>
+				<ul>
+					<li><a href="dropdowns2.html">Lizards and snakes</a></li>
+					<li><a href="dropdowns2.html">Tortoises and turtles</a></li>
+					<li><a href="dropdowns2.html">Crocodilians</a></li>
+					<li><a href="dropdowns2.html">Tuatara</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="dropdowns2.html">Amphibians</a>
+				<ul>
+					<li><a href="dropdowns2.html">Frogs and toads</a></li>
+					<li><a href="dropdowns2.html">Salamanders and newts</a></li>
+					<li><a href="dropdowns2.html">Caecilians</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<p>A simple multi-level CSS dropdown menu. Read the HTML Dog <a href="../techniques/dropdowns/index.html">Dropdowns technique article</a> for more information.</p>
+
+	<!-- Link back to HTML Dog: -->
+	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

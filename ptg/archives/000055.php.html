@@ -1,0 +1,2058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>HTML and CSS for Mobiles - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000055.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+<h1>HTML and CSS for Mobiles</h1>
+	
+<h2>Monday 14 June, 2004 (11:51AM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>Although it's chugging along rather slowly (certainly more slowly than people predicted a few years ago), with phones and PDA's becoming ever more advanced, the mobile internet is clearly going to play a big role in the future of the web.</p>
+
+<p>A problem in designing web pages for these platforms is the multitude of mobile devices (both PDA's and phones) that will no doubt render pages in different ways. If web standards were fully supported then it would be possible to optimise pages for these mobile devices without changing the underlying HTML - just like <a href="http://www.alistapart.com/articles/goingtoprint/">providing alternative styles for print</a>.</p>
+
+<p>It all comes down the <code>handheld</code> media type. If that was supported then we'd be laughing - one style sheet for screen, one style sheet for print and one style sheet for mobiles, with code something like this:</p>
+
+<pre><code>&lt;link rel="stylesheet" type="text/css" media="screen" href="screen.css" /&gt;</code>
+<code>&lt;link rel="stylesheet" type="text/css" media="print" href="print.css" /&gt;</code>
+<code>&lt;link rel="stylesheet" type="text/css" media="handheld" href="mobile.css" /&gt;</code>
+</pre>
+
+<p>But here's where the practical difficulties kick in. In everyday web design it's often difficult enough to get hold of a platform other than the one you're using, but when it comes to mobiles, where the hell do you start?. I understand that the <code>handheld</code> media type <em>is</em> supported by some devices and software, but I don't know to what extent. I also know that some also apply styles specifically targeted with the <code>screen</code> media type. Tut tut. Naughty.</p>
+
+<p>Opera have a browser for the Series 60 platform, which looks great. In fact, you can see what a web page would look like on it by going to the "View" menu and selecting "Small Screen" on a regular Opera browser. It has good support for standards (including the <code>handheld</code> media type), as you might expect from Opera but unfortunately, I'm assuming that this isn't that popular a browser for mobiles, although it does come pre-installed on a <a href="http://www.nokia.co.uk/nokia/0,,48691,00.html">certain new Nokia phone</a>.</p>
+
+<p>Some phones have their own built-in browser (such as the <a href="http://www.nokia.co.uk/nokia/0,,32982,00.html">Nokia 6220</a>), and I assume a lot of PDA's do too. The mobile version of IE is bound to be a major player, but there could well be hundreds of different mobile browsers out there. Another factor is international differences, especially with phones. Europe has quite a different market to America and parts of Asia are in a super hi-tech world of their own.</p>
+
+<p>Can anyone can shed any light on mobiles and how they handle HTML and CSS? I've constructed <a href="http://htmldog.com/test/handheld.html">a test page</a> that should show how a browser deals with <code>screen</code> and <code>handheld</code> media types (this works really well with Opera), so if you've got a web-enabled phone or PDA, please take a look at the page (<a href="http://htmldog.com/test/handheld.html">http://htmldog.com/test/handheld.html</a>) and let me know how many "applied" and "not applied"'s show up.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000055.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>Hi,</p>
+
+<p>I tried your testpage on a Nokia 6600 mobile phone and tested it both in the built-in browser and in Opera.<br>
+The results were:<br>
+- Built-in browser: "not applied" to all items<br>
+- Opera:<br>
+  - link media="handheld".. applied<br>
+  - style media="handheld"... applied<br>
+  - @import... NOT applied<br>
+  - @media handheld... applied<br>
+  - other items (screen media): NOT applied</p>
+
+<p>Guess I don't have to explain why I prefer Opera over the built-in browser :)</p>
+<p class="by">So said <a href="http://gwen.hana.nl/">Maurice</a> on Monday 14 June, 2004 at 12:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000055.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Great practical test, here goes:</p>
+
+<p>iPAQ 4150, with Windows Mobile 2003 &amp; standard Pocket Explorer:<br>
+screen: all apply<br>
+handheld: all apply</p>
+
+<p>Nokia 6600, with SymbianOS 7.0s, Series 60/2 &amp; Opera 6.2:<br>
+screen: none apply<br>
+handheld: "@import url" does not apply, the rest applies</p>
+
+<p>With a nice (x)html/css design one could 'catch' the user-agent string (server-side) of the most important mobile devices out there, and show a site without css... Just a thought :-). Most mobile users only care about the real content, and will love the slim pages you give them without css...</p>
+<p class="by">So said GeeBee on Monday 14 June, 2004 at 12:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000055.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Maurice and GeeBee - thanks for that. Interesting results. It appears that the in-built Nokia 6600 browser doesn't support CSS at all.</p>
+
+<p>I'm surprised about the @import thing with Opera. I'm not sure if that's down to the media type specificity (@import url("whatever.css") handheld rather than @import url("whatever.css") - standard IE hates this and falls down) or if it's the @import rule itself. I'll have to add another test to the test page.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Monday 14 June, 2004 at 12:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000055.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Are we talking about HTML or XHTML?</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Monday 14 June, 2004 at  1:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000055.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Either/Or/Both.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Monday 14 June, 2004 at  1:59PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000055.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Tested on a Sony Ericsson P800.</p>
+
+<p>With Opera:<br>
+Screen: none applied<br>
+Handheld: all applied except "@import url("whatever.css") handheld;"</p>
+
+<p>With built-in browser:<br>
+Screen: none applied except "&lt;style media="screen"... "<br>
+Handheld: all applied</p>
+
+<p>Hope that helps!</p>
+<p class="by">So said <a href="http://onepointzero.com/">Colin</a> on Monday 14 June, 2004 at  2:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000055.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Colin, thanks - that does help.<br>
+It's quite encouraging that a phone like the P800 that's been around for a few years has that support. I'm assuming that its successor, the P900, will also have good support.</p>
+
+<p>On another note, after a bit of digging, it seems that whereas the "handheld" media type is recognised on Pocket IE for Windows Pocket PC 2003, it isn't recognised on PPC 2002. I'm not sure if that's true or not and I'm not sure how relevant this is in practical terms.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Monday 14 June, 2004 at  2:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000055.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>With Blazer 3 (a.k.a. "Web") on Treo 600:<br>
+Screen: all applied<br>
+Handheld: none applied except @import url("whatever.css") handheld;</p>
+
+<p>Pathetic :(</p>
+<p class="by">So said <a href="http://www.elisimpson.com/">Eli</a> on Monday 14 June, 2004 at  2:54PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000055.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>Hello!</p>
+
+<p>I tried your test page in a Sony Ericsson T616.<br>
+Here are the results:</p>
+
+<p>Everything was listed: not applied</p>
+<p class="by">So said brent arnold on Monday 14 June, 2004 at  3:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000055.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>On NetFront v3.1 on a Sony Clié TH55:</p>
+
+<p>Screen: all applied<br>
+Handheld: only @import url("whaterver.css") applied.</p>
+
+<p>The browser may be awful, but it still supports transparent PNGs while IE doesn't. It's pretty bad when Microsoft's web browser gets beaten by a handheld device.</p>
+<p class="by">So said Mark Harmstone on Monday 14 June, 2004 at  4:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000055.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>On a Nokia 3650 built-in browser, none applied</p>
+<p class="by">So said <a href="http://http;//wellheard.com">Braxton Beyer</a> on Monday 14 June, 2004 at  5:59PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000055.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>Yeah, Opera really is better than Mozilla when it comes to standards and browsing features :)</p>
+
+<p>The handheld-hell problem looks like an interesting research topic, but I'm already knee-deep in San Francisco History and Atomic Bomb research (not to mention being unplugged from all computers for almost 2 months beginning later today...). </p>
+
+<p>Good luck in your research PTG....Maybe you should get one of those emulators...</p>
+
+<p>Off topic but that's the weirdest coincidence ever: Maurice..Then GeeBee....even more creppy now that Maurice is dead...</p>
+<p class="by">So said <a href="http://geociites.com/seanmhall2003">Dante Evans</a> on Monday 14 June, 2004 at  6:43PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000055.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>Oh no Dante! A whole 2 months without endless inane commentary and crass self-promotion. How ever will we cope?</p>
+<p class="by">So said Chris on Monday 14 June, 2004 at  8:37PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000055.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>Samsung SGH-E700 Mobile (Openwave Mobile Browser  6.1.0.6):<br>
+"Not applied" show up in all instances...<br>
+</p>
+<p class="by">So said <a href="http://www.baekdal.com/">Thomas Baekdal</a> on Monday 14 June, 2004 at  8:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000055.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>Tested with the Motorola v500 on  board browser. No idea what it is unfourtunately (and I've been trying to find out). </p>
+
+<p>All screen media rules where not applied and all handheld media rules were.</p>
+
+<p>Pretty impressive really.</p>
+<p class="by">So said <a href="http://www.khanate.dnsalias.org/">Simon Proctor</a> on Monday 14 June, 2004 at  8:50PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000055.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>Tested with pocket IE running on Smartphone 2003 OS (Orange SPV E200) :-</p>
+
+<p>It seems to apply them all in all 3 layouts.. <br>
+</p>
+<p class="by">So said Andy Forster on Monday 14 June, 2004 at  9:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000055.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>Panasonic GD87 'phone, built-in browser: all show not applied.</p>
+<p class="by">So said <a href="http://fuddland.org.uk/">David</a> on Monday 14 June, 2004 at  9:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000055.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>Danger Hiptop / T-Mobile Sidekick has a pretty good java-based browser, but it doesnt support css at all. A quick look at this page confirms this, with none of the selectors shown.</p>
+<p class="by">So said <a href="http://www.s00k.com/">bug</a> on Monday 14 June, 2004 at  9:36PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment19" class="comment">
+<h3><a href="000055.php.html#comment19"><span>Comment </span>19</a></h3>
+<p>I have a Palm Tungsten C Handheld and I have two browsers installed on it.<br>
+Below are the results respectively:<br>
++++<br>
+Web Browser v. 2.0.1.1 (Pre-installed)<br>
+Screen : All 4 tests applied<br>
+Handheld: @import url("whatever.css") applied - Other three not applied<br>
++++<br>
+Palm Web Pro v. 3.0.1b<br>
+I paid for this browser upgrade, by default it filters pages with a proxy server on palm's network.<br>
+With the proxy server enabled, none of the tests are applied.<br>
+With the proxy disabled there are two modes available:<br>
+- "Normal View" Rendering:<br>
+&gt; none of the tests are applied for either screen or handheld<br>
+- "Handheld View" Rendering:<br>
+&gt; This mode gives you the same results, none of the tests are applied in either screen or handheld.</p>
+
+<p>Palm has another upgraded verson of their Web Browser Pro, but it is only available for Bluetooth devices, The Tungsten C has wifi, but not bluetooth, so it will not work on mine.</p>
+
+<p>And as a test on AvantGo, none of the tests are applied either.</p>
+
+<p>Hope this is helpful to you.</p>
+<p class="by">So said <a href="http://digitalgravy.net/">Jacob Herman</a> on Monday 14 June, 2004 at  9:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment20" class="comment">
+<h3><a href="000055.php.html#comment20"><span>Comment </span>20</a></h3>
+<p>The Motorola T720i phone didn't apply any style rules.  However, I've never been able to figure out just how much HTML it supports in the first place (some pages won't even display at all), so chances are it  just doesn't handle CSS.</p>
+<p class="by">So said Kelson Vibber on Monday 14 June, 2004 at 10:04PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment21" class="comment">
+<h3><a href="000055.php.html#comment21"><span>Comment </span>21</a></h3>
+<p>NetFront 3.1 / Palm OS 5.2.1 / Sony TH55:</p>
+
+<p>Screen: all four were applied<br>
+Handheld: only @import was applied</p>
+<p class="by">So said <a href="http://ithink.ch/blog/">Ölbaum</a> on Monday 14 June, 2004 at 10:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment22" class="comment">
+<h3><a href="000055.php.html#comment22"><span>Comment </span>22</a></h3>
+<p>Opera 6.30 / Sony-Ericsson P800 / Symbian 7 (UIQ)</p>
+
+<p>Results (screencaps taken in fullscreen mode, i.e. 100% screen coverage = 320x208 px):<br>
+<a href="http://marcustucker.com/temp/p800cap1.jpg">http://marcustucker.com/temp/p800cap1.jpg</a><br>
+<a href="http://marcustucker.com/temp/p800cap2.jpg">http://marcustucker.com/temp/p800cap2.jpg</a></p>
+
+<p>:-)</p>
+<p class="by">So said <a href="http://blog.marcustucker.com/">Marcus Tucker</a> on Tuesday 15 June, 2004 at  2:01AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment23" class="comment">
+<h3><a href="000055.php.html#comment23"><span>Comment </span>23</a></h3>
+<p>Patrick, so they accept 'application/xhtml+xml'? (That was what I meant, actually ;-))</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday 15 June, 2004 at  6:35AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment24" class="comment">
+<h3><a href="000055.php.html#comment24"><span>Comment </span>24</a></h3>
+<p>Hi.<br>
+Tested on built-in browser on Motorola A920 (Symbian OS).</p>
+
+<p># Applys to all screen</p>
+
+<p># No handheld support</p>
+
+<p>Unfortunatly, they have made it impossible to install other spftware than their own, so I can't download another browser.. Grrr.<br>
+</p>
+<p class="by">So said <a href="http://www.winstondesign.se/">Joel Junström</a> on Tuesday 15 June, 2004 at  8:47AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment25" class="comment">
+<h3><a href="000055.php.html#comment25"><span>Comment </span>25</a></h3>
+<p>Nokia 6820, none of the rules are applied. I presume that this means that my older Nokia 5100 doesn't support them either.</p>
+<p class="by">So said <a href="http://fierymill.net/ramin/">ramin</a> on Tuesday 15 June, 2004 at  8:53AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment26" class="comment">
+<h3><a href="000055.php.html#comment26"><span>Comment </span>26</a></h3>
+<p>SonyEricsson p900:<br>
+Screen: none applied<br>
+Handheld: all applied except "@import url("whatever.css") handheld;"</p>
+
+<p>(same as p800)</p>
+<p class="by">So said <a href="http://netfactory.dk/">Flemming Mahler</a> on Tuesday 15 June, 2004 at 10:09AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment27" class="comment">
+<h3><a href="000055.php.html#comment27"><span>Comment </span>27</a></h3>
+<p>On Nokia 7250 none were applied, though it did still color the word not in red so apparently it will recognise inline styles.<br>
+</p>
+<p class="by">So said Rob Clarke on Tuesday 15 June, 2004 at 12:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment28" class="comment">
+<h3><a href="000055.php.html#comment28"><span>Comment </span>28</a></h3>
+<p>Nokia 3540 w/Opera browser installed:</p>
+
+<p>SCREEN<br>
+none applied</p>
+
+<p>HANDHELD</p>
+
+<p>&lt;link media="handheld"... - applied.<br>
+&lt;style media="handheld"... - applied.<br>
+@import url("whatever.css") handheld; - not applied.<br>
+@media handheld - applied.</p>
+<p class="by">So said <a href="http://www.loft417.com/">Joseph</a> on Tuesday 15 June, 2004 at  1:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment29" class="comment">
+<h3><a href="000055.php.html#comment29"><span>Comment </span>29</a></h3>
+<p>The above post should be Nokia 3650...its early.</p>
+<p class="by">So said <a href="http://www.loft417.com/">Joseph</a> on Tuesday 15 June, 2004 at  1:24PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment30" class="comment">
+<h3><a href="000055.php.html#comment30"><span>Comment </span>30</a></h3>
+<p>I am using an HP Jornada 568<br>
+The browser is the built-in Internet Explorer, and each of the tests were "Not applied". I'm not sure what version of browser this is (no way to tell, as far as I can see... if anyone knows how to check this, I'd be happy to provide it).<br>
+</p>
+<p class="by">So said <a href="http://www.fusionary.com/">Jay Jones</a> on Tuesday 15 June, 2004 at  2:02PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment31" class="comment">
+<h3><a href="000055.php.html#comment31"><span>Comment </span>31</a></h3>
+<p>On my new SonyEricsson T630 none applied :/</p>
+
+<p><a href="http://www.sonyericsson.com/t630">http://www.sonyericsson.com/t630</a></p>
+<p class="by">So said <a href="http://www.dropstone.com/">Ante</a> on Tuesday 15 June, 2004 at  2:21PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment32" class="comment">
+<h3><a href="000055.php.html#comment32"><span>Comment </span>32</a></h3>
+<p>N6230 - none aplied (hh&amp;scr), although some styling was applied to the document :( Damn :/</p>
+<p class="by">So said <a href="http://www.alphanumeric.cz/">JohnyB</a> on Tuesday 15 June, 2004 at  3:01PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment33" class="comment">
+<h3><a href="000055.php.html#comment33"><span>Comment </span>33</a></h3>
+<p>My mobile web-enabled fridge featuring a colour LCD screen doesn't apply any of the stylesheets.</p>
+
+<p>Hope this helps!</p>
+<p class="by">So said <a href="http://">Khasz</a> on Tuesday 15 June, 2004 at  4:11PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment34" class="comment">
+<h3><a href="000055.php.html#comment34"><span>Comment </span>34</a></h3>
+<p>Damn those non-standard fridges!</p>
+
+<p>I'm going to put together some kind of round-up on the Dog Blog soon. Thanks very much for everyone's help.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday 15 June, 2004 at  5:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment35" class="comment">
+<h3><a href="000055.php.html#comment35"><span>Comment </span>35</a></h3>
+<p>Nokia 7650: None apply.</p>
+<p class="by">So said <a href="http://www.yatil.de/">Eric</a> on Tuesday 15 June, 2004 at  7:43PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment36" class="comment">
+<h3><a href="000055.php.html#comment36"><span>Comment </span>36</a></h3>
+<p>Handspring Treo 300<br>
+screen: none applied<br>
+handheld: none applied</p>
+
+<p>Handspring Treo 600<br>
+screen: all apply<br>
+handheld: @import url("whatever.css") handheld; applied.</p>
+
+<p>Blackberry 6750 (B/W)<br>
+screen: none applied<br>
+handheld: none applied</p>
+
+<p>Blackberry 7750 (color)<br>
+screen: none applied<br>
+handheld: none applied</p>
+
+<p>I use the Treo 600. It uses the Blazer 3.0 browser which by default renders pages in an "optimized" narrow display mode. You can select  a "wide" mode which gives you a window to the web page. To see the page the user scrolls from side to side. I prefer the optimized mode as it allows you to select an url by pressing the right arrow and go to the url by pressing the enter key or middle button of the arrow selector. I does not support padding and only supports two font sizes.</p>
+
+<p>I hope that helps.</p>
+<p class="by">So said <a href="http://tanny.ica.com/">Tanny O'Haley</a> on Tuesday 15 June, 2004 at  9:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment37" class="comment">
+<h3><a href="000055.php.html#comment37"><span>Comment </span>37</a></h3>
+<p>I found that IE on my fathers Windows CE Dell Axim will render the screen stylesheets.  I did, however, find that if you wrap your screen stylesheet in a </p>
+
+<p>@media screen {</p>
+
+<p>/* stylesheet goes here */</p>
+
+<p>}</p>
+
+<p>that his version of IE will ignore it like it is supposed to.  </p>
+
+<p>Lemme recap: it renders it if you use the  syntax, it renders it if you use the  import, but it does not render it if you put your external stylesheet in a @media screen {   } wrapper.</p>
+
+<p>What I do then is use the  to feed the handheld the same stylesheet I feed to NN4 and IE4.</p>
+<p class="by">So said Josh King on Tuesday 15 June, 2004 at 10:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment38" class="comment">
+<h3><a href="000055.php.html#comment38"><span>Comment </span>38</a></h3>
+<p>Hey </p>
+
+<p>Im a PDA Web develloper and have some tips that we can put together to clean all doubts.</p>
+
+<p>What do u think ? </p>
+
+<p>u have my contact</p>
+<p class="by">So said <a href="http://www.rigonatti.com.br/mobile">Rigonatti</a> on Wednesday 16 June, 2004 at  4:20AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment39" class="comment">
+<h3><a href="000055.php.html#comment39"><span>Comment </span>39</a></h3>
+<p>Tried your testpage on a Sony Ericsson A5404S with an Openwave Mobile Browser 6.2.0.5: no styles are applied.<br>
+However, using &lt;link rel="stylesheet" href="linkhandheld.css" type="text/css" media="handheld" /&gt; (=different order) seems to work (!).<br>
+</p>
+<p class="by">So said <a href="http://andreas.web-graphics.com/">Andreas Bovens</a> on Wednesday 16 June, 2004 at  7:29AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment40" class="comment">
+<h3><a href="000055.php.html#comment40"><span>Comment </span>40</a></h3>
+<p>However, the fridge does apply stylesheets with media="fridge" specified.</p>
+
+<p>And just to contribute something serious, PPC 2002's standard browser Pocket IE does't support CSS at all.</p>
+<p class="by">So said <a href="http://www.max.nl/">Khasz</a> on Wednesday 16 June, 2004 at  9:35AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment41" class="comment">
+<h3><a href="000055.php.html#comment41"><span>Comment </span>41</a></h3>
+<p>Nokia 7650/Opera 6.10<br>
+screen: none apply<br>
+handheld: "@import url" does not apply, the rest applies</p>
+<p class="by">So said Chriz on Wednesday 16 June, 2004 at 12:11PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment42" class="comment">
+<h3><a href="000055.php.html#comment42"><span>Comment </span>42</a></h3>
+<p>Continuing my tests of the built in browser on my Nokia 7250 I found that if I went to the personal site of your sometime contributor Mr Dan Webb, that all styles were applied.</p>
+
+<p>He's using this @import url("/style.css");</p>
+
+<p>This is confusing as none of the styles in your test page were applied, so it looks like media=all works but media=handheld doesn't!</p>
+<p class="by">So said Rob Clarke on Wednesday 16 June, 2004 at  1:02PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment43" class="comment">
+<h3><a href="000055.php.html#comment43"><span>Comment </span>43</a></h3>
+<p>Woops,<br>
+that didn't make anysense as I included markup that got filtered out.</p>
+
+<p>I meant to say that he's using this:<br>
+&lt;style type="text/css" media="all"&gt;@import url("/style.css");&lt;/style&gt;</p>
+<p class="by">So said Rob Clarke on Wednesday 16 June, 2004 at  1:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment44" class="comment">
+<h3><a href="000055.php.html#comment44"><span>Comment </span>44</a></h3>
+<p>Thanks Rob. This is all so damned confusing (although interesting at the same time!).</p>
+
+<p>I managed to get my hands on a Nokia 6600 yesterday and realised the same kind of thing - it didn't apply any of the cases in the test page, but it did pick up the general styles (like the borders and the red colouring of the "not"s). So the proprietary Nokia HTML browsers clearly just ignore everything apart from media="all". Well, at least they don't apply "screen"....</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 16 June, 2004 at  1:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment45" class="comment">
+<h3><a href="000055.php.html#comment45"><span>Comment </span>45</a></h3>
+<p>Hi, I just tested this with the Motorola V525 in-built browser:</p>
+
+<p>All of the screen stuff came up as not applied<br>
+All the handheld stuff came up as applied</p>
+
+<p>Pretty much the same as comment 15 above, with the V500. He's right, it's pretty impressive =)</p>
+
+<p>If you know how to find out the browser info I'll take a look, but I can't see anything obvious...</p>
+<p class="by">So said <a href="http://www.ethicalgifts.com/">Sally</a> on Wednesday 16 June, 2004 at  1:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment46" class="comment">
+<h3><a href="000055.php.html#comment46"><span>Comment </span>46</a></h3>
+<p>I live in Stradella (Italy), 30 miles from Milan. My phone is: Nec e313 (UMTS) with NetFront 3.0 (the GUI is limited, very different from NetFront 3.1, to force users to navigate in the TRE.it portal):</p>
+
+<p>SCREEN<br>
+----------------<br>
+applied<br>
+applied<br>
+not applied<br>
+applied</p>
+
+<p>HANDHELD<br>
+------------------<br>
+applied<br>
+applied<br>
+not applied<br>
+applied<br>
+</p>
+<p class="by">So said Alberto Patelli on Wednesday 16 June, 2004 at  4:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment47" class="comment">
+<h3><a href="000055.php.html#comment47"><span>Comment </span>47</a></h3>
+<p>Nokia 6200's built-in "XHTML Browser" all comes up as "not applied"</p>
+<p class="by">So said Simon on Thursday 17 June, 2004 at  2:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment48" class="comment">
+<h3><a href="000055.php.html#comment48"><span>Comment </span>48</a></h3>
+<p>Tested on a nokia 3200, none applied, neither screen nor handheld. The inline styles worked fine though, both borders and colors.</p>
+<p class="by">So said  on Friday 18 June, 2004 at  5:32PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment49" class="comment">
+<h3><a href="000055.php.html#comment49"><span>Comment </span>49</a></h3>
+<p>I'm using the new Motorola V600 on Cingular with its built in browser. All screen styles were NOT applied. All handheld styles WERE applied. Pretty good! </p>
+
+<p>It also renders tables, although a 4-col table has columns only about 1/4" wide because it squeezes the whole table into the screen available (no horizontal scrolling on this phone). The only downside of my service is I can't download pages bigger than 10K, so I can only use nice lean mean sites that keep their code nice and trim using css. Not sure if the download limit  is the fault of Motorola or Cingular, probably Cingular.</p>
+
+<p>I have also been investigating this subject and found that many cell phones, even color ones, ignore foreground and or background colors (to "protect" the user from dangerous colors I imagine), and may also ignore font sizes because they only have one or two sizes available, but may apply other styles. That means some of the ones that don't look like they are reading the handheld stylesheet may be reading it but choosing to ignore the things you are testing. </p>
+
+<p>This may not be as bad as it sounds. One of the most important things about using the handheld stylesheet is being able to count on it to hide parts of the site that are not applicable (or even dangerous) to the small screen. I can live with a cell phone that doesn't show all my colors so long as it hides the big, unnecessary parts of the site (like many of the navigation links in the left column which I encase in a div with "display:none" for handhelds). I don't imagine you want to make another example :-) but it would be interesting to find out how many devices will support an important feature like "display:none".</p>
+
+<p>Also, I have also discovered that some cell phone service providers may be interfering with or changing the style on their proxies before passing it down to the phone (again I am sure to "protect" all of us). This means that some features that don't show up on a phone with one provider might show up on another provider. </p>
+
+<p>Related to a comment above about AdvantGo -- I just read on their site that the latest version of their software DOES support styles. Not sure how widely used the new version is (or if it is out yet).</p>
+
+<p>Related to the comment about using emulators -- there are dozens of them each of which mimic different PDAs and phones, and they are not exactly the same as looking at the real thing anyway. They're probably good mostly to get a general idea what things will look like. The best test is one like this -- with real phones and PDAs.</p>
+
+<p>I also read somewhere that Nokia only supports the handheld stylesheet if it is the first one in the list. I also read that support for @media(handheld) is less reliable than a linked stylesheet with the type media=handheld. I have no idea if either is true, but maybe someone else does.</p>
+<p class="by">So said Karen on Saturday 19 June, 2004 at 12:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment50" class="comment">
+<h3><a href="000055.php.html#comment50"><span>Comment </span>50</a></h3>
+<p>I can't  believe noone's mentioned iSilo (<a href="http://www.isilo.com/)">http://www.isilo.com/)</a> yet!  Results are as expected: first, second and fourth in each set are applied, so obviously it's ignoring the media type in all cases but failing on the "@import url(...) TYPE" command.</p>
+
+<p>I really ought to give it more of a thorough going over with some CSS to see how compliant it is.  Impression I get from my own work is that it's not up to the really complex stuff; it gets font sizes VERY mixed up at times.</p>
+<p class="by">So said <a href="http://flurf.net/">Eric TF Bat</a> on Sunday 20 June, 2004 at  9:27AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment51" class="comment">
+<h3><a href="000055.php.html#comment51"><span>Comment </span>51</a></h3>
+<p>I tested it on my Sony Ericsson P800, and obtained the same results as Colin (Comment 6), however, I did some further testing with other media types, and found some interesting results...</p>
+
+<p>So I decided that instead of just focussing on handheld and screen media types, why not test them all.  I made up some complete test cases to test every single combination of media type, MIME type and !DOCTYPE, as well as starting to publish some user agent support charts.  The number of tests may be just a bit of overkill, but I figured why not, it wasn't much effort to add the extra just to be 100% complete.  I also added the &lt;?xml-stylesheet?&gt; processing instruction which you omitted from your test.</p>
+
+<p>The P800 correctly applied all styles from all and handheld media types, except when served as text/html  It turns out that the P800 will process the ?xml-stylesheet? PI no matter which mime type was used (text/html, application/xhtml+xml or text/xml), however it should not process it for text/html.  It also applies all styles from a &lt;style type="text/css" media="xxx"&gt; for all media types except embossed, and I thought that was very strange.</p>
+
+<p>Here's the tests: <a href="http://www.lachy.id.au/css/tests/media/">http://www.lachy.id.au/css/tests/media/</a></p>
+
+<p>I would appreciate it if others would submit their results to me using any device or media type you have available, including the handhelds tested here.  I've provided a template to make up a support chart quite easily, that I can publish on my site.  Of course, comments on ways to improve the support charts, tests or anything else would also be appreciated too.</p>
+<p class="by">So said <a href="http://www.lachy.id.au/">Lachlan Hunt</a> on Sunday 20 June, 2004 at  1:55PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment52" class="comment">
+<h3><a href="000055.php.html#comment52"><span>Comment </span>52</a></h3>
+<p>PocketPC 2002 handhelds have IE 3.02 which does not support CSS at all, nor does support DOM1. I think it does not support Javascript too, but I'm not sure.</p>
+
+<p>PocketPC 2003 reports its version as IE 4.01 and thus again no DOM1. </p>
+
+<p>WinCE comps have IE5.5, which is practically identical to desktop IE 5.5.</p>
+
+<p>I used www.stanjames.com as test site which uses lots of CSS2 and DOM1 stuff. I'm informed by the client that this site is fully functional on BlackBerry ( <a href="http://www.blackberry.com/">http://www.blackberry.com/</a> ) devices (their customer reported it few weeks ago).</p>
+<p class="by">So said <a href="http://www.aplus.co.yu/">Aleksandar</a> on Tuesday 22 June, 2004 at 10:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment53" class="comment">
+<h3><a href="000055.php.html#comment53"><span>Comment </span>53</a></h3>
+<p>Hi - great test. Very interested in the compiled results down the road.</p>
+
+<p>Anyhow, it's a bit out of date and redundant but not entirely so:</p>
+
+<p>Device: Treo 270</p>
+
+<p>Browser: EudoraWeb 2.1 - "not applied" to all tests.</p>
+
+<p>Browser: Blazer 2.1.3  Build 12 - "not applied" to all tests</p>
+
+<p>Hopefully that will help at least with the retrospective part of the analysis.</p>
+<p class="by">So said <a href="http://www.mikel.org/">michael</a> on Tuesday 22 June, 2004 at  7:26PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment54" class="comment">
+<h3><a href="000055.php.html#comment54"><span>Comment </span>54</a></h3>
+<p>AvantGo v4,2 Build 1165 on a Palm m125:</p>
+
+<p>Nothing--not even one.</p>
+<p class="by">So said Mordechai Peller on Thursday 24 June, 2004 at  1:44AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment55" class="comment">
+<h3><a href="000055.php.html#comment55"><span>Comment </span>55</a></h3>
+<p>SonyEricsson T610</p>
+
+<p>None applied on all</p>
+<p class="by">So said Jens Wedin on Monday 28 June, 2004 at 10:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment56" class="comment">
+<h3><a href="000055.php.html#comment56"><span>Comment </span>56</a></h3>
+<p>none aplied (hh&amp;scr), although some styling was applied to the document </p>
+<p class="by">So said <a href="http://www.sron.net/">sron</a> on Tuesday 29 June, 2004 at 10:48AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment57" class="comment">
+<h3><a href="000055.php.html#comment57"><span>Comment </span>57</a></h3>
+<p>Dell AXIM X3 with Windows Mobile IE</p>
+
+<p>Screen : all applied  :-(</p>
+
+<p>Handheld : all applied</p>
+
+<p>That means my handheld stylesheet is going to have to have settings to cancel out all the screen <br>
+styling and positioning that I don't want for the handheld - that's depressing...<br>
+</p>
+<p class="by">So said Chris H on Friday  2 July, 2004 at 12:39PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment58" class="comment">
+<h3><a href="000055.php.html#comment58"><span>Comment </span>58</a></h3>
+<p>See <a href="http://my.opera.com/">http://my.opera.com</a> for a site which uses media handheld quite extensively. Works great in the mobile versions of Opera. To test on desktop, use Opera 7.x and hit SHIFT-F11 to trigger handheld mode.</p>
+<p class="by">So said Robert Parker on Sunday  4 July, 2004 at  3:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment59" class="comment">
+<h3><a href="000055.php.html#comment59"><span>Comment </span>59</a></h3>
+<p>Sony Ericsson K700i:<br>
+Screen: none applied<br>
+Handheld: all four applied<br>
+</p>
+<p class="by">So said Robin Rosenberg on Monday 12 July, 2004 at 10:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment60" class="comment">
+<h3><a href="000055.php.html#comment60"><span>Comment </span>60</a></h3>
+<p>I've tried this on the Sony Ericsson p800, t610, z1010 WAP emulator from <a href="http://developer.sonyericsson.com/site/global/docstools/browsing/p_browsing.jsp">http://developer.sonyericsson.com/site/global/docstools/browsing/p_browsing.jsp</a> (reg. required, but free.)</p>
+
+<p>- screen: &lt;style media="screen"&gt; applied<br>
+- handheld: all applied</p>
+<p class="by">So said <a href="http://www.pixelpush.org/">Kevin N</a> on Tuesday 13 July, 2004 at  6:16PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment61" class="comment">
+<h3><a href="000055.php.html#comment61"><span>Comment </span>61</a></h3>
+<p>I tried the test page on PocketIE running on a RedE SC1100 Developer Smartphone running WinMob 2003</p>
+
+<p>Screen: all 4 applied<br>
+Handheld: all 4 applied</p>
+<p class="by">So said Derek Wilson on Thursday 15 July, 2004 at 11:02AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment62" class="comment">
+<h3><a href="000055.php.html#comment62"><span>Comment </span>62</a></h3>
+<p>I've tried this on my Siemens A60 (which is using Browser component 1.3.0.5, Openwave 6.1.0.7.3)</p>
+
+<p>Screen: none applied<br>
+Handheld: none applied</p>
+<p class="by">So said MekDrop on Thursday 15 July, 2004 at  2:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment63" class="comment">
+<h3><a href="000055.php.html#comment63"><span>Comment </span>63</a></h3>
+<p>Sanyo SCP-5400 (also known as the Sprint RL2500) gets the following results:</p>
+
+<p>Screen:<br>
+- All items applied</p>
+
+<p>Handheld:<br>
+- link media="handheld"... NOT applied<br>
+- style media="handheld"... NOT applied<br>
+- @import... applied<br>
+- @media handheld... NOT applied</p>
+
+<p>So it would seem that for this phone, screen styles could be sucessfully replaced with styles from a handheld imported style sheet.</p>
+<p class="by">So said <a href="http://superfluousbanter.org/">Dan Rubin</a> on Monday 19 July, 2004 at  2:14AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment64" class="comment">
+<h3><a href="000055.php.html#comment64"><span>Comment </span>64</a></h3>
+<p>Sharp, the japanese electronics giant, introduced earlier this month the world's first SVG-enabled mobile phone. The device is quite an impressive piece of work, with a compliant SVG Tiny viewer.<br>
+Sharp also offers a server component that convert Word, Excel, Powerpoint and PDF documents to SVG.<br>
+css and svg seems to be the next thing in mobile devices as they can take clean content and render it in every media.</p>
+<p class="by">So said <a href="http://www.wikiverse.org/">Jim Richards</a> on Wednesday 21 July, 2004 at  2:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment65" class="comment">
+<h3><a href="000055.php.html#comment65"><span>Comment </span>65</a></h3>
+<p>Tested on a Sony Ericsson Z600</p>
+
+<p>Screen: none applied</p>
+
+<p>Handheld: All applied</p>
+<p class="by">So said <a href="http://www.thehod.com/">Rich Hafley</a> on Sunday 25 July, 2004 at  5:35AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment66" class="comment">
+<h3><a href="000055.php.html#comment66"><span>Comment </span>66</a></h3>
+<p>Sprint RL-2000</p>
+
+<p>Screen; all items applied.</p>
+
+<p>Handheld, only '@import url("whatever.css") handheld;' applied.<br>
+</p>
+<p class="by">So said Eric on Wednesday 28 July, 2004 at  5:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment67" class="comment">
+<h3><a href="000055.php.html#comment67"><span>Comment </span>67</a></h3>
+<p>I tried this page directly from my T610, and I will have to disagree with Jens Wedin who posted as #55 :) </p>
+
+<p>These are the results I got :<br>
+Screen:<br>
+None applied<br>
+Handheld:<br>
+ALL applied!!</p>
+
+<p>This does bring joy to my little nerdy being :)</p>
+<p class="by">So said Halfdan Mouritzen on Monday  2 August, 2004 at  8:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment68" class="comment">
+<h3><a href="000055.php.html#comment68"><span>Comment </span>68</a></h3>
+<p>Tested Sanyo RL-7300 with Netfront's v3.0 20031014 rel_v005a-7300 embedded.<br>
+Screen: all applied<br>
+Handheld: Only @import with the whatever.css was applied.</p>
+
+<p>I suspect the 3.1 and now 3.2 Netfront for sure are much more WAP 2.0 compliant.</p>
+
+<p>I'll test the Sanyo 4920 later this week.<br>
+</p>
+<p class="by">So said Greg Borders on Tuesday 31 August, 2004 at 10:08PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment69" class="comment">
+<h3><a href="000055.php.html#comment69"><span>Comment </span>69</a></h3>
+<p>All items applied.</p>
+<p class="by">So said <a href="http://www.faqcn.com/">faq</a> on Thursday  9 September, 2004 at  1:59PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment70" class="comment">
+<h3><a href="000055.php.html#comment70"><span>Comment </span>70</a></h3>
+<p>Hello, tested this on a Nokia 7710 and 7700 called 'that device' above <br>
+SCREEN<br>
+link media screen 'not applied'<br>
+style media screen 'not applied'<br>
+import url whatever.css 'not applied'<br>
+@media screen not applied</p>
+
+<p>HANDHELD<br>
+as above....</p>
+<p class="by">So said Mark on Monday 13 September, 2004 at  2:55PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment71" class="comment">
+<h3><a href="000055.php.html#comment71"><span>Comment </span>71</a></h3>
+<p>Sony Ericsson K700i:<br>
+screen: none applied<br>
+handheld: all items applied</p>
+
+<p>The k700i also supports inline styles</p>
+<p class="by">So said holly on Wednesday 20 October, 2004 at  1:07PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment72" class="comment">
+<h3><a href="000055.php.html#comment72"><span>Comment </span>72</a></h3>
+<p>Palm Tungsten W: all screen and handheld "not applied" I found that  this device reads a print style sheet and previously it read @media=screen as a subset.  I am so frustrated with styling for this medium. Love comments from anyone who has had success.</p>
+<p class="by">So said pat on Monday  8 November, 2004 at  7:29PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment73" class="comment">
+<h3><a href="000055.php.html#comment73"><span>Comment </span>73</a></h3>
+<p>tested on Nokia 6230   -  get a "not applied" throughout the board. This is a real downer since I've just coded an entire website with  linked handheld sheets and I cant even get a result  on my own phone !!!!!!</p>
+<p class="by">So said ukwheel on Monday 22 November, 2004 at  4:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment74" class="comment">
+<h3><a href="000055.php.html#comment74"><span>Comment </span>74</a></h3>
+<p>Connected via IE on a Dell AximX30 WM2003SE - all applied.</p>
+<p class="by">So said <a href="http://stblogsparish.com/">John</a> on Monday 22 November, 2004 at  8:31PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment75" class="comment">
+<h3><a href="000055.php.html#comment75"><span>Comment </span>75</a></h3>
+<p>Tested with IE on a Dell Axim X50 running WM2003SE. All applied!</p>
+<p class="by">So said <a href="http://www.kagi.com/fab/">Fabrizio Oddone</a> on Saturday 27 November, 2004 at  1:02AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment76" class="comment">
+<h3><a href="000055.php.html#comment76"><span>Comment </span>76</a></h3>
+<p>I just got my new Treo 650, and I'm happy to report that the new palmOne Web Browser (Blazer 4.0) now reports that all the styles were applied.  As others have noted, the version that came with the Treo 600 did NOT apply the handheld styles, so this is a definite improvement.</p>
+<p class="by">So said Rob M on Wednesday  8 December, 2004 at  2:03AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment77" class="comment">
+<h3><a href="000055.php.html#comment77"><span>Comment </span>77</a></h3>
+<p>Openwave Simulator: None applied.</p>
+
+<p>It does however support CSS. The "not" text is red and bold :)</p>
+<p class="by">So said zcorpan on Monday 27 December, 2004 at 12:44AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment78" class="comment">
+<h3><a href="000055.php.html#comment78"><span>Comment </span>78</a></h3>
+<p>Nokia 6230 - all not applied...<br>
+BTW I created a XHtml page, in all web browser it looks very fine (www.wd.sk) but on this mobile only the first page, but I can't get to other pages...<br>
+The links are:<br>
+contact also I tried  ?contakt"&gt;contact but I've been still in deep sh.t. Can someone tyellme what's wrong ?<br>
+Thank you very much for tips, in advance.</p>
+
+<p>marian@wd.sk</p>
+<p class="by">So said <a href="http://www.wd.sk/">Marian</a> on Wednesday 29 December, 2004 at  7:32PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment79" class="comment">
+<h3><a href="000055.php.html#comment79"><span>Comment </span>79</a></h3>
+<p>Again due some info hasn't been dispalyed...</p>
+
+<p>Nokia 6230 - all not applied...<br>
+BTW I created a XHtml page, in all web browser it looks very fine (www.wd.sk) but on this mobile only the first page, but I can't get to other pages...<br>
+The links are:    a href="?kontakt" ... <br>
+ also I tried  ...?contakt"&gt;contact....<br>
+ but I've been still in deep sh.t. Can someone tyellme what's wrong ?<br>
+Thank you very much for tips, in advance.</p>
+
+<p>M.</p>
+
+<p>marian@wd.sk</p>
+<p class="by">So said <a href="http://www.wd.sk/">Marian</a> on Wednesday 29 December, 2004 at  7:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment80" class="comment">
+<h3><a href="000055.php.html#comment80"><span>Comment </span>80</a></h3>
+<p>Patrick, really great test you have there and I think you have found a gold nugget there, despite the poor support by a number of people. You need to build another article around it and see if you can use it to build a universal mobile device system (like I have) that seems to deliver a good xhtml mobile style layout that works on the majority of agents, despite the crazy support we are all experiencing. I will tell you how....</p>
+
+<p>I hate browser sniffing and all forms of scripted tricks to figure out which versions of a web page and style sheets a given mobile device supports. Yet, we obviously have all these people with various states of agents and style support, even if it is pretty bad. However, your style tests proved, as occured on my mobile phone, that as long as you include, in your web page, BOTH handheld style sheet "link types" (link with media="handheld" and @import url (...) handheld;) with urls to a very robust mobile style sheet that includes cascading rules covering every aspect of your screen-based sheets, you can design a pretty powerful mobile sheet strategy that works for all the people listed above, except ONE TYPE....and thats those that only support screen media and NO handheld version of your test (ie. some pocket PC people). THats a troublesome group as they cant get to your handheld sheets which reformat your content for all the other agents. As is the case with that group, those devices seem to be designed around support of the full desktop browser version anyway! I proved this scenario after I discovered your test this summer, and though my phone supported all the screen versions BUT also one handheld version, it was all I needed to create a decent mobile solution using XHTML and CSS in which that handheld sheet was used to cascade over my screen sheets, and deliver a great version to my tiny phone browser, while retaining the fully layout for desktop users. In other words, by first designing your main web site in compliant XHTML and CSS, then adding in the two handheld url links to the same mobile sheet, and then designing that mobile sheet carefully so that it hides and reveals (cascades over) all the things needed for most mobile screens and devices, you stand a decent change of designing something that works well on a number of agents. Those agents that support ANY version of the handheld media test can get something redesigned, as can those that support no style sheets of any type.</p>
+
+<p>Because MANY devices seem to support one of the handheld sheet rules, and MOST are supporting or moving to support XHTML (basic) despite the movements worldwide, doing the above, a talented CSS developer could build a pretty good universal mobile test site and sheet system, that works pretty good in a number of devices, not to mention still delivers the screen sheets that look great on desktop browsers. Even if the device has NO style support at all, they still get fairly good linear content listing using clean xhtml markup without any sheets. Thats been my experience. So I say, your 8 point test proves there is a hope! Again, for those of you not supporting any handheld sheet, if the designer has designed their markup and menus correctly using the new xhtml standards, such as unordered link lists, and content is contained simple divs in xhtml rather than tables, and added mobile headers are used with display:none applied, when the non-styling agent reads that, its pretty accessible content when it gets to this broad range of devices. Again, its the people that only support "screen" that may be a problem, but it seems most of those stand behind some of the larger pocket pc devices.<br>
+-Mitchell<br>
+---------------------------------<br>
+BTW, my test is the exact OPPOSITE of the Sony Ericsson P800 with Opera user, in which of the 8 forms of style sheets it supports using your test, which shows how sad the standard is for mobile devices (I have a Sprint Sanyo SCP-7300 phone with NetFront micro-browser, and supports ALL screen sheets and only the import handheld flavor. As long as your device supports either no styles or at least one fo the handheld, you can design for your agent and many others.....it can be done!)</p>
+
+<p>Mitchell</p>
+<p class="by">So said <a href="http://www.stormdetector.com/">Mitchell</a> on Friday  7 January, 2005 at  5:50AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment81" class="comment">
+<h3><a href="000055.php.html#comment81"><span>Comment </span>81</a></h3>
+<p>On my  Z1010,</p>
+
+<p>Screen : none applied<br>
+Handheld: all applied <br>
+</p>
+<p class="by">So said Liviu on Friday  7 January, 2005 at  1:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment82" class="comment">
+<h3><a href="000055.php.html#comment82"><span>Comment </span>82</a></h3>
+<p>Motorola v300<br>
+Screen: None<br>
+Handheld: All</p>
+<p class="by">So said Jason on Monday 10 January, 2005 at 12:20AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment83" class="comment">
+<h3><a href="000055.php.html#comment83"><span>Comment </span>83</a></h3>
+<p>Tested on a nokia 3100 screen and handheld none applied</p>
+<p class="by">So said Rene on Monday 17 January, 2005 at  3:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment84" class="comment">
+<h3><a href="000055.php.html#comment84"><span>Comment </span>84</a></h3>
+<p>Pocket IE - PPC2003 (MSIE 4.01)<br>
+screen: all 4 applied<br>
+handheld: all 4 applied</p>
+
+<p>PPC NetFront v3.1<br>
+screen:  all 4 applied<br>
+handheld:  only @import("whatever.css") applied</p>
+
+<p>Sony Ericsson K700<br>
+screen: none<br>
+handheld:  all 4 applied</p>
+
+<p>Nokia 6170<br>
+screen: none applied<br>
+handheld: none applied</p>
+<p class="by">So said <a href="http://www.kayle.sk/">kayle</a> on Tuesday 25 January, 2005 at  1:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment85" class="comment">
+<h3><a href="000055.php.html#comment85"><span>Comment </span>85</a></h3>
+<p>"Are we talking about HTML or XHTML?</p>
+
+<p>So said Anne on Monday 14 June, 2004 at 1:53PM GMT.<br>
+"</p>
+
+<p>Firstly I thought this is an article about HTML and CSS for mobile devices.</p>
+
+<p>But if I looked at the source code of your test page I saw it is an XHTML page.</p>
+
+<p>Therefore: Are you talking about HTML and CSS or are you talking about XHTML and CSS?</p>
+
+<p>The second question is: What shall we learn from you article? It is well known that browsers have a very different standards support. </p>
+<p class="by">So said <a href="http://www25.brinkster.com/websolutions1/">Thomas</a> on Saturday 12 February, 2005 at  8:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment86" class="comment">
+<h3><a href="000055.php.html#comment86"><span>Comment </span>86</a></h3>
+<p>Nokia 6230 - all not applied...<br>
+BTW I created a XHtml page, in all web browser it looks very fine (www.wd.sk) but on this mobile only the first page, but I can't get to other pages...<br>
+The links are: a href="?kontakt" ... <br>
+also I tried ...?contakt"&gt;contact....<br>
+but I've been still in deep sh.t. Can someone tyellme what's wrong ?<br>
+Thank you very much for tips, in advance.</p>
+<p class="by">So said <a href="http://www.viphot.com/">Mitchell</a> on Monday 21 February, 2005 at  2:51AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment87" class="comment">
+<h3><a href="000055.php.html#comment87"><span>Comment </span>87</a></h3>
+<p>Tried it on my Sanyo RL-4920. All screen styles applied. Only handheld style applied was @import url().</p>
+<p class="by">So said <a href="http://kavlon.org/">MikeFM</a> on Thursday 24 February, 2005 at 10:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment88" class="comment">
+<h3><a href="000055.php.html#comment88"><span>Comment </span>88</a></h3>
+<p>Nokia 6610i - none applied</p>
+<p class="by">So said Anonymous coward on Friday 25 February, 2005 at  3:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment89" class="comment">
+<h3><a href="000055.php.html#comment89"><span>Comment </span>89</a></h3>
+<p>All green for Tungsten T5 using PalmOne Blazer v4.0</p>
+<p class="by">So said NM on Saturday  5 March, 2005 at  4:49PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment90" class="comment">
+<h3><a href="000055.php.html#comment90"><span>Comment </span>90</a></h3>
+<p>On Nokia 6610i it says none applied, but still I'm having a hard time hiding 'screen' stylesheets from the built-in browser on pages I create myself. Not sure what I do wrong, actually, but it seems to download and render stylesheets no matter what I do to hide them from it. I've tried to set media to "print" of course, tried to @import it with and without the 'screen' keyword, tried applying an 'id' attribute on the LINK element...</p>
+
+<p>Nothing has worked so far. The built-in browser in Nokia 6610i still downloads my 'screen.css' file and tries (miserably) to render it. Any ideas what I might be doing wrong?</p>
+<p class="by">So said <a href="http://virtuelvis.com/quark/">Asbjørn Ulsberg</a> on Friday 11 March, 2005 at  8:02AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment91" class="comment">
+<h3><a href="000055.php.html#comment91"><span>Comment </span>91</a></h3>
+<p>Hi!</p>
+
+<p>Netfront v3.1 on Nokia 6600, with 'No wrapping' and 'Smart Fit' rendering all apply. With 'Small Image' and 'Text Only' rendering nothing applies.</p>
+<p class="by">So said <a href="http://www.geraki.net/">geraki</a> on Saturday 12 March, 2005 at  2:06PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment92" class="comment">
+<h3><a href="000055.php.html#comment92"><span>Comment </span>92</a></h3>
+<p>Sharp Zaurus 5500 - OpenZaurus distro - Konqueror QtEmbedded:</p>
+
+<p>screen: all applied<br>
+handheld: style media="handheld" applied. Others not.<br>
+</p>
+<p class="by">So said shuriken on Saturday 19 March, 2005 at  1:49PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment93" class="comment">
+<h3><a href="000055.php.html#comment93"><span>Comment </span>93</a></h3>
+<p>On qtek s100 alias imate jam</p>
+
+<p>ALL aplied :)</p>
+<p class="by">So said <a href="http://www.colbro.se/testmail">jonas</a> on Wednesday 23 March, 2005 at  3:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment94" class="comment">
+<h3><a href="000055.php.html#comment94"><span>Comment </span>94</a></h3>
+<p>Motorola MPX220<br>
+Smartphone 2003<br>
+Internet Explorer</p>
+
+<p>ALL applied</p>
+
+<p><a href="http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_ie_01.jpg">http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_ie_01.jpg</a><br>
+<a href="http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_ie_02.jpg">http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_ie_02.jpg</a></p>
+
+<p>Please pay no attention to the miserably coded, tablelicious web site - I'm a recent convert to web standards. (^_^;)</p>
+<p class="by">So said <a href="http://www.adampage.net/">Adam Page</a> on Friday  8 April, 2005 at  6:23AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment95" class="comment">
+<h3><a href="000055.php.html#comment95"><span>Comment </span>95</a></h3>
+<p>Motorola MPX220<br>
+Smartphone 2003<br>
+Opera 7.60 Build 043 TP3 (Expires 2005-06-30)<br>
+<a href="http://www.opera.com/products/mobile/">http://www.opera.com/products/mobile/</a></p>
+
+<p>screen: None applied<br>
+handheld: ALL applied</p>
+
+<p><a href="http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_01.jpg">http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_01.jpg</a><br>
+<a href="http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_02.jpg">http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_02.jpg</a><br>
+<a href="http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_03.jpg">http://www.adampage.net/htmldog/htmldog_test_mpx220_sp2003_opera_706_03.jpg</a></p>
+<p class="by">So said <a href="http://www.adampage.net/">Adam Page</a> on Friday  8 April, 2005 at  7:51AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment96" class="comment">
+<h3><a href="000055.php.html#comment96"><span>Comment </span>96</a></h3>
+<p>XDA IIi from ww.o2.com - pocket internet explorer<br>
+Screen and handheld all applied.</p>
+<p class="by">So said <a href="http://www.websitesinbusiness.co.uk/">Rob Wilson</a> on Monday 11 April, 2005 at  9:27AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment97" class="comment">
+<h3><a href="000055.php.html#comment97"><span>Comment </span>97</a></h3>
+<p>Nokia 6230: none applied. It actually DOES support CSS, and not only Inline Styles (the "not" text is red and bold) but also the "projection" attribute as my own tests showed. </p>
+<p class="by">So said Nils on Monday 11 April, 2005 at  5:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment98" class="comment">
+<h3><a href="000055.php.html#comment98"><span>Comment </span>98</a></h3>
+<p>HP iPAQ hx4700 - pocket internet explorer - windows mobile 2003<br>
+screen - all 4 applied<br>
+handheld - all 4 applied<br>
+</p>
+<p class="by">So said Paul on Monday 18 April, 2005 at  5:59AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment99" class="comment">
+<h3><a href="000055.php.html#comment99"><span>Comment </span>99</a></h3>
+<p>Sprint 6600/6601  - Pocket PC Windows 2003: </p>
+
+<p>Both screen and handheld: all applied</p>
+<p class="by">So said Bart on Friday 22 April, 2005 at 10:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment100" class="comment">
+<h3><a href="000055.php.html#comment100"><span>Comment </span>100</a></h3>
+<p>yeah, I saw the treo 650 blazer 4.0 decorates both the screen and handheld style once, but upon revisiting the page, none of the styles were applied.</p>
+
+<p>even after clearing the blazer's browser cache, it doesn't work.<br>
+</p>
+<p class="by">So said <a href="http://www.luxtechnica.com/">Case Larsen</a> on Sunday 24 April, 2005 at  5:42AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment101" class="comment">
+<h3><a href="000055.php.html#comment101"><span>Comment </span>101</a></h3>
+<p>Thanks for putting this test page up...  I just viewed the source code, and noticed a couple of items that will not validate this source code as a valid document based on the XHTML 1.1 DTD.  I made a couple of changes: first of all, "&lt;link rel..." tags were not properly terminated, and second, the last "&amp;ltstyle type..." tag did not have a "type='text/css".</p>
+
+<p>I used the W3C HTML validator to check the document.  Would it be possible to make these changes?  And then retest the page again...</p>
+<p class="by">So said Frank Villa-Abrille on Wednesday  4 May, 2005 at  7:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment102" class="comment">
+<h3><a href="000055.php.html#comment102"><span>Comment </span>102</a></h3>
+<p>BTW, I tested the page using a Nokia 6101 and 7610, and none applied for both handheld and screen.  We've created a local testing page based on XHTML MP 1.0 which works with the Nokia phones.</p>
+<p class="by">So said Frank Villa-Abrille on Wednesday  4 May, 2005 at  7:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment103" class="comment">
+<h3><a href="000055.php.html#comment103"><span>Comment </span>103</a></h3>
+<p>Hello,</p>
+
+<p>I haven't checked your sample yet, but I am in the same boat. I am having to develop a site for multiple platforms and was wondering if "switching" css files is the way to go. Is that the way it's done or am I headed in the wrong direction?</p>
+
+<p>TIA</p>
+<p class="by">So said Josh on Wednesday  1 June, 2005 at  5:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment104" class="comment">
+<h3><a href="000055.php.html#comment104"><span>Comment </span>104</a></h3>
+<p>All handheld applied on my Sony Ericsson Z800i.<br>
+All screen not applied.</p>
+
+<p>Cheers.</p>
+<p class="by">So said <a href="http://superimportant.net/">Rolf Bjaanes</a> on Sunday 26 June, 2005 at  7:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment105" class="comment">
+<h3><a href="000055.php.html#comment105"><span>Comment </span>105</a></h3>
+<p>Samsung PM-A740<br>
+All options were not applied, but I'm not really sure what browser it uses. Anyone know where I could find out?</p>
+<p class="by">So said Shane Goodall on Monday 27 June, 2005 at  3:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment106" class="comment">
+<h3><a href="000055.php.html#comment106"><span>Comment </span>106</a></h3>
+<p>Sony Ericsson V800:<br>
+All screen not applied<br>
+All handheld applied<br>
+:)</p>
+<p class="by">So said Lukasnoname on Thursday 30 June, 2005 at 10:23AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment107" class="comment">
+<h3><a href="000055.php.html#comment107"><span>Comment </span>107</a></h3>
+<p>Nokia 6630: screen, none applied, handheld, none applied. This is either in render "fast" or "pretty" mode (in Setting)</p>
+
+<p>Sony Ericsson S710a: screen, none applied, handheld, ALL applied. Yay.</p>
+<p class="by">So said <a href="http://simonwoodside.com/">sbwoodside</a> on Saturday  9 July, 2005 at 11:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment108" class="comment">
+<h3><a href="000055.php.html#comment108"><span>Comment </span>108</a></h3>
+<p>Sony-Ericsson P910i:</p>
+
+<p>All works well apart from:</p>
+
+<p> applied.</p>
+
+<p>HTH</p>
+<p class="by">So said <a href="http://www.jakehowlett.com/">Jake</a> on Friday 15 July, 2005 at  1:12PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment109" class="comment">
+<h3><a href="000055.php.html#comment109"><span>Comment </span>109</a></h3>
+<p>treo 650 using blazer 4.0,<br>
+assuming applied means there was a yellow block over the word 'not', all were applied on screen and handheld.</p>
+<p class="by">So said christopher nicholson on Friday  5 August, 2005 at  6:58AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment110" class="comment">
+<h3><a href="000055.php.html#comment110"><span>Comment </span>110</a></h3>
+<p>Also, in re the Treo 650, it did load correctly again when i went back to the page, so I'm not experiencing the problem an earlier commenter experienced.</p>
+<p class="by">So said Christopher Nicholson on Friday  5 August, 2005 at  7:15AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment111" class="comment">
+<h3><a href="000055.php.html#comment111"><span>Comment </span>111</a></h3>
+<p>Using Motorola V551 from Cingular, built-in browser, none of the styles were applied.  Disappointing, given the good support that other Motorola models gave in your other users' comments.</p>
+<p class="by">So said Claus on Monday  8 August, 2005 at  8:49PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment112" class="comment">
+<h3><a href="000055.php.html#comment112"><span>Comment </span>112</a></h3>
+<p>I tried it using my BlackBerry  7520 with the BlackBerry Browser and all were not applied.  :-(</p>
+<p class="by">So said <a href="http://www.boonecountyky.org/">Barry Couch</a> on Tuesday  9 August, 2005 at  1:13PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment113" class="comment">
+<h3><a href="000055.php.html#comment113"><span>Comment </span>113</a></h3>
+<p>I tested your page with my PocketPC emulator (PPC 2003). All were applied both screen and handlheld.</p>
+<p class="by">So said <a href="http://www.geocities.com/arajalali">Arash Jalali</a> on Tuesday  6 September, 2005 at  7:52AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment114" class="comment">
+<h3><a href="000055.php.html#comment114"><span>Comment </span>114</a></h3>
+<p>TMobile Nokia  6101mfg 01/2003 - all not applied</p>
+<p class="by">So said A. Non on Sunday  2 October, 2005 at  7:30AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment115" class="comment">
+<h3><a href="000055.php.html#comment115"><span>Comment </span>115</a></h3>
+<p>correction: mfg 8/05</p>
+<p class="by">So said A. Non on Sunday  2 October, 2005 at  7:31AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment116" class="comment">
+<h3><a href="000055.php.html#comment116"><span>Comment </span>116</a></h3>
+<p>I have a NEC  N720 mobile. And OpenWave browser installed on it. can this css be used on my mobile?</p>
+<p class="by">So said <a href="http://www.basalt.com.cn/">wanyuye</a> on Tuesday 25 October, 2005 at 11:07AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment117" class="comment">
+<h3><a href="000055.php.html#comment117"><span>Comment </span>117</a></h3>
+<p>Motorola V3 (RAZR):<br>
+All screen styles were not applied; all handheld styles were applied.  It draws borders around the DIV elements too.  I was actually a little surprised, since the browser seems a bit too simplistic for a lot of sites.</p>
+<p class="by">So said Eric on Thursday 27 October, 2005 at  9:08PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment118" class="comment">
+<h3><a href="000055.php.html#comment118"><span>Comment </span>118</a></h3>
+<p>HiptTop2 (motorola sidekick?) shows all "not applied"</p>
+
+<p>The device definitely does use (at least some) CSS, but it seems to be a non-standard implementation.  My research continues... thanks!</p>
+<p class="by">So said <a href="http://www.lanoitar.com/">Jonathan Murray</a> on Saturday 29 October, 2005 at  3:15PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment119" class="comment">
+<h3><a href="000055.php.html#comment119"><span>Comment </span>119</a></h3>
+<p>Nokia 9500/Opera 6.x<br>
+screen: none apply<br>
+handheld: "@import url" does not apply, the rest applies</p>
+
+<p>Nokia 7370/Nokia browser<br>
+screen: none apply<br>
+handheld: none apply</p>
+
+<p>Although, test results were dissapointing, it seems wierdly that the browser renders CSS-pages with both the screen and the handheld styles. Go figure.</p>
+<p class="by">So said Lumisade on Sunday  6 November, 2005 at  1:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment120" class="comment">
+<h3><a href="000055.php.html#comment120"><span>Comment </span>120</a></h3>
+<p>T-Mobile SidekickII (aka Danger Hiptop2) *with newly released OS2.3 update*</p>
+
+<p>Screen: all applied (with green boxes shown next to the word applied)<br>
+Handheld: all *not* applied (with the word not shown in red)<br>
+Borders were drawn around DIV elements</p>
+<p class="by">So said Michael on Tuesday  8 November, 2005 at  2:33AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment121" class="comment">
+<h3><a href="000055.php.html#comment121"><span>Comment </span>121</a></h3>
+<p>Treo 650 with Blazer 4.0</p>
+
+<p>All applied in 'wide page mode'. All handheld, no screen applied in 'optimized'</p>
+<p class="by">So said <a href="http://funkive.com/">Terrence Wood</a> on Tuesday 22 November, 2005 at  8:35PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment122" class="comment">
+<h3><a href="000055.php.html#comment122"><span>Comment </span>122</a></h3>
+<p>SonyEricssonT610/R401 Profile/MIDP-1.0 Configuration/CLDC-1.0</p>
+
+<p>All Screen not applied </p>
+
+<p>All Handheld applied. </p>
+
+<p>So do I win a hat and a T-shirt?</p>
+<p class="by">So said <a href="http://www.vulpine.co.nz/">Tom</a> on Wednesday 23 November, 2005 at  8:30AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment123" class="comment">
+<h3><a href="000055.php.html#comment123"><span>Comment </span>123</a></h3>
+<p>Sony PSP with built-in browser (firmware 2.6)</p>
+
+<p>All screen applied.</p>
+
+<p>link media="handheld" - NOT applied<br>
+style media="handheld" - NOT applied<br>
+import url("whatever.css") handheld - APPLIED<br>
+media handheld - NOT applied</p>
+
+<p>I think the only reason it applied the "import url() handheld" directive is because of a bug. This seems to be confirmed by using the PSP to visit this page, where all the @import directives work regardless of media type: <a href="http://lachy.id.au/dev/css/tests/media/xhtml10.xhtml">http://lachy.id.au/dev/css/tests/media/xhtml10.xhtml</a></p>
+
+<p>Hmm. Is PSP really a handheld? What do you think? Obviously you hold it in your hand, so there's that... but it's got good bandwidth (802.11), a widescreen color display, animated GIF support, sound and video capability, etc. Given the official descriptions of the media types, I would say PSP almost seems more like "TV" than "handheld". What do you think?</p>
+
+<p>handheld: Intended for handheld devices (typically small screen, monochrome, limited bandwidth).<br>
+tv: Intended for television-type devices (low resolution, color, limited-scrollability screens, sound available).</p>
+
+<p>In any case, it only seems to respond to screen right now. Which in practice is a little obnoxious because many pages have graphics that are just a touch too big for its screen and make it obnoxious to scroll around... they would benefit from a PSP-specific page.</p>
+<p class="by">So said <a href="http://multisolar.com/">Drew Thaler</a> on Tuesday 29 November, 2005 at  8:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment124" class="comment">
+<h3><a href="000055.php.html#comment124"><span>Comment </span>124</a></h3>
+<p>More details on the PSP browser. According to the "About PSP" item in the home menu, it's the NetFront Access browser: <a href="http://www.access-us-inc.com/Products/client-side/Prod_NetFront.html">http://www.access-us-inc.com/Products/client-side/Prod_NetFront.html</a></p>
+<p class="by">So said <a href="http://multisolar.com/">Drew Thaler</a> on Tuesday 29 November, 2005 at 11:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment125" class="comment">
+<h3><a href="000055.php.html#comment125"><span>Comment </span>125</a></h3>
+<p>Have just loaded your screen/handheld test page for mobile/pda devices. Viewing it on a UK spec 02 xdaIIi running windows ce it renders perfectly (all screen and handheld items show as applied).</p>
+
+<p>Hope this helps</p>
+<p class="by">So said Stephen Lines on Saturday  3 December, 2005 at 11:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment126" class="comment">
+<h3><a href="000055.php.html#comment126"><span>Comment </span>126</a></h3>
+<p>123 / Is PSP really a handheld?<br>
+My Uk spec 02 XDAIIi (windows ce based) also has WiFi (802.11g), a widescreen colour display (if set to landscape mode), plays animated gifs, sound and video support - NOT LIMITED TO SONY's PROPRIETARY FORMAT, and it's got a 1 gig memory card (SD) that cost next to nothing. Oh, and the device itself cost NOTHING (contract upgrade!).</p>
+
+<p>Have just bought a PSP for my son (Christmas), but have avoided all accessorie etc for anything other than games playing (which it is SUPERB at). It simply fails to cut the mustard at anything else, and the memory stick/proprietary video format makes it a no-no for anything else. Doesn't stop it being the best hand held games machine in the universe though...</p>
+<p class="by">So said Stephen Lines on Saturday  3 December, 2005 at 11:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment127" class="comment">
+<h3><a href="000055.php.html#comment127"><span>Comment </span>127</a></h3>
+<p>Dell Axim X30.  Windows Mobile 2003 2nd Ed. using Internet Explorer.<br>
+It applies both.</p>
+
+<p>on my PC, just applies "screen", like it should.</p>
+<p class="by">So said <a href="http://jetsystemsdead.com/">Scott.</a> on Thursday 15 December, 2005 at  3:22AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment128" class="comment">
+<h3><a href="000055.php.html#comment128"><span>Comment </span>128</a></h3>
+<p>yea, tried it on the Nextel 7100i BlackBerry and none were applied. :(</p>
+<p class="by">So said  on Wednesday 21 December, 2005 at 10:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment129" class="comment">
+<h3><a href="000055.php.html#comment129"><span>Comment </span>129</a></h3>
+<p>Blackberry 7100  Software v4.0.2.49<br>
+'not applied' for all, using Browser or Blackberry Browser.<br>
+Bummer</p>
+<p class="by">So said Kevin on Friday 30 December, 2005 at  2:53AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment130" class="comment">
+<h3><a href="000055.php.html#comment130"><span>Comment </span>130</a></h3>
+<p>Here's another one: Samsung SGH-D500 using OpenWave 6.2.3.3:</p>
+
+<p>&lt;link media="screen" -- not applied<br>
+&lt;style media="screen" -- not applied<br>
+@import url("whatever.css") screen -- not applied<br>
+@media screen { -- not applied</p>
+
+<p>&lt;link media="handheld" -- not applied<br>
+&lt;style media="handheld" -- not applied<br>
+@import url("whatever.css") handheld -- not applied<br>
+@media handheld { -- not applied</p>
+
+<p>However I serve handheld files through &lt;link rel="stylesheet" type="text/css" href="..." media="handheld"/&gt; and it seems to work nicely with OpenWave. This test deserves another round and a nice summary ;-)</p>
+<p class="by">So said <a href="http://johannburkard.de/">Johann</a> on Monday  9 January, 2006 at 11:33AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment131" class="comment">
+<h3><a href="000055.php.html#comment131"><span>Comment </span>131</a></h3>
+<p>I was looking around for information on this, and I found your (great) blog post here, and also a list that identifies which browsers (including proprietary cell phone browsers) work with the "handheld" media type.</p>
+
+<p><a href="http://w3development.de/css/assigning_external_css/style_media_handheld.html">http://w3development.de/css/assigning_external_css/style_media_handheld.html</a></p>
+<p class="by">So said <a href="http://www.lowbatteries.com/blogs">Steven</a> on Wednesday 11 January, 2006 at  6:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment132" class="comment">
+<h3><a href="000055.php.html#comment132"><span>Comment </span>132</a></h3>
+<p>Motorolia V330 only following work:<br>
+&lt;style media="handheld"<br>
+@media handheld</p>
+<p class="by">So said John on Friday 20 January, 2006 at  1:08AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment133" class="comment">
+<h3><a href="000055.php.html#comment133"><span>Comment </span>133</a></h3>
+<p>Cingular Blackberry 7290, native browser: "not applied" to all tests.</p>
+<p class="by">So said Dave on Tuesday 24 January, 2006 at 10:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment134" class="comment">
+<h3><a href="000055.php.html#comment134"><span>Comment </span>134</a></h3>
+<p>Sony Ericsson W800i built-in browser:</p>
+
+<p>Screen: none applied<br>
+Handheld: all applied (Yay!)</p>
+<p class="by">So said <a href="http://aftnn.org/">Afternoon</a> on Wednesday 25 January, 2006 at  3:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment135" class="comment">
+<h3><a href="000055.php.html#comment135"><span>Comment </span>135</a></h3>
+<p>Nokia 6630 Builtin browser: none applied, but general stylesheets are. It looks like the Nokia's Series60 browser doesn't support @media selector at all. Their new browser (found in E** and newer modles) should support those because it is based on WebCore from Apple's Safari, but i don't think there is any phone with that browser available on market.</p>
+<p class="by">So said Filip Milivojevic on Friday 27 January, 2006 at  5:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment136" class="comment">
+<h3><a href="000055.php.html#comment136"><span>Comment </span>136</a></h3>
+<p>Treo 700w</p>
+
+<p>Screen: All applied<br>
+Handheld: All applied</p>
+<p class="by">So said <a href="http://www.kfx2.com/">Wes</a> on Friday 27 January, 2006 at  8:20PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment137" class="comment">
+<h3><a href="000055.php.html#comment137"><span>Comment </span>137</a></h3>
+<p>Tested on sonyericsson K608i with build in browser</p>
+
+<p>All screen styles: not applied<br>
+All handheld styles: applied</p>
+<p class="by">So said <a href="http://www.smartpage.dk/">Flemming Hoffmeyer</a> on Thursday  2 February, 2006 at  8:21AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment138" class="comment">
+<h3><a href="000055.php.html#comment138"><span>Comment </span>138</a></h3>
+<p>No ccs support for my Palm TXs built in browser.</p>
+<p class="by">So said Robin on Monday  6 February, 2006 at  3:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment139" class="comment">
+<h3><a href="000055.php.html#comment139"><span>Comment </span>139</a></h3>
+<p>On the Treo 650 - all styles active with Blazer 4.<br>
+Which, I think is a bummer... because just the smaller screen is reason enough to support the possibilites that "handheld" should open up for us. </p>
+<p class="by">So said <a href="http://www.n-vent.com/">Ian</a> on Thursday 23 February, 2006 at  9:40PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment140" class="comment">
+<h3><a href="000055.php.html#comment140"><span>Comment </span>140</a></h3>
+<p>The Internet Explorer in my Sprint Audiovox PPC6700 (described in <a href="http://www.wilsonmar.com/wireless.htm#PPC6700z">http://www.wilsonmar.com/wireless.htm#PPC6700z")</a> is described wqith version "IE401", and returns "applied" to all items, both screen and handheld.</p>
+<p class="by">So said <a href="http://www.wilsonmar.com/1css.htm">wilson mar</a> on Sunday 26 February, 2006 at 11:54AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment141" class="comment">
+<h3><a href="000055.php.html#comment141"><span>Comment </span>141</a></h3>
+<p>I've been investigating this very issue, so I'm glad you guys have been discussing it.</p>
+
+<p>I tried you test on a Nokia 6822 and it returned no for every thing, which suggests that it doesn't recognise styles.  But as has already been mentioned they do read styles, so I'm at a loss as to why your test result on the 6822 came back negative.</p>
+
+<p>I've be investigating this from a different angle.  I've been trying to get the 6822 to ignore the media =" screen" in the link tag and just pick up the media="handheld" but it keeps on reading both style sheets with disastrous results :o(</p>
+
+<p>I decided to devise little a test of my own, to see what was going on.  I don't have the expertise to test for every possible out come, so I decided to test for,</p>
+
+<p>1.  To see if the 6822 treated the media="screen" any different to media="handheld"<br>
+2.  To see if there was any difference in how the it dealt with the id and class attribute along with contextual selectors.</p>
+
+<p><a href="http://carjen.co.uk/mediatest/index.htm">http://carjen.co.uk/mediatest/index.htm</a></p>
+
+<p>Now my code could be flaky, so run a few tests your self to be sure.</p>
+
+<p>The result was that the 6822 read all the media="screen" styles with ease (so how the heck am I going to product a mobile style sheet then....grrr)</p>
+
+<p>But when it came to reading the media="handheld" styles, every thing worked, except the contextual selector (where do you go from here?)</p>
+
+<p>Like I said some of my code might be flaky (although I did validate it markup but the w3 css validator is down)</p>
+
+<p>Not sure I want to look any further into this, as it sound like a lot of trouble!<br>
+</p>
+<p class="by">So said <a href="http://www.carjen.co.uk/">Michael Hickland</a> on Wednesday  1 March, 2006 at 11:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment142" class="comment">
+<h3><a href="000055.php.html#comment142"><span>Comment </span>142</a></h3>
+<p>I've experimented some with using handheld styles on an ecomm site I've been working on, Tub Monkey (<a href="http://www.tubmonkey.com/),">http://www.tubmonkey.com/),</a> but without huge success. It kind of works but not as well as I'd like. I'm thinking of trying Opera on my phone to see if that improves the situation but that still doesn't mean it'll work on most phones.</p>
+<p class="by">So said <a href="http://www.tubmonkey.com/">mogmios</a> on Saturday  4 March, 2006 at  6:36PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment143" class="comment">
+<h3><a href="000055.php.html#comment143"><span>Comment </span>143</a></h3>
+<p>BTW, on the NGage QD none of the stylesheets work. Other of my phones work a bit better. My old Sanyo phone sucked though.</p>
+<p class="by">So said <a href="http://www.tubmonkey.com/">mogmios</a> on Saturday  4 March, 2006 at  6:55PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment144" class="comment">
+<h3><a href="000055.php.html#comment144"><span>Comment </span>144</a></h3>
+<p>Motorola V3i</p>
+
+<p>Screen: None<br>
+Handheld: All</p>
+
+<p>(thanks Patrick, I'm over the moon about finding this handheld trick)</p>
+<p class="by">So said <a href="http://www.systemserve.co.uk/">Bob</a> on Tuesday  7 March, 2006 at  5:37PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment145" class="comment">
+<h3><a href="000055.php.html#comment145"><span>Comment </span>145</a></h3>
+<p>T-Mobile MDA Vario, Windows Mobile 5, Pocket Internet Explorer. All screen and handlheld applied.</p>
+<p class="by">So said Richard on Sunday 12 March, 2006 at  3:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment146" class="comment">
+<h3><a href="000055.php.html#comment146"><span>Comment </span>146</a></h3>
+<p>O2 XDA Mini S, Pocket IE.  All screen and handheld applied.</p>
+<p class="by">So said John on Tuesday  4 April, 2006 at  3:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment147" class="comment">
+<h3><a href="000055.php.html#comment147"><span>Comment </span>147</a></h3>
+<p>NEC 720</p>
+
+<p>Screen: None<br>
+Handheld: All applied</p>
+<p class="by">So said <a href="http://www.maximax.net.cn/">ajianzen</a> on Saturday  8 April, 2006 at  4:00AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment148" class="comment">
+<h3><a href="000055.php.html#comment148"><span>Comment </span>148</a></h3>
+<p>Blackberry 7730</p>
+
+<p>Screen: none applied<br>
+Handheld: none applied</p>
+<p class="by">So said <a href="http://www.dresme.nl/">Jan</a> on Monday 17 April, 2006 at  3:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment149" class="comment">
+<h3><a href="000055.php.html#comment149"><span>Comment </span>149</a></h3>
+<p>Tried it on my Nokia 3230 standard browser.</p>
+
+<p>Screen : not applied.<br>
+Handheld : not applied.</p>
+
+<p>The word "not" appears in red colour.</p>
+<p class="by">So said Douglas Lee on Wednesday 26 April, 2006 at  3:40AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment150" class="comment">
+<h3><a href="000055.php.html#comment150"><span>Comment </span>150</a></h3>
+<p>Ipaq 4150  :  screen and handheld  OK</p>
+
+<p>SonyEricsson T630  Screen   NOT OK  . handheld  ALL OK</p>
+<p class="by">So said Frank K on Saturday 27 May, 2006 at 10:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment151" class="comment">
+<h3><a href="000055.php.html#comment151"><span>Comment </span>151</a></h3>
+<p>tested on a Siemens SX66 with Pocket IE</p>
+
+<p>screen applied all<br>
+handheld applied all</p>
+
+<p>I'm sure most people know about this, but just in case: I use Openwave Simulator to see what my pages look like on most cell phones.<br>
+<a href="http://developer.openwave.com/dvl/tools_and_sdk/phone_simulator/">http://developer.openwave.com/dvl/tools_and_sdk/phone_simulator/</a></p>
+
+<p>Just learning css and xhtml. Never knew html. I'm REALLY new. Love the site. Thanks!<br>
+</p>
+<p class="by">So said <a href="http://www.wilsonfolio.com/">Ray Wilson</a> on Tuesday 30 May, 2006 at  4:14PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000056.php.html">Mobile CSS is a Reality</a></li>			<li id="previous">Previous Page: <a href="000054.php.html">Computer Book Covers are Nuts</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000055.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

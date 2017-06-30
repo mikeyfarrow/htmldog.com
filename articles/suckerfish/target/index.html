@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Suckerfish :target</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	
+	<link href="../../../r10/goldenjackal.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,300,400,600,700' rel="stylesheet">
+
+	<!--[if lt IE 9]><link href="/r10/damnyouGJ.css" rel="stylesheet"><script src="/r10/html5shiv.js"></script><![endif]-->
+
+
+	<script src="../../../r10/codehighlighter.js"></script>
+
+		
+</head>
+
+<body class="level2">
+
+
+<div id="dog_tag"><p><a href="../../../index.html"><img src="../../../r10/logoNew.gif" alt="HTML Dog" width="80" height="58"><span></span></a></p></div>
+<p id="access_nav"><a href="index.html#main_nav">Skip to navigation</a></p>
+
+<nav id="you_are_here"><a href="../../../index.html" id="home_link">Home</a><span> &rarr; </span><a href="../../../reference/index.html">References</a><span> &rarr; </span><a href="../../../references/css/index.html">CSS</a><span> &rarr; </span><a href="../../../reference/cssproperties/index.html">Properties</a><span id="yah_last"> &rarr; </span></nav>
+
+<article>
+	
+<header>
+	
+	<div id="flowerbreak" class="flowernum2 flowerextra"></div>
+
+	<h1>Suckerfish :target</h1>
+
+	
+
+<p>By Patrick Griffiths and <a href="http://www.danwebb.net/">Dan Webb</a>.</p>
+
+<p>CSS3 brings with it quite a funky little pseudo-class, <code>:target</code>, which can be used to highlight a targeted page anchor:</p>
+
+<pre><code class="css">
+h2:target {
+	color: white;
+	background: #f60;
+}</code></pre>
+	
+		<aside id="flower_primary" class="flower">
+			<div id="bsap_1294690" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		</aside>
+
+
+</header>
+
+<section id="main_content">		
+
+
+	
+<p>Basically, using the above as an example, if someone were to select a link in a page with <code>href="#balloon"</code> and in that page was an <a href="../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a> element with the attribute <code>id="balloon"</code> then not only will the page jump to that element, it will also apply the styles specified by the <code>h2:target</code> selector.</p>
+
+<p>This pseudo-class is already supported by the Mozilla family of browsers. To get the same results in Internet Explorer, this Suckerfish should work a treat:</p>
+
+<pre><code class="javascript">
+sfTarget = function() {
+	var sfEls=document.getElementsByTagName("H2");
+	var aEls = document.getElementsByTagName("A");
+	document.lastTarget = null;
+	for (var i=0; i&lt;sfEls.length; i++) {
+		if (sfEls[i].id) {
+			if (location.hash==("#" + sfEls[i].id)) {
+				sfEls[i].className+=" " + cls;
+				document.lastTarget=sfEls[i];
+			}
+			for (var j=0; j&lt;aEls.length; j++) {
+				if (aEls[j].hash==("#" + sfEls[i].id)) aEls[j].targetEl = sfEls[i]; aEls[j].onclick = function() {
+					if (document.lastTarget) document.lastTarget.className = document.lastTarget.className.replace(new RegExp(" sftarget\\b"), "");
+					if (this.targetEl) this.targetEl.className+=" sftarget"; document.lastTarget=this.targetEl;
+					return true;
+				}
+			}
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfTarget);</code></pre>
+
+
+<p>This 'sfTarget' function is a little more complex than the other Suckerfish functions.  This is because, in order to replicate the behaviour, the function must perform 3 actions:</p>
+<ol>
+	<li>On load, if the page URL contains an anchor (for example, '#something') then the 'sftarget' class must be applied.</li>
+	<li>If a target is already activated and another anchor is clicked the previous target must be reverted to normal by removing the 'sftarget' class from it.</li>
+	<li>If a link containing an anchor is selected it must add the 'sftarget' class to the anchors target.</li>
+</ol>
+
+<p>So, let's have a stroll through the 'sfTarget' function to see what's going on.</p>
+<ol>
+	<li>Firstly, using the standard Suckerfish method, we collect up the elements we want the function to work on.  In this case, we are going to collect up all the <a href="../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a> elements in the document (<code>var sfEls=document.getElementsByTagName("H2");</code>).</li>
+	<li>We then need to collect up all the <a href="../../../reference/htmltags/a/index.html" class="acode"><code>a</code></a> elements as we will need to work on those later too (<code>var aEls = document.getElementsByTagName("A");</code>).</li>
+	<li>Then we create an empty variable attached to the document element (<code>document.lastTarget = null;</code>) that will hold a reference to the last target element that was activated.  Later, we'll use this to deactivate it before activating a new target element therefore keeping only one target element active at a time.  Now we'll start looping through all of the <a href="../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h2</code></a> elements we collected above to apply the behaviour.</li>
+	<li>Firstly, we will find out if the page URL contains an anchor to the element in question.  We can find this out by examining the <code>location.hash</code> property.  If it contains a reference to the <code>id</code> of the element in question then we need to add the 'sftarget' class to it.</li>
+	<li>Now we get to the meat - much like the other Suckerfish functions we go about assigning event handlers to the elements in question but this time we must assign the <code>onclick</code> handler to the anchor that points to the target rather than the target itself.  Secondly, the anchor must know who it's target is so that it can add 'sftarget' to its <code>classname</code>.  We do this by looping through each anchor element and checking if it's hash property (the target it links to) is the same as the target in question's <code>id</code>. If it is we give it a reference to the target element ('targetEl') and apply the <code>onclick</code> event handler. Note that we do not need to use the <code>onkeypress</code> event handler to accommodate users who do not have pointing devices - <code>onclick</code> will work with key presses just as well.</li>
+	<li>Inside the <code>onclick</code> handler, we turn off the last target, if there is one, by removing the 'sftarget' class and then turn on the new target by adding the 'sftarget' class to 'targetEl'.  Finally, we return <code>true</code> so that the link acts as normal.</li>
+</ol>
+
+<p>As with all of the other Suckerfish methods, once the JavaScript is implemented, all you have to do is replicate the <code>:target</code> pseudo-class selectors:</p>
+
+<pre><code class="css">
+h2:target, h2.sftarget {
+	color: white;
+	background: #f60;
+}</code></pre>
+
+
+<h2>Examples</h2>
+
+<p>Perhaps the simplest beneficial application of such a method would be when there are a lot of headings in a page that are linked to, and a <a href="example/index.html">little extra cue</a> would help.</p>
+
+<p>If the anchors are blocks of code instead of headings, then a whole area can be restyled (rather than just a heading). The comments on the HTML Dog Blog <a href="http://www.htmldog.com/ptg/archives/000051.php#comment1">now employ this approach</a> for example.</p>
+
+
+
+
+
+
+
+
+<aside id="flowers">
+	<div class="flower">
+		<div id="bsap_1294762" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+	
+	<div class="blossom">
+		<div id="bsap_1294763" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+		<div id="bsap_1294764" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+	</div>
+
+	<p><a href="../../../advertise/index.html">Advertise With Us</a></p>
+
+</aside>
+
+
+</section>
+
+
+
+
+<footer id="related">
+
+	
+
+
+
+
+
+	
+	<h2>Related Pages</h2>
+	<ul>
+		<li><a href="../index.html">Sons of Suckerfish</a> - Outlining the whole Suckerfish methodology.</li>
+		<li><a href="../shoal/index.html">Suckerfish Shoal</a> - Using Suckerfish :target with other Suckerfish.</li>
+		<li><a href="../hover/index.html">Suckerfish :hover</a> - Mimicking the <code>:hover</code> pseudo-class.</li>
+	</ul>
+
+
+
+
+
+
+
+
+	
+
+
+
+</footer>
+
+
+</article>
+
+
+
+
+<nav id="main_nav">
+
+	<ul>
+
+		<li id="li_tut"><a href="../../../guides/index.html" >Tutorials</a>
+			<ul>
+				<li><a href="../../../guides/html/index.html">HTML</a></li>
+				<li><a href="../../../guides/css/index.html">CSS</a></li>
+				<li><a href="../../../guides/javascript/index.html">JavaScript</a></li>
+			</ul>
+		</li>
+
+		<li id="li_tech"><a href="../../../techniques/index.html">Techniques</a></li>
+
+		<li id="li_eg"><a href="../../../examples/index.html">Examples</a></li>
+
+	    <li id="li_ref"><a href="../../../reference/index.html" >References</a>
+			<ul>
+				<li><a href="../../../reference/htmltags/index.html">HTML Tags</a></li>
+				<li><a href="../../../reference/cssproperties/index.html">CSS Properties</a></li>			
+			</ul>
+		</li>
+
+		<li id="li_wh" class="subli superli"><a href="../../../webhosting/index.html">Web Hosting</a></li>
+
+		<li class="subli superli"><a href="../../../about.1.html">About Us</a></li>
+		<li class="subli"><a href="../../../linkto/index.html">Link to Us</a></li>
+		<li id="li_smap" class="subli"><a href="../../../sitemap/index.html">Site Map</a></li>
+
+		<li id="access_top"><a href="index.html#">&#8593; Top</a></li>    
+	</ul>
+
+	<p id="tweet"><a href="https://twitter.com/htmldog">Tweet @htmldog</a></p>
+
+
+</nav>
+
+
+<form action="../../../search/index.html" id="search">
+
+	<fieldset><label for="morombe">Search: </label><input name="q" id="morombe"><input type="submit" value="Search"></fieldset>
+
+</form>
+
+
+
+
+<footer id="site_footer">
+	<p>&copy; 2003&#8211;2017.</p>
+	<p><a href="../../../terms/index.html">Terms of use</a>.</p>
+	<p>Hosted by <a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+<p id="flogo"><a href="../../../index.html"><img src="../../../r10/htmldog90_lg.gif" width="90" height="18" alt="HTML Dog"></a></p>
+</footer>
+
+
+</body>
+
+<script async src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</html>

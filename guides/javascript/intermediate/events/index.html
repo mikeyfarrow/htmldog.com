@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Events and Callbacks | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">JavaScript</a>&nbsp;&rarr; <a href="../index.html">Intermediate</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Events and Callbacks</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>In the browser most code is <em>event-driven</em> and writing interactive applications in JavaScript is often about waiting for and reacting to events, to alter the behavior of the browser in some way. Events occur when the page loads, when user interacts (clicks, hovers, changes) and myriad other times, and can be triggered manually too.</p>
+
+<p>To react to an event you <em>listen</em> for it and supply a function which will be called by the browser when the event occurs. This function is known as a <em>callback</em>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>Here&#8217;s a group of the things needed to listen for an event; the callback function, an element and the call to listen for an event:</p>
+
+<pre><code class="oldLang language-javascript">
+var handleClick = function (event) {
+    // do something!
+};
+var button = document.querySelector('#big-button');
+button.addEventListener('click', handleClick);
+</code></pre>
+
+<p><code>addEventListener</code> is a method found on all DOM elements. Here it&#8217;s being called on an element saved in the <var>button</var> variable. The first argument is a string - the name of the <em>event</em> to listen for. Here&#8217;s it&#8217;s <code>click</code> - that&#8217;s a click of the mouse or a tap of the finger. The second is the <em>callback</em> function - here it&#8217;s <code>handleClick</code>.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<aside class="note i">
+<p>Unfortunately, Internet Explorer does not support <code>addEventListener</code> in versions earlier than 9. Instead <code>attachEvent</code> must be used.</p>
+
+<pre><code class="oldLang language-javascript">
+button.attachEvent('onclick', handleClick);
+</code></pre>
+
+<p>Notice that it requires <code>onclick</code>, not just <code>click</code>. You&#8217;ll find this is the same for most events. It&#8217;s things like this that caused the creation of libraries like <em>jQuery</em> (<a href="../jquery/index.html">which we&#8217;ll come to</a>) - they help you so that you don&#8217;t have to care that the way of listening for events is different across browsers.</p>
+</aside>
+
+<p>Data about a particular event is passed to the event <em>callback</em>. Take a look at <code>handleClick</code>, declared above. You can see its argument: <em>event</em> - it&#8217;s an object whose properties describe what occurred.</p>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>Here&#8217;s an example event you might see into a click event callback like <code>handleClick</code>. There are lots of properties giving you an idea of where the event occurred on the page (like <code>pageX</code> and <code>offsetY</code>) - these are slightly different because they depend on the reference point used to measure from. You can also see the <code>target</code> which is a reference to the node that was clicked. </p>
+
+<pre><code class="oldLang language-javascript">
+{
+    offsetX: 74,
+    offsetY: 10,
+    pageX: 154,
+    pageY: 576,
+    screenX: 154,
+    screenY: 489,
+    target: h2,
+    timeStamp: 1363131952985,
+    type: "click",
+    x: 154,
+    y: 395
+}
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../ajax/index.html">AJAX</a></li>
+  <li>Previous Page: <a href="../thedom/index.html">The DOM</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>JavaScript&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../beginner/index.html">Beginner</a></li>
+				
+				<li id="yahSubsec"><a href="../index.html">Intermediate</a>
+					<ul>
+						<li><a href="../thedom/index.html">The DOM</a></li>
+						<li><a href="index.html">Events and Callbacks</a></li>
+						<li><a href="../ajax/index.html">AJAX</a></li>
+						<li><a href="../json/index.html">JSON</a></li>
+						<li><a href="../scope/index.html">Scope</a></li>
+						<li><a href="../jquery/index.html">jQuery</a></li>
+						<li><a href="../jquerydom/index.html">jQuery: DOM API</a></li>
+						<li><a href="../jqueryajax/index.html">jQuery: AJAX</a></li>
+						<li><a href="../jquerytricks/index.html">jQuery: Other Tricks</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../advanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

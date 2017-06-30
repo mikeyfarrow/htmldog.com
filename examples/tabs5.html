@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tabs 5</title>
+	<style>
+		body {
+			background: #f80;
+			font: 0.8em arial, helvetica, sans-serif;
+			text-transform: lowercase;
+			margin: 0;
+			padding: 0;
+		}
+
+		#header {
+			background-color: white;
+		}
+
+		#header ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			background: white;
+			float: left;
+			width: 100%;
+		}
+
+		#header li {
+			float: left;
+			margin: 0 1em 0 0;
+		}
+
+		#header a {
+			text-decoration: none;
+			display: block;
+			width: 6em;
+			padding: 0 0.5em;
+			font-weight: bold;
+			color: black;
+			border-bottom: 0.5em solid #fc6;
+			color: #fc6;
+		}
+
+		#header a:hover {
+			color: #fa3;
+			border-color: #fa3;
+		}
+
+		#header #selected a {
+			color: #f80;
+			border-color: #f80;
+		}
+
+		#content {
+			clear: both;
+			color: white;
+			padding: 1em;
+		}
+
+		#content p {
+			margin: 0 0 1em 0;
+		}
+
+		h1 {
+			margin: 0;
+			padding: 0.5em 0 1em 0.5em;
+			color: #f80;
+			font-size: 1.5em;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Tabs</h1>
+		<ul>
+			<li><a href="tabs5.html#">This</a></li>
+			<li id="selected"><a href="tabs5.html#">That</a></li>
+			<li><a href="tabs5.html#">The Other</a></li>
+			<li><a href="tabs5.html#">Banana</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<p>Ispum schmipsum.</p>
+	</div>
+
+	<!-- Link back to HTML Dog: -->
+	<p><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

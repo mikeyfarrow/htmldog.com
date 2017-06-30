@@ -1,0 +1,580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Multiple CSS Background Images - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000107.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Multiple CSS Background Images</h1>
+	
+<h2>Tuesday  7 June, 2005 ( 8:33AM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>One of the biggest annoyances with CSS is the inability to apply more than one background image to a box.</p>
+
+<p>I'm currently working on a site that is in particular need of this. The only way to tackle it, at the moment, is to throw an ass-load of <code>span</code> or <code>div</code> tags in the mix (or to rely on tags that are slightly more meaningful, if they're appropriate, but that's not always possible).</p>
+
+<p>Here's the situation. I have a list item that needs a particular little image in it. On top of that I need curved corners. Because I want the whole thing to expand and contract regardless of the size of the content within it, that means I need a separate background image for each corner.</p>
+
+<p>So the HTML inevitably looks like this:</p>
+
+<pre>&lt;li&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;Booby&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;</pre>
+
+<p>Urgh.</p>
+
+<p>And the CSS looks something like this:</p>
+
+<pre><code>li {</code>
+<code>	background: url(booby.jpg) center no-repeat;</code>
+<code>}</code>
+<code>li span {</code>
+	<code>background: url(corner_top_right.gif) top right no-repeat;</code>
+	<code>display: block;</code>
+<code>}</code>
+	<code>li span span {</code>
+	<code>background: url(corner_bottom_right.gif) bottom right no-repeat;</code>
+<code>}</code>
+	<code>li span span span {</code>
+	<code>background: url(corner_bottom_left.gif) bottom left  no-repeat;</code>
+<code>}</code>
+	<code>li span span span span {</code>
+	<code>background: url(corner_top_left.gif) top left no-repeat;</code>
+	<code>padding: 0.5em;</code>
+<code>}</code>
+</pre>
+
+<p>One image for a pretty little background, and one image for each of the corners.</p>
+
+<p><a href="http://www.w3.org/TR/2005/WD-css3-background-20050216/#layering">CSS 3's got provision for multiple backgrounds</a>, which would be wonderful. If only it was a practical option.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000107.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>Nice article - there is only one  missing...</p>
+<p class="by">So said bavel on Tuesday  7 June, 2005 at  8:38AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000107.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Oh dear... it should have been "there is only one &lt; /code &gt; missing"...</p>
+<p class="by">So said bavel on Tuesday  7 June, 2005 at  8:39AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000107.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Wow bavel. You're quick on the comments! I'm a bit lazy on checking the entries before I put them up. It's not the first time I've had a mini-panic "Oh god! An XML parsing error! I've missed something somewhere!".</p>
+
+<p>All fixed now though. Cheers.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at  8:44AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000107.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Until CSS3 is usable, can't you use a Javascript function to insert all of those span's or div's?</p>
+
+<p>a la nifty-corner? <a href="http://pro.html.it/esempio/nifty/">http://pro.html.it/esempio/nifty/</a></p>
+<p class="by">So said SteveC on Tuesday  7 June, 2005 at  9:31AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000107.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Ah. Indeed a possibility. There are pros and cons though. The code would be neater, but if someone doesn't have JavaScript enabled, they won't get the presentational effect you're after.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at  9:36AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000107.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>There are so much articles about the rounded corners. Are 4 different images for al the corners really necessary, I don't think so.<br>
+I think you already looked over here but there must be a usefull one between it: <a href="http://css-discuss.incutio.com/?page=RoundedCorners">http://css-discuss.incutio.com/?page=RoundedCorners</a> and mine of course: <a href="http://www.ischagast.nl/knutselhoek/ronde-hoeken/">http://www.ischagast.nl/knutselhoek/ronde-hoeken/</a><br>
+</p>
+<p class="by">So said <a href="http://www.ischagast.nl/">Ischa Gast</a> on Tuesday  7 June, 2005 at  9:46AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000107.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Yes, four different images *are* necessary in situations like this. If the whole box can be different height and different widths to accommodate different sizes then there's no other way.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at  9:57AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000107.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Maybe I am too naïve, but since this multiple backround-image thing is mostly (if not only) used for corners, would it not be possible to create something else ?<br>
+I am thinking about a "corner" value looking like</p>
+
+<p>#mybox  {<br>
+                   corner-radius: 8px;  }</p>
+
+<p>This would be really helpful in future versions of CSS. Does anyone know of any potential drawbacks to such a thing ? I doubt I am the first person to wish for something like this.</p>
+<p class="by">So said Olivier on Tuesday  7 June, 2005 at 10:24AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000107.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>I think Mozilla has some sort of proprietary CSS for this. As for the CSS standards, I'm not sure. It would certainly be cool.</p>
+
+<p>SVG might be an option...</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at 10:31AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000107.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>" SVG might be an option... "</p>
+
+<p>What do you mean by SVG ?</p>
+
+<p>(sorry if this is obvious to some)</p>
+<p class="by">So said Olivier on Tuesday  7 June, 2005 at 10:54AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000107.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Ah. Sorry. "Scalable Vector Graphics". I'm no expert. See <a href="http://www.w3.org/TR/SVG/">http://www.w3.org/TR/SVG/</a></p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at 11:00AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000107.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>Quote:<br>
+Yes, four different images *are* necessary in situations like this. If the whole box can be different height and different widths to accommodate different sizes then there's no other way.</p>
+
+<p>But in the example I posted I only need one image, the only thing is that the image must extreme heigh end width. I used Roger Johansson example (using 2 images instead of 4) over here and changed it something <a href="http://www.456bereastreet.com/lab/teaser/flexible/">http://www.456bereastreet.com/lab/teaser/flexible/</a></p>
+
+<p>Is that not the right example you are searching?<br>
+</p>
+<p class="by">So said <a href="http://www.ischagast.nl/">Ischa Gast</a> on Tuesday  7 June, 2005 at  1:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000107.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>you could actually have the top left rounded corner as part of  the main background image, then you only need 3 additional span's as opposed to 4... it's still not ideal, but it uses less meaningless tags...</p>
+<p class="by">So said <a href="http://superk.dj/">keith - SuPeR K!</a> on Tuesday  7 June, 2005 at  1:07PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000107.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>Ischa - Ah yes! Sorry, I didn't look very closely. Clever that. Of, course, you need a pretty big image, and you're still stuck with all of the HTML scaffolding.</p>
+
+<p>Keith - that's assuming you don't need that box for something else, as in this example!</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at  1:09PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000107.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>-moz-border-radius is the property. SVG is not really an option here. It requires exactly the same.</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday  7 June, 2005 at  1:29PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000107.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>When CSS3 does become viable, backgrounds for corners won't be necessary as borders (including curved corners) will get their own module:<br>
+<a href="http://www.w3.org/TR/css3-border">http://www.w3.org/TR/css3-border</a></p>
+<p class="by">So said <a href="http://www.clagnut.com/">Richard Rutter</a> on Tuesday  7 June, 2005 at  3:25PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000107.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>i got it down to 2 spans utilizing :before and :after pseudo classes and and expression hack to make it work in ie... a bit confusing code, but only 2 spans... tested in ie6/win, firefox, and opera...</p>
+
+<p>// html<br>
+&lt;li&gt;&lt;span&gt;&lt;span&gt;Booby&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;</p>
+
+<p><br>
+// css<br>
+li {<br>
+  background: url(booby.jpg) center no-repeat;<br>
+  display: block;<br>
+  list-style: none;<br>
+  margin: 0;<br>
+  padding: 0;<br>
+}<br>
+li span {<br>
+  background: url(corner_bottom_left.gif) bottom left no-repeat;<br>
+  display: block;<br>
+}<br>
+li span span {<br>
+  background: url(corner_bottom_right.gif) bottom right no-repeat;<br>
+  padding: 0.5em;<br>
+}<br>
+li:before {<br>
+  content: url(corner_top_left.gif);<br>
+  display: block;<br>
+  height: 15px;<br>
+  width: 15px;<br>
+}<br>
+li span:before {<br>
+  content: url(corner_top_right.gif);<br>
+  display: block;<br>
+  height: 15px;<br>
+  padding-left: 100%;<br>
+  margin: -15px 0 -15px -15px;<br>
+  width: 15px;<br>
+}<br>
+li span span:before {<br>
+  display: none;<br>
+}<br>
+* html li {<br>
+  font-size: expression(this.runtimeStyle.fontSize="1em", this.innerHTML=''+this.innerHTML+'');<br>
+}<br>
+* html li span span {<br>
+  padding: 0;<br>
+}<br>
+* html li span span span {<br>
+  background: url(corner_top_left.gif) top left no-repeat;<br>
+}<br>
+* html li span span span span {<br>
+  background: url(corner_top_right.gif) top right no-repeat;<br>
+  padding: 0.5em;<br>
+}</p>
+<p class="by">So said <a href="http://superk.dj/">keith - SuPeR K!</a> on Tuesday  7 June, 2005 at  3:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000107.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>Regarding a CSS 'corner' property - yes I read about one about a year ago that was part of the proposal for CSS3 I think, I guess it would have made it too although I haven't checked - from what I can remember it allowed you to specify images for the four corners of an element using full or shorthand (a la border shorthand) code. You could also use only one corner image and CSS could handle the rotation of it for the other corners. I wish browser makers would pull their bloody finger out :p</p>
+<p class="by">So said <a href="http://www.scrwd.com/">Jon B</a> on Tuesday  7 June, 2005 at  7:38PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment19" class="comment">
+<h3><a href="000107.php.html#comment19"><span>Comment </span>19</a></h3>
+<p>It should really be css3-background above. css3-border has been obsoleted by that document...</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday  7 June, 2005 at  9:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment20" class="comment">
+<h3><a href="000107.php.html#comment20"><span>Comment </span>20</a></h3>
+<p>There seems to be an easy solution for this with a little help from PHP. The effect is a random background, I'm not sure if this is exactly what you would like to have. See <a href="http://sonspring.com/index.php?id=77">http://sonspring.com/index.php?id=77</a> for more details. The technique elaborates upon a previous technique from Automatic Labs.</p>
+<p class="by">So said <a href="http://www.typephases.com/">Joan M. Mas</a> on Tuesday  7 June, 2005 at 10:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment21" class="comment">
+<h3><a href="000107.php.html#comment21"><span>Comment </span>21</a></h3>
+<p>I think Mozilla has some sort of proprietary CSS for this. As for the CSS standards, I'm not sure. It would certainly be cool.</p>
+
+<p>Patrick, try this. A background image/color might leak and make them square again, well worth testing. </p>
+
+<p>As for CSS3, this is the latest working draft for border-image, if only we had all that power ...</p>
+
+<p>Meanwhile you could also try the oh so cool IE7 by dean. Here is the rounded corners demo.</p>
+<p class="by">So said <a href="http://www.thedeplorableword.net/">Tom</a> on Tuesday  7 June, 2005 at 11:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment22" class="comment">
+<h3><a href="000107.php.html#comment22"><span>Comment </span>22</a></h3>
+<p>ok, it seems I shouldnt have posted HTML. Here are the missing links to the post above</p>
+
+<p>Moz:   <a href="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">http://www.xulplanet.com/references/elemref/ref_StyleProperties.html</a></p>
+
+<p>CSS3: <a href="http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-border-image">http://www.w3.org/TR/2005/WD-css3-background-20050216/#the-border-image</a></p>
+
+<p>IE7: <a href="http://dean.edwards.name/IE7/">http://dean.edwards.name/IE7/</a><br>
+IE7, before and after test: <a href="http://dean.edwards.name/IE7/compatibility/content.html">http://dean.edwards.name/IE7/compatibility/content.html</a></p>
+<p class="by">So said <a href="http://www.thedeplorableword.net/">Tom</a> on Tuesday  7 June, 2005 at 11:45PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment23" class="comment">
+<h3><a href="000107.php.html#comment23"><span>Comment </span>23</a></h3>
+<p>"Don't use HTML. Use ' &amp;lt; ' to show the ' &lt; ' character." ;)</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday  7 June, 2005 at 11:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment24" class="comment">
+<h3><a href="000107.php.html#comment24"><span>Comment </span>24</a></h3>
+<p>Patrick: Yeah, my technique (which has now been updated to support PNG images with alpha transparency and insert the extraneous elements with unobtrusive JavaScript: <a href="http://www.456bereastreet.com/archive/200505/transparent_custom_corners_and_borders/)">http://www.456bereastreet.com/archive/200505/transparent_custom_corners_and_borders/)</a> uses an image that is large when you count the pixels, but that doesn't necessarily mean that the file size will be too large. In fact, compared to downloading multiple smaller images the total bandwidth can actually be reduced. Plus you get fewer server requests. The extra HTML is still there though.</p>
+<p class="by">So said <a href="http://www.456bereastreet.com/">Roger Johansson</a> on Monday 13 June, 2005 at  2:26PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment25" class="comment">
+<h3><a href="000107.php.html#comment25"><span>Comment </span>25</a></h3>
+<p>It really is an annoyance that you can't apply multiple background images to a block level element.  I find this to be one of the most frustrating things about CSS.  I can't wait until CSS3 is standard, but that's going to be a very long while, I fear</p>
+<p class="by">So said <a href="http://fitfreak.net/">RMM</a> on Tuesday 12 July, 2005 at 10:39PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment26" class="comment">
+<h3><a href="000107.php.html#comment26"><span>Comment </span>26</a></h3>
+<p>Crude way* to do it with a single image for all the corners ...</p>
+
+<p>Building on Roger's iirc</p>
+
+<p><a href="http://www.elogicom.com/curvy.html">http://www.elogicom.com/curvy.html</a> or <a href="http://www.elogicom.com/c/sp/">http://www.elogicom.com/c/sp/</a></p>
+
+<p>* IE gets the colours wrong somewhere or other</p>
+<p class="by">So said <a href="http://cdn.mozdev.org/">Chris Neale</a> on Wednesday 28 September, 2005 at 10:08AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment27" class="comment">
+<h3><a href="000107.php.html#comment27"><span>Comment </span>27</a></h3>
+<p>2nd link has two methods ... the variation of single image corners is for the same picture in both pages.</p>
+<p class="by">So said <a href="http://cdn.mozdev.org/">Chris Neale</a> on Wednesday 28 September, 2005 at 10:11AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment28" class="comment">
+<h3><a href="000107.php.html#comment28"><span>Comment </span>28</a></h3>
+<p>tried and now working ;-) thanks</p>
+<p class="by">So said <a href="http://www.vfunk.com/">Conner</a> on Sunday  2 October, 2005 at  2:04AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment29" class="comment">
+<h3><a href="000107.php.html#comment29"><span>Comment </span>29</a></h3>
+<p>The Mozilla way is just as unsupported as css3 will be.<br>
+Could do it like this. </p>
+
+<p>&lt;div id="box"&gt;<br>
+&lt;img src="top.jpg" width=100%&gt;<br>
+bla bla bla<br>
+&lt;img src="bottom.jpg" width=100%&gt;<br>
+&lt;/div&gt;</p>
+
+<p>This makes the corner radius more round if the box gets bigger.</p>
+
+<p>This is the firefox way.<br>
+<a href="http://sitemeterreview.blogspot.com/">http://sitemeterreview.blogspot.com/</a></p>
+
+<p>boo hoo, It's ugly in other browsers. :(</p>
+<p class="by">So said <a href="http://fototour.blogspot.com/">gaby de wilde</a> on Saturday  8 October, 2005 at 10:32AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment30" class="comment">
+<h3><a href="000107.php.html#comment30"><span>Comment </span>30</a></h3>
+<p>Hm... Nice trick. I will try it. Interesting to check, how it looks in Opera browser.</p>
+<p class="by">So said <a href="http://www.airedogs.org/">Roman</a> on Friday 18 November, 2005 at  9:54AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment31" class="comment">
+<h3><a href="000107.php.html#comment31"><span>Comment </span>31</a></h3>
+<p>...that's a really messy technique. Why not just:</p>
+
+<p>[ul]<br>
+[li] [a href="#"] link 1 [/a] [/li]<br>
+[li] [a href="#"] link 2 [/a] [/li]<br>
+[li] [a href="#"] link 2 [/a] [/li]<br>
+[/ul]</p>
+
+<p>and the CSS:</p>
+
+<p>div { background: url(...) top left no-repeat; }<br>
+div ul { background: url(...) top right no-repeat; }<br>
+div ul li {background: url(...) bottom left no-repeat; }<br>
+div ul li a {background: url(...) bottom right no-repeat; }</p>
+
+<p>much cleaner, much simpler; enjoy :)</p>
+<p class="by">So said <a href="http://www.bcdesignplace.com/">Boris Cherny</a> on Friday 25 November, 2005 at  6:25AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment32" class="comment">
+<h3><a href="000107.php.html#comment32"><span>Comment </span>32</a></h3>
+<p>Erm, cuz that wouldn't wurk. You'd get two corners on the list and two corners on each of the list items. The example is for four images on each and every one of the (non-link) list items.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Friday 25 November, 2005 at  3:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment33" class="comment">
+<h3><a href="000107.php.html#comment33"><span>Comment </span>33</a></h3>
+<p>Unfortunately neither of this means I can call acceptable (personally to me, I mean). Overloading with unnecessary html tags destroy the logical structure of a html/html/xhtml document. Sometimes I sacrifice the graphics to make the tag structure of a document more logical.</p>
+<p class="by">So said <a href="http://www.zip.dk/gaeste/bog.php3/24229/">Cowboy Marlboro</a> on Friday  2 December, 2005 at 12:13PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000108.php.html">A Personal @media Experience</a></li>			<li id="previous">Previous Page: <a href="000106.php.html">Dr. Strangeswitcher Article</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000107.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

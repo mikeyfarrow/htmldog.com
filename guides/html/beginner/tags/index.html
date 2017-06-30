@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tags, Attributes, and Elements | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">HTML</a>&nbsp;&rarr; <a href="../../../htmlbeginner/index.html">Beginner</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Tags, Attributes, and Elements</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Although the basics of HTML is plain text, we need a bit more to make it a nice and shiny HTML document.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Tags</h2>
+
+<p>The basic structure of an HTML document includes tags, which surround content and apply meaning to it.</p>
+
+<p>Change your document so that it looks like this:</p>
+
+<pre><code class="oldLang language-html">
+<strong>&lt;!DOCTYPE html&gt;</strong>
+<strong>&lt;html&gt;</strong>
+<strong>&lt;body&gt;</strong>
+    This is my first web page
+<strong>&lt;/body&gt;</strong>
+<strong>&lt;/html&gt;</strong>
+</code></pre>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>Now save the document again, go back to the web browser and reload the page.</p>
+
+<p>The appearance of the page will not have changed at all, but the purpose of HTML is to apply meaning, not presentation, and this example has now defined some fundamental elements of a web page.</p>
+
+<p>The first line on the top, <code>&lt;!DOCTYPE html&gt;</code>, is a <strong>document type declaration</strong> and it lets the browser know which flavor of HTML you&#8217;re using (HTML5, in this case). It&#8217;s very important to stick this in - If you don&#8217;t, browsers will assume you don&#8217;t really know what you&#8217;re doing and act in a very peculiar way.</p>
+
+<p>To get back to the point, <code>&lt;html&gt;</code> is the <strong>opening tag</strong> that kicks things off and tells the browser that everything between that and the <code>&lt;/html&gt;</code> <strong>closing tag</strong> is an HTML document. The stuff between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> is the main content of the document that will appear in the browser window.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<h3>Closing tags</h3>
+
+<p>The <code>&lt;/body&gt;</code> and <code>&lt;/html&gt;</code> put a close to their respective elements (more on elements in a moment).</p>
+
+<aside class="note i">
+<p>Not all tags have closing tags like this (<code>&lt;html&gt;&lt;/html&gt;</code>) some tags, which do not wrap around content will close themselves. The line-break tag for example, looks like this : <code>&lt;br&gt;</code> - a line break doesn&#8217;t hold any content so the tag merrily sits by its lonely self. We will come across these examples later. All you need to remember is that all tags with content between them should be closed, in the format of opening tag &rarr; content &rarr; closing tag. It isn&#8217;t, strictly speaking, always a requirement, but it&#8217;s a convention we&#8217;re using in these tutorials because it&#8217;s good practice that results in cleaner, easier to understand code.</p>
+</aside>
+
+<aside class="note five">
+<p>You might come across &#8220;self-closing&#8221; tags, whereby a <a href="../../../../references/html/tags/br/index.html" class="acode"><code>br</code></a> tag, for example, will look like &#8220;<code>&lt;br /&gt;</code>&#8221; instead of simply &#8220;<code>&lt;br&gt;</code>&#8221;. This is a remnant of XHTML, a form of HTML based on another markup language called XML. HTML5 is much more chilled out than XHTML and will be happy with either format. Some developers prefer one way, some prefer the other. We tossed a coin and decided to stick with the simpler version.</p>
+</aside>
+
+<h2>Attributes</h2>
+
+<p>Tags can also have <strong>attributes</strong>, which are extra bits of information. Attributes appear inside the opening tag and their values sit inside quotation marks. They look something like <code>&lt;tag attribute="value"&gt;Margarine&lt;/tag&gt;</code>. We will come across tags with attributes later.</p>
+
+<aside class="note">
+<p>Once again, quotation marks aren&#8217;t always essential but it is a good-practice convention HTML Dog uses for consistency and clarity. We suggest you do the same.</p>
+</aside>
+
+<h2>Elements</h2>
+
+<p>Tags tend not to do much more than mark the beginning and end of an element. Elements are the bits that make up web pages. You would say, for example, that everything that is in between (and includes) the <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> tags is the body element. As another example, whereas &#8220;<code>&lt;title&gt;</code>&#8221; and &#8220;<code>&lt;/title&gt;</code>&#8221; are <strong>tags</strong>, &#8220;<code>&lt;title&gt;Rumple Stiltskin&lt;/title&gt;</code>&#8221; is a title <strong>element</strong>.</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next page: <a href="../titles/index.html">Page Titles</a></li>
+  <li>Previous page: <a href="../gettingstarted/index.html">Getting Started</a></li>
+  </ul>
+
+
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/html/tags/html/index.html">HTML Tag: <code>html</code></a></li>
+  <li><a href="../../../../references/html/tags/body/index.html">HTML Tag: <code>body</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+		<section id="navSec">
+        <h2><span>Section menu: </span>HTML&nbsp;tutorials</h2>
+			<ul>
+				<li id="yahSubsec"><a href="../../../htmlbeginner/index.html">Beginner</a>
+					<ul>
+						<li><a href="../gettingstarted/index.html">Getting Started</a></li>
+						<li><a href="index.html">Tags, Attributes, and Elements</a></li>
+						<li><a href="../titles/index.html">Page Titles</a></li>
+						<li><a href="../paragraphs/index.html">Paragraphs</a></li>
+						<li><a href="../headings/index.html">Headings</a></li>
+						<li><a href="../lists/index.html">Lists</a></li>
+						<li><a href="../links/index.html">Links</a></li>
+						<li><a href="../images/index.html">Images</a></li>
+						<li><a href="../tables/index.html">Tables</a></li>
+						<li><a href="../forms/index.html">Forms</a></li>
+						<li><a href="../conclusion/index.html">Putting It All Together</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="../../../htmlintermediate/index.html">Intermediate</a></li>
+				
+				
+				<li><a href="../../../htmladvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

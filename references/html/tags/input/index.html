@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Tag: input | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+	<link href="../../../../rAF/arcticFox_tables.css" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../../reference/index.html" class="yahSec yahRef">References</a>&nbsp;&rarr; <a href="../../index.html">HTML</a>&nbsp;&rarr; <a href="../../../../reference/htmltags/index.html">Tags</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>HTML Tag: <strong><dfn><code>input</code></dfn></strong></h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>A <strong>form control</strong>, allowing input from a user. It can be one of many types, including a text field, a checkbox, or a submit button.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p><code >input</code> has no content and therefore does not warrant a closing tag.</p>
+
+<h2>Optional Attributes</h2>
+
+<table class="twval">
+    <tr>
+        <th scope="col">Attribute</th>
+        <th scope="col">Description</th>
+        <th scope="col">Possible values</th>
+    </tr>
+    <tr>
+        <td><code >name</code></td>
+        <td>Name of the form control, to be paired with its value.</td>
+        <td>Text (no spaces).</td>
+    </tr>
+    <tr>
+        <td><code >type</code></td>
+        <td>The type of form control.</td>
+        <td>
+            <ul>
+                <li><code >text</code>: <strong>Text field</strong> &#8212; text without line breaks. (default)</li>
+                <li><code >password</code>: Text field with <strong>obscured input</strong>.</li>
+                <li><code >checkbox</code>: <strong>Check box</strong> / tick box.</li>
+                <li><code >radio</code>: <strong>Radio button</strong> &#8212; allows one control to be selected in a group of these sharing the same <code >name</code> attribute value.</li>
+                <li><code >submit</code>: <strong>Submit button</strong> &#8212; submits the form.</li>
+                <li><code >reset</code>: <strong>Reset button</strong> &#8212; resets the controls in a form to their initial default values.</li>
+                <li><code >hidden</code>: A <strong>hidden</strong> control that can not be accessed directly by the user but the value of which is submitted with the rest of the form data.</li>
+                <li><code >image</code>: An <strong>image</strong> that, when clicked or otherwise selected, will submit the form. The coordinates of the pixel point that the image is clicked on will become the control&#8217;s value.</li>
+                <li><code >file</code>: <strong>File upload</strong> &#8212; allows a local file to be selected for submission.</li>
+                <li><code >button</code>: <strong>Button</strong> with no default behaviour.</li>
+                <li><code >search</code>: Text field for <strong>search strings</strong>.</li>
+                <li><code >tel</code>: Text field for <strong>telephone numbers</strong>.</li>
+                <li><code >url</code>: Text field for <strong>absolute URLs</strong>.</li>
+                <li><code >email</code>: Text field for <strong>email addresses</strong>.</li>
+                <li><code >date</code>: <strong>Date</strong> selection control.</li>
+                <li><code >time</code>: <strong>Time</strong> selection control.</li>
+                <li><code >number</code>: Text field or spinner for <strong>numerical</strong> values.</li>
+                <li><code >range</code>: Slider, or similar, for selecting a numerical value from a potentially imprecise <strong>range</strong>.</li>
+                <li><code >color</code>: <strong>Color well</strong>, with an 8-bit sRGB value.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >value</code></td>
+        <td>An initial value.</td>
+        <td>Dependent on type.</td>
+    </tr>
+    <tr>
+        <td><code >checked</code></td>
+        <td>Sets a <code >checkbox</code> or <code >radio</code> type to be checked by default.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >maxlength</code></td>
+        <td>The maximum number of permissible characters in a value.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >minlength</code></td>
+        <td>The minimum number of permissible characters in a value.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >src</code></td>
+        <td>Used, and required, when type is <code >image</code>. The location of the image file to be used.</td>
+        <td>URL.</td>
+    </tr>
+    <tr>
+        <td><code >alt</code></td>
+        <td>Used, and required, when type is <code >image</code>. Alternative text that will replace the image if the image specified by <code >src</code> isn&#8217;t available.</td>
+        <td>Text.</td>
+    </tr>
+    <tr>
+        <td><code >width</code></td>
+        <td>Used when type is <code >image</code>. Pixel width of the image.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >height</code></td>
+        <td>Used when type is <code >image</code>. Pixel height of the image.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >accept</code></td>
+        <td>Used when type is <code >file</code>. Indicates what file types are accepted.</td>
+        <td>A single instance or comma-separated list of:
+            <ul>
+                <li><code >audio/*</code>: Audio files.</li>
+                <li><code >video/*</code>: Video files.</li>
+                <li><code >image/*</code>: Image files.</li>
+                <li>MIME type, such as <code >application/pdf</code>.</li>
+                <li>Specific file extensions, such as <code >.pdf</code>.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >disabled</code></td>
+        <td>Disables the form control.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >readonly</code></td>
+        <td>Makes the form control unalterable by the user.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >autocomplete</code></td>
+        <td>If a browser should implement autocomplete on the control or not.</td>
+        <td>
+            <ul>
+                <li><code >on</code> (default)</li>
+                <li><code >off</code></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >autofocus</code></td>
+        <td>Indicates that the form control should have focus on page load. Should only be used on one form control in a page.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >dirname</code></td>
+        <td>Adds an additional field to be sent containing the directionality of the form control&#8217;s value.</td>
+        <td>Text (no spaces). <code>dirname="this.dir"</code> will append <code>this.dir=ltr</code> (left-to-right) or <code>this.dir=rtl</code> (right-to-left) to submitted data, for example.</td>
+    </tr>
+    <tr>
+        <td><code >form</code></td>
+        <td>Explicitly associates the control to a <a href="../form/index.html" class="acode"><code>form</code></a> element, which it may or may not be nested within. If absent, the control will be associated to its <a href="../form/index.html" class="acode"><code>form</code></a> ancestor.</td>
+        <td>Text matching the value of a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >id</code> attribute.</td>
+    </tr>
+    <tr>
+        <td><code >formaction</code></td>
+        <td>Used when type is <code >submit</code> or <code >image</code>. The address to which submitted form data should be sent to. Will override a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >action</code> attribute.</td>
+        <td>URL.</td>
+    </tr>
+    <tr>
+        <td><code >formmethod</code></td>
+        <td>Used when type is <code >submit</code> or <code >image</code>. The HTTP method by which submitted form data should be sent. Will override a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >method</code> attribute.</td>
+        <td>
+            <ul>
+                <li><code >get</code>: Bolts the form values onto the URL that the form is submitted to. Used for simple data sending, such as search queries, for example.</li>
+                <li><code >post</code>: Invisibly sends the form data in the body of the submitted HTTP request. Used for more detailed or secure data sending, such as contact forms, for example.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >formenctype</code></td>
+        <td>Used when type is <code >submit</code> or <code >image</code>. The MIME type used to encode the form data. Will override a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >enctype</code> attribute.</td>
+        <td>
+            <ul>
+                <li><code >application/x-www-form-urlencoded</code>: Default.</li>
+                <li><code >multipart/form-data</code>: For when a file <a href="index.html" class="acode"><code>input</code></a> element is used in the form.</li>
+                <li><code >text/plain</code>: Basic text.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >formnovalidate</code></td>
+        <td>Used when type is <code >submit</code> or <code >image</code>. Indicates that the form should not be validated before it is submitted. Will override a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >novalidate</code> attribute.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >formtarget</code></td>
+        <td>Used when type is <code >submit</code> or <code >image</code>. The browsing context in which the submitted form&#8217;s destination URL should open. Will override a <a href="../form/index.html" class="acode"><code>form</code></a> element&#8217;s <code >target</code> attribute.</td>
+        <td>
+            <ul>
+                <li><code>_self</code>: Opens in current window / tab.</li>
+                <li><code>_blank</code>: Opens in a new window / tab.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code >list</code></td>
+        <td>Associates the form control with a list of options to suggest to the user.</td>
+        <td>Text matching the value of a <a href="../datalist/index.html" class="acode"><code>datalist</code></a> element&#8217;s <code >id</code> attribute.</td>
+    </tr>
+    <tr>
+        <td><code >max</code></td>
+        <td>Used when type is <code >date</code>, <code >time</code>, <code >number</code> or <code >range</code>. The maximum value.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >min</code></td>
+        <td>Used when type is <code >date</code>, <code >time</code>, <code >number</code> or <code >range</code>. The minimum value.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td><code >step</code></td>
+        <td>Used when type is <code >date</code>, <code >time</code>, <code >number</code> or <code >range</code>. The increments in which a value can be increased or decreased.</td>
+        <td>Number or <code >any</code>.</td>
+    </tr>
+    <tr>
+        <td><code >multiple</code></td>
+        <td>Used when type is <code >email</code> or <code >file</code>. Indicates that the user can enter more than one value.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >pattern</code></td>
+        <td>A regular expression against which a value can be checked.</td>
+        <td>Regular expression.</td>
+    </tr>
+    <tr>
+        <td><code >placeholder</code></td>
+        <td>A visible hint as to what kind of data the user should input.</td>
+        <td>Text.</td>
+    </tr>
+    <tr>
+        <td><code >required</code></td>
+        <td>Indicates that the form field must be completed.</td>
+        <td>None.</td>
+    </tr>
+    <tr>
+        <td><code >size</code></td>
+        <td>The number of characters in a text-type control that a user should be expected to see whilst editing.</td>
+        <td>Number.</td>
+    </tr>
+    <tr>
+        <td colspan="3"><a href="../../globalattributes/index.html">Global attributes</a></td>
+    </tr>
+</table>
+
+<aside class="note i">
+    <p>The <code >title</code> global attribute takes on a special role when the <code >pattern</code> attribute is used. In these cases, the titles should represent a description of the pattern being used. A standalone textual explanation in the main content is still recommended, however.</p>
+</aside>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Example</h2>
+
+<pre><code class="oldLang language-html">
+&lt;form action="someKindOfProcessingScript.php" method="post"&gt;
+    &lt;label for="username"&gt;Name&lt;/label&gt;
+    <strong>&lt;input name="username" id="username"&gt;</strong>
+
+    &lt;label for="housenumber"&gt;House number&lt;/label&gt;
+    &lt;input type="number" name="housenumber" id="housenumber"&gt;
+
+    &lt;label for="street"&gt;Street&lt;/label&gt;
+    &lt;input name="street" id="street"&gt;
+
+    &lt;label for="emailaddress"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" placeholder="you@somewhere.com" name="emailaddress" id="emailaddress"&gt;
+
+    &lt;input type="submit" value="Sign up!"&gt;
+&lt;/form&gt;
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+
+
+	<h3>References</h3>
+  <ul>
+  <li><a href="../form/index.html">HTML Tag: <code>form</code></a></li>
+  <li><a href="../label/index.html">HTML Tag: <code>label</code></a></li>
+  <li><a href="../datalist/index.html">HTML Tag: <code>datalist</code></a></li>
+  <li><a href="../textarea/index.html">HTML Tag: <code>textarea</code></a></li>
+  <li><a href="../select/index.html">HTML Tag: <code>select</code></a></li>
+  </ul>
+
+
+
+	<h4>All HTML Tags</h4>
+	<ul class="longlist acodeblock">
+		<li><a href="../../../../reference/htmltags/a/index.html"><code>a</code></a></li>
+		<li><a href="../abbr/index.html"><code>abbr</code></a></li>
+		<li><a href="../address/index.html"><code>address</code></a></li>
+		<li><a href="../area/index.html"><code>area</code></a></li>
+		<li><a href="../article/index.html"><code>article</code></a></li>
+		<li><a href="../aside/index.html"><code>aside</code></a></li>
+		<li><a href="../audio/index.html"><code>audio</code></a></li>
+		<li><a href="../b/index.html"><code>b</code></a></li>
+		<li><a href="../base/index.html"><code>base</code></a></li>
+		<li><a href="../bdi/index.html"><code>bdi</code></a></li>
+		<li><a href="../bdo/index.html"><code>bdo</code></a></li>
+		<li><a href="../blockquote/index.html"><code>blockquote</code></a></li>
+		<li><a href="../body/index.html"><code>body</code></a></li>
+		<li><a href="../br/index.html"><code>br</code></a></li>
+		<li><a href="../button/index.html"><code>button</code></a></li>
+		<li><a href="../canvas/index.html"><code>canvas</code></a></li>
+		<li><a href="../caption/index.html"><code>caption</code></a></li>
+		<li><a href="../cite/index.html"><code>cite</code></a></li>
+		<li><a href="../code/index.html"><code>code</code></a></li>
+		<li><a href="../../../../reference/htmltags/col/index.html"><code>col</code></a></li>
+		<li><a href="../../../../reference/htmltags/colgroup/index.html"><code>colgroup</code></a></li>
+		<li><a href="../data/index.html"><code>data</code></a></li>
+		<li><a href="../datalist/index.html"><code>datalist</code></a></li>
+		<li><a href="../dd/index.html"><code>dd</code></a></li>
+		<li><a href="../del/index.html"><code>del</code></a></li>
+		<li><a href="../dfn/index.html"><code>dfn</code></a></li>
+		<li><a href="../div/index.html"><code>div</code></a></li>
+		<li><a href="../dl/index.html"><code>dl</code></a></li>
+		<li><a href="../dt/index.html"><code>dt</code></a></li>
+		<li><a href="../em/index.html"><code>em</code></a></li>
+		<li><a href="../embed/index.html"><code>embed</code></a></li>
+		<li><a href="../fieldset/index.html"><code>fieldset</code></a></li>
+		<li><a href="../figcaption/index.html"><code>figcaption</code></a></li>
+		<li><a href="../figure/index.html"><code>figure</code></a></li>
+		<li><a href="../footer/index.html"><code>footer</code></a></li>
+		<li><a href="../form/index.html"><code>form</code></a></li>
+		<li><a href="../h1h2h3h4h5h6/index.html"><code>h1 - h6</code></a></li>
+		<li><a href="../head/index.html"><code>head</code></a></li>
+		<li><a href="../header/index.html"><code>header</code></a></li>
+		<li><a href="../hr/index.html"><code>hr</code></a></li>
+		<li><a href="../html/index.html"><code>html</code></a></li>
+		<li><a href="../i/index.html"><code>i</code></a></li>
+		<li><a href="../iframe/index.html"><code>iframe</code></a></li>
+		<li><a href="../img/index.html"><code>img</code></a></li>
+		<li><a href="index.html"><code>input</code></a></li>
+		<li><a href="../ins/index.html"><code>ins</code></a></li>
+		<li><a href="../kbd/index.html"><code>kbd</code></a></li>
+		<li><a href="../keygen/index.html"><code>keygen</code></a></li>
+		<li><a href="../label/index.html"><code>label</code></a></li>
+		<li><a href="../legend/index.html"><code>legend</code></a></li>
+		<li><a href="../li/index.html"><code>li</code></a></li>
+		<li><a href="../link/index.html"><code>link</code></a></li>
+		<li><a href="../main/index.html"><code>main</code></a></li>
+		<li><a href="../map/index.html"><code>map</code></a></li>
+		<li><a href="../mark/index.html"><code>mark</code></a></li>
+		<li><a href="../meta/index.html"><code>meta</code></a></li>
+		<li><a href="../meter/index.html"><code>meter</code></a></li>
+		<li><a href="../nav/index.html"><code>nav</code></a></li>
+		<li><a href="../noscript/index.html"><code>noscript</code></a></li>
+		<li><a href="../object/index.html"><code>object</code></a></li>
+		<li><a href="../ol/index.html"><code>ol</code></a></li>
+		<li><a href="../optgroup/index.html"><code>optgroup</code></a></li>
+		<li><a href="../option/index.html"><code>option</code></a></li>
+		<li><a href="../output/index.html"><code>output</code></a></li>
+		<li><a href="../p/index.html"><code>p</code></a></li>
+		<li><a href="../param/index.html"><code>param</code></a></li>
+		<li><a href="../../../../reference/htmltags/pre/index.html"><code>pre</code></a></li>
+		<li><a href="../progress/index.html"><code>progress</code></a></li>
+		<li><a href="../q/index.html"><code>q</code></a></li>
+		<li><a href="../rb/index.html"><code>rb</code></a></li>
+		<li><a href="../rp/index.html"><code>rp</code></a></li>
+		<li><a href="../rt/index.html"><code>rt</code></a></li>
+		<li><a href="../rtc/index.html"><code>rtc</code></a></li>
+		<li><a href="../ruby/index.html"><code>ruby</code></a></li>
+		<li><a href="../s/index.html"><code>s</code></a></li>
+		<li><a href="../samp/index.html"><code>samp</code></a></li>
+		<li><a href="../script/index.html"><code>script</code></a></li>
+		<li><a href="../section/index.html"><code>section</code></a></li>
+		<li><a href="../select/index.html"><code>select</code></a></li>
+		<li><a href="../small/index.html"><code>small</code></a></li>
+		<li><a href="../source/index.html"><code>source</code></a></li>
+		<li><a href="../span/index.html"><code>span</code></a></li>
+		<li><a href="../strong/index.html"><code>strong</code></a></li>
+		<li><a href="../style/index.html"><code>style</code></a></li>
+		<li><a href="../sub/index.html"><code>sub</code></a></li>
+		<li><a href="../sup/index.html"><code>sup</code></a></li>
+		<li><a href="../table/index.html"><code>table</code></a></li>
+		<li><a href="../tbody/index.html"><code>tbody</code></a></li>
+		<li><a href="../td/index.html"><code>td</code></a></li>
+		<li><a href="../template/index.html"><code>template</code></a></li>
+		<li><a href="../textarea/index.html"><code>textarea</code></a></li>
+		<li><a href="../tfoot/index.html"><code>tfoot</code></a></li>
+		<li><a href="../th/index.html"><code>th</code></a></li>
+		<li><a href="../thead/index.html"><code>thead</code></a></li>
+		<li><a href="../time/index.html"><code>time</code></a></li>
+		<li><a href="../title/index.html"><code>title</code></a></li>
+		<li><a href="../tr/index.html"><code>tr</code></a></li>
+		<li><a href="../track/index.html"><code>track</code></a></li>
+		<li><a href="../u/index.html"><code>u</code></a></li>
+		<li><a href="../ul/index.html"><code>ul</code></a></li>
+		<li><a href="../var/index.html"><code>var</code></a></li>
+		<li><a href="../video/index.html"><code>video</code></a></li>
+		<li><a href="../wbr/index.html"><code>wbr</code></a></li>
+	</ul>
+
+
+
+
+
+  <h3>Tutorials</h3>
+  <ul>
+  <li><a href="../../../../guides/html/beginner/forms/index.html">Forms</a> (HTML Beginner Tutorial)</li>
+  <li><a href="../../../../guides/html/advanced/html5forms1/index.html">HTML5 Forms Pt. 1: Input Types</a> (HTML Advanced Tutorial)</li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/inputtextboxes/index.html">Text boxes</a></li>
+  <li><a href="../../../../examples/inputcheckboxes/index.html">Checkboxes and radio buttons</a></li>
+  <li><a href="../../../../examples/inputfile/index.html">File upload input</a></li>
+  </ul>
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

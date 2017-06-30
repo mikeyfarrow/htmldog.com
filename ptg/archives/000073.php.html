@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Usable Form Labels - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000073.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Usable Form Labels</h1>
+	
+<h2>Monday  1 November, 2004 ( 2:46PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>When we label the elements of a form, what are the best terms to use?</p>
+
+<p>Most of the pages on HTML Dog (except those on the Dog Blog) carry a contact form with four fields, simply labelled "Name", "Email", "URL" and "Message".</p>
+
+<p>Absolutely none of these are required (although nothing will be sent if there is nothing in the "Message" text area) because I want people to get on and do what they like with the minimum of fuss. If someone wants to remain anonymous or make a comment that doesn't require a reply (and therefore their email address), I want to give people that option. I'm weird like that, I know - most web sites have some kind of requirements and validation. But whether you agree with this approach or not, it has thrown up some interesting issues regarding the usability of form labels.</p>
+
+<p>The first problem arises with the "URL" field. This is a technical term and some people don't know what it means, which I gather from collecting instances of "?", "URL??" and "I don't know what this means" as the input for that field. URL is <em>not</em> a good term to use - a less technical and more generally understood term such as "Web address" would probably cause less confusion, methinks.</p>
+
+<p>But even this might not be enough - some people type the web page that they are on, which I don't need to know because the form-to-email processing script puts that in the email for me anyway. Maybe "Your web address" might be better?</p>
+
+<p>The bigger problem I have comes from the "Email" field. In a surprisingly large number of messages, people will not leave their email address, even when they require a response.</p>
+
+<p>I have even had a few irate repeat messages along the lines of "I HAVE ASKED YOU THIS MANY TIMES, WHY WON'T YOU ANSWER ME?".</p>
+
+<p>Erm, because I can't - I don't know your email address.</p>
+
+<p>I'm sure that a large number are going to be from those who have simply overlooked or forgotten to fill in the field. But here's a completely unsubstantiated theory - what if there are web users who believe that their email address is automatically sent when a form is submitted? I think most people realise that web browsing and email are two different things and that there is no way of telling someone's email address from a sent form without the sender explicitly stating it. But it seems perfectly logical to me that relative newcomers may believe that their browser and their email programme are in someway intertwined in a single, universal, internet system. Just a thought.</p>
+
+<p>This isn't really a question about whether you should gear up your forms to require one piece of information or another, validate it and alert the user if they have not filled it in (although I <strong>bet</strong> there'll be a comment or two about that). It's about <strong>what you should use as labels</strong> and <strong>how to make them easier to understand</strong>. Even if you validate it, you'll be doing yourself a favour by making things easier for users in the first place. The thing to keep in mind is that, as technically proficient web makers, there are many technical things that we take for granted.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000073.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I would add that the "URL" fields on forms like this should make it clear whether the "<a href="http://">http://"</a> prefix is required or not, since it does seem to vary from site to site, and might confuse the uninitiated yet further. I suggest that the best approach is to prefill the URL field with the "<a href="http://">http://"</a> so that it is clear that a fully qualified URL must be entered. But then that means that users who choose not to supply a URL won't be sure if they need to clear out the prefilled value or not, and you'll also need a couple of extra lines of server-side code (or client-side JavaScript) to filter out these dummy values. There are other similar alternatives, but none are particularly satisfactory. Any thoughts?!</p>
+
+<p>PS - "URL's starting with" should be "URLs starting with" (no apostrophe, it's not possessive)</p>
+<p class="by">So said <a href="http://blog.marcustucker.com/">Marcus Tucker</a> on Monday  1 November, 2004 at  3:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000073.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Any one know how 'auto-fill' on a browser recognizes fields? I love using AutoFill to handle forms, and it seems that using fairly standard labels enables AutoFill (I'm using Safari now, but the same seems true for IE). In this form it AutoFilled 'Name' and 'Email' for me, but not 'URL'.  So I suggest using labels that make AutoFill work, but I don't know precisely what those are.</p>
+<p class="by">So said <a href="http://www.benbrophy.com/">Ben Brophy</a> on Monday  1 November, 2004 at  4:29PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000073.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Please fix your RSS feed of this blog! It has been broken for a long time (at least in Thunderbird). I get:</p>
+
+<p>XML Parsing Error: undefined entity Location: <a href="http://htmldog.com/ptg/archives/73_files/73.html">http://www.htmldog.com/ptg/archives/000073.php</a> Line Number 244, Column 21:© Vivabit Ltd. &amp; Patrick Griffiths 2004 | Terms &amp; Privacy | XHTML 1.1 | CSS | Dog Blog powered by Movable Type --------------------^</p>
+<p class="by">So said Garret on Monday  1 November, 2004 at  4:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000073.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>I would label an website address "Website" - not "url" or "Web address". </p>
+
+<p>Marcus: You should never force a technical requirement on the user. It does not matter if the address is prefixed "<a href="http://">http://",</a> if you need it - add it server-side before sending or storing the address. </p>
+
+<p>In regards to validating, then I have had some success with inline helping messages. These are displayed when the user exits that particular field. (example: <a href="http://www.baekdal.com/x/email.gif">http://www.baekdal.com/x/email.gif</a> ). The advantage is that they do not see an error dialog, which often puts people off.</p>
+
+<p>But, I still see some rather strange field values from time to time. The funniest ones is when they enter my email address, instead of their own :)</p>
+<p class="by">So said <a href="http://www.baekdal.com/">Thomas Baekdal</a> on Monday  1 November, 2004 at  4:51PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000073.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Yeah, "web address" might be better than URL, though just pre-filling the field with "<a href="http://">http://"</a> might give a nudge to your more clueful readers what it is you're driving at.</p>
+
+<p>On the email issue, how about explicitly stating in the form, either at the top or beside the email field, something like "be sure to include your email address if you require a reply". Of course this requires your visitors to *read* your page before sending you their question, which won't always happen amongst typical short-attention-span surfers; but maybe the guy who KEEPS ASKING YOU WITHOUT GETTING AN ANSWER might, in desperation, read the site and find out why.</p>
+
+<p>Another option - give your more obscure form &lt;label&gt;s a title= attribute which explains what's required. I've just tested it, and even IE6 displays a tooltip. You might need to add some visual cue to your users the the tips are there, though.</p>
+
+<p>By the way, since you're talking about forms, have you looked at *this* form in IE6? You get "Comment:", then "t:" on the next line, then the comment &lt;textarea&gt;. Weird. You get more space to type into than you do on Mozilla, though. Something to do with floats and em sizing? (I've not peeked at the CSS).</p>
+<p class="by">So said <a href="http://www.extraconnections.co.uk/">Chris Hunt</a> on Monday  1 November, 2004 at  4:57PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000073.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>I think that pre-filling the URL field will only help a very small number of users, where the confusion is whether or not to include the protocol prefix. I always do, as a rule, because my website is at a subdomain. For a www... address this is a stickier issue.</p>
+
+<p>I would suggest something similar to Mr. Baekdal's solution, except to trigger a help message as soon as the user hovers over the field, rather than waiting for them to make a mistake. Often an example could be most helpful.</p>
+<p class="by">So said <a href="http://dave.homelessatnyu.com/">Dave Vogt</a> on Monday  1 November, 2004 at  5:26PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000073.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>Dave, Actually it does both. It displays a help message for fields that requires one (email is currently not one of them), then if people still makes mistakes it displays the "error" message.</p>
+
+<p>The "help" text is not displayed in a box,but next to the box itself. The reason for this is that peope do not notice that the box changes (if it contains both messages). They focus on the field itself, not the box. </p>
+
+<p>I am still in the process of refining this approach, there are a lot of considerations to take into account (you pointed out one of them)</p>
+<p class="by">So said <a href="http://www.baekdal.com/">Thomas Baekdal</a> on Monday  1 November, 2004 at  5:47PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000073.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>"Maybe "Your web address" might be better?"</p>
+
+<p>How about "Your website's address"?</p>
+
+<p>"In a surprisingly large number of messages, people will not leave their email address, even when they require a response."</p>
+
+<p>Be sure to include your email address if you would like a reply. Replies cannot be guaranteed, but every effort will be made to get back to you.</p>
+
+<p>Or something.</p>
+
+<p>The hardest thing for people with web skills is they don't really understand how little the average user actually knows. You feel like you're belittling the user when you give a horribly obvious instruction, so you leave it out. If you can find a matter-of-fact way to state it, which is going to either be a "but of course, everyone knows that" or a "oh, good thing they mentioned that, I didn't know", there's your course of action.</p>
+
+<p>We try to avoid the mechanics, but sometimes you have to mention them. Bet to do this succinctly, plainly and unambiguously, so even the uninitiated feel like they're in the know, and the web-savvy see it as merely stating the obvious.</p>
+<p class="by">So said <a href="../../index.html@%2520I%2520don't%2520know%2520what%2520this%2520is%2520%3B).html">Neal</a> on Monday  1 November, 2004 at  6:00PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000073.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>Could you put<br>
+value="Example Name" onfocus="this.select()" <br>
+value="example@example.com" onfocus="this.select()" <br>
+value="<a href="http://example_website.com/">http://example_website.com/"</a> onfocus="this.select()" <br>
+value="Type your comments here" onfocus="this.select()" <br>
+with those 4 fields?</p>
+<p class="by">So said <a href="http://01010.org/">Peter</a> on Monday  1 November, 2004 at  9:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000073.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>Never trust newbies to know anything.</p>
+
+<p>And speaking of form fields, can you PLEASE add a 'Remember me function'? Thank you!!!</p>
+<p class="by">So said <a href="http://dantecubed.com/blog/">Dante</a> on Tuesday  2 November, 2004 at 12:19AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000073.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Why use a comment form at all?  Just have a mailto link.<br>
+On the dog blog where comments are posted, I can see the need for a comment form rather than a mailto and an e-mail processing bot.<br>
+But on the other pages why use a form?  For the people where the mailto wouldn't work (webmail users, users on a different computer)?</p>
+<p class="by">So said <a href="http://www.willrickards.net/">Will Rickards</a> on Wednesday  3 November, 2004 at  6:06PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000073.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>I generally try to subtly show people how to fill out a form by splitting it into a couple of sections.<br>
+First section: Please enter your contact details. (I also include a preferred method on commercial sites)<br>
+Second section: Please enter your enquiry.</p>
+
+<p>When it comes to the labels, it all depends on the traffic I think, if it is a site with traffic consisting of people less likely to understand technical terms I would put (your) in front of most labels, otherwise I think Web Address etc. is adequate.</p>
+
+<p>I always include a contact email address at the top of the form so when all else fails if they cant use an email program, they may not be worth worrying about…;)<br>
+</p>
+<p class="by">So said <a href="http://www.infiniteye.com.au/">Nathan</a> on Thursday  4 November, 2004 at  9:51AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000073.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>"Why use a comment form at all? Just have a mailto link."</p>
+
+<p>1) Visitor is at a library or internet cafe. They do not have an email client set up.</p>
+
+<p>2) Visitor is at a friend's house. They don't want to use their friend's email client.</p>
+
+<p>3) Visitor is at work, and emails are monitored.</p>
+
+<p>If you cannot have an email form, at least provide a valid email address the user can write down and use on their own machine later.</p>
+<p class="by">So said Neal on Friday  5 November, 2004 at  1:52AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000073.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>"Why use a comment form at all? Just have a mailto link."</p>
+
+<p>4) Horrible spammers will harvest your address and bombard you with adverts for viagra and dubious money-making schemes.</p>
+<p class="by">So said <a href="http://www.extraconnections.co.uk/">Chris Hunt</a> on Monday  8 November, 2004 at 11:55AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000073.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>I train a lot of computer users, whose expertise and experience varies enormously. Many users have no conception of the difference between their browser, their ISP, Yahoo, a website and a modem even. </p>
+
+<p>Experienced and very clueful visitors will fill in a form while barely glancing at the field names. It's the not so clueful who read and need the field names / labels. I think the more clearly fields can be labelled or explained the better.</p>
+<p class="by">So said <a href="http://mactips.info/">Miraz Jordan</a> on Monday 22 November, 2004 at  7:53AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000073.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>Perhaps you could mark up the 'URL' part as an &lt;abbr&gt; ?</p>
+
+<p>js and server side checking of the Email field would 'encourage'/force people to fill it in.</p>
+<p class="by">So said <a href="http://cdn.mozdev.org/">Chris Neale</a> on Saturday 11 December, 2004 at 11:53PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000073.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>You seem to be a very knowledgeable blog person.  I am interested in adding a form to my blog and have the results sent to my e-mail... good or bad idea?  How do you write the html tag to send the message?  Does the blog site have to have special features enable to support this?  Any feedback would be very much appreciated!</p>
+<p class="by">So said Denise on Saturday 16 July, 2005 at  9:01AM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000074.php.html">Image Replacement Considered Evil</a></li>			<li id="previous">Previous Page: <a href="000072.php.html">Watch Your Language</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+		
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000073.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Dr. Strangeswitcher, The Example</title>
+<style type="text/css">
+body {
+	font: 80%/1.5 arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 30px;
+	color: white;
+	background: black url(strangelove.gif) bottom right fixed no-repeat;
+}
+#switch_default { display: none; }
+:target #switch_default { display: list-item; }
+
+#dr_strangeswitcher:target {
+	background-image: url(muffley.gif);
+	color: red;
+}
+#dr_strangeswitcher:target #switch_alt { display: none }
+
+h1 {
+	background: url(logo2.gif) bottom;
+	margin: 0;
+	width: 399px;
+	height: 248px;
+	letter-spacing: -99em;
+}
+#dr_strangeswitcher:target h1 { background-position: top }
+
+ul, p {
+	width: 393px;
+}
+
+a {
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+}
+#dr_strangeswitcher:target a { color: white }
+
+code {
+	font-family: courier;
+}
+
+ul {
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+	display: none;
+}
+body>ul {
+	display: block;
+}
+body>#b {
+	display: none;
+}
+
+ul a {
+	color: white;
+	font-size: 1.6em;
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	display: block;
+	line-height: 1;
+	padding: 2em 0.5em;
+	border: 3px solid red;
+	text-align: center;
+	background: url(boom2.jpg) 99em 99em no-repeat;
+}
+#dr_strangeswitcher:target ul a {
+	color: red;
+	border-color: white;
+}
+ul a:hover {
+	text-decoration: none;
+	background-position: center left;
+}
+ul a:active {
+	background-position: center right;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#hd a {
+	display: block;
+	width: 399px;
+	height: 70px;
+	background: url(htmldog2.gif) top;
+	letter-spacing: -99em;
+}
+
+#hd a:hover {
+	background-position: bottom;
+}
+
+</style>
+</head>
+
+<body id="dr_strangeswitcher">
+
+<h1>Dr. Strangeswitcher or: How I Learned to Stop Scripting and Love CSS</h1>
+
+<ul>
+	<li id="switch_default"><a href="index.html#" title="Switch to the default presentation style">Dmitri? Dmitri! You can switch to the default style now</a></li>
+	<li id="switch_alt"><a href="index.html#dr_strangeswitcher" title="Switch to the alternative presentation style">Why don't you switch the styles, eh?!</a></li>
+</ul>
+
+<p>This is a little example of <a href="../../drstrangeswitcher.html">Dr. Strangeswitcher</a>, an article written by Patrick Griffiths that explains how you can construct a style-switcher with nothing more than plain old HTML and CSS.</p>
+<p>The whole page becomes one big page anchor, and alternative styles are applied by targeting that "page anchor" when it is linked to using CSS 3's <code>:target</code> pseudo class.</p>
+
+<p id="b">Unfortunately, you <em>will</em> require a decent, modern browser, such as <a href="http://www.mozilla.org/products/firefox/">Firefox</a> or <a href="http://www.apple.com/macosx/features/safari/">Safari</a> to see this basic example at work...</p>
+
+<p id="hd"><a href="../../../index.html">Made with Fuzzy Felt by HTML Dog</a></p>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+#dex {
+	position: absolute;
+	top: 340px; bottom: 0; left: 0;
+	width: 100%;
+	min-height: 500px;
+	overflow: hidden;
+	font-size: 15px;
+}
+#dex, #dex * { margin: 0 }
+#dexInner {
+	display: table;
+	height: 100%;
+	width: 100%;
+	background: #333;
+}
+#dexInner > * { display: table-row }
+#dexSourceAndOutput { height: 100% }
+#dexSourceAndOutput section {
+	display: table-cell;
+	width: 50%;
+	height: 85%;
+	background: #666;
+}
+section#dexOutput { background: #999 }
+#dexSourceAndOutput section div {
+	height: 100%;
+	position: relative;
+}
+#dex pre, #dex samp {
+	position: absolute;
+	top: 30px; right: 0; bottom: 0; left: 0;
+	overflow: auto;
+	background: #f5f2f0;
+}
+#dex samp { -webkit-overflow-scrolling: touch }
+#dex pre code {
+	display: block;
+	padding-top: 30px;
+}
+#dex iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #fff;
+}
+#dex header div, #dex footer div {
+	box-sizing: border-box;
+	width: 199.7%;
+	min-height: 30px;
+	padding: 3.5px 30px;
+	color: #fff;
+}
+#dex header div *, #dex footer div * {
+	display: inline;
+	padding: 0;
+	font-size: inherit;
+}
+#dex footer li:last-child { padding-right: 3.5em }
+#dexCopy {
+	position: absolute;
+	right: 30px; bottom: 0;
+	line-height: 30px;
+}
+#dex h1, #dex h2 { font-weight: 400 }
+#dex header h1:after, #dex footer h2:after { content: ":" }
+#dex #dexInner footer ul li { color: #ccc }
+#dex li:after { content: " · " }
+#dex li:before, #dex li:last-child:after { content: none }
+#dex header a, #dex footer a {
+	text-shadow: .07em .03em #333, -.07em .03em #333, -.07em 0 #333, -.07em -.03em #333, 0 .03em #333, 0 -.07em #333;
+	background-image: url("invUBlk.png");
+}
+#dexSourceAndOutput h2 {
+	padding: 0 30px;
+	font-weight: 300;
+	font-size: inherit;
+	line-height: 30px;
+	color: #fff;
+}
+#dexSourceAndOutput a {
+	position: absolute;
+	top: -5px; right: 25px;
+	width: 30px;
+	height: 30px;
+	border: 5px solid #999;
+	border-radius: 20px;
+	background: url("icon_ext.png") 0 0 / contain #fff;
+	background-clip: content-box;
+	text-indent: -99in;
+	transition: transform .4s, background-position .4s;
+	cursor: pointer;
+}
+#dexSource a {
+	border-color: #666;
+	background-image: url("icon_reload.png");
+}
+#dexSourceAndOutput a:after {
+	content: "";
+	position: absolute;
+	top: -2px; left: -2px;
+	width: 30px;
+	height: 30px;
+	border: 2px solid;
+	border-color: inherit;
+	border-radius: 16px;
+	background: url("icon_ext_hover.png") 0 0 / contain #fff;
+	background-clip: content-box;
+	opacity: 0;
+	transition: opacity .4s, background-position .4s;
+}
+#dexSource a:after { background-image: url("icon_reload_hover.png") }
+#dexSourceAndOutput a:hover:after { opacity: 1 }
+#dexSource a:hover { transform: rotate(360deg) }
+#dexOutput a:hover, #dexOutput a:hover:after { background-position: 30px -30px }
+
+@media (max-width: 980px) {
+	#dex header div, #dex footer div, #dexSourceAndOutput h2 {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	#dex.js1 h2 { transition: color .3s }
+	#dex.selectedSource #dexOutput h2, #dex.selectedOutput #dexSource h2 {
+		color: #cde;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	#dexSourceAndOutput a { right: 10px }
+	#dex.js1 pre {
+		z-index: 1;
+		bottom: 100%;
+		width: 200%;
+		border-top: 10px solid #666;
+		padding-bottom: 0;
+		opacity: 0;
+		transition: opacity .3s 0s, bottom 0s .3s, padding 0s .3s;
+	}
+	#dex.js1 samp {
+		left: -100%;
+		border-top: 10px solid #999;
+	}
+	#dex.selectedSource pre {
+		bottom: 0;
+		padding-bottom: 30px;
+		opacity: 1;
+		transition: opacity .3s 0s, bottom 0s 0s, padding 0s 0s;
+	}
+	#dexCopy { right: 15px }
+}

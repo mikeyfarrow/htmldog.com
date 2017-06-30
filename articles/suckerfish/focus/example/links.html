@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Suckerfish :focus example 2</title>
+<style type="text/css" media="all">
+
+body {
+	font: 100% arial, helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 1.5em;
+	color: orange;
+}
+
+a {
+	color: #009;
+	text-decoration: none;
+}
+
+a:focus, a.sffocus {
+	background-color: #00c;
+	color: white;
+	padding: 0.5em 0;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+</style>
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfFocus = function() {
+	var sfEls = document.getElementsByTagName("A");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onfocus=function() {
+			this.className+=" sffocus";
+		}
+		sfEls[i].onblur=function() {
+			this.className=this.className.replace(new RegExp(" sffocus\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfFocus);
+
+//--><!]]></script>
+
+</head>
+
+<body>
+
+<h1>Suckerfish :focus (2)</h1>
+
+<p>A basic example accompanying the <a href="../index.html">Suckerfish :focus article</a> in <a href="../../../../index.html">HTML Dog</a>.</p>
+
+<p>Tab through the links on this page to highlight the link that has focus.</p>
+
+<p>Lorem ipsum <a href="links.html#">dolor</a> sit amet, consectetuer adipiscing elit. <a href="links.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit blandit risus. <a href="links.html#">Praesent</a> nonummy. <a href="links.html#">In erat</a>. Duis nibh pede, <a href="links.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. Curabitur nec dui sed nunc congue tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. Vivamus pretium dolor. Proin eu turpis. Phasellus ut mauris non nulla mattis luctus. <a href="links.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="links.html#">tellus</a> a vestibulum pharetra, nunc purus auctor lacus, ut semper purus ipsum eu velit. Praesent dui. Nulla accumsan turpis at erat.</p>
+
+<p>Lorem ipsum <a href="links.html#">dolor</a> sit amet, consectetuer adipiscing elit. <a href="links.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit blandit risus. <a href="links.html#">Praesent</a> nonummy. <a href="links.html#">In erat</a>. Duis nibh pede, <a href="links.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. Curabitur nec dui sed nunc congue tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. Vivamus pretium dolor. Proin eu turpis. Phasellus ut mauris non nulla mattis luctus. <a href="links.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="links.html#">tellus</a> a vestibulum pharetra, nunc purus auctor lacus, ut semper purus ipsum eu velit. Praesent dui. Nulla accumsan turpis at erat.</p>
+
+<p>Lorem ipsum <a href="links.html#">dolor</a> sit amet, consectetuer adipiscing elit. <a href="links.html#">Suspendisse</a> egestas ultricies pede. Phasellus suscipit blandit risus. <a href="links.html#">Praesent</a> nonummy. <a href="links.html#">In erat</a>. Duis nibh pede, <a href="links.html#">accumsan</a> eu, pulvinar et, volutpat vel, elit. Curabitur nec dui sed nunc congue tempus. Nulla ac dui ac libero fringilla nonummy. Maecenas ullamcorper sodales risus. Vivamus pretium dolor. Proin eu turpis. Phasellus ut mauris non nulla mattis luctus. <a href="links.html#">Nunc porttitor</a> dapibus sapien. In malesuada fermentum metus. Nulla egestas, <a href="links.html#">tellus</a> a vestibulum pharetra, nunc purus auctor lacus, ut semper purus ipsum eu velit. Praesent dui. Nulla accumsan turpis at erat.</p>
+
+
+</body>
+
+</html>
+

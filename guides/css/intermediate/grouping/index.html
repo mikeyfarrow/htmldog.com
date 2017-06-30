@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Grouping and Nesting | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../cssintermediate/index.html">Intermediate</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Grouping and Nesting</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Two ways that you can simplify your code &#8212; both HTML and CSS &#8212; and make it easier to manage.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<h2>Grouping</h2>
+
+<p>You can give the same properties to a number of selectors without having to repeat them.</p>
+
+<p>For example, if you have something like:</p>
+
+<pre><code class="oldLang language-css">
+h2 {
+    color: red;
+}
+
+.thisOtherClass {
+    color: red;
+}
+
+.yetAnotherClass {
+    color: red;
+}
+</code></pre>
+
+<p>You can simply separate selectors with <strong>commas</strong> in one line and apply the same properties to them all so, making the above:</p>
+
+<pre><code class="oldLang language-css">
+<strong>h2, .thisOtherClass, .yetAnotherClass</strong> {
+    color: red;
+}
+</code></pre>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Nesting</h2>
+
+<p>If the CSS is structured well, there shouldn&#8217;t be a need to use many class or ID selectors. This is because you can specify properties to selectors <em>within</em> other selectors.</p>
+
+<p>For example:</p>
+
+<pre><code class="oldLang language-css">
+#top {
+    background-color: #ccc;
+    padding: 1em
+}
+
+<strong>#top h1</strong> {
+    color: #ff0;
+}
+
+<strong>#top p</strong> {
+    color: red;
+    font-weight: bold;
+}
+</code></pre>
+
+<p>This removes the need for classes or IDs on the <a href="../../../../references/html/tags/p/index.html" class="acode"><code>p</code></a> and <a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a> tags if it is applied to HTML that looks something like this:</p>
+
+<pre><code class="oldLang language-html">
+&lt;div id="top"&gt;
+    &lt;h1&gt;Chocolate curry&lt;/h1&gt;
+    &lt;p&gt;This is my recipe for making curry purely with chocolate&lt;/p&gt;
+    &lt;p&gt;Mmm mm mmmmm&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>This is because, by separating selectors with spaces, we are saying &#8220;<a href="../../../../references/html/tags/h1h2h3h4h5h6/index.html" class="acode"><code>h1</code></a> inside ID <code >top</code> is colour <code>#ff0</code>&#8221; and &#8220;<a href="../../../../references/html/tags/p/index.html" class="acode"><code>p</code></a> inside ID <code >top</code> is <code>red</code> and <code>bold</code>&#8221;.</p>
+
+<p>This can get quite complicated (because it can go for more than two levels, such as this inside this inside this inside this etc.) and may take a bit of practice.</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../pseudoclasses/index.html">Pseudo Classes</a></li>
+  <li>Previous Page: <a href="../classid/index.html">Class and ID Selectors</a></li>
+  <li><a href="../../beginner/selectors/index.html">Selectors, Properties and Values</a> (CSS Beginner Tutorial)</li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../html/index.html">HTML</a></li>
+						<li><a href="../../index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+	
+		<section id="navSec">
+			<h2><span>Section menu: </span>CSS&nbsp;tutorials</h2>
+			<ul>
+				
+				<li><a href="../../../cssbeginner/index.html">Beginner</a></li>
+				
+				<li id="yahSubsec"><a href="../../../cssintermediate/index.html">Intermediate</a>
+					<ul>
+						<li><a href="../classid/index.html">Class and ID Selectors</a></li>
+						<li><a href="index.html">Grouping and Nesting</a></li>
+						<li><a href="../pseudoclasses/index.html">Pseudo Classes</a></li>
+						<li><a href="../shorthand/index.html">Shorthand Properties</a></li>
+						<li><a href="../backgroundimages/index.html">Background Images</a></li>
+						<li><a href="../../../cssadvanced/specificity/index.html">Specificity</a></li>
+						<li><a href="../display/index.html">Display</a></li>
+						<li><a href="../pseudoelements/index.html">Pseudo Elements</a></li>
+						<li><a href="../../../cssadvanced/layout/index.html">Page Layout</a></li>
+					</ul>
+				</li>
+				
+				
+				<li><a href="../../../cssadvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

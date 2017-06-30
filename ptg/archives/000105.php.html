@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Link Titles Shmink Titles - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000105.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Link Titles Shmink Titles</h1>
+	
+<h2>Monday 23 May, 2005 (11:13PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>You don't need to use the <code>title</code> attribute on every link to aid accessibility. The attribute is there to convey what the link is (or rather what's at the destination of the link target) if the link text doesn't describe it itself. It might be helpful on link text such as "more" or "click here" (urgh! why would you have links that say that?!), but it isn't usually necessary on descriptive text. You <em>certainly</em> don't need it if you're simply repeating the link text in the <code>title</code> attribute value.</p>
+
+<p>When you probably don't need it:<br>
+<code>&lt;p&gt;Website x will teach you &lt;a href="wherever.html"&gt;how to peel an orange&lt;/a&gt;&lt;p&gt;</code></p>
+
+<p>When you might:<br>
+<code>&lt;p&gt;Website X will teach you how to peel an orange. &lt;a href="wherever.html" title="how to peel an orange"&gt;Click here for more&lt;/a&gt;&lt;/p&gt;</code></p>
+
+<p>The first example's clearly better anyway. It keeps with the flow of language, it's better for scannability, it's more suitable when it comes to being printed and <a href="http://webstandardsgroup.org/features/derek-featherstone.cfm#myth">you can't rely on the link title attribute anyway</a>.</p>
+
+<p>Sometimes there are legitimate uses, even when you're not using the bad habit of "click here", but in most cases, if you're writing good link content, you won't need the <code>title</code> attribute.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000105.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I often use the link title attribute to give meta info about the document the link points to, like this: "today i read a (link)blog entry(/link) on the topic of link titles". I would give that link the title "HTML Dog Blog - Link Titles Shmink Titles" or something similar.</p>
+<p class="by">So said <a href="http://www.jacobrask.net/">Jacob Rask</a> on Tuesday 24 May, 2005 at  1:28AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000105.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>I use the TITLE attribute for the title of the document I point towards unless it is already literally inside the A element obviously.</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday 24 May, 2005 at  5:21AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000105.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>Jacob - but if you wrote "today I read &lt;a&gt;a blog entry on the topic of link titles&lt;/a&gt;", you'd be sorted!</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday 24 May, 2005 at 11:21AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000105.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>I agree with Jacob. I try to give my link title attributes "meta-data" about the site I am linking to. And, typically, that "meta-data" is usually the &lt;title&gt; element of the page I am linking to.</p>
+
+<p>In general, I think it is good practice to always include the title attribute in links - of course there are some situations where it becomes redundant - but it's best to stay consistent. </p>
+
+<p>I wouldn't want some of my links to have a title attribute, and some not.</p>
+<p class="by">So said <a href="http://www.matthom.com/">Matthom</a> on Tuesday 24 May, 2005 at  1:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000105.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>That relies on the destination having a well written title element.</p>
+
+<p>Also, why would you need this meta data if the link text is well written?</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Tuesday 24 May, 2005 at  2:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000105.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>I try to include a title at all times, for accessibility and I think it has search rank implications as it adds concentration of key words related to the topic you're writing about.  Whether this is true at the moment or not seems irrelevant as search algorithms are constantly in flux - it seems a logical thing to aggregate.</p>
+<p class="by">So said <a href="http://23rdworld.com/">mahalie</a> on Tuesday 24 May, 2005 at  5:00PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000105.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>We've been watching and testing for the effect of the title attribute on search positions and thus far, this attribute is ignored. Even if it is built into the search engines' algos at some later point, it won't be difficult to build a filter to identify whether the title attribute is being used mainly to inject keywords into the page ('over-optimization). Esp if there are relevant keywords in the anchor text as well as around the link itself. The keyword stuffing of the alt attribute set the precedent for this.</p>
+
+<p>As for 'click here' and 'more' - it depends entirely on who your audience is. I cringe but I have to use it all the time on a couple of web sites where the target audience consists mainly of non-savvy computer users over 50 years of age. </p>
+<p class="by">So said <a href="http://indianfoodrocks.blogspot.com/">Manisha</a> on Tuesday 24 May, 2005 at  7:03PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000105.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>mahalie: "I try to include a title at all times, for accessibility"</p>
+
+<p>sorry, but that's rubbish. if accessibility is really your concern, you should just write good link text. the argument of absolutely requiring a title on every link is a flimsy one...</p>
+<p class="by">So said <a href="http://www.splintered.co.uk/">patrick h. lauke</a> on Tuesday 24 May, 2005 at  8:16PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000105.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>I also give meta data to my links (just more information for the search engines to find and follow). I believe it's just a good practice to get into...</p>
+<p class="by">So said <a href="http://www.coonens.com/">Chet</a> on Wednesday 25 May, 2005 at  3:57PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000105.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>But as Manisha said, there's no evidence of this helping in search engines. So, in fact, it *could* be a bad practice because not only are you increasing page weight by adding more, you could also be pushing relevant information further down a page. And I do believe that the proximity of relevant information to the beginning of a page can affect search engine results. I could be wrong, but still, it's not a clear-cut "good practice".</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 25 May, 2005 at  4:21PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000105.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Patrick  "Also, why would you need this meta data if the link text is well written?" </p>
+
+<p>I agree for in-page links. But what about navigation menu links that are necessarily brief. 'contact us' for example. What's at the end of that link? A form or is it a mailto link? </p>
+
+<p>I think titles can sometimes help sighted people too. </p>
+<p class="by">So said Ben on Wednesday 25 May, 2005 at  4:59PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000105.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>I'd go as far as saying that more sighted people get some kind of use out of title attribures than visually impaired users do, with the browser displaying them as a tooltip. It could be seen as a tad annoying if it was used all over the place.</p>
+
+<p>On a slightly different note, I know that you were only using it as an example, but "Contact us" is really not something to be using as a mailto link. A user would expect to be taken to a contact page. I think Jakob Nielsen had this as one of his "Biggest mistakes in web design" thing a few years back - only use *email addresses* as mailto link text!!</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 25 May, 2005 at  5:12PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000105.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>So what we're actually saying is there's no need for the title attribute? If screen readers read the links out and they're worded well enough then what's the point of applying a title other than displaying a 'tooltip' which is useless if the link is descriptive enough?</p>
+
+<p>I also thought that the title attribute had an effect on SEO; but as it hasn't (apparently) I'm sceptical of ever using the title attribute again.</p>
+
+<p>Interestingly enough though, part of commercial site design is aesthetics. And I heard a guy say whilst looking at one of my sites "I like these little tooltips" and all they consisted of was a rewording of the actual link.<br>
+If people like the way a site functions, then they'll come back. Although this isn't really the way we should be considering accessibility, it sure helps a company if customers come back alot.</p>
+
+<p>I'm not saying that the title attribute has massive impact on the decisions the average web user makes, but it demonstrates how it's the little things that make a difference... Maybe.</p>
+<p class="by">So said Fen on Thursday 26 May, 2005 at 10:58AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000105.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>I had a word with a guy from an "Independent Internet Marketing" company about the title attribute affecting search engine results and he said this:</p>
+
+<p>"Title attributes do aid in the ranking algorithm. Although they do not have a major impact and if left out would not make a considerable difference. They are on the bottom of the chain when it comes to ranking factors.</p>
+
+<p>Their main use is for usability, screen readers etc. Most sites that we optimise do not use them, if they were that important we would recommend including them all the time - however it does no harm including them.</p>
+
+<p>We cannot comment on the order of these ranking factors in the months to come, as google may pay higher attention to these attributes at a later date"</p>
+
+<p>So. They do and they don't. Use them at your discretion in my opinion... I remain a sceptic tank. If you want high rankings concentrate on page titles and headings / links relating to the page titles. Personally I'll be thinking twice about applying the title attribute to links in future.</p>
+<p class="by">So said Fen on Thursday 26 May, 2005 at  2:08PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000105.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>Have you noticed that when people do something stupid/pointless/aggravating they tend to be doing it for "accessibility", "SEO" (or maybe, ahem,  "Standards"). If you're one of those people, take a step back and think "how is doing xxx going to achieve my stated goal?" and "Am I going to irritate the heck out of everyone by doing it".</p>
+
+<p>Anybody who's adding spurious and repetitive title tags "for usability" think - how does that make the link any more usable? If, say, you link to a blog post with something like "Fred Bloggs makes an [a href="xxx"]intersting point about widgets[/a]", in what way does it enhance the experience to give the full title of the remote page, the date, author's name, inside leg measurement or any other metadata? Will it make anybody more/less likely to click on it? Or is it just useless cruft that sighted visitors will ignore and screen reader users have to sit through.</p>
+
+<p>I'm currently reworking one of my older sites, and removing loads of useless title attributes. Somehow I used to think that people needed telling what a link was for with links like</p>
+
+<p>[a href="<a href="http://www.acme.com/">http://www.acme.com"</a> title="Visit the Acme web site"]Acme[/a]</p>
+
+<p>Nowadays I trust them to know how the internet works - heck, it's the 21st century now!</p>
+
+<p>The title attribute does have its place though. Sometimes space constraints mean that you have to be more terse than you want to be - so the title can be used to explain what you mean. Another use would be to identify instances of generic links - for example you might have a sequence of pages, each with links only marked "Next" and "Previous". You could use titles to show the name of the page/chapter/slide/whatever that they point to.</p>
+
+<p>I think the most useful title is title="" in images, to stop IE putting my alt text into a tooltip grrr...</p>
+<p class="by">So said <a href="http://www.extraconnections.co.uk/">Chris Hunt</a> on Wednesday  1 June, 2005 at  4:08PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000105.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>I can see what Chris is saying about "being the 21st Century" but that's not really valid.  We all know people who have never been on the net or don't use it too much.  And there will always new users, so the need for some hand holding is always going to be there.</p>
+
+<p>I like to use the title attribute for meta-data and to let users know if a link is going to exit the site:</p>
+
+<p>     title="acme website [opens new window]"</p>
+
+<p>or opens another form of file:</p>
+
+<p>     title="our catalog [PDF file]"</p>
+
+<p>but it's interesting to see that adding title to images will cause IE to not show the alt text.<br>
+</p>
+<p class="by">So said <a href="http://www.dmwebsites.com/">David Mead</a> on Monday  6 June, 2005 at  2:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000105.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>David Mead—That's what I do too. I think the title attribute can be used for non-essential information. Sometimes I don't want to bog down my link text. For example, I wrote a tutorial and had linked many words to their definition on Answers.com and these all opened in a new window. The links were just there for people who didn't know what a word meant. I didn't want to distract from the subject by having long, descriptive link text, but I didn't want to stop them from understanding what I meant. So, I put the non-essential information in the title. I'm also very grateful when I hover my mouse over a link and it says if it opens in a new window. In other words, I use the title attribute as a sort of footnote for links (or images)  that I think need them. </p>
+<p class="by">So said Cat on Friday 26 August, 2005 at 12:19AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000105.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>I use link title attribute quite often. I describe the document link points to. I think it's pretty useful. </p>
+<p class="by">So said <a href="http://www.alierra.com/design-pricing.html">Helen Price</a> on Friday 20 January, 2006 at  7:58AM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000106.php.html">Dr. Strangeswitcher Article</a></li>			<li id="previous">Previous Page: <a href="000104.php.html">Dog Blog 100</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000105.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

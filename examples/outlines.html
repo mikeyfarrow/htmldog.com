@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Outlines</title>
+	<style>
+		* {
+			margin: 0;
+		}
+		body {
+			margin: 20px;
+			padding: 20px;
+		}
+		h1 {
+			font-size: 80px;
+		}
+		pre {
+			padding: 20px;
+			border: 20px dotted;
+			outline: 20px solid red;
+			margin: 40px 0;
+		}
+		p {
+			font-size: 40px;
+			outline-color: #999;
+			outline-style: dashed;
+			outline-width: thin;
+			margin: 40px 0;
+		}
+		p strong {
+			outline: 20px double rgba(0,255,0,.2);
+		}
+		
+		#borderCollie {
+			outline: 0;
+		}
+		#borderCollie a {
+			outline: medium solid rgba(0,0,255,.1);
+			transition: outline 1s;
+		}
+		#borderCollie a:hover {
+			outline: 400px solid rgba(0,0,255,.9);
+		}
+	</style>
+</head>
+<body>
+	<h1>Outlines</h1>
+
+	<pre><code>padding: 20px;
+border: 20px dotted;
+outline: 20px solid red;</code></pre>
+
+	<p>The width, style, and color of the outline around a box. An outline is rendered around the outside of the border of a box. <strong>It does not affect the size or position of the box, or any other box.</strong></p>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="borderCollie"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

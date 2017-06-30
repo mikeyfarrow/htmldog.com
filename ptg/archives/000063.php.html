@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Avoiding Email-Link Spam - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000063.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>Avoiding Email-Link Spam</h1>
+	
+<h2>Tuesday 31 August, 2004 (12:40PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>The problem with putting email address links (<code>&lt;a href="mailto:someone@somewhere.com"&gt;someone@somewhere.com&lt;/a&gt;</code>) on web pages is that they'll be added to spam lists. In the same way that a search engine will trawl through pages to find links, "spambots" will slither their way through the net to collect email addresses for evildoing.</p>
+
+<p>I have a few addresses I've used for years that get a LOT of spam, and that's due mainly to those addresses appearing on web pages. It's the reason that a lot of web sites (including HTML Dog) avoid using them. It's a shame. Sometimes you really want to include an email link on a web page. Sometimes a contact form isn't good enough on its own - you want to open up as many contact options as possible.</p>
+
+<p>When using email links, there are two main ways of cutting down on potential spam. The first is to use <a href="http://www.zeldman.com/daily/0102a.html#iajk">special characters in place of normal characters</a>, but it's <a href="http://www.dreamweaverfever.com/experiments/spam/">not as effective</a> as the second method - using JavaScript.</p>
+
+<p>The examples I found on the net aren't great. What we really want to do in this day and age is cut out event attributes and inline JavaScript code and take full advantage of the DOM - pulling the code out of the page altogether.</p>
+
+<p>So on a recent project I used this code and threw it into a separate JavaScript file:</p>
+
+<pre><code>function view_address() {</code>
+	<code class="m1">address_to_replace=document.getElementById("e").firstChild;</code>
+	<code class="m1">real_address=address_to_replace.nodeValue.replace("[at]", "@");</code>
+	<code class="m1">address_to_replace.nodeValue=real_address; </code>
+	<code class="m1">address_to_replace.parentNode.setAttribute("href", "mailto:"+real_address); </code>
+<code>}</code>
+<code>window.onload = function() { view_address(); }</code>
+</pre>
+
+<p>And then in every HTML page there is an <code>a</code> element that looks something like:</p>
+
+<pre><code>&lt;a id="e"&gt;pooba[at]chunkysoup.co.uk&lt;/a&gt;</code></pre>
+
+<p>On the unusual occasion that JavaScript is not enabled, the user will be confronted with an understandable (not perfect, but better than nothing) email address. When JavaScript <em>is</em> enabled, the HTML is replaced with code that effectively resembles <code>&lt;a id="e" href="mailto:pooba@chunkysoup.co.uk"&gt;pooba@chunkysoup.co.uk&lt;/a&gt;</code>. It's just a normal email link as far as a human visitor is concerned. Most spambots, on the other hand, won't recognise them and won't add them to their lists.</p>
+
+<p>This single-email-link-per-page (in a "contact us" section) serves my purposes, but there are obviously lots of variations on this DOM theme. If anyone has ideas for more generic code, please comment away.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000063.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>I've always found Automatic Labs Enkoder to be useful: <a href="http://automaticlabs.com/products/enkoder">http://automaticlabs.com/products/enkoder</a></p>
+<p class="by">So said Aaron on Tuesday 31 August, 2004 at  1:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000063.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>I don't bother. Never did. Not going to. All those email-kripling techniques give an impression that we ar giving up.<br>
+Just get decent spam filter and wait till technology improves.</p>
+<p class="by">So said <a href="http://rimantas.com/">Rimantas</a> on Tuesday 31 August, 2004 at  2:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000063.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>That Enkoder thing produces ludicrous amounts of javascript and has no fallback for users with JS off.  I wouldn't recommend using that.  Although it looks pretty secure, I think that's cutting off your nose to spite your face a bit. </p>
+
+<p>A little tip though, when you create new vars use the var keyword otherwise they are global rather than local to the function and could mess around with other scripts you have running.  Unlikely in this case but worth doing as a matter of good practice.  So, for instance:</p>
+
+<p>address_to_replace=document.getElementById("e").firstChild;</p>
+
+<p>would become:</p>
+
+<p>var address_to_replace=document.getElementById("e").firstChild;</p>
+<p class="by">So said <a href="http://www.danwebb.net/">Dan Webb</a> on Tuesday 31 August, 2004 at  3:01PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000063.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>I have used a similar technique for years, but this one is superior in that it works decently without javascript. Way to go.</p>
+<p class="by">So said <a href="http://www.edgordon.com/">Ed Gordon</a> on Tuesday 31 August, 2004 at  3:03PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000063.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>Good idea, but this method is accessible and full standards compliance?</p>
+<p class="by">So said <a href="http://www.qweos.net/">qweos</a> on Tuesday 31 August, 2004 at  4:04PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000063.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Thanks for this excellent snippet of code...  now it's in my toolbox.</p>
+<p class="by">So said <a href="http://www.pixelpush.org/">Kevin Navia</a> on Tuesday 31 August, 2004 at  5:16PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000063.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>hmm, how long before email spiders catch on to the old [at] trick? any half decent coder could write a script that that found email addresses in pages using this kind of technique. However I guess it's a balance between losing accessibility and getting your arse spammed back to the stone age.</p>
+
+<p>It's a nice litte script tho.</p>
+<p class="by">So said <a href="http://www.scrwd.com/">Jon B</a> on Tuesday 31 August, 2004 at  6:05PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000063.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Hexadecimal encoded e-mail addresses work, at least for me.</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Tuesday 31 August, 2004 at  6:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000063.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>if they catch on to the [at] trick then the [a t] trick becomes used, or [ at ] or [ a t ]</p>
+<p class="by">So said Steve C. on Tuesday 31 August, 2004 at  7:24PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000063.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>Would be nice to have a version that looked for a class instead of an id, it seems to me that you might want to put more than one mailto: on a page from time to time. Good stuff, though.</p>
+<p class="by">So said <a href="http://www.mcgonagall-online.org.uk/">Chris Hunt</a> on Wednesday  1 September, 2004 at  9:50AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000063.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Hi guys, I am new here,<br>
+I read that article and I must say that is pretty cool solution of hiding e-mail address.</p>
+
+<p>I use a trick like this, instead @ I put  @ and insted of dot(.) I put  . in e-mail addresses.</p>
+
+<p>Can anyone tell me, if it is a good solution with some reasonable explanations.<br>
+Thx</p>
+<p class="by">So said <a href="http://www.maglakel.host.sk/">voloda</a> on Wednesday  1 September, 2004 at 10:09AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000063.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>Sorry  for my mistake, I meant ...<br>
+@ - &amp;_#64;<br>
+dot (.) - &amp;_#46;</p>
+
+<p>"_" is nothing, read without it :)</p>
+<p class="by">So said  on Wednesday  1 September, 2004 at 10:16AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment13" class="comment">
+<h3><a href="000063.php.html#comment13"><span>Comment </span>13</a></h3>
+<p>I can't remember where I saw this, but why not try using &lt;bdo&gt;s and typing in the e-mail address backwards?</p>
+<p class="by">So said Wereon on Wednesday  1 September, 2004 at 11:53AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment14" class="comment">
+<h3><a href="000063.php.html#comment14"><span>Comment </span>14</a></h3>
+<p>I use a system.. naa I just direct anyone who wants to send me an email to a email page on my website, no risk of spam, and it's only a mild inconvience for the modern we love forms generation :)</p>
+<p class="by">So said <a href="http://www.hayter.me.uk/contact/">S Hayter</a> on Wednesday  1 September, 2004 at  1:45PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment15" class="comment">
+<h3><a href="000063.php.html#comment15"><span>Comment </span>15</a></h3>
+<p>Personally, I like to know where I can purchase cheap viagra.</p>
+
+<p>But, even if I didn't I have to say I'm not a fan of these JS based techniques. You're more or less guaranteed to get a shed load of spam whether you hide your email address or not. 'Spambots' only accelerate the inevitable and they'll soon be able to bypass all these hacks anyway. It's arguable that you're harming the accessibilty of the page by using techniques like this. </p>
+
+<p>I can't think of a better way though. Except of course using a form for all email contact which would be a bit long winded in some situations.</p>
+<p class="by">So said Rob C on Wednesday  1 September, 2004 at  3:27PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment16" class="comment">
+<h3><a href="000063.php.html#comment16"><span>Comment </span>16</a></h3>
+<p>You can also use a php to hide your email address from spam bots.  You provide a link to a php page that looks like this &lt;a href = "emailHider.php?user=info&amp;domain=BicycleAustin.com"&gt; text&lt;/a&gt;. It contains the following code: </p>
+<p class="by">So said Adam Holloway on Thursday  2 September, 2004 at 12:50AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment17" class="comment">
+<h3><a href="000063.php.html#comment17"><span>Comment </span>17</a></h3>
+<p>&lt;?php<br>
+header("Location: mailto:$_GET[u]@$_GET[d]"); ?&gt;</p>
+
+<p>sorry about that.</p>
+<p class="by">So said Adam Holloway on Thursday  2 September, 2004 at 12:52AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment18" class="comment">
+<h3><a href="000063.php.html#comment18"><span>Comment </span>18</a></h3>
+<p>Nice though your suggestion is, Adam, I don't think it'd work in practice. As these spambots are spiders, they would follow the obfuscated link, thinking it to be a normal page, and receive the Location header to the real e-mail address. A well-designed spambot would then recognize that in the normal manner. Any attempts are ultimately futile, anyway. I've received spam to webmaster@(mydomain) before, without even using that address.</p>
+<p class="by">So said Wereon on Thursday  2 September, 2004 at 12:49PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment19" class="comment">
+<h3><a href="000063.php.html#comment19"><span>Comment </span>19</a></h3>
+<p>The only reliable way I have found to defeat spambots is to display email addresses as image files without mailto: links.  A well-compressed png address is only about 1K.</p>
+
+<p>Yes, it stinks that users can't click-and-mail, but there's something to be said for weeding out the lazy on non-commercial sites.</p>
+<p class="by">So said µø˜˚´¥ on Thursday  2 September, 2004 at  6:21PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment20" class="comment">
+<h3><a href="000063.php.html#comment20"><span>Comment </span>20</a></h3>
+<p>I work with this method:</p>
+
+<p>This code insert into a head tag:<br>
+&lt;script language="JavaScript"&gt;<br>
+function PleaseSpamNotSend(ml) { return 'to:'+ ml + '@'; }<br>
+function PleaseSendSpamToHell(ml) { return ml + '@'; }<br>
+&lt;/script&gt;</p>
+
+<p><br>
+And this code insert into page, where i want to insert a email addres:<br>
+&lt;script language=JavaScript&gt;<br>
+	var r = ".com";<br>
+	document.write('&lt;a title="Any qustions? Send mail!" href="m' + 'ail'+ PleaseSpamNotSend('www') + "yourdomain" + r + '"&gt;' + PleaseSendSpamToHell('www') + 'yourdomain.com&lt;/a&gt;');<br>
+&lt;/script&gt;</p>
+
+<p>Im no recive any spam for 2 years ago. </p>
+<p class="by">So said <a href="http://vimsite.ru/">Alexey</a> on Friday  3 September, 2004 at  3:19AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment21" class="comment">
+<h3><a href="000063.php.html#comment21"><span>Comment </span>21</a></h3>
+<p>Sorry.  Gave up on email addresses.  Web forms for me.  But if I was to put the email address up, I'd probably do what Simon Wilson did - put it behing a form button.  On submit, show the address.  Slightly inconviences the user but hey...</p>
+<p class="by">So said <a href="http://www.bods.me.uk/">Andrew Bowden</a> on Friday  3 September, 2004 at 12:39PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment22" class="comment">
+<h3><a href="000063.php.html#comment22"><span>Comment </span>22</a></h3>
+<p>The reason why you were receiving the email at your webmaster@(mydomain) address is that most spam bots send emails to that is a common address for most domains.  This makes it likely target for spam.</p>
+
+<p>There are a lot of trade offs when fighting spam mainly dealing with the convenience to the user versus reducing the amount of spam you receive is a tough task.  I'm not a fan of using web forms for email.  Sure it prevents spam, but as a user, I prefer to use my own email client.  When I post email addresses, I use a javascript technique (similar to the one posted here).  This combined with a good filter keeps the spam in my inbox to a minimum.<br>
+</p>
+<p class="by">So said Adam Holloway on Friday  3 September, 2004 at  5:22PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment23" class="comment">
+<h3><a href="000063.php.html#comment23"><span>Comment </span>23</a></h3>
+<p>I am completely ignorant of how to put those javascripts into my site...  Someone please assist! :(  I have a good understanding of a lot of this, but I just don't know where to put the script so that the id="#" attribute references the right script.  Help!</p>
+<p class="by">So said bret on Sunday  5 September, 2004 at  4:13AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment24" class="comment">
+<h3><a href="000063.php.html#comment24"><span>Comment </span>24</a></h3>
+<p>I use Dreamweaver with an extension called Linecraft Hide Email, <a href="http://www.linecraft.com/extensions.php.">http://www.linecraft.com/extensions.php.</a>  Has worked well for me.</p>
+<p class="by">So said <a href="http://annesweb.com/">Anne Hecht</a> on Thursday  9 September, 2004 at  8:48PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment25" class="comment">
+<h3><a href="000063.php.html#comment25"><span>Comment </span>25</a></h3>
+<p>Here is a css technique that uses the :after selector and the content property.<br>
+<a href="http://phoenity.com/newtedge/hide_email_spambots/">http://phoenity.com/newtedge/hide_email_spambots/</a></p>
+
+<p>Can this be separated? for example:<br>
+address:after{content: " &lt;cheeaun"}<br>
+address:after{content: "\40"}<br>
+address:after{content: "phoenity.com"}</p>
+<p class="by">So said <a href="http://www.willrickards.net/">Will Rickards</a> on Friday 10 September, 2004 at  8:46PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment26" class="comment">
+<h3><a href="000063.php.html#comment26"><span>Comment </span>26</a></h3>
+<p>This doesn't stop dictionary attacks, name attacks etc and replacing the @ with it's unicode (or other) equivalent is encoding, not encryption. Just because john@example.com (substitute your address) isn't found on the web doesn't mean it won't get spammed. Write the email in human form rather than the mailto: link, even: e.g my mailbox is john, my domain is example.com -- but that still won't stop the spam :D.<br>
+The way to reduce spam is to implement effective filters at the server level, make it unprofitable for bulk emailers, enforce the laws and ship email clients with HTML turned off by default, or turn off object and iframe support in them for good if you really want red text (goes a good way to stop those Win32 boxes from becoming from becoming owned relays).</p>
+<p class="by">So said James on Sunday 12 September, 2004 at  2:06PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment27" class="comment">
+<h3><a href="000063.php.html#comment27"><span>Comment </span>27</a></h3>
+<p>Hey --</p>
+
+<p>Nice little script!  I'm not a javascript guy, but I assume it's possible to tweak it so that a "display name" can be used.  In other words, I'd like the page to read "Joe Blow", but have it linked to mailto:joe@blow.com.</p>
+
+<p>If it's not too much trouble, could ya hook me up?  I think lots of others would like this too...</p>
+<p class="by">So said Mik on Thursday 30 September, 2004 at  2:01AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment28" class="comment">
+<h3><a href="000063.php.html#comment28"><span>Comment </span>28</a></h3>
+<p>Minor enhancement to support multiple email addresses on the page:</p>
+
+<p>  if (document.getElementsByTagName) {<br>
+    var a = document.getElementsByTagName("a")<br>
+    var i<br>
+    for (i = 0; i &lt; a.length; i++) {<br>
+      if (a[i].className &amp;&amp; a[i].className == "e") {<br>
+        address_to_replace = a[i]<br>
+        ...<br>
+      }<br>
+    }<br>
+  }<br>
+</p>
+<p class="by">So said <a href="http://www.slopages.com/">richard</a> on Saturday  9 October, 2004 at  4:25PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment29" class="comment">
+<h3><a href="000063.php.html#comment29"><span>Comment </span>29</a></h3>
+<p>p.s. change id= to class=</p>
+
+<p>pooba[at]chunkysoup.co.uk</p>
+<p class="by">So said <a href="http://www.slopages.com/">richard</a> on Saturday  9 October, 2004 at  4:28PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment30" class="comment">
+<h3><a href="000063.php.html#comment30"><span>Comment </span>30</a></h3>
+<p>anybody knows if spam robots scan external CSS ? </p>
+<p class="by">So said Timmy on Tuesday 16 November, 2004 at  1:26PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment31" class="comment">
+<h3><a href="000063.php.html#comment31"><span>Comment </span>31</a></h3>
+<p>No they don't</p>
+<p class="by">So said Steve on Saturday 20 November, 2004 at  2:04PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment32" class="comment">
+<h3><a href="000063.php.html#comment32"><span>Comment </span>32</a></h3>
+<p>I can't get richard's enhancement to work. I have tried using the original code where he has put "...", but it only gives me this JavaScript error in debug:<br>
+Error: address_to_replace.nodeValue has no properties</p>
+<p class="by">So said el mono on Thursday 24 February, 2005 at  3:21PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment33" class="comment">
+<h3><a href="000063.php.html#comment33"><span>Comment </span>33</a></h3>
+<p>I just found out what was wrong, address_to_replace was missing .firstChild. I've also modified the enhancement so that you can now use other classes on the links if needed. The enhanced code is as follows:</p>
+
+<p>function view_address() {<br>
+	if (document.getElementsByTagName) {<br>
+		var a = document.getElementsByTagName("a")<br>
+		var i<br>
+		for (i = 0; i = 0) {<br>
+				address_to_replace = a[i].firstChild;<br>
+				real_address = address_to_replace.nodeValue.replace("[at]", "@");<br>
+				address_to_replace.nodeValue = real_address; <br>
+				address_to_replace.parentNode.setAttribute("href", "mailto:" + real_address); <br>
+			}<br>
+		}<br>
+	}<br>
+}<br>
+window.onload = function() { view_address(); }</p>
+
+<p>Save the above as a .js file, include it in your HTML header, and use it like this:<br>
+user[at]server.com</p>
+<p class="by">So said el mono on Thursday 24 February, 2005 at  3:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment34" class="comment">
+<h3><a href="000063.php.html#comment34"><span>Comment </span>34</a></h3>
+<p><br>
+For more strong security I have used php code to change string that replaced for every user agent. So it's not a static string that spam-robots can collect and pass by.<br>
+I have created a file <br>
+email_protection.js.php which contain one function (not original):</p>
+
+<p>function view_address() {<br>
+    if (document.getElementsByTagName) {<br>
+        var a = document.getElementsByTagName("a");<br>
+        var i;</p>
+
+<p>        &lt;?php<br>
+        $mark='{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+        echo "var mark = '".$mark."';\n";<br>
+        ?&lt;</p>
+
+<p>         for (i = 0; i pooba&lt;?php echo <br>
+'{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+?&gt;chunkysoup.co.uk&lt;/a&gt;</p>
+
+<p>So we have different strings!!! Spam-robots mast collect this.<br>
+You can use date or md5 for each page...</p>
+<p class="by">So said <a href="http://solti.com.ua/">Vlad</a> on Wednesday 17 August, 2005 at 12:50PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment35" class="comment">
+<h3><a href="000063.php.html#comment35"><span>Comment </span>35</a></h3>
+<p>Sorry!</p>
+
+<p>email_protection.js.php (function was changed):</p>
+
+<p>function view_address() {<br>
+    if (document.getElementsByTagName) {<br>
+        var a = document.getElementsByTagName("a");<br>
+        var i;<br>
+        &lt;?php<br>
+        $mark='{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+        echo "var mark = '".$mark."';\n";<br>
+        ?&gt;<br>
+         for (i = 0; i pooba&lt;?php <br>
+echo '{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+?&gt;chunkysoup.co.uk&lt;/a&gt;</p>
+<p class="by">So said <a href="http://solti.com.ua/">Vlad</a> on Wednesday 17 August, 2005 at 12:54PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment36" class="comment">
+<h3><a href="000063.php.html#comment36"><span>Comment </span>36</a></h3>
+<p>Sorry again! Last try.</p>
+
+<p>JS:</p>
+
+<p>function view_address() {<br>
+    if (document.getElementsByTagName) {<br>
+        var a = document.getElementsByTagName("a");<br>
+        var i;<br>
+        &lt;?php<br>
+        $mark='{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+        echo "var mark = '".$mark."';\n";<br>
+        ?&gt;<br>
+         for (i = 0; i &lt; a.length; i++) {<br>
+            if (a[i].className &amp;&amp; a[i].className == "e") {<br>
+                var address_to_replace = a[i].firstChild;<br>
+                var real_address = address_to_replace.nodeValue.replace(mark, "@");<br>
+                address_to_replace.nodeValue = real_address;<br>
+                address_to_replace.parentNode.setAttribute("href", "mailto:" + real_address);<br>
+            }<br>
+        }<br>
+    }<br>
+}</p>
+
+<p></p>
+
+<p>HTML:<br>
+poobachunkysoup.co.uk</p>
+<p class="by">So said <a href="http://solti.com.ua/">Vlad</a> on Wednesday 17 August, 2005 at 12:56PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment37" class="comment">
+<h3><a href="000063.php.html#comment37"><span>Comment </span>37</a></h3>
+<p>Last-last try!</p>
+
+<p>HTML:</p>
+
+<p>&lt;a class="e"&gt;pooba&lt;?php echo <br>
+'{for '.getenv('HTTP_USER_AGENT').'}'.'[at server]';<br>
+?&gt;chunkysoup.co.uk&lt;/a&gt;</p>
+<p class="by">So said <a href="http://solti.com.ua/">Vlad</a> on Wednesday 17 August, 2005 at 12:58PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment38" class="comment">
+<h3><a href="000063.php.html#comment38"><span>Comment </span>38</a></h3>
+<p>Hey, that's really great. Thanks a lot. I've used that little code (with some minor tuning) to my own webpage. Thanks for sharing it.</p>
+<p class="by">So said bob on Monday  9 January, 2006 at  1:08AM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000064.php.html">Sydney's The Place To Be</a></li>			<li id="previous">Previous Page: <a href="000062.php.html">PHP and Web Standards</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+		
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000063.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

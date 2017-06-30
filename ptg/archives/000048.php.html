@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>The Truth About Columns - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000048.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>The Truth About Columns</h1>
+	
+<h2>Wednesday 12 May, 2004 ( 4:34PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>Table columns are crazy.</p>
+
+<p>You've got your <a href="../../reference/htmltags/col/index.html"><code>col</code></a> and <a href="../../reference/htmltags/colgroup/index.html"><code>colgroup</code></a> HTML elements that are used to collect together cells in a column.</p>
+
+<p>THEN, you can apply CSS to a column, rather than being forced to work with rows. Great! That opens up the possibilities of styling tables a bit without having loads of classes all over the place.</p>
+
+<p>But there's a catch. <a href="000016.php.html">You can only use the <code>background</code>, <code>border</code>, <code>visibility</code> and <code>width</code> properties</a>.</p>
+
+<p>Well, at least that's something.</p>
+
+<p>But the catch has a catch.</p>
+
+<p>After some brief testing, it seems that Mozilla only supports <code>width</code>, Opera doesn't support <code>visibility</code> and <code>border</code> isn't supported by either of them <em>or</em> IE (which in it's peculiar manner supports more properties than even the spec suggests).</p>
+
+<p>My cross-browser tests are limited (no Mac lovin' going on in this house), but it would seem that the only safe property you can apply to a column is <code>width</code>.</p>
+
+<p>See? Crazy.</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000048.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>Not true! Mozilla supports 'background' and I believe 'visibility' as well. Download a newer build! ;-)</p>
+<p class="by">So said <a href="http://annevankesteren.nl/">Anne</a> on Wednesday 12 May, 2004 at  8:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000048.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>Hmm.... Really? I'm still using Mozilla 1.5b. Waiting for 1.7 proper to come out...<br>
+I have to say that background is the property I would find most useful.</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Wednesday 12 May, 2004 at 11:33PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000048.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>I don't like to wait so I test my CSS3 pages in 1.7 RC 1 (which supports the CSS3 ~ selector).</p>
+
+<p>Someone posted a message about this on the www-style message board.</p>
+
+<p>BTW Pat, ever thought of adding a 'remember me' function with the comments?</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante</a> on Thursday 13 May, 2004 at  2:46AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000048.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Wow. What a coincident. I was trying this out not an hour ago, and was blown away when Mozilla (Firefox) actually applied the background color to a column.</p>
+
+<p>The devs are great.</p>
+<p class="by">So said Hemebond on Thursday 13 May, 2004 at  8:55AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000048.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>"no Mac lovin' going on in this house"</p>
+
+<p>Same here. I thought all web standards guys liked Macs.</p>
+
+<p>Please don't tell me you're a linux geek!<br>
+LOL</p>
+<p class="by">So said <a href="http://geocities.com/seanmhall2003">Dante</a> on Friday 14 May, 2004 at 12:15AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000048.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>You think THAT's crazy? <br>
+I had styled FULL columns on a 20-column table using IE6.</p>
+
+<p>It's so ironic... IE6 being the least compatible browser and it's the ONE browser that supports full-styling of cols and colgroups.</p>
+
+<p>I said: WOW, cols rule! I'll test it in mozilla.</p>
+
+<p>(5 seconds later:)</p>
+
+<p>waaaaaaaaaaaaaaaa.....</p>
+
+<p>Then, as I read on the web about why Mozilla cannot style columns, i found out about the w3 guys and their own problems and discussions.</p>
+
+<p>It was then that I realized that no matter how much technology and standards evolved, there would be ALWAYS compatibility problems.</p>
+
+<p>That's when I wanted for the first time in my life to quit the web designer stuff and send it down the tube.</p>
+<p class="by">So said Rick on Tuesday 25 May, 2004 at  5:39PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000048.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>I'm still using Mozilla 1.5b. Waiting for 1.7 proper to come out...<br>
+I have to say that background is the property I would find most useful.</p>
+<p class="by">So said <a href="http://www.viphot.com/">下载</a> on Monday 13 September, 2004 at  1:52PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000048.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>i wonder how much of the comment spam problem has to do with the ubiquity of movable type. i've only gotten a handful of comment spams.You have done an exceptional job in creating and designing this website. My Congratulations to you!!Keep up this great resource.</p>
+<p class="by">So said  on Tuesday  5 October, 2004 at  8:32AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000048.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>In my opinion,any HTML elements  support  most CSS style,inculding  col and colgroup,we can use CSS like this:<br>
+style="xxx:yyy".</p>
+<p class="by">So said <a href="http://www.google163.net/google/placement/">google163</a> on Saturday  9 October, 2004 at  5:43PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000048.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>The new version Mozilla  supports " width " now!</p>
+<p class="by">So said <a href="http://www.ascm.cn/">供应链</a> on Tuesday 23 November, 2004 at  3:37AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000048.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>I have test on IE 6, Win2003 OS, it seens that it support colgroup's border and width properties, but don't support visibility properties.</p>
+<p class="by">So said <a href="http://www.hotindex.net/">Jam zerder</a> on Sunday 28 November, 2004 at  8:02AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment12" class="comment">
+<h3><a href="000048.php.html#comment12"><span>Comment </span>12</a></h3>
+<p>I did a Google search about the &lt;colgroup&gt; borders not working. I found out that if you add the rules="none" attribute to your table then all &lt;colgroup&gt; borders work... It just screws up the rest of the table. (I've only tested this in Firefox.) Wierd huh?</p>
+<p class="by">So said Arthur Pope on Friday 27 May, 2005 at  9:18PM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000049.php.html">Tables My Ass</a></li>			<li id="previous">Previous Page: <a href="000047.php.html">WE04 Sydney</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+		
+
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000048.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

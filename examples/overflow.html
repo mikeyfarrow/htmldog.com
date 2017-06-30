@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Overflow</title>
+	<style>
+		body {
+			font-size: 25px;
+			background: #dcb;
+			color: #000;
+			margin: 20px;
+		}
+	
+		p {
+			background-color: #fff;
+			margin: 0 20px 90px 0;
+			width: 300px;
+			height: 90px;
+			float: left;
+			line-height: 1.4;
+		}
+		code {
+			color: #c00;
+		}
+
+		#p1 {
+			overflow: visible;
+		}
+		#p2 {
+			overflow: hidden;
+		}
+		#p3 {
+			overflow: scroll;
+		}
+		#p4 {
+			overflow: auto;
+		}
+
+		#htmldog a {
+			display: block;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1><a href="http://www.htmldog.com/references/css/properties/overflow/">CSS Property: <code>overflow</code></a></h1>
+	<p id="p1"><code>overflow: visible</code>: Non-fitting content spills outside of the edges of the box for all to see. Default.</p>
+	<p id="p2"><code>overflow: hidden</code>: Box is clipped, non-fitting content is unseen and the browser does not offer a way to see it.</p>
+	<p id="p3"><code>overflow: scroll</code>: Box is clipped, non-fitting content is initially unseen and the browser offers up a scrolling mechanism (or equivalent) so that the it can be seen upon user interaction.</p>
+	<p id="p4"><code>overflow: auto</code>: Browser dependent, but typically similar to <code>scroll</code>.</p>
+
+	<!-- Link back to HTML Dog: -->
+	<p id="htmldog"><a href="http://www.htmldog.com/examples/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+</body>
+</html>

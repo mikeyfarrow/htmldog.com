@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Images | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../index.html" class="yahSec yahTut">Tutorials</a>&nbsp;&rarr; <a href="../../index.html">HTML</a>&nbsp;&rarr; <a href="../../../htmlbeginner/index.html">Beginner</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Images</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Things might seem a little bland and boring with all of this text formatting. Of course, the web is not just about text, it is a multi-media extravaganza and the most common form of sparkle is the <strong>image</strong>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>The <a href="../../../../references/html/tags/img/index.html" class="acode"><code>img</code></a> tag is used to put an image in an HTML document and it looks like this:</p>
+
+<pre><code class="oldLang language-html">
+&lt;img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog"&gt;
+</code></pre>
+
+<p>The <code>src</code> attribute tells the browser where to find the image. Like the <a href="../../../../reference/htmltags/a/index.html" class="acode"><code>a</code></a> tag, this can be absolute, as the above example demonstrates, but is usually relative. For example, if you create your own image and save it as &#8220;alienpie.jpg&#8221; in a directory called &#8220;images&#8221; then the code would be <code>&lt;img src="images/alienpie.jpg"...</code></p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<p>The <code >width</code> and <code >height</code> attributes are necessary because if they are excluded, the browser will tend to calculate the size as the image loads, instead of when the page loads, which means that the layout of the document may jump around while the page is loading.</p>
+
+<p>The <code>alt</code> attribute is the <strong>alternative description</strong>. This is an accessibility consideration, providing meaningful information for users who are unable to see the image (if they are visually impaired, for example).</p>
+
+<p>Note that, like the <a href="../../../../references/html/tags/br/index.html" class="acode"><code>br</code></a> tag, because the <a href="../../../../references/html/tags/img/index.html" class="acode"><code>img</code></a> element does not enclose any content, no closing tag is required.</p>
+
+<aside class="note i">
+
+<p>The construction of images for the web is a little outside of the remit of this website, but it is worth noting a few things&#8230;</p>
+
+<p>The most commonly used file formats used for images are <strong>JPEGs</strong>, <strong>GIFs</strong>, and <strong>PNGs</strong>. They are compressed formats, and have very different uses.</p>
+
+<p>A JPEG (pronounced &#8220;jay-peg&#8221;) uses a mathematical algorithm to compress the image and will distort the original slightly. The lower the compression, the higher the file size, but the clearer the image.</p>
+
+<p><strong>JPEGs are typically used for images such as photographs.</strong></p>
+
+<p>A GIF (pronounced &#8220;jif&#8221;) can have no more than 256 colors, but they maintain the colors of the original image. The lower the number of colors you have in the image, the lower the file size will be. GIFs also allow any pixel in the image to be transparent.</p>
+
+<p><strong>GIFs are typically used for images with solid colors, such as icons or logos.</strong></p>
+
+<p>A PNG (pronounced &#8220;ping&#8221;) replicates colors, much like a GIF, but allows 16 million colors as well as alpha transparency (that is, an area could be 50% transparent).</p>
+
+<p><strong>PNGs are typically used for versatile images in more complex designs BUT they are not fully supported by some older browsers.</strong></p>
+
+<p>The web is forever getting faster and faster but you obviously want your web pages to download as quickly as possible. Using super-high resolution images isn&#8217;t doing your or your user&#8217;s bandwidth (or patience) any favors. Image compression is a great tool and you need to strike a balance between image quality and image size. Most modern image manipulation programs allow you to compress images and the best way to figure out what is best suited for yourself is trial and error.</p>
+
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li>Next Page: <a href="../tables/index.html">Tables</a></li>
+  <li>Previous Page: <a href="../links/index.html">Links</a></li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/images1/index.html">HTML images</a></li>
+  </ul>
+
+
+
+
+  <h3>References</h3>
+  <ul>
+  <li><a href="../../../../references/html/tags/img/index.html">HTML Tag: <code>img</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../index.html">HTML</a></li>
+						<li><a href="../../../css/index.html">CSS</a></li>
+						<li><a href="../../../javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+	
+		<section id="navSec">
+        <h2><span>Section menu: </span>HTML&nbsp;tutorials</h2>
+			<ul>
+				<li id="yahSubsec"><a href="../../../htmlbeginner/index.html">Beginner</a>
+					<ul>
+						<li><a href="../gettingstarted/index.html">Getting Started</a></li>
+						<li><a href="../tags/index.html">Tags, Attributes, and Elements</a></li>
+						<li><a href="../titles/index.html">Page Titles</a></li>
+						<li><a href="../paragraphs/index.html">Paragraphs</a></li>
+						<li><a href="../headings/index.html">Headings</a></li>
+						<li><a href="../lists/index.html">Lists</a></li>
+						<li><a href="../links/index.html">Links</a></li>
+						<li><a href="index.html">Images</a></li>
+						<li><a href="../tables/index.html">Tables</a></li>
+						<li><a href="../forms/index.html">Forms</a></li>
+						<li><a href="../conclusion/index.html">Putting It All Together</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="../../../htmlintermediate/index.html">Intermediate</a></li>
+				
+				
+				<li><a href="../../../htmladvanced/index.html">Advanced</a></li>
+				
+			</ul>
+		</section>
+	
+	
+	
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>T&amp;C's Quandry - HTML Dog Blog - HTML Dog</title>
+	<style type="text/css" media="all">@import url(../../css/boxer2.css);</style>		<meta name="description" content="How to make web pages - A good practice guide to HTML and CSS.">
+	</head>
+
+<body id="dogBlog">
+
+<div id="header">
+	
+	<p><a href="../../index.html" accesskey="1" title="HTML Dog home page" id="htmldogcom"><span>htmldog.com</span></a><span> - </span>A Good Practice Guide to <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <acronym title="Cascading Style Sheets">CSS</acronym>.</p>
+	
+	<form method="get" action="../../search/index.html">
+		<div><input type="hidden" name="sp-a" value="sp1002e60e"><input type="hidden" name="sp-f" value="UTF-8"><label for="morombe">Search: </label><input type="text" name="sp-q" id="morombe"><input type="submit" value="Search" class="button"></div>
+	</form>
+	
+	<p id="skip"><a href="000083.php.html#primaryNav" title="Skip to main navigation." accesskey="s">Skip to main navigation.</a></p>
+	
+</div>
+
+
+
+
+
+
+<div id="section">
+
+
+
+	<div id="youAreHere" class="sNav">
+		<p><span>You are here: </span><a href="../../index.html">Home</a> / <em><a href="../index.html">Dog Blog</a></em> / <a href="index.html">Archives</a></p>
+	</div>
+
+	
+	
+	
+	<div id="content">
+
+<h1>T&amp;C's Quandry</h1>
+	
+<h2>Sunday  9 January, 2005 ( 4:38PM <abbr title="Greenwich Mean Time">GMT</abbr>)</h2>
+
+<p>What's the best way to mark up an "I agree to the terms and conditions" checkbox?</p>
+
+<p>Here's the obvious way:</p>
+
+<pre>	<code>&lt;input type="checkbox" name="agree" id="agree" /&gt;&lt;label for="agree"&gt;I have read and agree to the &lt;a href="/termsandconditions.html"&gt;terms and conditions&lt;/a&gt;.&lt;/label&gt;</code>
+</pre>
+
+<p>The problem with this, though, is that if the user clicks on the "terms and conditions" link, because it's within a label for the checkbox, the checkbox will be checked. Because of this, it could be argued that the user <em>doesn't</em> agree to the T&amp;C's because they only intended to read them, not to agree with them.</p>
+
+<p>But then the text within that label <em>is</em> the best label for the checkbox. And the obvious place to put a link to the T&amp;C's is within that text.</p>
+
+<p>What to do?</p>
+
+
+
+<h2 class="break" id="comments">Comments</h2>
+
+
+
+<div id="comment1" class="comment">
+<h3><a href="000083.php.html#comment1"><span>Comment </span>1</a></h3>
+<p>Well, this would be definitely confusing.<br>
+My first thought is: place checkbox under the text and add "I agree" label next to it.</p>
+<p class="by">So said <a href="http://rimantas.com/">Rimantas</a> on Sunday  9 January, 2005 at  5:23PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment2" class="comment">
+<h3><a href="000083.php.html#comment2"><span>Comment </span>2</a></h3>
+<p>[checkbox] [label]: [link]<br>
+Something like:<br>
+&lt;input type="checkbox" name="agree" id="agree" /&gt;&lt;label for="agree"&gt;I have read and agree to:&lt;/label&gt; &lt;a href="/termsandconditions.html"&gt;terms and conditions&lt;/a&gt;.</p>
+
+<p>OR,<br>
+why not just display the legalese text in an IFRAME or overflow: auto-ed DIV, above the label and checkbox?</p>
+<p class="by">So said <a href="http://www.individualism.ro/">Gabriel Mihalache</a> on Sunday  9 January, 2005 at  5:57PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment3" class="comment">
+<h3><a href="000083.php.html#comment3"><span>Comment </span>3</a></h3>
+<p>I think you would use your example, but not make it a link. Then, immediately following that, put a link that reads "Read the terms and conditions."</p>
+<p class="by">So said <a href="http://nokrev.com/">Jeff</a> on Sunday  9 January, 2005 at  7:19PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment4" class="comment">
+<h3><a href="000083.php.html#comment4"><span>Comment </span>4</a></h3>
+<p>Either:<br>
+1: Do not use the label tag<br>
+...or<br>
+2: Use the label tag, but add som javascript to overrule the checking of the checkbox<br>
+...or<br>
+3: Rethink the use of the terms of use, why require it at all?...</p>
+<p class="by">So said <a href="http://www.baekdal.com/">Thomas Baekdal</a> on Sunday  9 January, 2005 at  9:42PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment5" class="comment">
+<h3><a href="000083.php.html#comment5"><span>Comment </span>5</a></h3>
+<p>hmm,  I see your point. You do need to use the label tag. Perhaps:</p>
+
+<p>I have read the terms and conditions and <br>
+I agree</p>
+
+<p>If your offering a disagree option then you might be better to use radio buttons.</p>
+
+<p>Not sure if your comment filter will eat that, Hopefully not.</p>
+<p class="by">So said Tom on Sunday  9 January, 2005 at 10:17PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment6" class="comment">
+<h3><a href="000083.php.html#comment6"><span>Comment </span>6</a></h3>
+<p>Please read the  terms and conditions before checking the following item.<br>
+I have read and agree to the terms and conditions.<br>
+</p>
+<p class="by">So said Neal on Sunday  9 January, 2005 at 11:01PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment7" class="comment">
+<h3><a href="000083.php.html#comment7"><span>Comment </span>7</a></h3>
+<p>"By checking 'I agree' you signify that you agree to be bound by the &lt;a href...&gt;terms and conditions&lt;/a&gt; set forth herein notwithstanding cognito ergo sum and all that rubbish.<br>
+&lt;br /&gt;<br>
+&lt;label for="agree"&gt;I agree&lt;/label&gt;" and the checkbox.</p>
+<p class="by">So said Dave Vogt on Monday 10 January, 2005 at  5:54AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment8" class="comment">
+<h3><a href="000083.php.html#comment8"><span>Comment </span>8</a></h3>
+<p>Isn't the real problem going to be that the person follows the link to see the T&amp;C, and thus jumps out of the form that they were in the middle of completing. Maybe this is one of those very rare "valid uses of an iframe"?</p>
+<p class="by">So said Chris Hunt on Monday 10 January, 2005 at  5:14PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment9" class="comment">
+<h3><a href="000083.php.html#comment9"><span>Comment </span>9</a></h3>
+<p>"Valid uses for an iframe"? Aren't they related to flying pigs? ;)</p>
+
+<p>There are some good ideas here. I particularly like Gabriel's overflow: auto idea, which would make the T&amp;C's act like an iframe, but be much more accessible (not to mention easier) and also something along the lines of what Neal suggested, like:</p>
+
+<p>&lt;p&gt;Please ensure that you have read the &lt;a&gt;terms and conditions&lt;/a&gt; before continuing&lt;/p&gt;<br>
+&lt;input type="checkbox" /&gt;&lt;label&gt;I have read and agree to the terms and conditions&lt;/label&gt;</p>
+<p class="by">So said <a href="../index.html">Patrick</a> on Monday 10 January, 2005 at  5:30PM GMT.</p>
+</div>
+
+
+
+
+<div id="comment10" class="comment">
+<h3><a href="000083.php.html#comment10"><span>Comment </span>10</a></h3>
+<p>Interesting, but tyour example at the top of this page is not semantically correct, meaning you are using the markup for a purpose it was not meant for.<br>
+First, the label is just that...a label for a form control, and to use it with a link is most likely not valid markup, even though it "works" in terms of providing a link.  Second, you are missing a "form" wrapper control around the input. You are also using an input tag without the form control wrapper AND a submit button, as the input tag needs a way to "submit" the form data the user entered. You are using a form "input" control, right? If so, thats the purpose of a form control, so that rule is also being violated as shown. Lastly, by asking the user to "input" data or check a box (which I see is unchecked by default), then using a link to link away from the form, you are confusing the user who now is wondering what happend to their input.</p>
+
+<p>So, here is a Solution: First figure out what you are trying to do. If its have them passively read something and move to the next page, a hyperlink with text without a form or input element is fine. Create a graphic button if you need to. If you are asking for "input" from the user, then allow them to enter input via the checkbox form control and then add a submit button (styled anyway you like) so they can submit the data, regardless of whether its processed or stored.<br>
+Finally, you can add the textual information about "agreeing to terms and condition" possibly in a label associated with the input element as you have done, but also you might but "I agree" as the text value  in the submit button. There is also the possibility for another checkbox and/or button with the option of not agreeing. Choosing either routes them to a different page. If the user is passively agreeing to something they read on that page, you still need to decide if you are requesting input and submitting a form or linking to information. That should decide what kind of markup to use....but the "hybrid" type won't work, in my opinion.</p>
+<p class="by">So said <a href="http://www.stormdetector.com/">mitchell</a> on Saturday 29 January, 2005 at  9:29AM GMT.</p>
+</div>
+
+
+
+
+<div id="comment11" class="comment">
+<h3><a href="000083.php.html#comment11"><span>Comment </span>11</a></h3>
+<p>Is it not possible to attach a label to a row as opposed to text. I looked into the source code of phpMyAdmin to see how they do it, but to no avail.</p>
+<p class="by">So said <a href="http://www.bestkeptsimple.org/mpost/">Farheen</a> on Sunday  9 October, 2005 at  5:04AM GMT.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<h2 class="break">See Also</h2>
+		<ul>
+			<li id="next">Next Page: <a href="000084.php.html">@media 2005</a></li>			<li id="previous">Previous Page: <a href="000082.php.html">Payment Services - Rigid Junk</a></li>		</ul>		
+		<ul>			<li><a href="../index.html">Dog Blog home page</a></li>								</ul>
+
+
+
+
+				
+		
+
+
+	</div>
+	
+	
+	<div id="goToTop" class="sNav"><p><a href="000083.php.html#content">^ Top</a></p></div>
+	
+</div>
+
+<div id="primaryNav">
+
+<ul>
+	<li>Guides
+		<ul>
+		<li class="beginner"><a href="../../guides/htmlbeginner/index.html">HTML Beginner</a></li>
+		<li class="beginner"><a href="../../guides/cssbeginner/index.html">CSS Beginner</a></li>
+		<li class="intermediate"><a href="../../guides/htmlintermediate/index.html">HTML Intermediate</a></li>
+		<li class="intermediate"><a href="../../guides/cssintermediate/index.html">CSS Intermediate</a></li>
+		<li class="advanced"><a href="../../guides/htmladvanced/index.html">HTML Advanced</a></li>
+		<li class="advanced"><a href="../../guides/cssadvanced/index.html">CSS Advanced</a></li>
+	</ul>	</li>
+
+	<li>Reference
+	<ul>
+		<li><a href="../../reference/htmltags/index.html">HTML Tags</a></li>
+		<li><a href="../../reference/cssproperties/index.html">CSS Properties</a></li>
+	</ul></li>
+	
+
+	<li>Misc.
+	<ul>
+		<li><a href="../../index.html" accesskey="1">Home</a></li>
+		<li><a href="../../about.1.html">About HTML Dog</a></li>
+		<li><a href="../../contact/index.html" accesskey="9">Contact HTML Dog</a></li>
+		<li><a href="../../sitemap/index.html" accesskey="3">Site Map</a></li>
+	</ul></li>
+</ul>
+
+
+</div>
+
+<div id="secondaryNav">
+
+	<p><a href="http://www.siteground.com/web-hosting.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11"><img src="../../r10/siteground1.png" alt="SiteGround: Fast, reliable, recommended hosting." width="120" height="184" style="width: auto; height: auto"></a></p>
+
+</div>
+
+<div id="footer"><p>© HMTL Dog &amp; Patrick Griffiths 2003-2005 | <a href="http://htmldog.com/legal/" accesskey="8">Terms &amp; Privacy</a> | <a href="http://validator.w3.org/check/referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.htmldog.com%2Fcss%2Fboxer2.css&warning=1&profile=css2&usermedium=all">CSS</a></p></div>
+	
+
+
+
+</body></html>

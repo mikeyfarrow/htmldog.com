@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Show / Hide Navigation | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../rAF/arcticFox.css" rel="stylesheet">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../manifest.json">
+	<link rel="mask-icon" href="../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../index.html" title="Home"><img src="../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../index.html" class="yahSec yahTech">Techniques</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>Show / Hide Navigation</h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>When web page space is at a premium, which it is in scenarios such as those designed for use on mobile devices, you might want to hide things, such as your navigation area, and show them only when visitors choose to see them.</p>
+
+<p>This article looks at two options for achieving this: using JavaScript, and exploiting the CSS :target pseudo class. As an extra bell and/or whistle, it includes &#8220;show&#8221; and &#8220;hide&#8221; icons made from CSS gradients instead of images.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>These techniques demonstrate a simple and effective way to increase the usability of a page and they manipulate accessibility considerations that are useful to have regardless of the show / hide quest.</p>
+
+<figure class="note shot">
+    <div><img src="../../figures/showhide.jpg" width="500" height="307"></div>
+    <figcaption>HTML Dog on mobile: before and after the navigation button is pressed.</figcaption>
+</figure>
+
+<h2>The Markup</h2>
+
+<p>We&#8217;re going to start with a typical page structure:</p>
+
+<pre><code class="language-html">
+&lt;body id="body"&gt;
+
+&lt;p&gt;&lt;a href="#main_nav" id="access_nav" class="access_aid"&gt;Skip to navigation&lt;/a&gt;&lt;/p&gt;
+
+&lt;article&gt;
+    &lt;!-- main content here --&gt;
+&lt;/article&gt;
+
+&lt;nav id="main_nav"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;This&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;That&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;The other&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- etc. --&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;a href="#body" id="access_top" class="access_aid"&gt;Skip to top&lt;/a&gt;&lt;/p&gt;
+&lt;/nav&gt;
+
+&lt;/body&gt;
+</code></pre>
+
+<p>Note that we have the accessibility considerations of a &#8220;Skip to navigation&#8221; link and a &#8220;Skip to top&#8221; link. These are beneficial for those using non-visual browsers (such as screen readers) or those who are unable to use a pointing device (and may be using a keyboard-like tabbing system, for example). These links will, however, prove additionally useful in our show / hide technique.</p>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../examples/index.html">
+			<span class="bsa_it_i"><img src="../../rAF/food/int_eg120.png" alt="Examples" width="120" height="60"></span>
+			<strong class="bsa_it_t">New Examples Section!</strong>
+			<span class="bsa_it_d">See all of this code stuff in action, and play around with it.</span>
+		</a>
+	</p>
+</aside>
+
+<h2>Showing and Hiding</h2>
+
+<p>Cutting to the chase and keeping it simple for the time being, we&#8217;re going to have our page start out with a visible content area and hidden navigation. So we can start with this CSS:</p>
+
+<pre><code class="language-css">
+#main_nav {
+    display: none;
+}
+</code></pre>
+
+<p>In all likelihood you probably won&#8217;t actually want your main web site to start out like this &#8212; you would usually want the navigation to be available for all to see. You can target this hidden navigation specifically in instances of smaller screens, though, using media queries. In this way, such an approach comes into play nicely when adapting a design for mobile devices.</p>
+
+<aside class="note warning">
+<p>What lies ahead won&#8217;t work on older browsers. The JavaScript, the target, and the gradients, will all fall down on Internet Explorer version 8 and below. Super. While there are work-arounds, we&#8217;re keeping things simple and <strong>modern</strong>, and keeping in mind that this technique is primarily useful for mobile browsers, which are reliably capable.</p>
+</aside>
+
+<h3>JavaScript</h3>
+
+<p>The most obvious way to switch the display of the navigation on and off is to use <strong>JavaScript</strong>. The following example can be used as one way to add and remove a class attribute (in this case &#8220;with_nav&#8221;) to the <a href="../../references/html/tags/body/index.html" class="acode"><code>body</code></a> when the &#8220;Skip to navigation&#8221; link is clicked:</p>
+
+<pre><code class="language-javascript">
+var nav = document.getElementById('access_nav'),
+    body = document.body;
+
+nav.addEventListener('click', function(e) {
+    body.className = body.className? '' : 'with_nav';
+    e.preventDefault();
+});
+</code></pre>
+
+<p>In short, this will:</p>
+
+<ul>
+<li>Wait for the element with ID &#8220;access_nav&#8221; to be clicked</li>
+<li>Add the class &#8220;with_nav&#8221; to the body (OR remove it, if it&#8217;s already there)</li>
+<li>Prevent the actual destination of the link from being followed</li>
+</ul>
+
+<p>The page can then be styled appropriately, fundamentally including:</p>
+
+<pre><code class="language-css">
+.with_nav #main_nav {
+    display: block;
+}
+</code></pre>
+
+<h3>:target</h3>
+
+<aside class="foodC"><div id="bsap_1305864" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+
+<p>Alternatively, we can avoid JavaScript all together. The <code>:target</code> pseudo class can be used to style a <strong>target element</strong> in a page, that is, an HTML element with an ID (such as &#8220;blancmange&#8221;) that is linked to (with something like &#8220;raspberry.html#blancmange&#8221;). In this case, our target element is that with the ID &#8220;main_nav&#8221; &#8212; our main navigation area. So when someone selects the &#8220;Skip to navigation&#8221; link, the page will jump to &#8220;main_nav&#8221; and we can then style that box differently:</p>
+
+<pre><code class="language-css">
+#main_nav:target {
+    display: block;
+}
+</code></pre>
+
+<p>Now, not only will the page jump to the suddenly appearing navigation area when &#8220;Skip to navigation&#8221; is selected, when &#8220;Skip to top&#8221; Is subsequently selected, the navigation will disappear again. This is because &#8220;main_nav&#8221; would no longer be the target anchor.</p>
+
+<h2>Styling</h2>
+
+<p>There are plenty of things you can do with that basic concept, but let&#8217;s fix up an obvious issue: we don&#8217;t want the page to jump down, we want the navigation to majestically appear near to the instigating link. One obvious solution is to simply position the navigation at the top of the page:</p>
+
+<pre><code class="language-css">
+#main_nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+</code></pre>
+
+<h3>Buttons with gradients</h3>
+
+<p>We can pretty this up in plenty of ways &#8212; colors, whitespace, shadows, transitions, etc. &#8212; but there&#8217;s one last essential thing that isn&#8217;t quite right: the accessibility link &#8220;Skip to&#8230;&#8221; text doesn&#8217;t make much sense when referring to &#8220;show&#8221; and &#8220;hide&#8221;. We don&#8217;t want to change the text of the links because they&#8217;re well worded for their original accessibility purpose. But we can replace them with icons fitting to our task. So, just to be posh, we&#8217;ll finish off by styling our show / hide buttons with icons made from linear gradients instead of background images.</p>
+
+<figure class="note shot">
+    <div><img src="../../figures/showhide_buttons.png" width="144" height="82"></div>
+    <figcaption>The buttons. Following conventions: parallel lines for &#8220;show&#8221; and a cross for &#8220;hide&#8221;.</figcaption>
+</figure>
+
+<p>Let&#8217;s get some basics out of the way first, though. We can prepare our links to be more button-like and we can place them in better positions:</p>
+
+<pre><code class="language-css">
+.access_aid {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+</code></pre>
+
+<p>This will push our link boxes to the top right of their respective parent boxes, turn them into squares, shove the text out of the way, and slap a thin border around them.</p>
+
+<p>Now to create those icons. We&#8217;re going for a series of horizontal lines to represent &#8220;show&#8221; (this being a common convention in suggesting &#8220;navigation&#8221;) and a cross to represent &#8220;hide&#8221; (being an even more ubiquitous symbol for &#8220;close&#8221;):</p>
+
+<pre><code class="language-css">
+.access_aid {
+    /* In addition to the existing declarations... */
+    background: white 10px 10px / 20px 20px no-repeat;
+}
+
+#access_nav {
+    background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+    background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+}
+
+#access_top {
+    background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+}
+</code></pre>
+
+<p>To break this down, the code:</p>
+
+<ul>
+<li>Sets the background position to be a single instance, 10 pixels in from the left, 10 pixels down from the top, and to be 20 pixels by 20 pixels in size.</li>
+<li>Adds a repeating horizontal gray and white linear gradient for the &#8220;show&#8221; button.</li>
+<li>Adds two diagonal gradients for &#8220;hide&#8221;, one for each line that makes up the cross.</li>
+</ul>
+
+<p>Bam. Easy.</p>
+
+<aside class="note mag">
+<p>The basic principles outlined here, including using <code>:target</code> and CSS gradient buttons, are used by this web site when viewed on small-screen devices.</p>
+</aside>
+
+<h2>Live!</h2>
+
+<p>Have a gander at <a href="../../examples/showhide1/index.html">the JavaScript example</a> and <a href="../../examples/showhide2/index.html">the target example</a> to see it all work together. There are a few additional licks of paint in there, but the purpose of these, as with all of the examples on this site, is to show a bare-bones proof of concept. Tinker.</p>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+  <ul>
+  <li><a href="../../guides/javascript/intermediate/events/index.html">Events and Callbacks</a> (JavaScript Intermediate Tutorial)</li>
+  <li><a href="../../guides/css/advanced/gradients/index.html">Gradients</a> (CSS Advanced Tutorial)</li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../examples/showhide1/index.html">Show / Hide Navigation (JavaScript)</a></li>
+  <li><a href="../../examples/showhide2/index.html">Show / Hide Navigation (target)</a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../references/html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../references/html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../references/html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../references/css/index.html">CSS</a>
+							<ul>
+								<li><a href="../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../references/css/selectors/index.html">Selectors</a></li>
+								<li><a href="../../references/css/values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../about.1.html">About Us</a></li>
+				<li><a href="../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

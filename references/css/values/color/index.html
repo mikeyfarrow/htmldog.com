@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Value: Color | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+	<link href="../../../../rAF/arcticFox_tables.css" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+	<style>
+                th { width: 50% }
+                th:first-child { width: auto }
+                .keyword {
+                	color: #fff;
+                	display: inline-block;
+                	padding: 0 30px;
+                	text-shadow: 0 0 3px rgba(0,0,0,.7);
+                }
+                .black { background: black }
+                .silver { background: silver; color: black; text-shadow: none }
+                .gray { background: gray }
+                .white { background: white; color: black; text-shadow: none; outline: 2px solid #ccc }
+                .maroon { background: maroon }
+                .red { background: red }
+                .purple { background: purple }
+                .fuchsia { background: fuchsia; color: black; text-shadow: none }
+                .green { background: green }
+                .lime { background: lime }
+                .olive { background: olive }
+                .yellow { background: yellow; color: black; text-shadow: none }
+                .navy { background: navy }
+                .blue { background: blue }
+                .teal { background: teal }
+                .aqua { background: aqua; color: black; text-shadow: none }
+                .altkw {
+                	color: black;
+                	text-shadow: none;
+                }
+	</style>
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../../reference/index.html" class="yahSec yahRef">References</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../index.html">Values</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>CSS Value: <strong><dfn>Color</dfn></strong></h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p><strong>Color values</strong> used with properties such as <a href="../../../../reference/cssproperties/color/index.html" class="acode"><code>color</code></a> and <a href="../../../../reference/cssproperties/background-color/index.html" class="acode"><code>background-color</code></a>.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<p>A color value can take one of several forms:</p>
+
+<table class="tweg">
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td><code>#</code></td>
+        <td><strong>Hexadecimal red-green-blue.</strong><br>Can be six or three hexadecimal digits (0 to F).<br>Using six digits, the first two specify the amount of red, second two the amount of green, and third two the amount of blue.<br>The three-digit form is a shortened notation with the first digit red, second green, and thrid blue.</td>
+        <td><code>p { color: #ff0000 }<br>/* is the same as... */<br>p { color: #f00 }<br>/* (full red) */</code></td>
+    </tr>
+    <tr>
+        <td><code>rgb()</code></td>
+        <td><strong>Functional red-green-blue.</strong><br>Contains three comma-separated values, each from <code>0</code> to <code>255</code> or <code>0%</code> to <code>100%</code>. The first specifies the amount of red, second amount of green, and thrid amount of blue.</td>
+        <td><code>body { background: rgb(0,127,0) }<br>/* is the same as... */<br>body { background: rgb(0%,50%,0%) }<br>/* (middle green) */</code></td>
+    </tr>
+    <tr>
+        <td><code>rgba()</td>
+        <td><strong>Functional red-green-blue with alpha.</strong><br>As Functional RGB, with an additional value, from <code>0</code> to <code>1</code>, which specifies transparency. <code>0</code> is full transparency, <code>1</code> is solid, <code>0.3</code> is 30% solid, etc.</td>
+        <td><code>h1 { background: rgba(0,0,0,0.8) }<br>/* (slightly transparent black) */</code></td>
+    </tr>
+    <tr>
+        <td><code>hsl()</code></td>
+        <td><strong>Hue-saturation-lightness.</strong><br>Contains three comma-separated values.<br>The first value, hue, is from <code>0</code> to <code>360</code>, or <code>0%</code> to <code>100%</code>, and represents an angle on the color circle. <code>0</code> (or <code>360</code>) is red, <code>120</code> is green, <code>240</code> is blue, etc.<br>The second value, saturation, is from <code>0%</code> (full desaturation) to <code>100%</code> (full saturation).<br>The third value, lightness, is from <code>0%</code> (black) to <code>100%</code> (white).</td>
+        <td><code>p { color: hsl(240,100%,75%) }<br>/* (pale blue) */</code></td>
+    </tr>
+    <tr>
+        <td><code>hsla()</code></td>
+        <td><strong>Hue-saturation-lightness with alpha.</strong><br>As Hue-saturation-lightness, with an additional value, from <code>0</code> to <code>1</code>, which specifies transparency. <code>0</code> is full transparency, <code>1</code> is solid, <code>0.7</code> is 70% solid, etc.</td>
+        <td><code>h1 { background: hsla(0,0%,100%,0.1) }<br>/* (very transparent white) */</code></td>
+    </tr>
+    <tr>
+        <td><code>transparent</code></td>
+        <td><strong>Transparent.</strong></td>
+        <td><code>.alt { backround: transparent }</code></td>
+    </tr>
+    <tr>
+        <td><code>black</code></td>
+        <td><strong class="black keyword">Black keyword.</strong><br>Equivalent of <code>#000000</code> / <code>rgb(0,0,0)</code></td>
+        <td><code>p { color: black }</code></td>
+    </tr>
+    <tr>
+        <td><code>silver</code></td>
+        <td><strong class="silver keyword altkw">Silver keyword.</strong><br>Equivalent of <code>#c0c0c0</code> / <code>rgb(192,192,192)</code></td>
+        <td><code>p { color: silver }</code></td>
+    </tr>
+    <tr>
+        <td><code>gray</code></td>
+        <td><strong class="gray keyword">Gray keyword.</strong><br>Equivalent of <code>#808080</code> / <code>rgb(128,128,128)</code></td>
+        <td><code>p { color: gray }</code></td>
+    </tr>
+    <tr>
+        <td><code>white</code></td>
+        <td><strong class="white keyword altkw">White keyword.</strong><br>Equivalent of <code>#ffffff</code> / <code>rgb(255,255,255)</code></td>
+        <td><code>p { color: white }</code></td>
+    </tr>
+    <tr>
+        <td><code>maroon</code></td>
+        <td><strong class="maroon keyword">Maroon keyword.</strong><br>Equivalent of <code>#800000</code> / <code>rgb(128,0,0)</code></td>
+        <td><code>p { color: maroon }</code></td>
+    </tr>
+    <tr>
+        <td><code>red</code></td>
+        <td><strong class="red keyword">Red keyword.</strong><br>Equivalent of <code>#ff0000</code> / <code>rgb(255,0,0)</code></td>
+        <td><code>p { color: red }</code></td>
+    </tr>
+    <tr>
+        <td><code>purple</code></td>
+        <td><strong class="purple keyword">Purple keyword.</strong><br>Equivalent of <code>#800080</code> / <code>rgb(128,0,128)</code></td>
+        <td><code>p { color: purple }</code></td>
+    </tr>
+    <tr>
+        <td><code>fuchsia</code></td>
+        <td><strong class="fuchsia keyword altkw">Fuchsia keyword.</strong><br>Equivalent of <code>#ff00ff</code> / <code>rgb(255,0,255)</code></td>
+        <td><code>p { color: fuchsia }</code></td>
+    </tr>
+    <tr>
+        <td><code>green</code></td>
+        <td><strong class="green keyword">Green keyword.</strong><br>Equivalent of <code>#008000</code> / <code>rgb(0,128,0)</code></td>
+        <td><code>p { color: green }</code></td>
+    </tr>
+    <tr>
+        <td><code>lime</code></td>
+        <td><strong class="lime keyword">Lime keyword.</strong><br>Equivalent of <code>#00ff00</code> / <code>rgb(0,255,0)</code></td>
+        <td><code>p { color: lime }</code></td>
+    </tr>
+    <tr>
+        <td><code>olive</code></td>
+        <td><strong class="olive keyword">Olive keyword.</strong><br>Equivalent of <code>#808000</code> / <code>rgb(128,128,0)</code></td>
+        <td><code>p { color: olive }</code></td>
+    </tr>
+    <tr>
+        <td><code>yellow</code></td>
+        <td><strong class="yellow keyword altkw">Yellow keyword.</strong><br>Equivalent of <code>#ffff00</code> / <code>rgb(255,255,0)</code></td>
+        <td><code>p { color: yellow }</code></td>
+    </tr>
+    <tr>
+        <td><code>navy</code></td>
+        <td><strong class="navy keyword">Navy keyword.</strong><br>Equivalent of <code>#000080</code> / <code>rgb(0,0,128)</code></td>
+        <td><code>p { color: navy }</code></td>
+    </tr>
+    <tr>
+        <td><code>blue</code></td>
+        <td><strong class="blue keyword">Blue keyword.</strong><br>Equivalent of <code>#0000ff</code> / <code>rgb(0,0,255)</code></td>
+        <td><code>p { color: blue }</code></td>
+    </tr>
+    <tr>
+        <td><code>teal</code></td>
+        <td><strong class="teal keyword">Teal keyword.</strong><br>Equivalent of <code>#008080</code> / <code>rgb(0,128,128)</code></td>
+        <td><code>p { color: teal }</code></td>
+    </tr>
+    <tr>
+        <td><code>aqua</code></td>
+        <td><strong class="aqua keyword altkw">Aqua keyword.</strong><br>Equivalent of <code>#00ffff</code> / <code>rgb(0,255,255)</code></td>
+        <td><code>p { color: aqua }</code></td>
+    </tr>
+
+</table>
+
+<aside class="note i">
+    <p>In addition, there&#8217;s a whole messy slew of practically useless &#8220;X11 extended color keywords&#8221;, including <code>papayawhip</code>, <code>peachpuff</code>, and <code>lightgoldenrodyellow</code>.</p>
+</aside>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+
+
+
+
+	<h3>References</h3>
+  <ul>
+  <li><a href="../../../../reference/cssproperties/color/index.html">CSS Property: <code>color</code></a></li>
+  <li><a href="../../../../reference/cssproperties/background-color/index.html">CSS Property: <code>background-color</code></a></li>
+  <li><a href="../../../../reference/cssproperties/border-color/index.html">CSS Property: <code>border-color</code></a></li>
+  </ul>
+
+
+
+
+
+
+
+  <h3>Tutorials</h3>
+  <ul>
+  <li><a href="../../../../guides/css/beginner/colors/index.html">Colors</a> (CSS Beginner Tutorial): The basics.</li>
+  <li><a href="../../../../guides/css/advanced/colors/index.html">Advanced Colors</a> (CSS Advanced Tutorial): Alpha transparency and HSL.</li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/gradients1/index.html">Linear gradients</a>: Using keywords and HSL colors.</li>
+  <li><a href="../../../../examples/boxshadows/index.html">Box shadows</a>: Using RGBa colors.</li>
+  </ul>
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../selectors/index.html">Selectors</a></li>
+								<li><a href="../index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>

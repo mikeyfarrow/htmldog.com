@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+	
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS Property: transform | HTML Dog</title>
+
+<!--[if !(lt IE 9)]><!-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../../../../rAF/arcticFox.css" rel="stylesheet">
+
+	<link href="../../../../rAF/arcticFox_tables.css" rel="stylesheet">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Code+Pro:300,400,500" rel="stylesheet">
+
+<!--<![endif]-->
+
+	<!--[if lt IE 9]><script src="/rAF/html5shiv.js"></script><link href="/rAF/altBasic.css" rel="stylesheet"><![endif]--> 
+
+
+
+	<link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../../../../manifest.json">
+	<link rel="mask-icon" href="../../../../safari-pinned-tab.svg">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#0088ee">
+
+</head>
+
+
+
+
+
+<body>
+
+<header id="pageMeta">
+<div class="accessAid"><a href="../../../../index.html" title="Home"><img src="../../../../rAF/htmldog.png" width="180" height="130" alt="HTML Dog"></a></div>
+	<div id="toNav"><a href="index.html#nav">Skip to navigation</a></div>
+</header>
+
+<nav id="youAreHere">
+<p><strong class="accessAid">You are here: </strong><a href="../../../../index.html" id="yahHome">Home</a>&nbsp;&rarr; <a href="../../../../reference/index.html" class="yahSec yahRef">References</a>&nbsp;&rarr; <a href="../../index.html">CSS</a>&nbsp;&rarr; <a href="../../../../reference/cssproperties/index.html">Properties</a>&nbsp;&rarr;</p>
+</nav>
+
+<article>
+
+<header>
+
+
+	<h1>CSS Property: <strong><dfn><code>transform</code></dfn></strong></h1>
+
+
+	
+<aside class="foodH1"><div id="bsap_1305903" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside class="foodH1">
+	<div id="bsap_1305780" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae">
+		<div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="auto"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+	</div>
+</aside>
+
+
+	<p>Manipulates the size, shape, and position of a box and its contents through rotating, skewing, scaling and translating.</p>
+
+
+</header>
+
+<section>
+
+	
+
+<figure class="note shot">
+    <div><img src="../../../../figures/transform.png" width="360" height="360"></div>
+    <figcaption>The four basic 2D transform functions &#8212; rotate, skew, scale, and translate.</figcaption>
+</figure>
+
+<aside class="note warning">
+<p>The specifications for transforms are currently classed as a <strong>working draft</strong> and therefore should be used with caution because the intricacies of how they work are not finalized.</p>
+
+<p>2D transforms are widely supported. Safari (desktop and mobile) versions 8.x and below and Android browser 4.x and below require a <code>-webkit-</code> prefix (that is, <code>-webkit-transform</code>). Internet Explorer 9 requires a <code>-ms-</code> prefix (<code>-ms-transform</code>). 2D transforms are not supported by Opera Mini or IE8 and below.</p>
+
+<p>3D transforms follow the same prefix requirements except for IE9, which does not support 3D transforms.</p>
+</aside>
+
+<h2>Possible Values</h2>
+
+<h3>2D Transform Functions</h3>
+
+<table class="tweg">
+    <tr><th>Value</th><th>Description</th><th>Example</th></tr>
+    <tr><td><code>rotate(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Rotates a box around the point specified by <a href="../transform-origin/index.html" class="acode"><code>transform-origin</code></a> by the given angle.</td><td><code>rotate(-45deg)</code></td></tr>
+    <tr><td><code>skewX(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Tilts the (horizontal) x-axis by the given angle.</td><td><code>skewX(20deg)</code></td></tr>
+    <tr><td><code>skewY(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Tilts the (vertical) y-axis by the given angle.</td><td><code>skewY(40deg)</code></td></tr>
+    <tr><td><code>skew(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Tilts the (horizontal) x-axis by the given angle. Equivalent to <code>skewX(</code>[angle]<code>)</code>.</td><td><code>skew(20deg)</code></td></tr>
+    <tr><td><code>skew(</code><a href="../../values/angle/index.html">[angle]</a><code>,&nbsp;</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Tilts the (horizontal) x-axis by the first angle and the (vertical) y-axis by the second angle.</td><td><code>skew(20deg,&nbsp;40deg)</code></td></tr>
+    <tr><td><code>scaleX(</code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts horizontal dimensions, multiplying them by the specified number.</td><td><code>scaleX(2)</code></td></tr>
+    <tr><td><code>scaleY(</code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts vertical dimensions, multiplying them by the specified number.</td><td><code>scaleY(0.5)</code></td></tr>
+    <tr><td><code>scale(</code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts horizontal and vertical dimensions, multiplying them by the specified number.</td><td><code>scale(2)</code></td></tr>
+    <tr><td><code>scale(</code><a href="../../values/number/index.html">[number]</a><code>,&nbsp;</code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts horizontal dimensions, multiplying them by the first number, and vertical dimensions, multiplying them by the second number.</td><td><code>scale(2,&nbsp;0.5)</code></td></tr>
+    <tr><td><code>translateX(</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a box horizontally by the given length.</td><td><code>translateX(100px)</code></td></tr>
+    <tr><td><code>translateY(</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a box vertically by the given length.</td><td><code>translateY(-2em)</code></td></tr>
+    <tr><td><code>translate(</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a box horizontally by the given length. Equivalent to <code>translateX(</code>[angle]<code>)</code>.</td><td><code>translateX(100px)</code></td></tr>
+    <tr><td><code>translate(</code><a href="../../values/length/index.html">[length]</a><code>,&nbsp;</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a box, horizontally by the first length, and vertically by the second length.</td><td><code>translate(100px,&nbsp;-2em)</code></td></tr>
+    <tr><td><code>matrix(</code>[values]<code>)</code></td><td>A six-value transformation matrix. Each <a href="../../values/number/index.html">number value</a> relates to scale (1st and 4th), skew (2nd and 3rd), and translate (5th and 6th), while rotate is implicit and determined from the other values. Values can be determined with the help of <a href="http://meyerweb.com/eric/tools/matrix/">matrix conversion</a> tools.</td><td><code>matrix(2.6, -0.2, 1.9, 0.9, 205, -48.7)</code></td></tr>
+</table>
+
+<div id="bsap_1305815" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div>
+<aside id="foodC2">
+	<p class="bsa_it_ad">
+		<a href="../../../../advertise/index.html">
+
+			<strong class="bsa_it_t">Advertise Here!</strong>
+			<span class="bsa_it_d">On a long-established, well-read, well-respected web development resource.</span>
+		</a>
+	</p>
+</aside>
+
+<h3>3D Transform Functions</h3>
+
+<table class="tweg">
+    <tr><th>Value</th><th>Description</th><th>Example</th></tr>
+    <tr><td><code>rotate3d(</code><a href="../../values/number/index.html">[number]</a><code>, </code><a href="../../values/number/index.html">[number]</a><code>, </code><a href="../../values/number/index.html">[number]</a><code>, </code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Rotates a 3D box by the given angle around a direction vector specified by the 1st (x-axis), 2nd (y-axis), and 3rd (z-axis) number values.</td><td><code>rotate3d(1,&nbsp;-1,&nbsp;1,&nbsp;45deg)</code></td></tr>
+    <tr><td><code>rotateX(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Equivalent to <code>rotate3d(1,0,0,</code>[angle]<code>)</code>.</td><td><code>rotateX(45deg)</code></td></tr>
+    <tr><td><code>rotateY(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Equivalent to <code>rotate3d(0,1,0,</code>[angle]<code>)</code>.</td><td><code>rotateY(50grad)</code></td></tr>
+    <tr><td><code>rotateZ(</code><a href="../../values/angle/index.html">[angle]</a><code>)</code></td><td>Equivalent to <code>rotate3d(0,0,1,</code>[angle]<code>)</code> and <code>rotate(</code>[angle]<code>)</code>.</td><td><code>rotateZ(1rad)</code></td></tr>
+    <tr><td><code>scale3d(</code><a href="../../values/number/index.html">[number]</a><code>, </code><a href="../../values/number/index.html">[number]</a><code>, </code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts dimensions, multiplying the x-axis by the first number, the y-axis by the second, and the z-axis by the third number.</td><td><code>scale3d(1,&nbsp;2,&nbsp;3)</code></td></tr>
+    <tr><td><code>scaleZ(</code><a href="../../values/number/index.html">[number]</a><code>)</code></td><td>Stretches or contracts dimensions on the z-axis, multiplying them by the specified number. Equivalent to <code>scale3d(1,&nbsp;1,&nbsp</code>[number]<code>)</code>.</td><td><code>scaleZ(3)</code></td></tr>
+    <tr><td><code>translate3d(</code><a href="../../values/length/index.html">[length]</a><code>, </code><a href="../../values/length/index.html">[length]</a><code>, </code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a 3D box, on the x-axis by the first length, the y-axis by the second, and the z-axis by the third length.</td><td><code>translate3d(10px, 20px, 30px)</code></td></tr>
+    <tr><td><code>translateZ(</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>Shifts a 3D box on the z-axis by the given length. Equivalent to <code>translate3d(0,&nbsp;0,&nbsp;</code>[length]<code>)</code>.</td><td><code>translateZ(30px)</code></td></tr>
+    <tr><td><code>matrix3d(</code>[values]<code>)</code></td><td>A sixteen-value transformation matrix, combining all of the 3D transform values. Values can be determined with the help of <a href="http://meyerweb.com/eric/tools/matrix/">matrix conversion</a> tools.</td><td><code>matrix3d(0.8, 0.3, 0.5, 0, -1, 1.6, 0.6, 0, -0.9, -1.5, 2.4, 0, -40.1, -10.2, 89.9, 1)</code></td></tr>
+    <tr><td><code>perspective(</code><a href="../../values/length/index.html">[length]</a><code>)</code></td><td>The distance of the z-plane origin from the viewer. The smaller the value the more pronounced the 3D effect.</td><td><code>perspective(500px)</code></td></tr>
+</table>
+
+<h3>Keywords</h3>
+
+<ul>
+<li><code >none</code></li>
+<li><a href="../../values/inherit/index.html"><code>inherit</code></a></li>
+<li><a href="../../values/initial/index.html"><code>initial</code></a></li>
+<li><a href="../../values/unset/index.html"><code>unset</code></a></li>
+</ul>
+
+<h3>Multiple Values</h3>
+
+<p>Any number of transform values can be combined by separating them with spaces.</p>
+
+<p>Example: <code>rotate(-45deg) skew(20deg, 40deg) scale(2)</code></p>
+
+<p>Each value will be applied one by one, in reverse order. <code>scale(2,1) rotate(45deg)</code> will rotate and then scale, for example. It is not, therefore, the same as <code>rotate(45deg) scale(2,1)</code>.</p>
+
+<aside class="note i">
+<p><code>skew(20deg, 40deg)</code>, for example, is not the same as <code>skewX(20deg) skewY(40deg)</code>. The former acts on both x and y axes at the same time whereas the latter acts on the x-axis first and then tickles the y-axis.</p>
+<p>Similarly, <code>matrix()</code> is not the same as specifying other values separately.</p>
+</aside>
+
+<h2>Example</h2>
+
+<pre><code class="oldLang language-css">
+#puddle {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-10deg);
+}
+/* A 200px by 200px box, rotated 10 degrees counter-clockwise. */
+
+#pond {
+    width: 200px;
+    height: 100px;
+    transform: translate(20px, -10px) scale(1,2);
+}
+/* A 200px by 100px box stretched to twice its height (making it 200px and, importantly, doubling the height of the box's contents) then shifted 20px right and 10px up. */
+</code></pre>
+
+</section>
+
+<footer id="related">
+
+	<h2>Related pages</h2>
+
+
+
+
+  <ul>
+  <li><a href="../transform-origin/index.html">CSS Property: <code>transform-origin</code></a></li>
+  </ul>
+
+
+
+
+	<h3>All CSS Properties</h3>
+	<ul class="longlist acodeblock">
+		<li><a href="../all/index.html"><code>all</code></a></li>
+		<li><a href="../background/index.html"><code>background</code></a></li>
+		<li><a href="../background-attachment/index.html"><code>background-attachment</code></a></li>
+		<li><a href="../background-clip/index.html"><code>background-clip</code></a></li>
+		<li><a href="../../../../reference/cssproperties/background-color/index.html"><code>background-color</code></a></li>
+		<li><a href="../../../../reference/cssproperties/background-image/index.html"><code>background-image</code></a></li>
+		<li><a href="../background-origin/index.html"><code>background-origin</code></a></li>
+		<li><a href="../background-position/index.html"><code>background-position</code></a></li>
+		<li><a href="../background-repeat/index.html"><code>background-repeat</code></a></li>
+		<li><a href="../background-size/index.html"><code>background-size</code></a></li>
+		<li><a href="../border/index.html"><code>border</code></a></li>
+		<li><a href="../border-bottom/index.html"><code>border-bottom</code></a></li>
+		<li><a href="../border-bottom-color/index.html"><code>border-bottom-color</code></a></li>
+		<li><a href="../border-bottom-left-radius/index.html"><code>border-bottom-left-radius</code></a></li>
+		<li><a href="../border-bottom-right-radius/index.html"><code>border-bottom-right-radius</code></a></li>
+		<li><a href="../border-bottom-style/index.html"><code>border-bottom-style</code></a></li>
+		<li><a href="../border-bottom-width/index.html"><code>border-bottom-width</code></a></li>
+		<li><a href="../border-collapse/index.html"><code>border-collapse</code></a></li>
+		<li><a href="../../../../reference/cssproperties/border-color/index.html"><code>border-color</code></a></li>
+		<li><a href="../border-image/index.html"><code>border-image</code></a></li>
+		<li><a href="../border-image-outset/index.html"><code>border-image-outset</code></a></li>
+		<li><a href="../border-image-repeat/index.html"><code>border-image-repeat</code></a></li>
+		<li><a href="../border-image-slice/index.html"><code>border-image-slice</code></a></li>
+		<li><a href="../border-image-source/index.html"><code>border-image-source</code></a></li>
+		<li><a href="../border-image-width/index.html"><code>border-image-width</code></a></li>
+		<li><a href="../border-left/index.html"><code>border-left</code></a></li>
+		<li><a href="../border-left-color/index.html"><code>border-left-color</code></a></li>
+		<li><a href="../border-left-style/index.html"><code>border-left-style</code></a></li>
+		<li><a href="../border-left-width/index.html"><code>border-left-width</code></a></li>
+		<li><a href="../border-radius/index.html"><code>border-radius</code></a></li>
+		<li><a href="../border-right/index.html"><code>border-right</code></a></li>
+		<li><a href="../border-right-color/index.html"><code>border-right-color</code></a></li>
+		<li><a href="../border-right-style/index.html"><code>border-right-style</code></a></li>
+		<li><a href="../border-right-width/index.html"><code>border-right-width</code></a></li>
+		<li><a href="../border-spacing/index.html"><code>border-spacing</code></a></li>
+		<li><a href="../border-style/index.html"><code>border-style</code></a></li>
+		<li><a href="../border-top/index.html"><code>border-top</code></a></li>
+		<li><a href="../border-top-color/index.html"><code>border-top-color</code></a></li>
+		<li><a href="../border-top-left-radius/index.html"><code>border-top-left-radius</code></a></li>
+		<li><a href="../border-top-right-radius/index.html"><code>border-top-right-radius</code></a></li>
+		<li><a href="../border-top-style/index.html"><code>border-top-style</code></a></li>
+		<li><a href="../border-top-width/index.html"><code>border-top-width</code></a></li>
+		<li><a href="../border-width/index.html"><code>border-width</code></a></li>
+		<li><a href="../../../../reference/cssproperties/bottom/index.html"><code>bottom</code></a></li>
+		<li><a href="../box-shadow/index.html"><code>box-shadow</code></a></li>
+		<li><a href="../caption-side/index.html"><code>caption-side</code></a></li>
+		<li><a href="../clear/index.html"><code>clear</code></a></li>
+		<li><a href="../clip/index.html"><code>clip</code></a></li>
+		<li><a href="../../../../reference/cssproperties/color/index.html"><code>color</code></a></li>
+		<li><a href="../../../../reference/cssproperties/content/index.html"><code>content</code></a></li>
+		<li><a href="../counter-increment/index.html"><code>counter-increment</code></a></li>
+		<li><a href="../counter-reset/index.html"><code>counter-reset</code></a></li>
+		<li><a href="../cursor/index.html"><code>cursor</code></a></li>
+		<li><a href="../direction/index.html"><code>direction</code></a></li>
+		<li><a href="../display/index.html"><code>display</code></a></li>
+		<li><a href="../empty-cells/index.html"><code>empty-cells</code></a></li>
+		<li><a href="../../../../reference/cssproperties/float/index.html"><code>float</code></a></li>
+		<li><a href="../font/index.html"><code>font</code></a></li>
+		<li><a href="../font-family/index.html"><code>font-family</code></a></li>
+		<li><a href="../../../../reference/cssproperties/font-size/index.html"><code>font-size</code></a></li>
+		<li><a href="../font-size-adjust/index.html"><code>font-size-adjust</code></a></li>
+		<li><a href="../font-stretch/index.html"><code>font-stretch</code></a></li>
+		<li><a href="../../../../reference/cssproperties/font-style/index.html"><code>font-style</code></a></li>
+   		<li><a href="../font-synthesis/index.html"><code>font-synthesis</code></a></li>
+		<li><a href="../font-variant/index.html"><code>font-variant</code></a></li>
+		<li><a href="../../../../reference/cssproperties/font-weight/index.html"><code>font-weight</code></a></li>
+		<li><a href="../../../../reference/cssproperties/height/index.html"><code>height</code></a></li>
+		<li><a href="../../../../reference/cssproperties/left/index.html"><code>left</code></a></li>
+		<li><a href="../letter-spacing/index.html"><code>letter-spacing</code></a></li>
+		<li><a href="../line-height/index.html"><code>line-height</code></a></li>
+		<li><a href="../list-style/index.html"><code>list-style</code></a></li>
+		<li><a href="../list-style-image/index.html"><code>list-style-image</code></a></li>
+		<li><a href="../list-style-position/index.html"><code>list-style-position</code></a></li>
+		<li><a href="../list-style-type/index.html"><code>list-style-type</code></a></li>
+		<li><a href="../margin/index.html"><code>margin</code></a></li>
+		<li><a href="../margin-bottom/index.html"><code>margin-bottom</code></a></li>
+		<li><a href="../margin-left/index.html"><code>margin-left</code></a></li>
+		<li><a href="../margin-right/index.html"><code>margin-right</code></a></li>
+		<li><a href="../margin-top/index.html"><code>margin-top</code></a></li>
+		<li><a href="../max-height/index.html"><code>max-height</code></a></li>
+		<li><a href="../max-width/index.html"><code>max-width</code></a></li>
+		<li><a href="../min-height/index.html"><code>min-height</code></a></li>
+		<li><a href="../min-width/index.html"><code>min-width</code></a></li>
+		<li><a href="../opacity/index.html"><code>opacity</code></a></li>
+		<li><a href="../orphans/index.html"><code>orphans</code></a></li>
+		<li><a href="../outline/index.html"><code>outline</code></a></li>
+		<li><a href="../outline-color/index.html"><code>outline-color</code></a></li>
+		<li><a href="../outline-style/index.html"><code>outline-style</code></a></li>
+		<li><a href="../outline-width/index.html"><code>outline-width</code></a></li>
+		<li><a href="../overflow/index.html"><code>overflow</code></a></li>
+		<li><a href="../padding/index.html"><code>padding</code></a></li>
+		<li><a href="../padding-bottom/index.html"><code>padding-bottom</code></a></li>
+		<li><a href="../padding-left/index.html"><code>padding-left</code></a></li>
+		<li><a href="../padding-right/index.html"><code>padding-right</code></a></li>
+		<li><a href="../padding-top/index.html"><code>padding-top</code></a></li>
+		<li><a href="../page-break-after/index.html"><code>page-break-after</code></a></li>
+		<li><a href="../page-break-before/index.html"><code>page-break-before</code></a></li>
+		<li><a href="../page-break-inside/index.html"><code>page-break-inside</code></a></li>
+		<li><a href="../position/index.html"><code>position</code></a></li>
+		<li><a href="../quotes/index.html"><code>quotes</code></a></li>
+		<li><a href="../../../../reference/cssproperties/right/index.html"><code>right</code></a></li>
+		<li><a href="../table-layout/index.html"><code>table-layout</code></a></li>
+		<li><a href="../text-align/index.html"><code>text-align</code></a></li>
+		<li><a href="../../../../reference/cssproperties/text-decoration/index.html"><code>text-decoration</code></a></li>
+		<li><a href="../text-indent/index.html"><code>text-indent</code></a></li>
+		<li><a href="../text-transform/index.html"><code>text-transform</code></a></li>
+		<li><a href="../../../../reference/cssproperties/top/index.html"><code>top</code></a></li>
+		<li><a href="index.html"><code>transform</code></a></li>
+		<li><a href="../transform-origin/index.html"><code>transform-origin</code></a></li>
+		<li><a href="../transition/index.html"><code>transition</code></a></li>
+		<li><a href="../transition-delay/index.html"><code>transition-delay</code></a></li>
+		<li><a href="../transition-duration/index.html"><code>transition-duration</code></a></li>
+		<li><a href="../transition-property/index.html"><code>transition-property</code></a></li>
+		<li><a href="../transition-timing-function/index.html"><code>transition-timing-function</code></a></li>
+		<li><a href="../unicode-bidi/index.html"><code>unicode-bidi</code></a></li>
+		<li><a href="../../../../reference/cssproperties/vertical-align/index.html"><code>vertical-align</code></a></li>
+		<li><a href="../../../../reference/cssproperties/visibility/index.html"><code>visibility</code></a></li>
+		<li><a href="../white-space/index.html"><code>white-space</code></a></li>
+		<li><a href="../widows/index.html"><code>widows</code></a></li>
+		<li><a href="../../../../reference/cssproperties/width/index.html"><code>width</code></a></li>
+		<li><a href="../word-spacing/index.html"><code>word-spacing</code></a></li>
+		<li><a href="../z-index/index.html"><code>z-index</code></a></li>
+	</ul>
+
+
+
+
+
+  <h3>Tutorials</h3>
+  <ul>
+  <li><a href="../../../../guides/css/advanced/transformations/index.html">Transformations</a></li>
+  </ul>
+
+
+
+
+  <h3>Examples</h3>
+  <ul>
+  <li><a href="../../../../examples/transforms/index.html">2D Transforms</a></li>
+  </ul>
+
+
+
+
+
+
+</footer>
+
+</article>
+
+
+
+<nav id="nav">
+	
+	<section id="theThreeNaviteers">
+	
+		<section id="navMain">
+			<h2>Main menu</h2>
+			<ul>
+				<li><a href="../../../../guides/index.html" id="navTut">Tutorials</a>
+					<ul>
+						<li><a href="../../../../guides/html/index.html">HTML</a></li>
+						<li><a href="../../../../guides/css/index.html">CSS</a></li>
+						<li><a href="../../../../guides/javascript/index.html">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="../../../../techniques/index.html" id="navTech">Techniques</a></li>
+				<li><a href="../../../../examples/index.html" id="navEg">Examples</a></li>
+				<li><a href="../../../../reference/index.html" id="navRef">References</a>
+					<ul>
+            	        <li><a href="../../../html/index.html">HTML</a>
+							<ul>
+								<li><a href="../../../../reference/htmltags/index.html">Tags</a></li>
+								<li><a href="../../../html/globalattributes/index.html">Attributes</a></li>
+								<li><a href="../../../html/characters/index.html">Characters</a></li>
+							</ul>
+						</li>
+						<li><a href="../../index.html">CSS</a>
+							<ul>
+								<li><a href="../../../../reference/cssproperties/index.html">Properties</a></li>
+								<li><a href="../../selectors/index.html">Selectors</a></li>
+								<li><a href="../../values/index.html">Values</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+
+
+
+
+		<section id="navSupp">
+			<h2>Supplemental menu</h2>
+			<ul>
+				<li><a href="../../../../about.1.html">About Us</a></li>
+				<li><a href="../../../../contact/index.html">Contact Us</a></li>
+				<li><a href="../../../../linkto/index.html">Link to Us</a></li>
+				<li><a href="../../../../advertise/index.html">Advertise With Us</a></li>
+				<li><a href="../../../../webhosting/index.html">Web Hosting</a></li>
+				<li><a href="../../../../sitemap/index.html">Site Map</a></li>
+				<li><a href="../../../../index.html" id="navHome" title="Home">Home</a></li>		
+			</ul>
+		</section>
+	
+	</section>
+
+	<form action="../../../../search/index.html" id="search">
+		<label for="sInput">Search</label>
+		<input name="q" id="sInput">
+		<input type="submit" value="Go!" id="sGo">
+	</form>
+
+	<a href="index.html#" id="toTop">&#8593; Top</a>
+
+</nav>
+
+<footer id="siteFooter">
+	
+<aside class="foodF"><div id="bsap_1305782" class="bsarocks bsap_42de178ce2c5601e0c8eebfd00a854ae"></div></aside>
+<aside id="foodF1" class="foodF"><div class="foodGoog"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" data-ad-client="ca-pub-2105257479089713" data-ad-slot="4282714042" data-ad-format="horizontal"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></aside>
+
+	<p>&copy; 2003&#8211;2017. <a href="../../../../terms/index.html">Terms of use</a>. Hosted&nbsp;by&nbsp;<a href="http://www.siteground.com/index.htm?afcode=4960306b51b3ed1ddecbf83b3076ee11">SiteGround</a>.</p>
+</footer>
+
+<script src="../../../../rAF/prism.js"></script>
+
+
+
+<script src="http://s3.buysellads.com/ac/bsa.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49412703-1', 'htmldog.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
